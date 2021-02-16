@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <title> Atualizar senha </title>
-    <link rel="stylesheet" href="/WEB/css/css.css">
+    <link rel="stylesheet" href="/web/css/css.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="/WEB/js/alterar_senha/alterar_senha.js"></script>
-    <script type="text/javascript" src="/WEB/js/alerta/alerta_senha.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="/web/js/alterar_senha/alterar_senha.js"></script>
+    <script type="text/javascript" src="/web/js/alerta/alerta_senha.js" charset="UTF-8"></script>
 </head>
 <body>
 	<?php

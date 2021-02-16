@@ -3,13 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title> Cadastrar funcionário </title>
-	<link rel="stylesheet" href="/WEB/css/css.css">
+	<link rel="stylesheet" href="/web/css/css.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script type="text/javascript" src="/WEB/js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="/WEB/js/jquery.mask.min.js"></script>
-	<script type="text/javascript" src="/WEB/js/funcionario/mascara_funcionario.js"></script>
-	<script type="text/javascript" src="/WEB/js/funcionario/senha_funcionario.js"></script>
-	<script type="text/javascript" src="/WEB/js/alerta/alerta_insert.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="/web/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/web/js/jquery.mask.min.js"></script>
+	<script type="text/javascript" src="/web/js/funcionario/mascara_funcionario.js"></script>
+	<script type="text/javascript" src="/web/js/funcionario/senha_funcionario.js"></script>
+	<script type="text/javascript" src="/web/js/alerta/alerta_insert.js" charset="UTF-8"></script>
 </head>
 <body>
 	<nav id="menu">

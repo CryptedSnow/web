@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8"> 
 	<title> Atualizar venda </title>
-	<link rel="stylesheet" href="/WEB/css/css.css">
-	<script type="text/javascript" src="/WEB/js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="/WEB/js/jquery.mask.min.js"></script>
-	<script type="text/javascript" src="/WEB/js/venda/mascara_venda.js"></script>
-	<script type="text/javascript" src="/WEB/js/venda/requisicao_venda.js"></script>
-	<script type="text/javascript" src="/WEB/js/alerta/alerta_update.js" charset="UTF-8"></script>
+	<link rel="stylesheet" href="/web/css/css.css">
+	<script type="text/javascript" src="/web/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/web/js/jquery.mask.min.js"></script>
+	<script type="text/javascript" src="/web/js/venda/mascara_venda.js"></script>
+	<script type="text/javascript" src="/web/js/venda/requisicao_venda.js"></script>
+	<script type="text/javascript" src="/web/js/alerta/alerta_update.js" charset="UTF-8"></script>
 </head>
 <body>
 	<?php

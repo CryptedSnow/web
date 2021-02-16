@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8"> 
 	<title> Excluir funcionário </title>
-	<link rel="stylesheet" href="/WEB/css/css.css">
-	<script type="text/javascript" src="/WEB/js/alerta/alerta_delete.js" charset="UTF-8"></script>
+	<link rel="stylesheet" href="/web/css/css.css">
+	<script type="text/javascript" src="/web/js/alerta/alerta_delete.js" charset="UTF-8"></script>
 <body> 
 	<?php
 

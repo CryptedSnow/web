@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8"> 
 	<title> Atualizar compra </title>
-	<link rel="stylesheet" href="/WEB/css/css.css">
-	<script type="text/javascript" src="/WEB/js/compra/requisicao_compra.js"></script>
-	<script type="text/javascript" src="/WEB/js/alerta/alerta_update.js" charset="UTF-8"></script>
+	<link rel="stylesheet" href="/web/css/css.css">
+	<script type="text/javascript" src="/web/js/compra/requisicao_compra.js"></script>
+	<script type="text/javascript" src="/web/js/alerta/alerta_update.js" charset="UTF-8"></script>
 </head>
 <body>
 	<?php
