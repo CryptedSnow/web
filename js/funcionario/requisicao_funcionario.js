@@ -12,7 +12,7 @@ function buscaDados(){
     // Instancia a classe XMLHttpReques
     ajax = new XMLHttpRequest();
     // Especifica o Method e a url que sera chamada
-    ajax.open("GET","/WEB/json/id_funcionario.php?cd_funcionario="+cd_funcionario,true);
+    ajax.open("GET","/web/json/id_funcionario.php?cd_funcionario="+cd_funcionario,true);
     // Executa na resposta do ajax
     ajax.onreadystatechange = function(){
     	// Se completar a requisicao
