@@ -1,5 +1,5 @@
 function mostrarSenha() {
-	// JS do Font awesome para campo de Senha atual
+	// JS do Font awesome para campo de senha atual
 	var tipo = document.getElementById('senha')
 	document.getElementById('pass').addEventListener('click', () => {
 		if (tipo.value) {
@@ -21,7 +21,7 @@ function mostrarSenha() {
 }
 	
 function mostrarNovaSenha() {
-	// JS do Font awesome para campo de Nova senha
+	// JS do Font awesome para campo de nova senha
 	var tipo2 = document.getElementById('senha_nova')
 	document.getElementById('pass1').addEventListener('click', () => {
 		if (tipo2.value) {
@@ -43,7 +43,7 @@ function mostrarNovaSenha() {
 }
 	
 function mostrarConfirmarSenha() {
-	// JS do Font awesome para campo de Redigite a nova senha
+	// JS do Font awesome para campo de redigite a nova senha
 	var tipo3 = document.getElementById('confirmar_senha_nova')
 	document.getElementById('pass2').addEventListener('click', () => {
 		if (tipo3.value) {
