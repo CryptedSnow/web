@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+﻿@charset "UTF-8"
 
  /* input[type=number] retira a setas de seleção dos inputs type="number" */
 input[type=number]::-webkit-inner-spin-button { 
