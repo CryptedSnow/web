@@ -1,4 +1,4 @@
-// JS para revelar e ocultar os caracteres do campo da senha
+// JS para revelar e ocultar os caracteres do campo senha
 function mostrarSenha() {
 	var tipo = document.getElementById('senha')
 	document.getElementById('pass').addEventListener('click', () => {
