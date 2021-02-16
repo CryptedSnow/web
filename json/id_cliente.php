@@ -1,5 +1,5 @@
 <?php
-	// Arquivo conexao.php
+	// Arquivo conexao.php;
 	require_once '../conexao/conexao.php';
 	// Variavel $cd_cliente que recebe a coluna cd_cliente da tabela cliente
 	$cd_cliente = $_GET["cd_cliente"];  // Importante ser $_GET para a requisicao funcionar
