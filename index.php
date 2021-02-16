@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title> Login </title>
-	<link rel="stylesheet" href="/WEB/css/css.css">
+	<link rel="stylesheet" href="/web/css/css.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script type="text/javascript" src="/WEB/js/senha_login/senha_login.js"></script>
+	<script type="text/javascript" src="/web/js/senha_login/senha_login.js"></script>
 </head>
 <body>
 	<h1 title="Login"> Login </h1>
