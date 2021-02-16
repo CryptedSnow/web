@@ -6,7 +6,7 @@
 	$host = 'localhost';
 	$banco = 'web';
 	$usuario = 'root';
-	$senha = '';
+	$senha = '1';
 
 	// Se for possivel realizar a conexao
 	try {
