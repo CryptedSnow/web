@@ -7,7 +7,7 @@
 			global $conexao;
 			// Verifica se o funcionario e a coluna de email existem no banco de dados
 			$consulta = "SELECT * FROM funcionario WHERE email = :email LIMIT 1";
-			// Prepara a conexão com o banco
+			// Prepara a conexao com o banco
 			$consulta = $conexao->prepare($consulta);
 			// Vincula um valor a um parametro
 			$consulta->bindValue(':email', $email);
