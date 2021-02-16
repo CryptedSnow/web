@@ -1,5 +1,5 @@
 <?php
-	// Classe Usuario
+	// Classe Usuarios
 	class Usuario{
 		// Metodo Logar criado
 		public function Logar($email, $senha){
