@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title> UPDATE | COMPRA </title>
+	<link rel="stylesheet" href="/web/css/css.css">
 </head>
 <body>
 	<?php
