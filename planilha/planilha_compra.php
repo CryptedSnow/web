@@ -1,6 +1,6 @@
 <?php
 
-	// Arquivo conexao.php
+	// Arquivo conexao.php;
 	require_once '../conexao/conexao.php';
 
 	// Query que armazena INNER JOIN
