@@ -7,13 +7,13 @@
 
 	// Se nao existir o botao de Entrar
 	if (!isset($_POST['Entrar'])) {
-		echo "<script> alert('Ação inválida, realize o login para acessar o sistema.'); location.href='index.php' </script>";
+		echo "<script> alert('Ação inválida, realize o login para acessar o sistema.'); location.href='/web/index.php' </script>";
 		die;
 	}
 
 	// Se os parametros de email ou senha forem vazios
 	if (empty($_POST['email']) || empty($_POST['senha'])) {
-		echo "<script> alert('Dados inválidos, refaça novamente o login.'); location.href='index.php' </script>";
+		echo "<script> alert('Dados inválidos, refaça novamente o login.'); location.href='/web/index.php' </script>";
 		die;
 	}
 
@@ -30,12 +30,12 @@
 
 	// Verifica se o metodo e falso
 	if ($u->Logar($email, $senha) == false) {
-		echo "<script> alert('Dados inválidos, refaça novamente o login.'); location.href='index.php' </script>";
+		echo "<script> alert('Dados inválidos, refaça novamente o login.'); location.href='/web/index.php' </script>";
 		die;																								
 	}																						
 
 	// Sera redirecionado para a pagina inicio.php
-	echo "<script> alert('Login realizado com sucesso! Bem-vindo ao sistema.'); location.href='inicio.php' </script>";
+	echo "<script> alert('Login realizado com sucesso! Bem-vindo ao sistema.'); location.href='/web/inicio.php' </script>";
 	die;
 	
 ?>

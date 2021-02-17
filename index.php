@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1 title="Login"> Login </h1>
-	<form method="POST" autocomplete="off" action="valida_login.php">
+	<form method="POST" autocomplete="off" action="/web/valida_login.php">
 		<p> Email: <input type="email" name="email" title="Campo para digitar seu email" size=30 required maxlength="50"> </p>
 		<p> Senha:
 			<input type="password" id="senha" name="senha" title="Campo para digitar sua senha" size="30" 
