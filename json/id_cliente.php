@@ -10,7 +10,7 @@
 		// $seleciona_dados recebe $conexao que prepare a operação para selecionar
 		$seleciona_dados = $conexao->prepare($selecao);
 		// Vincula um valor a um paramentro
-		$seleciona_dados->bindValue(':cd_cliente',$cd_cliente);
+		$seleciona_dados->bindValue(':cd_cliente', $cd_cliente, PDO::PARAM_INT);
 		// Executa a operacao
 		$seleciona_dados->execute();
 		// Retorna uma matriz contendo todas as linhas do conjunto de resultados
