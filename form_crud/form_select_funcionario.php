@@ -89,8 +89,8 @@
 			</li>
 			<li class="submenu"> <a> Fluxo de caixa </a>
 				<ul>
-					<li> <a href="/web/crud/caixa_venda.php" title="Fluxo de vendas"> Fluxo de vendas </a> </li>
-					<li> <a href="/web/crud/caixa_devolucao.php" title="Fluxo de devoluções"> Fluxo de devoluções </a> </li> 
+					<li> <a href="/web/form_crud/caixa_venda.php" title="Fluxo de vendas"> Fluxo de vendas </a> </li>
+					<li> <a href="/web/form_crud/caixa_devolucao.php" title="Fluxo de devoluções"> Fluxo de devoluções </a> </li> 
 				</ul>
 			</li>
 		</ul>
@@ -98,7 +98,7 @@
 
 	<nav>
 		<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-		<li> <a href="logout.php" title="Sair do sistema"> Sair </a> </li> 
+		<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 	</nav>
 	<p> Procurar funcionário: <input id="nome" title="Campo para procurar determinado funcionário"/></p>
 	<table id="lista" border="1">

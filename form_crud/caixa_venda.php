@@ -2,30 +2,46 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title> Listar devoluções </title>
+	<title> Fluxo de vendas </title>
 	<link rel="stylesheet" href="/web/css/css.css">
 </head>
 <body>
 	<?php
-		// Arquivo conexao.php
+		
 		require_once '../conexao/conexao.php';  
-		// Se a selecao for possivel de realizar
+		
 		try {
-			// Query que faz a selecao
-			$selecao = "SELECT devolucao.cd_devolucao,
-			venda.cd_venda, produto.nome, venda.valor_item,
-			devolucao.quantidade, devolucao.valor_devolucao,
-			venda.quantidade AS qtd_vendida, devolucao.motivo_devolucao, 
-			devolucao.data_devolucao FROM devolucao
-			INNER JOIN venda ON (venda.cd_venda = devolucao.cd_venda)
-			INNER JOIN produto ON (produto.cd_produto = devolucao.cd_produto)";
-			// $seleciona_dados recebe $conexao que prepare a operacaoo para selecionar
-			$seleciona_dados = $conexao->prepare($selecao);
-			// Executa a operacao
-			$seleciona_dados->execute();
-			// Retorna uma matriz contendo todas as linhas do conjunto de resultados
-			$linhas = $seleciona_dados->fetchAll(PDO::FETCH_ASSOC);
-		// Se a selecao nao for possivel de realizar
+			
+			$valor_detalhado = "SELECT DAY(data_venda) AS dia, MONTH(data_venda) AS mes, YEAR(data_venda) AS ano,  
+			venda.cd_produto, produto.nome, venda.valor_item, SUM(venda.quantidade) AS qtd_vendida,
+			SUM(valor_venda) AS venda_mes FROM venda 
+			INNER JOIN produto ON (produto.cd_produto = venda.cd_produto)
+			GROUP BY YEAR(data_venda), MONTH(data_venda), venda.cd_produto 
+			ORDER BY mes, ano, venda.cd_produto";
+
+			$seleciona_detalhes = $conexao->prepare($valor_detalhado);
+			$seleciona_detalhes->execute();
+			$linhas_detalhes = $seleciona_detalhes->fetchAll(PDO::FETCH_ASSOC);
+
+		} catch (PDOException $falha_selecao) {
+			echo "A listagem de dados não foi feita".$falha_selecao->getMessage();
+			die;
+		} catch (Exception $falha) {
+			echo "Erro não característico do PDO".$falha->getMessage();
+			die;
+		}
+	?>
+	<?php
+		
+		try {
+			
+			$valor_total = "SELECT YEAR(data_venda) AS ano, SUM(valor_venda) 
+			AS venda_total FROM venda GROUP BY YEAR(data_venda) ORDER BY data_venda";
+
+			$seleciona_total = $conexao->prepare($valor_total);
+			$seleciona_total->execute();
+			$linhas_total = $seleciona_total->fetchAll(PDO::FETCH_ASSOC);
+
 		} catch (PDOException $falha_selecao) {
 			echo "A listagem de dados não foi feita".$falha_selecao->getMessage();
 			die;
@@ -95,8 +111,8 @@
 			</li>
 			<li class="submenu"> <a> Fluxo de caixa </a>
 				<ul>
-					<li> <a href="/web/crud/caixa_venda.php" title="Fluxo de vendas"> Fluxo de vendas </a> </li>
-					<li> <a href="/web/crud/caixa_devolucao.php" title="Fluxo de devoluções"> Fluxo de devoluções </a> </li> 
+					<li> <a href="/web/form_crud/caixa_venda.php" title="Fluxo de vendas"> Fluxo de vendas </a> </li>
+					<li> <a href="/web/form_crud/caixa_devolucao.php" title="Fluxo de devoluções"> Fluxo de devoluções </a> </li> 
 				</ul>
 			</li>
 		</ul>
@@ -104,45 +120,47 @@
 
 	<nav>
 		<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-		<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
+		<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li>  
 	</nav>
-	<p> Procurar produto devolvido: <input id="nome" title="Campo para procurar determinado item devolvido"/> </p>
-	<table id="lista" border="1">
+	<table border="1">
+		<caption title="Movimentação anual"> Movimentação anual </caption>
 		<tr> 
-			<th title="ID"> ID </th>
-			<th title="ID venda"> ID venda </th>
-			<th title="Produto"> Produto </th>
-			<th title="Valor item"> Valor item </th>
-			<th title="Quantidade devolvida"> Quantidade devolvida </th> 
-			<th title="Valor da devolução"> Valor da devolução </th>
-		    <th title="Quantidade vendida"> Quantidade vendida </th>
-		    <th title="Motivo da devolução"> Motivo da devolução </th>
-		    <th title="Data da devolução"> Data da devolução </th>
-		    <th title="Ações"> Ações </th>
+			<th title="Ano"> Ano </th> 
+			<th title="Valor total de vendas"> Valor total de vendas </th> 
 		</tr>
 		<?php 
-			// Loop para exibir as linhas
-			foreach ($linhas as $exibir_colunas){
+			foreach ($linhas_total as $exibir_colunas){
 				echo '<tr>';
-		 		echo '<td title="'.$exibir_colunas['cd_devolucao'].'">'.$exibir_colunas['cd_devolucao'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['cd_venda'].'">'.$exibir_colunas['cd_venda'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['nome'].'">'.$exibir_colunas['nome'].'</td>';
-		 		echo '<td title="R$'.$exibir_colunas['valor_item'].'">R$'.$exibir_colunas['valor_item'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['quantidade'].' produto(s) devolvido(s)">'.$exibir_colunas['quantidade'].'</td>';
-		 		echo '<td title="R$'.$exibir_colunas['valor_devolucao'].'">R$'.$exibir_colunas['valor_devolucao'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['qtd_vendida'].' produto(s) vendidos(s) em estoque">'.$exibir_colunas['qtd_vendida'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['motivo_devolucao'].'">'.$exibir_colunas['motivo_devolucao'].'</td>';
-		 		echo '<td title="'.date('d/m/Y H:i:s', strtotime($exibir_colunas['data_devolucao'])).'">'.
-		 		date('d/m/Y H:i:s', strtotime($exibir_colunas['data_devolucao'])).'</td>';
-		 		echo '<td>'."<a href='../form_crud/form_insert_devolucao.php' title='Cadastrar devolução'>INSERT</a> ".
-		 		"<a href='../form_crud/form_select_devolucao.php' title='Listar devoluções'>SELECT</a> ".
-		 		"<a href='../form_crud/form_update_devolucao.php' title='Atualizar devolução'>UPDATE</a> ".
-		 		"<a href='../form_crud/form_delete_devolucao.php' title='Deletar devolução'>DELETE</a>".'</td>';
+				echo '<td title="'.$exibir_colunas['ano'].'">'.$exibir_colunas['ano'].'</td>';
+		 		echo '<td title="R$'.$exibir_colunas['venda_total'].'">R$'.$exibir_colunas['venda_total'].'</td>';
 		 		echo '</tr>'; echo '</p>';
 			}
 		?>
 	</table>
-	<script type="text/javascript" src="/WEB/js/devolucao/select_devolucao.js"></script>
-	<p><a href='../planilha/planilha_devolucao.php' title="Botão de download do relatório de devoluções" target="_blank"><button>Donwload do relatório de devoluções</button></a></p>
+	<table border="1">
+		<caption title="Movimentação mensal"> Movimentação mensal </caption>
+		<tr> 
+			<th title="Dia"> Dia </th> 
+			<th title="Mês"> Mês </th> 
+			<th title="Ano"> Ano </th> 
+			<th title="Produto"> Produto </th> 
+		    <th title="Valor item"> Valor item </th> 
+		    <th title="Quantidade vendida"> Quantidade vendida </th> 
+		    <th title="Total"> Total </th> 
+		</tr>
+		<?php 
+			foreach ($linhas_detalhes as $exibir_colunas){
+				echo '<tr>';
+				echo '<td title="'.$exibir_colunas['dia'].'">'.$exibir_colunas['dia'].'</td>';
+				echo '<td title="'.$exibir_colunas['mes'].'">'.$exibir_colunas['mes'].'</td>';
+				echo '<td title="'.$exibir_colunas['ano'].'">'.$exibir_colunas['ano'].'</td>';
+		 		echo '<td title="'.$exibir_colunas['nome'].'">'.$exibir_colunas['nome'].'</td>';
+		 		echo '<td title="R$'.$exibir_colunas['valor_item'].'">R$'.$exibir_colunas['valor_item'].'</td>';
+		 		echo '<td title="'.$exibir_colunas['qtd_vendida'].' produto(s) vendido(s)">'.$exibir_colunas['qtd_vendida'].'</td>';
+		 		echo '<td title="R$'.$exibir_colunas['venda_mes'].'">R$'.$exibir_colunas['venda_mes'].'</td>';
+		 		echo '</tr>'; echo '</p>';
+			}
+		?>
+	</table>
 </body>
 </html>

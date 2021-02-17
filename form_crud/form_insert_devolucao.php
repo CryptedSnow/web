@@ -113,7 +113,7 @@
 
 	<nav>
 		<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-		<li> <a href="logout.php" title="Sair do sistema"> Sair </a> </li> 
+		<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li>  
 	</nav> 
 	<form method="POST" autocomplete="off" action="../crud/insert_devolucao.php" onsubmit="exibirNome()">
 		<p> ID venda:
@@ -132,7 +132,7 @@
 				<?php endforeach ?>
 			</select>
 		</p>
-		<p> Valor do item: <input type="number" step="any" name="valor_item" id="valor_item" title="Campo para inserir o valor do produto" size=30 required="" readonly="readonly"> </p>
+		<p> Valor do item: <input type="number" step="any" name="valor_item" id="valor_item" placeholder="R$0.00" title="Campo para inserir o valor do produto" size=30 required="" readonly="readonly"> </p>
 		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" title="Campo para inserir a quantidade de produtos para devolução" size=10 required=""> </p>
 		<p> Motivo da devolução:
 			<select name="motivo_devolucao" required="" title="Caixa de seleção para escolher o motivo da devolução">
@@ -140,7 +140,7 @@
 				<option value="Produto danificado" title="Produto danificado">Produto danificado</option>
 				<option value="Tamanho errado" title="Tamanho errado">Tamanho errado</option>
 				<option value="Gênero errado de roupa" title="Gênero errado de roupa">Gênero errado de roupa</option>
-				<option value="Arrependimento da compra" title="Arrependimento da compra">Arrependimento da compra</option>
+				<option value="Arrependimento de compra" title="Arrependimento de compra">Arrependimento de compra</option>
 			</select>
 		</p>
 		<button name="Inserir" title="Botão para cadastrar a devolução"> Cadastrar devolução </button>

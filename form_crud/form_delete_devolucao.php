@@ -104,7 +104,7 @@
 
 	<nav>
 		<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-		<li> <a href="logout.php" title="Sair do sistema"> Sair </a> </li> 
+		<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 	</nav> 
 	<form method="POST" autocomplete="off" action="../crud/delete_devolucao.php" onsubmit="exibirNome()">
 		<p> ID devolução:
