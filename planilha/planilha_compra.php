@@ -5,10 +5,10 @@
 
 	// Query que armazena INNER JOIN
 	$registros_compra = "SELECT compra_fornecedor.cd_compra_fornecedor, 
-	fornecedor.nome AS fornecedor_nome, produto.nome AS produto_nome, 
-	produto.marca, produto.codigo_barra, produto.cor, produto.tamanho, 
-	produto.genero, produto.quantidade, produto.valor_compra,
-	compra_fornecedor.data_compra FROM compra_fornecedor
+	fornecedor.nome AS fornecedor_nome, fornecedor.cnpj AS cnpj_fornecedor,
+	produto.nome AS produto_nome, produto.marca, produto.codigo_barra, 
+	produto.cor, produto.tamanho, produto.genero, produto.quantidade, 
+	produto.valor_compra, compra_fornecedor.data_compra FROM compra_fornecedor
 	INNER JOIN fornecedor ON (fornecedor.cd_fornecedor = compra_fornecedor.cd_fornecedor)
 	INNER JOIN produto ON (produto.cd_produto = compra_fornecedor.cd_produto)";
 
@@ -37,7 +37,8 @@
 				<thead>
 					<tr> 
 						<th> ID </th> 
-						<th> Fornecedor </th> 
+						<th> Fornecedor </th>
+						<th> CNPJ Fornecedor </th>  
 						<th> Produto </th> 
 						<th> Marca </th> 
 						<th> Código de barra </th> 
@@ -55,6 +56,7 @@
 							<tr>
 					 			<td align='center'>{$exibir_registros['cd_compra_fornecedor']}</td>
 					 			<td align='center'>{$exibir_registros['fornecedor_nome']}</td>
+					 			<td align='center'>{$exibir_registros['cnpj_fornecedor']}</td>
 					 			<td align='center'>{$exibir_registros['produto_nome']}</td>
 					 			<td align='center'>{$exibir_registros['marca']}</td>
 					 			<td align='center'>{$exibir_registros['codigo_barra']}</td>

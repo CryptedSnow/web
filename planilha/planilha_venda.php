@@ -5,10 +5,9 @@
 
 	// Query que armazena INNER JOIN
 	$registros_venda = "SELECT venda.cd_venda, produto.nome AS nome_produto, 
-	produto.marca, produto.codigo_barra, produto.cor,
-	produto.tamanho, produto.genero, venda.tipo_pagamento, venda.valor_item, 
-	venda.quantidade, venda.valor_venda, 
-	funcionario.nome AS nome_funcionario, cliente.nome AS nome_cliente, 
+	produto.marca, produto.codigo_barra, produto.cor, produto.tamanho, produto.genero, 
+	venda.tipo_pagamento, venda.valor_item, venda.quantidade, venda.valor_venda, 
+	funcionario.nome AS nome_funcionario, cliente.nome AS nome_cliente, cliente.cpf AS cpf_cliente,
 	venda.data_venda FROM venda INNER JOIN produto ON (produto.cd_produto = venda.cd_produto)
 	INNER JOIN funcionario ON (funcionario.cd_funcionario = venda.cd_funcionario)
 	INNER JOIN cliente ON (cliente.cd_cliente = venda.cd_cliente)";
@@ -49,7 +48,8 @@
 						<th> Valor da venda </th>
 						<th> Tipo de pagamento </th>
 						<th> Funcionário </th>
-						<th> Cliente </th> 
+						<th> Cliente </th>
+						<th> CPF Cliente </th>  
 						<th> Data da venda </th> 
 					</tr>
 				</thead>
@@ -70,6 +70,7 @@
 					 			<td align='center'>{$exibir_registros['tipo_pagamento']}</td>
 					 			<td align='center'>{$exibir_registros['nome_funcionario']}</td>
 					 			<td align='center'>{$exibir_registros['nome_cliente']}</td>
+					 			<td align='center'>{$exibir_registros['cpf_cliente']}</td>
 					 			<td align='center'>" . date('d/m/Y H:i:s', strtotime($exibir_registros['data_venda'])) . "</td>
 					 		</tr>";
 	}

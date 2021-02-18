@@ -8,8 +8,8 @@
 	venda.cd_venda, produto.nome, produto.marca, produto.codigo_barra, produto.cor,
 	produto.tamanho, produto.genero, venda.valor_item, devolucao.quantidade, 
 	funcionario.nome AS nome_funcionario, cliente.nome AS nome_cliente, 
-	devolucao.valor_devolucao, venda.tipo_pagamento, devolucao.motivo_devolucao, 
-	devolucao.data_devolucao FROM devolucao
+	cliente.cpf AS cpf_cliente, devolucao.valor_devolucao, venda.tipo_pagamento, 
+	devolucao.motivo_devolucao, devolucao.data_devolucao FROM devolucao
 	INNER JOIN venda ON (venda.cd_venda = devolucao.cd_venda)
 	INNER JOIN produto ON (produto.cd_produto = devolucao.cd_produto)
 	INNER JOIN funcionario ON (funcionario.cd_funcionario = venda.cd_funcionario)
@@ -52,7 +52,8 @@
 						<th> Valor da devolução </th> 
 						<th> Tipo de pagamento </th> 
 						<th> Funcionário </th>
-						<th> Cliente </th> 
+						<th> Cliente </th>
+						<th> CPF Cliente </th>  
 						<th> Motivo da devolução </th> 
 						<th> Data da devolucao </th> 
 					</tr>
@@ -75,6 +76,7 @@
 					 			<td align='center'>{$exibir_registros['tipo_pagamento']}</td>
 					 			<td align='center'>{$exibir_registros['nome_funcionario']}</td>
 					 			<td align='center'>{$exibir_registros['nome_cliente']}</td>
+					 			<td align='center'>{$exibir_registros['cpf_cliente']}</td>
 					 			<td align='center'>{$exibir_registros['motivo_devolucao']}</td>
 					 			<td align='center'>" . date('d/m/Y H:i:s', strtotime($exibir_registros['data_devolucao'])) . "</td>
 					 		</tr>";
