@@ -123,7 +123,7 @@
 		<p> Estado: <input type="text" name="estado" title="Campo para atualizar o estado do fornecedor" id="estado" size="30" maxlength="30" required=""> </p>
 		<p> Cidade: <input type="text" name="cidade" title="Campo para atualizar a cidade do fornecedor" id="cidade" size="30" maxlength="30" required=""> </p>
 		<p> Bairro: <input type="text" name="bairro" title="Campo para atualizar o bairro do fornecedor" id="bairro" size="30" maxlength="30" required=""> </p>
-		<p> Endereço: <input type="text" title="Campo para atualizar o endereço do fornecedor" name="endereco" id="endereco" size="30" maxlength="30" required=""> </p>
+		<p> Rua: <input type="text" title="Campo para atualizar a rua do fornecedor" name="endereco" id="endereco" size="30" maxlength="30" required=""> </p>
 		<p> Número: <input type="number" name="numero" title="Campo para atualizar o número do comércio do fornecedor" id="numero" size="5" required=""> </p>
 		<button name="Atualizar" id="botao" title="Botão para atualizar fornecedor">Atualizar fornecedor</button>
 	</form>
