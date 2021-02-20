@@ -1,14 +1,21 @@
 <?php
-
+	// Arquivo conexao.php
 	require(__DIR__ . '/conexao/conexao.php');
-
-	// Se nao existir o id da sessao ou se a sessao nao estiver aberta
-	if (!session_id() || !isset($_SESSION)) {
-		session_start();
+	// Arquivo classe_usuario.php
+	require(__DIR__ . '/classe/classe_usuario.php');
+	// Inicio da sessao
+	session_start();
+	// Se existir $_SESSION['id_usuario'] e $_SESSION['nome_usuario']
+	if(isset($_SESSION['id_usuario']) && isset($_SESSION['nome_usuario'])){
+		// Mensagem
+		echo "Olá " . $_SESSION['nome_usuario'] . "!";
+	// Se nao
+	} else {
+		// Retorna para a pagina index.php
+		echo "<script> alert('Ação inválida, entre no sistema da maneira correta.'); location.href='/web/index.php' </script>";
+		die;
 	}
-
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -83,15 +90,12 @@
 					<li> <a href="/web/form_crud/caixa_devolucao.php" title="Fluxo de devoluções"> Fluxo de devoluções </a> </li> 
 				</ul>
 			</li>
+			<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
+			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-
-	<nav>
-		<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-		<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
-	</nav>
-		
-	<?php  
+	
+	<?php
 		// Se a selecao for possível de realizar
 		try {
 			// Query que faz a selecao
