@@ -1,14 +1,44 @@
 <?php
-
 	// Arquivo conexao.php
-	require_once '../conexao/conexao.php';
+	require_once '../conexao/conexao.php'; 
+	// Arquivo classe_usuario.php
+	require_once '../classe/classe_usuario.php';
+	// Inicio da sessao
+	session_start();
+	// Se existir $_SESSION['id_usuario'] e nao for vazio
+	if(isset($_SESSION['id_usuario']) && !empty($_SESSION['id_usuario'])){
+		// Mensagem
+		echo "";
+	// Se nao
+	} else {
+		// Retorna para a pagina index.php
+		echo "<script> alert('Ação inválida, entre no sistema da maneira correta.'); location.href='/web/index.php' </script>";
+		die;
+	}
+?>
+
+<?php
+
+	$qnt_registro = "SELECT COUNT(*) FROM venda
+	INNER JOIN produto ON (produto.cd_produto = venda.cd_produto)
+	INNER JOIN funcionario ON (funcionario.cd_funcionario = venda.cd_funcionario)
+	INNER JOIN cliente ON (cliente.cd_cliente = venda.cd_cliente)";
+	$seleciona_qnt = $conexao->prepare($qnt_registro);
+	$seleciona_qnt->execute();
+	$linha_qnt = $seleciona_qnt->fetchAll(PDO::FETCH_ASSOC);
+
+	if ($linha_qnt != 0) {
+		echo "<script> alert('Não existem registros de vendas para gerar uma planilha.'); window.close(); </script>";
+		die;
+	}
 
 	// Query que armazena INNER JOIN
 	$registros_venda = "SELECT venda.cd_venda, produto.nome AS nome_produto, 
 	produto.marca, produto.codigo_barra, produto.cor, produto.tamanho, produto.genero, 
 	venda.tipo_pagamento, venda.valor_item, venda.quantidade, venda.valor_venda, 
-	funcionario.nome AS nome_funcionario, cliente.nome AS nome_cliente, cliente.cpf AS cpf_cliente,
-	venda.data_venda FROM venda INNER JOIN produto ON (produto.cd_produto = venda.cd_produto)
+	funcionario.nome AS nome_funcionario, cliente.nome AS nome_cliente, 
+	cliente.cpf AS cpf_cliente,venda.data_venda FROM venda 
+	INNER JOIN produto ON (produto.cd_produto = venda.cd_produto)
 	INNER JOIN funcionario ON (funcionario.cd_funcionario = venda.cd_funcionario)
 	INNER JOIN cliente ON (cliente.cd_cliente = venda.cd_cliente)";
 

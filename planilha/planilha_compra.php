@@ -1,7 +1,34 @@
 <?php
-
 	// Arquivo conexao.php
-	require_once '../conexao/conexao.php';
+	require_once '../conexao/conexao.php'; 
+	// Arquivo classe_usuario.php
+	require_once '../classe/classe_usuario.php';
+	// Inicio da sessao
+	session_start();
+	// Se existir $_SESSION['id_usuario'] e nao for vazio
+	if(isset($_SESSION['id_usuario']) && !empty($_SESSION['id_usuario'])){
+		echo "";
+	// Se nao
+	} else {
+		// Retorna para a pagina index.php
+		echo "<script> alert('Ação inválida, entre no sistema da maneira correta.'); location.href='/web/index.php' </script>";
+		die;
+	}
+?>
+
+<?php
+
+	$qnt_registro = "SELECT COUNT(*) FROM compra_fornecedor 
+	INNER JOIN fornecedor ON (fornecedor.cd_fornecedor = compra_fornecedor.cd_fornecedor) 
+	INNER JOIN produto ON (produto.cd_produto = compra_fornecedor.cd_produto)";
+	$seleciona_qnt = $conexao->prepare($qnt_registro);
+	$seleciona_qnt->execute();
+	$linha_qnt = $seleciona_qnt->fetchAll(PDO::FETCH_ASSOC);
+
+	if ($linha_qnt != 0) {
+		echo "<script> alert('Não existe registros de compras para gerar uma planilha.'); window.close(); </script>";
+		die;
+	}
 
 	// Query que armazena INNER JOIN
 	$registros_compra = "SELECT compra_fornecedor.cd_compra_fornecedor, 
