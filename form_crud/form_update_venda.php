@@ -1,3 +1,21 @@
+<?php
+	// Arquivo conexao.php
+	require_once '../conexao/conexao.php'; 
+	// Arquivo classe_usuario.php
+	require_once '../classe/classe_usuario.php';
+	// Inicio da sessao
+	session_start();
+	// Se existir $_SESSION['id_usuario'] e $_SESSION['nome_usuario']
+	if(isset($_SESSION['id_usuario']) && isset($_SESSION['nome_usuario'])){
+		// Mensagem
+		echo "Olá " . $_SESSION['nome_usuario'] . "!";
+	// Se nao
+	} else {
+		// Retorna para a pagina index.php
+		echo "<script> alert('Ação inválida, entre no sistema da maneira correta.'); location.href='/web/index.php' </script>";
+		die;
+	}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -20,9 +38,6 @@
 
 		// Se a selecao for possivel de realizar
 		try {
-			// Arquivo conexao.php
-			require_once '../conexao/conexao.php';
-
 			// Query que seleciona chave de venda
 			$seleciona_vendas = $conexao->query("SELECT cd_venda FROM venda");
 			// Resulta em uma matriz
@@ -117,13 +132,11 @@
 					<li> <a href="/web/form_crud/caixa_devolucao.php" title="Fluxo de devoluções"> Fluxo de devoluções </a> </li> 
 				</ul>
 			</li>
+			<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
+			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-
-	<nav>
-		<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-		<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
-	</nav>  
+ 
 	<form method="POST" autocomplete="off" action="../crud/update_venda.php" onsubmit="exibirNome()">
 		<p> ID venda:
 		<select onclick="buscaDados()" name="cd_venda" id="cd_venda" required="" title="Caixa de seleção para escolher a venda a ser atualizado">
@@ -158,72 +171,16 @@
 			</select>
 		</p>
 		<p> Valor do item: <input type="number" step="any" name="valor_item" placeholder="R$0.00" id="valor_item" title="Campo para atualizar o valor da peça de roupa" required="" readonly="readonly"> </p>
-		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" title="Campo para atualizar a quantidade de peças de roupas para venda" size="10" required=""> </p>
+		<p> Quantidade:
+			<select name="quantidade" id="quantidade" required="" title="Caixa de seleção para atualizar a quantidade para venda">
+				<option value="0" title="Por padrão a opção é zero, escolha abaixo a quantidade desejada" selected> 0 unidades </option>
+				<?php
+					
+				?>
+			</select>
+		</p>
 		<button name="Atualizar" title="Botão para atualizar a venda"> Atualizar venda </button>
+		<button type="reset" title="Botão para limpar todos os campos do formulário">Limpar formulário</button>
 	</form>
-	<?php 
-		// Se a selecao for possivel de realizar
-		try {
-			// Query que faz a selecao
-			$selecao = "SELECT venda.cd_venda, produto.nome AS nome_produto, 
-			funcionario.nome AS nome_funcionario, cliente.nome AS nome_cliente, 
-			venda.tipo_pagamento, venda.valor_item, venda.quantidade, produto.quantidade AS estoque,
-			venda.valor_venda, venda.data_venda FROM venda
-			INNER JOIN produto ON (produto.cd_produto = venda.cd_produto)
-			INNER JOIN funcionario ON (funcionario.cd_funcionario = venda.cd_funcionario)
-			INNER JOIN cliente ON (cliente.cd_cliente = venda.cd_cliente)";
-			// $seleciona_dados recebe $conexao que prepare a operacao para selecionar
-			$seleciona_dados = $conexao->prepare($selecao);
-			// Executa a operacao
-			$seleciona_dados->execute();
-			// Retorna uma matriz contendo todas as linhas do conjunto de resultados
-			$linhas = $seleciona_dados->fetchAll(PDO::FETCH_ASSOC);
-		// Se a selecao nao for possivel de realizar
-		} catch (PDOException $falha_selecao) {
-			echo "A listagem de dados não foi feita".$falha_selecao->getMessage();
-			die;
-		} catch (Exception $falha) {
-			echo "Erro não característico do PDO".$falha->getMessage();
-			die;
-		}
-	?>
-	<table border="1">
-		<tr> 
-			<th title="ID"> ID </th>
-			<th title="Produto"> Produto </th>
-			<th title="Funcionário"> Funcionário </th>
-			<th title="Cliente"> Cliente </th>
-			<th title="Valor item"> Valor item </th>
-			<th title="Quantidade vendida"> Quantidade vendida </th> 
-		    <th title="Estoque disponível"> Estoque disponível </th>
-		    <th title="Valor da venda"> Valor da venda </th>
-		    <th title="Pagamento"> Pagamento </th>
-		    <th title="Data da venda"> Data da venda </th>
-		    <th title="Ações"> Ações </th>
-		</tr>
-		<?php 
-			// Loop para exibir as linhas
-			foreach ($linhas as $exibir_colunas){
-				echo '<tr>';
-		 		echo '<td title="'.$exibir_colunas['cd_venda'].'">'.$exibir_colunas['cd_venda'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['nome_produto'].'">'.$exibir_colunas['nome_produto'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['nome_funcionario'].'">'.$exibir_colunas['nome_funcionario'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['nome_cliente'].'">'.$exibir_colunas['nome_cliente'].'</td>';
-		 		echo '<td title="R$'.$exibir_colunas['valor_item'].'">R$'.$exibir_colunas['valor_item'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['quantidade'].' produto(s) vendido(s)">'.$exibir_colunas['quantidade'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['estoque'].' produto(s) em estoque">'.$exibir_colunas['estoque'].'</td>';
-		 		echo '<td title="R$'.$exibir_colunas['valor_venda'].'">R$'.$exibir_colunas['valor_venda'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['tipo_pagamento'].'">'.$exibir_colunas['tipo_pagamento'].'</td>';
-		 		echo '<td title="'.date('d/m/Y H:i:s', strtotime($exibir_colunas['data_venda'])).'">'.
-		 		date('d/m/Y H:i:s', strtotime($exibir_colunas['data_venda'])).'</td>';
-		 		echo '<td>'."<a href='../form_crud/form_insert_venda.php' title='Cadastrar venda'>INSERT</a> ".
-		 		"<a href='../form_crud/form_select_venda.php' title='Listar vendas'>SELECT</a> ".
-		 		"<a href='../form_crud/form_update_venda.php' title='Atualizar venda'>UPDATE</a> ".
-		 		"<a href='../form_crud/form_delete_venda.php' title='Deletar venda'>DELETE</a>".'</td>';
-		 		echo '</tr>'; echo '</p>';
-			}
-		?>
-	</table>
-	<p><a href='../planilha/planilha_venda.php' title="Botão de download do relatório de vendas" target="_blank"><button>Donwload do relatório de vendas</button></a></p>
 </body>
 </html> 

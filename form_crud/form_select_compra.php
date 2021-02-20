@@ -1,3 +1,21 @@
+<?php
+	// Arquivo conexao.php
+	require_once '../conexao/conexao.php'; 
+	// Arquivo classe_usuario.php
+	require_once '../classe/classe_usuario.php';
+	// Inicio da sessao
+	session_start();
+	// Se existir $_SESSION['id_usuario'] e $_SESSION['nome_usuario']
+	if(isset($_SESSION['id_usuario']) && isset($_SESSION['nome_usuario'])){
+		// Mensagem
+		echo "Olá " . $_SESSION['nome_usuario'] . "!";
+	// Se nao
+	} else {
+		// Retorna para a pagina index.php
+		echo "<script> alert('Ação inválida, entre no sistema da maneira correta.'); location.href='/web/index.php' </script>";
+		die;
+	}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,8 +25,6 @@
 </head>
 <body>
 	<?php
-		// Arquivo conexao.php
-		require_once '../conexao/conexao.php';  
 		// Se a selecao for possivel de realizar
 		try {
 			// Query que faz a selecao
@@ -99,13 +115,11 @@
 					<li> <a href="/web/form_crud/caixa_devolucao.php" title="Fluxo de devoluções"> Fluxo de devoluções </a> </li> 
 				</ul>
 			</li>
+			<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
+			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
 
-	<nav>
-		<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-		<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
-	</nav>
 	<p> Procurar produto do fornecedor: <input id="nome" title="Campo para procurar determinado produto comprado do fornecedor"/> </p>
 	<table id="lista" border="1">
 		<tr> 
@@ -146,7 +160,7 @@
 			}
 		?>
 	</table>
-	<script type="text/javascript" src="/WEB/js/compra/select_compra.js"></script> 
-	<p><a href='../planilha/planilha_compra.php' target="_blank"><button>Donwload do relatório de compra</button></a></p>
+	<script type="text/javascript" src="/web/js/compra/select_compra.js"></script> 
+	<p><a href='../planilha/planilha_compra.php' target="_blank" title="Botão de download de planilha de compras"><button> Gerar planilha de compras </button></a></p>
 </body>
 </html>

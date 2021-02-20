@@ -1,3 +1,21 @@
+<?php
+	// Arquivo conexao.php
+	require_once '../conexao/conexao.php'; 
+	// Arquivo classe_usuario.php
+	require_once '../classe/classe_usuario.php';
+	// Inicio da sessao
+	session_start();
+	// Se existir $_SESSION['id_usuario'] e $_SESSION['nome_usuario']
+	if(isset($_SESSION['id_usuario']) && isset($_SESSION['nome_usuario'])){
+		// Mensagem
+		echo "Olá " . $_SESSION['nome_usuario'] . "!";
+	// Se nao
+	} else {
+		// Retorna para a pagina index.php
+		echo "<script> alert('Ação inválida, entre no sistema da maneira correta.'); location.href='/web/index.php' </script>";
+		die;
+	}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -76,13 +94,11 @@
 					<li> <a href="/web/form_crud/caixa_devolucao.php" title="Fluxo de devoluções"> Fluxo de devoluções </a> </li> 
 				</ul>
 			</li>
+			<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
+			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
 
-	<nav>
-		<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-		<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
-	</nav>
 	<?php
 
 		// Mostrar todos os erros do php
@@ -92,8 +108,6 @@
 
 		// Se a selecao for possivel de realizar
 		try {
-			// Arquivo conexao.php
-			require_once '../conexao/conexao.php'; 
 			// Query que seleciona chave e nome do fornecedor
 			$seleciona_nomes = $conexao->query("SELECT cd_fornecedor, nome FROM fornecedor");
 			// Resulta em uma matriz
@@ -126,62 +140,7 @@
 		<p> Rua: <input type="text" title="Campo para atualizar a rua do fornecedor" name="endereco" id="endereco" size="30" maxlength="30" required=""> </p>
 		<p> Número: <input type="number" name="numero" title="Campo para atualizar o número do comércio do fornecedor" id="numero" size="5" required=""> </p>
 		<button name="Atualizar" id="botao" title="Botão para atualizar fornecedor">Atualizar fornecedor</button>
+		<button type="reset" title="Botão para limpar todos os campos do formulário">Limpar formulário</button>
 	</form>
-	<?php
-		// Se a selecao for possivel de realizar
-		try {
-			// Query que faz a selecao
-			$selecao = "SELECT * FROM fornecedor";
-			// $seleciona_dados recebe $conexao que prepare a operacao para selecionar
-			$seleciona_dados = $conexao->prepare($selecao);
-			// Executa a operacao
-			$seleciona_dados->execute();
-			// Retorna uma matriz contendo todas as linhas do conjunto de resultados
-			$linhas = $seleciona_dados->fetchAll(PDO::FETCH_ASSOC);
-		// Se a selecao nao for possivel de realizar
-		} catch (PDOException $falha_selecao) {
-			echo "A listagem de dados não foi feita".$falha_selecao->getMessage();
-			die;
-		} catch (Exception $falha) {
-			echo "Erro não característico do PDO".$falha->getMessage();
-			die;
-		}
-	?>
-	<table border="1">
-		<tr> 
-			<th title="ID"> ID </th>
-			<th title="Nome"> Nome </th>
-			<th title="CNPJ"> CNPJ </th>
-			<th title="Telefone"> Telefone </th>
-			<th title="Email"> Email </th>
-			<th title="Estado"> Estado </th>
-		    <th title="Cidade"> Cidade </th>
-		    <th title="Bairro"> Bairro </th>
-		    <th title="Endereço"> Endereço </th>
-		    <th title="Número"> Número </th>
-		    <th title="Ações"> Ações </th>
-		</tr>
-		<?php 
-			// Loop para exibir as linhas
-			foreach ($linhas as $exibir_colunas){
-				echo '<tr>';
-		 		echo '<td title="'.$exibir_colunas['cd_fornecedor'].'">'.$exibir_colunas['cd_fornecedor'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['nome'].'">'.$exibir_colunas['nome'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['cnpj'].'">'.$exibir_colunas['cnpj'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['telefone'].'">'.$exibir_colunas['telefone'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['email'].'">'.$exibir_colunas['email'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['estado'].'">'.$exibir_colunas['estado'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['cidade'].'">'.$exibir_colunas['cidade'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['bairro'].'">'.$exibir_colunas['bairro'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['endereco'].'">'.$exibir_colunas['endereco'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['numero'].'">'.$exibir_colunas['numero'].'</td>';
-		 		echo '<td>'."<a href='../form_crud/form_insert_fornecedor.php' title='Cadastrar fornecedor'>INSERT</a> ".
-		 		"<a href='../form_crud/form_select_fornecedor.php' title='Listar fornecedores'>SELECT</a> ".
-		 		"<a href='../form_crud/form_update_fornecedor.php' title='Atualizar fornecedor'>UPDATE</a> ".
-		 		"<a href='../form_crud/form_delete_fornecedor.php' title='Deletar fornecedor'>DELETE</a>".'</td>';
-		 		echo '</tr>'; echo '</p>';
-			}
-		?>
-	</table>
 </body>
 </html>

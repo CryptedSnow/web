@@ -1,3 +1,21 @@
+<?php
+	// Arquivo conexao.php
+	require_once '../conexao/conexao.php'; 
+	// Arquivo classe_usuario.php
+	require_once '../classe/classe_usuario.php';
+	// Inicio da sessao
+	session_start();
+	// Se existir $_SESSION['id_usuario'] e $_SESSION['nome_usuario']
+	if(isset($_SESSION['id_usuario']) && isset($_SESSION['nome_usuario'])){
+		// Mensagem
+		echo "Olá " . $_SESSION['nome_usuario'] . "!";
+	// Se nao
+	} else {
+		// Retorna para a pagina index.php
+		echo "<script> alert('Ação inválida, entre no sistema da maneira correta.'); location.href='/web/index.php' </script>";
+		die;
+	}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,8 +35,6 @@
 
 		// Se a selecao for possivel de realizar
 		try {
-			// Arquivo conexao.php
-			require_once '../conexao/conexao.php'; 
 			// Query que seleciona chave da tabela compra_fornecedor
 			$seleciona_compra = $conexao->query("SELECT cd_compra_fornecedor FROM compra_fornecedor");
 			// Resulta em uma matriz
@@ -107,13 +123,11 @@
 					<li> <a href="/web/form_crud/caixa_devolucao.php" title="Fluxo de devoluções"> Fluxo de devoluções </a> </li> 
 				</ul>
 			</li>
+			<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
+			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-
-	<nav>
-		<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-		<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
-	</nav> 
+ 
 	<form method="POST" autocomplete="off" action="../crud/update_compra.php" onsubmit="exibirNome()">
 		<p> ID compra:
 		<select onclick="buscaDados()" name="cd_compra_fornecedor" id="cd_compra_fornecedor" required="" title="Caixa de seleção para escolher a compra a ser atualizada">
@@ -141,72 +155,7 @@
 			</select>
 		</p>
 		<button name="Atualizar" id="botao" title="Botão para atualizar a compra"> Atualizar compra </button>
+		<button type="reset" title="Botão para limpar todos os campos do formulário">Limpar formulário</button>
 	</form>
-	<?php  
-		// Se a selecao for possivel de realizar
-		try {
-			// Query que faz a selecao
-			$selecao = "SELECT compra_fornecedor.cd_compra_fornecedor, 
-			fornecedor.nome AS fornecedor_nome, produto.nome AS produto_nome, 
-			produto.marca, produto.codigo_barra, produto.cor, produto.tamanho, 
-			produto.genero, produto.quantidade, produto.valor_compra,
-			compra_fornecedor.data_compra FROM compra_fornecedor
-			INNER JOIN fornecedor ON (fornecedor.cd_fornecedor = compra_fornecedor.cd_fornecedor)
-			INNER JOIN produto ON (produto.cd_produto = compra_fornecedor.cd_produto)";
-			// $seleciona_dados recebe $conexao que prepare a operacao para selecionar
-			$seleciona_dados = $conexao->prepare($selecao);
-			// Executa a operacao
-			$seleciona_dados->execute();
-			// Retorna uma matriz contendo todas as linhas do conjunto de resultados
-			$linhas = $seleciona_dados->fetchAll(PDO::FETCH_ASSOC);
-		// Se a selecao nao for possível de realizar
-		} catch (PDOException $falha_selecao) {
-			echo "A listagem de dados não foi feita".$falha_selecao->getMessage();
-			die;
-		} catch (Exception $falha) {
-			echo "Erro não característico do PDO".$falha->getMessage();
-			die;
-		}
-	?>
-	<table border="1">
-		<tr> 
-			<th title="ID"> ID </th>
-			<th title="Fornecedor"> Fornecedor </th>
-			<th title="Produto"> Produto </th>
-			<th title="Marca"> Marca </th>
-			<th title="Código de barra"> Código de barra </th> 
-		    <th title="Cor"> Cor </th>
-		    <th title="Tamanho"> Tamanho </th>
-		    <th title="Gênero"> Gênero </th>
-		    <th title="Quantidade"> Quantidade </th>
-		    <th title="Valor de compra"> Valor de compra </th>
-		    <th title="Data da compra"> Data da compra </th>
-		    <th> Ações </th>
-		</tr>
-		<?php 
-			// Loop para exibir as linhas
-			foreach ($linhas as $exibir_colunas){
-				echo '<tr>';
-		 		echo '<td title="'.$exibir_colunas['cd_compra_fornecedor'].'">'.$exibir_colunas['cd_compra_fornecedor'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['fornecedor_nome'].'">'.$exibir_colunas['fornecedor_nome'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['produto_nome'].'">'.$exibir_colunas['produto_nome'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['marca'].'">'.$exibir_colunas['marca'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['codigo_barra'].'">'.$exibir_colunas['codigo_barra'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['cor'].'">'.$exibir_colunas['cor'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['tamanho'].'">'.$exibir_colunas['tamanho'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['genero'].'">'.$exibir_colunas['genero'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['quantidade'].'">'.$exibir_colunas['quantidade'].'</td>';
-		 		echo '<td title="R$'.$exibir_colunas['valor_compra'].'">R$'.$exibir_colunas['valor_compra'].'</td>';
-		 		echo '<td title="'.date('d/m/Y H:i:s', strtotime($exibir_colunas['data_compra'])).'">'.
-		 		date('d/m/Y H:i:s', strtotime($exibir_colunas['data_compra'])).'</td>';
-		 		echo '<td>'."<a href='../form_crud/form_insert_compra.php' title='Cadastrar compra'>INSERT</a> ".
-		 		"<a href='../form_crud/form_select_compra.php' title='Listar compras'>SELECT</a> ".
-		 		"<a href='../form_crud/form_update_compra.php' title='Atualizar compra'>UPDATE</a> ".
-		 		"<a href='../form_crud/form_delete_compra.php' title='Deletar compra'>DELETE</a>".'</td>';
-		 		echo '</tr>'; echo '</p>';
-			}
-		?>
-	</table>
-	<p><a href='../planilha/planilha_compra.php' target="_blank"><button>Donwload do relatório de compra</button></a></p> 
 </body>
 </html> 

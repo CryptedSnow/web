@@ -1,3 +1,21 @@
+<?php
+	// Arquivo conexao.php
+	require_once '../conexao/conexao.php'; 
+	// Arquivo classe_usuario.php
+	require_once '../classe/classe_usuario.php';
+	// Inicio da sessao
+	session_start();
+	// Se existir $_SESSION['id_usuario'] e $_SESSION['nome_usuario']
+	if(isset($_SESSION['id_usuario']) && isset($_SESSION['nome_usuario'])){
+		// Mensagem
+		echo "Olá " . $_SESSION['nome_usuario'] . "!";
+	// Se nao
+	} else {
+		// Retorna para a pagina index.php
+		echo "<script> alert('Ação inválida, entre no sistema da maneira correta.'); location.href='/web/index.php' </script>";
+		die;
+	}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -76,13 +94,11 @@
 					<li> <a href="/web/form_crud/caixa_devolucao.php" title="Fluxo de devoluções"> Fluxo de devoluções </a> </li> 
 				</ul>
 			</li>
+			<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
+			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-
-	<nav>
-		<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-		<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
-	</nav> 
+ 
 	<form method="POST" autocomplete="off" action="../crud/insert_produto.php" onsubmit="exibirNome()">
 		<p> Roupa:
       		<select name="nome" id="nome" required="" title="Caixa de seleção para escolher a roupa">
@@ -174,66 +190,7 @@
 		</select>
 		</p>
 		<button name="Inserir" title="Botão para cadastrar o produto">Cadastrar produto</button>
+		<button type="reset" title="Botão para limpar todos os campos do formulário">Limpar formulário</button>
 	</form>
-	<?php
-		// Arquivo conexao.php
-		require_once '../conexao/conexao.php'; 
-		// Se a selecao for possivel de realizar
-		try {
-			// Query que faz a selecao
-			$selecao = "SELECT * FROM produto";
-			// $seleciona_dados recebe $conexao que prepare a operacao para selecionar
-			$seleciona_dados = $conexao->prepare($selecao);
-			// Executa a operacao
-			$seleciona_dados->execute();
-			// Retorna uma matriz contendo todas as linhas do conjunto de resultados
-			$linhas = $seleciona_dados->fetchAll(PDO::FETCH_ASSOC);
-		// Se a selecao nao for possivel de realizar
-		} catch (PDOException $falha_selecao) {
-			echo "A listagem de dados não foi feita".$falha_selecao->getMessage();
-			die;
-		} catch (Exception $falha) {
-			echo "Erro não característico do PDO".$falha->getMessage();
-			die;
-		}
-	?>
-	<table border="1">
-		<tr> 
-			<th title="ID"> ID </th>
-			<th title="Produto"> Produto </th>
-			<th title="Marca"> Marca </th>
-			<th title="Código de barra"> Código de barra </th> 
-		    <th title="Cor"> Cor </th>
-		    <th title="Tamanho"> Tamanho </th>
-		    <th title="Gênero"> Gênero </th>
-		    <th title="Quantidade"> Quantidade </th>
-		    <th title="Valor de compra"> Valor de compra </th>
-		    <th title="Porcentagem de revenda"> Porcentagem de revenda </th>
-		    <th title="Valor de revenda"> Valor de revenda </th>
-		    <th title="Ações"> Ações </th>
-		</tr>
-		<?php 
-			// Loop para exibir as linhas
-			foreach ($linhas as $exibir_colunas){
-				echo '<tr>';
-		 		echo '<td title="'.$exibir_colunas['cd_produto'].'">'.$exibir_colunas['cd_produto'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['nome'].'">'.$exibir_colunas['nome'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['marca'].'">'.$exibir_colunas['marca'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['codigo_barra'].'">'.$exibir_colunas['codigo_barra'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['cor'].'">'.$exibir_colunas['cor'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['tamanho'].'">'.$exibir_colunas['tamanho'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['genero'].'">'.$exibir_colunas['genero'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['quantidade'].' produto(s)">'.$exibir_colunas['quantidade'].'</td>';
-		 		echo '<td title="R$'.$exibir_colunas['valor_compra'].'">R$'.$exibir_colunas['valor_compra'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['porcentagem_revenda'].'%">'.$exibir_colunas['porcentagem_revenda'].'%</td>';
-		 		echo '<td title="R$'.$exibir_colunas['valor_revenda'].'">R$'.$exibir_colunas['valor_revenda'].'</td>';
-		 		echo '<td>'."<a href='../form_crud/form_insert_produto.php' title='Cadastrar produto'>INSERT</a> ".
-		 		"<a href='../form_crud/form_select_produto.php' title='Listar produtos'>SELECT</a> ".
-		 		"<a href='../form_crud/form_update_produto.php' title='Atualizar produto'>UPDATE</a> ".
-		 		"<a href='../form_crud/form_delete_produto.php' title='Deletar produto'>DELETE</a>".'</td>';
-		 		echo '</tr>'; echo '</p>';
-			}
-		?>
-	</table>
 </body>
 </html> 

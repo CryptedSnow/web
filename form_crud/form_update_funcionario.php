@@ -1,3 +1,21 @@
+<?php
+	// Arquivo conexao.php
+	require_once '../conexao/conexao.php'; 
+	// Arquivo classe_usuario.php
+	require_once '../classe/classe_usuario.php';
+	// Inicio da sessao
+	session_start();
+	// Se existir $_SESSION['id_usuario'] e $_SESSION['nome_usuario']
+	if(isset($_SESSION['id_usuario']) && isset($_SESSION['nome_usuario'])){
+		// Mensagem
+		echo "Olá " . $_SESSION['nome_usuario'] . "!";
+	// Se nao
+	} else {
+		// Retorna para a pagina index.php
+		echo "<script> alert('Ação inválida, entre no sistema da maneira correta.'); location.href='/web/index.php' </script>";
+		die;
+	}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -21,8 +39,6 @@
 
 		// Se a selecao for possivel de realizar
 		try {
-			// Arquivo conexao.php
-			require_once '../conexao/conexao.php'; 
 			// Query que seleciona chave e nome do funcionario
 			$seleciona_nomes = $conexao->query("SELECT cd_funcionario, nome FROM funcionario WHERE cargo != 'Administrador'");
 			// Resulta em uma matriz
@@ -101,13 +117,11 @@
 					<li> <a href="/web/form_crud/caixa_devolucao.php" title="Fluxo de devoluções"> Fluxo de devoluções </a> </li>  
 				</ul>
 			</li>
+			<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
+			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
 
-	<nav>
-		<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-		<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
-	</nav>
 	<form method="POST" autocomplete="off" action="../crud/update_funcionario.php" onsubmit="exibirNome()">
 		<p> ID funcionário:
 		<select onclick="buscaDados()" id="cd_funcionario" name="cd_funcionario" required="" title="Caixa de seleção para escolher o funcionário a ser atualizado">
@@ -122,54 +136,7 @@
 		<p> Telefone: <input type="text" name="telefone" id="telefone" title="Campo para atualizar o telefone do funcionário" size="30" minlength="14" required=""> </p>
 		<p> Email: <input type="email" name="email" id="email" title="Campo para atualizar o email de login do funcionário" size="30" maxlength="50" required=""> </p>
 		<button name="Atualizar" id="botao" title="Botão para atualizar funcionário">Atualizar funcionário</button>
+		<button type="reset" title="Botão para limpar todos os campos do formulário">Limpar formulário</button>
 	</form>
-	<?php
-		// Se a seleca for possivel de realizar
-		try {
-			// Query que faz a selecao
-			$selecao = "SELECT * FROM funcionario WHERE cargo != 'Administrador'";
-			// $seleciona_dados recebe $conexao que prepare a operacao para selecionar
-			$seleciona_dados = $conexao->prepare($selecao);
-			// Executa a operacao
-			$seleciona_dados->execute();
-			// Retorna uma matriz contendo todas as linhas do conjunto de resultados
-			$linhas = $seleciona_dados->fetchAll(PDO::FETCH_ASSOC);
-		// Se a selecao nao for possivel de realizar
-		} catch (PDOException $falha_selecao) {
-			echo "A listagem de dados não foi feita".$falha_selecao->getMessage();
-			die;
-		} catch (Exception $falha) {
-			echo "Erro não característico do PDO".$falha->getMessage();
-			die;
-		}
-	?>
-	<table border="1">
-		<tr> 
-			<th title="ID"> ID </th> 
-			<th title="Nome"> Nome </th> 
-			<th title="Cargo"> Cargo </th>
-			<th title="CPF"> CPF </th> 
-		    <th title="Telefone"> Telefone </th>
-		    <th title="Email"> Email </th>
-		    <th title="Ações"> Ações </th>
-		</tr>
-		<?php 
-			// Loop para exibir as linhas
-			foreach ($linhas as $exibir_colunas){
-				echo '<tr>';
-		 		echo '<td title="'.$exibir_colunas['cd_funcionario'].'">'.$exibir_colunas['cd_funcionario'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['nome'].'">'.$exibir_colunas['nome'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['cargo'].'">'.$exibir_colunas['cargo'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['cpf'].'">'.$exibir_colunas['cpf'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['telefone'].'">'.$exibir_colunas['telefone'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['email'].'">'.$exibir_colunas['email'].'</td>';
-		 		echo '<td>'."<a href='../form_crud/form_insert_funcionario.php' title='Cadastrar funcionário'>INSERT</a> ".
-		 		"<a href='../form_crud/form_select_funcionario.php' title='Listar funcionários'>SELECT</a> ".
-		 		"<a href='../form_crud/form_update_funcionario.php' title='Atualizar funcionário'>UPDATE</a> ".
-		 		"<a href='../form_crud/form_delete_funcionario.php' title='Deletar funcionário'>DELETE</a>".'</td>';
-		 		echo '</tr>'; echo '</p>';
-			}
-		?>
-	</table>
 </body>
 </html>
