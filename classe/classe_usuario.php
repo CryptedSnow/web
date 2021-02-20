@@ -7,7 +7,7 @@
 			global $conexao;
 			// Verifica se o funcionario e a coluna de email existem no banco de dados
 			$consulta = "SELECT * FROM funcionario WHERE email = :email LIMIT 1";
-			// Prepara a conexao com o banco
+			// Prepara a conexão com o banco
 			$consulta = $conexao->prepare($consulta);
 			// Vincula um valor a um parametro
 			$consulta->bindValue(':email', $email);
@@ -27,8 +27,9 @@
 				return false; // Login nao feito
 			}
 
-			// Variavel global da sessao que armazena a variavel cd_funcionario
+			// Variavel global da sessao que armazena a variavel cd_funcionario e nome
 			$_SESSION['id_usuario'] = $dados['cd_funcionario'];
+			$_SESSION['nome_usuario'] = $dados['nome'];
 			return true; // Login feito
 		}
 	}
