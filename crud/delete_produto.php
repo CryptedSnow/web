@@ -1,3 +1,21 @@
+<?php
+	// Arquivo conexao.php
+	require_once '../conexao/conexao.php'; 
+	// Arquivo classe_usuario.php
+	require_once '../classe/classe_usuario.php';
+	// Inicio da sessao
+	session_start();
+	// Se existir $_SESSION['id_usuario'] e $_SESSION['nome_usuario']
+	if(isset($_SESSION['id_usuario']) && isset($_SESSION['nome_usuario'])){
+		// Mensagem
+		echo "Olá " . $_SESSION['nome_usuario'] . "!";
+	// Se nao
+	} else {
+		// Retorna para a pagina index.php
+		echo "<script> alert('Ação inválida, entre no sistema da maneira correta.'); location.href='/web/index.php' </script>";
+		die;
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +25,6 @@
 </head>
 <body>
 	<?php
-		// Arquivo conexa.php
-		require_once '../conexao/conexao.php';  
 		// Se existir o botao de Deletar
 		if(isset($_POST['Deletar'])){
 			// Especifica a variavel
