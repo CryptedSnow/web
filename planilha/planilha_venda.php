@@ -6,7 +6,7 @@
 	// Inicio da sessao
 	session_start();
 	// Se existir $_SESSION['id_usuario'] e nao for vazio
-	if(isset($_SESSION['id_usuario']) && !empty($_SESSION['id_usuario'])){
+	if((isset($_SESSION['id_usuario'])) && (!empty($_SESSION['id_usuario']))){
 		// Mensagem
 		echo "";
 	// Se nao
@@ -20,30 +20,29 @@
 <?php
 
 	$qnt_registro = "SELECT COUNT(*) FROM venda
-	INNER JOIN produto ON (produto.cd_produto = venda.cd_produto)
-	INNER JOIN funcionario ON (funcionario.cd_funcionario = venda.cd_funcionario)
-	INNER JOIN cliente ON (cliente.cd_cliente = venda.cd_cliente)";
-	$seleciona_qnt = $conexao->prepare($qnt_registro);
-	$seleciona_qnt->execute();
-	$linha_qnt = $seleciona_qnt->fetchAll(PDO::FETCH_ASSOC);
+    INNER JOIN produto ON (produto.cd_produto = venda.cd_produto)
+    INNER JOIN funcionario ON (funcionario.cd_funcionario = venda.cd_funcionario)
+    INNER JOIN cliente ON (cliente.cd_cliente = venda.cd_cliente)";
+    $seleciona_qnt = $conexao->prepare($qnt_registro);
+    $seleciona_qnt->execute();
+    $linha_qnt = $seleciona_qnt->fetchColumn();
 
-	if ($linha_qnt != 0) {
-		echo "<script> alert('Não existem registros de vendas para gerar uma planilha.'); window.close(); </script>";
-		die;
-	}
-
-	// Query que armazena INNER JOIN
-	$registros_venda = "SELECT venda.cd_venda, produto.nome AS nome_produto, 
-	produto.marca, produto.codigo_barra, produto.cor, produto.tamanho, produto.genero, 
-	venda.tipo_pagamento, venda.valor_item, venda.quantidade, venda.valor_venda, 
-	funcionario.nome AS nome_funcionario, cliente.nome AS nome_cliente, 
-	cliente.cpf AS cpf_cliente,venda.data_venda FROM venda 
-	INNER JOIN produto ON (produto.cd_produto = venda.cd_produto)
-	INNER JOIN funcionario ON (funcionario.cd_funcionario = venda.cd_funcionario)
-	INNER JOIN cliente ON (cliente.cd_cliente = venda.cd_cliente)";
+    if ($qnt_reg <= 0) {
+        echo "<script> alert('Não existem registros de vendas para gerar uma planilha.'); window.close(); </script>";
+        die;
+    }
 
 	// Se a selecao for possivel de realizar
 	try {
+		// Query que armazena INNER JOIN
+		$registros_venda = "SELECT venda.cd_venda, produto.nome AS nome_produto, 
+		produto.marca, produto.codigo_barra, produto.cor, produto.tamanho, produto.genero, 
+		venda.tipo_pagamento, venda.valor_item, venda.quantidade, venda.valor_venda, 
+		funcionario.nome AS nome_funcionario, cliente.nome AS nome_cliente, 
+		cliente.cpf AS cpf_cliente,venda.data_venda FROM venda 
+		INNER JOIN produto ON (produto.cd_produto = venda.cd_produto)
+		INNER JOIN funcionario ON (funcionario.cd_funcionario = venda.cd_funcionario)
+		INNER JOIN cliente ON (cliente.cd_cliente = venda.cd_cliente)";
 		// $seleciona_dados recebe $conexao que prepare a operacao para selecionar
 		$seleciona_dados = $conexao->prepare($registros_venda);
 		// Executa a operacao

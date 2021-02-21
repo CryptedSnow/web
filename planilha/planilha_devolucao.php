@@ -6,7 +6,7 @@
 	// Inicio da sessao
 	session_start();
 	// Se existir $_SESSION['id_usuario'] e nao for vazio
-	if(isset($_SESSION['id_usuario']) && !empty($_SESSION['id_usuario'])){
+	if((isset($_SESSION['id_usuario'])) && (!empty($_SESSION['id_usuario']))){
 		// Mensagem
 		echo "";
 	// Se nao
@@ -20,33 +20,32 @@
 <?php
 
 	$qnt_registro = "SELECT COUNT(*) FROM devolucao
-	INNER JOIN venda ON (venda.cd_venda = devolucao.cd_venda)
+    INNER JOIN venda ON (venda.cd_venda = devolucao.cd_venda)
 	INNER JOIN produto ON (produto.cd_produto = devolucao.cd_produto)
 	INNER JOIN funcionario ON (funcionario.cd_funcionario = venda.cd_funcionario)
 	INNER JOIN cliente ON (cliente.cd_cliente = venda.cd_cliente)";
-	$seleciona_qnt = $conexao->prepare($qnt_registro);
-	$seleciona_qnt->execute();
-	$linha_qnt = $seleciona_qnt->fetchAll(PDO::FETCH_ASSOC);
+    $seleciona_qnt = $conexao->prepare($qnt_registro);
+    $seleciona_qnt->execute();
+    $linha_qnt = $seleciona_qnt->fetchColumn();
 
-	if ($linha_qnt != 0) {
-		echo "<script> alert('Não existem registros de devoluções para gerar uma planilha.'); window.close(); </script>";
-		die;
-	}
-
-	// Query que armazena INNER JOIN
-	$registros_devolucao = "SELECT devolucao.cd_devolucao,
-	venda.cd_venda, produto.nome, produto.marca, produto.codigo_barra, produto.cor,
-	produto.tamanho, produto.genero, venda.valor_item, devolucao.quantidade, 
-	funcionario.nome AS nome_funcionario, cliente.nome AS nome_cliente, 
-	cliente.cpf AS cpf_cliente, devolucao.valor_devolucao, venda.tipo_pagamento, 
-	devolucao.motivo_devolucao, devolucao.data_devolucao FROM devolucao
-	INNER JOIN venda ON (venda.cd_venda = devolucao.cd_venda)
-	INNER JOIN produto ON (produto.cd_produto = devolucao.cd_produto)
-	INNER JOIN funcionario ON (funcionario.cd_funcionario = venda.cd_funcionario)
-	INNER JOIN cliente ON (cliente.cd_cliente = venda.cd_cliente)";
+    if ($qnt_reg <= 0) {
+        echo "<script> alert('Não existem registros de devoluções para gerar uma planilha.'); window.close(); </script>";
+        die;
+    }
 
 	// Se a selecao for possivel de realizar
 	try {
+		// Query que armazena INNER JOIN
+		$registros_devolucao = "SELECT devolucao.cd_devolucao,
+		venda.cd_venda, produto.nome, produto.marca, produto.codigo_barra, produto.cor,
+		produto.tamanho, produto.genero, venda.valor_item, devolucao.quantidade, 
+		funcionario.nome AS nome_funcionario, cliente.nome AS nome_cliente, 
+		cliente.cpf AS cpf_cliente, devolucao.valor_devolucao, venda.tipo_pagamento, 
+		devolucao.motivo_devolucao, devolucao.data_devolucao FROM devolucao
+		INNER JOIN venda ON (venda.cd_venda = devolucao.cd_venda)
+		INNER JOIN produto ON (produto.cd_produto = devolucao.cd_produto)
+		INNER JOIN funcionario ON (funcionario.cd_funcionario = venda.cd_funcionario)
+		INNER JOIN cliente ON (cliente.cd_cliente = venda.cd_cliente)";
 		// $seleciona_dados recebe $conexao que prepare a operacao para selecionar
 		$seleciona_dados = $conexao->prepare($registros_devolucao);
 		// Executa a operacao

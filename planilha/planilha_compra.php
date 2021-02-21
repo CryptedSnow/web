@@ -6,7 +6,7 @@
 	// Inicio da sessao
 	session_start();
 	// Se existir $_SESSION['id_usuario'] e nao for vazio
-	if(isset($_SESSION['id_usuario']) && !empty($_SESSION['id_usuario'])){
+	if((isset($_SESSION['id_usuario'])) && (!empty($_SESSION['id_usuario']))){
 		echo "";
 	// Se nao
 	} else {
@@ -18,29 +18,28 @@
 
 <?php
 
-	$qnt_registro = "SELECT COUNT(*) FROM compra_fornecedor 
-	INNER JOIN fornecedor ON (fornecedor.cd_fornecedor = compra_fornecedor.cd_fornecedor) 
+	$qnt_registro = "SELECT COUNT(*) FROM compra_fornecedor
+	INNER JOIN fornecedor ON (fornecedor.cd_fornecedor = compra_fornecedor.cd_fornecedor)
 	INNER JOIN produto ON (produto.cd_produto = compra_fornecedor.cd_produto)";
 	$seleciona_qnt = $conexao->prepare($qnt_registro);
 	$seleciona_qnt->execute();
-	$linha_qnt = $seleciona_qnt->fetchAll(PDO::FETCH_ASSOC);
+	$linha_qnt = $seleciona_qnt->fetchColumn();
 
-	if ($linha_qnt != 0) {
-		echo "<script> alert('Não existe registros de compras para gerar uma planilha.'); window.close(); </script>";
+	if ($linha_qnt <= 0) {
+		echo "<script> alert('Não existem registros de compras para gerar uma planilha.'); window.close(); </script>";
 		die;
 	}
 
-	// Query que armazena INNER JOIN
-	$registros_compra = "SELECT compra_fornecedor.cd_compra_fornecedor, 
-	fornecedor.nome AS fornecedor_nome, fornecedor.cnpj AS cnpj_fornecedor,
-	produto.nome AS produto_nome, produto.marca, produto.codigo_barra, 
-	produto.cor, produto.tamanho, produto.genero, produto.quantidade, 
-	produto.valor_compra, compra_fornecedor.data_compra FROM compra_fornecedor
-	INNER JOIN fornecedor ON (fornecedor.cd_fornecedor = compra_fornecedor.cd_fornecedor)
-	INNER JOIN produto ON (produto.cd_produto = compra_fornecedor.cd_produto)";
-
 	// Se a selecao for possivel de realizar
 	try {
+		// Query que armazena INNER JOIN
+		$registros_compra = "SELECT compra_fornecedor.cd_compra_fornecedor, 
+		fornecedor.nome AS fornecedor_nome, fornecedor.cnpj AS cnpj_fornecedor,
+		produto.nome AS produto_nome, produto.marca, produto.codigo_barra, 
+		produto.cor, produto.tamanho, produto.genero, produto.quantidade, 
+		produto.valor_compra, compra_fornecedor.data_compra FROM compra_fornecedor
+		INNER JOIN fornecedor ON (fornecedor.cd_fornecedor = compra_fornecedor.cd_fornecedor)
+		INNER JOIN produto ON (produto.cd_produto = compra_fornecedor.cd_produto)";
 		// $seleciona_dados recebe $conexao que prepare a operacao para selecionar
 		$seleciona_dados = $conexao->prepare($registros_compra);
 		// Executa a operacao
