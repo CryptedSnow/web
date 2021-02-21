@@ -30,6 +30,7 @@
 			// Variavel global da sessao que armazena a variavel cd_funcionario e nome
 			$_SESSION['id_usuario'] = $dados['cd_funcionario'];
 			$_SESSION['nome_usuario'] = $dados['nome'];
+			$_SESSION['cargo_usuario'] = $dados['cargo'];
 			return true; // Login feito
 		}
 	}
