@@ -8,7 +8,7 @@
 	<script type="text/javascript" src="/web/js/senha_login/senha_login.js"></script>
 </head>
 <body>
-	<h1 title="Login"> Login </h1>
+	<h1> Login </h1>
 	<form method="POST" autocomplete="off" action="/web/valida_login.php">
 		<p> Email: <input type="email" name="email" title="Campo para digitar seu email" size=30 required maxlength="50"> </p>
 		<p> Senha:
