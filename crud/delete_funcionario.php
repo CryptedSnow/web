@@ -5,10 +5,10 @@
 	require_once '../classe/classe_usuario.php';
 	// Inicio da sessao
 	session_start();
-	// Se existir $_SESSION['id_usuario'] e $_SESSION['nome_usuario']
-	if(isset($_SESSION['id_usuario']) && isset($_SESSION['nome_usuario'])){
+	// Se existir $_SESSION['id_usuario'] e nao for vazio
+	if((isset($_SESSION['id_usuario'])) && (!empty($_SESSION['id_usuario']))){
 		// Mensagem
-		echo "Olá " . $_SESSION['nome_usuario'] . "!";
+		echo "";
 	// Se nao
 	} else {
 		// Retorna para a pagina index.php
@@ -39,9 +39,18 @@
 			$nome_usuario = $linha['nome'];
 			$tipo_cargo = $linha['cargo'];
 
-			// Se o funcionário for um gerente
+			// Se o for um gerente
 			if ($tipo_cargo == "Gerente") {
 				echo "O gerente {$nome_usuario} não pode ser excluído do sistema por ele ser um gerente, refaça novamente a operação.";
+				echo '<p><a href="../form_crud/form_delete_funcionario.php" 
+				title="Refazer a operação"><button>Refazer operação</button></a></p>';
+				exit;
+			}
+
+			// Se o for um Administrador
+			if ($tipo_cargo == "Administrador") {
+				echo "O administrador {$nome_usuario} não pode ser excluído do sistema por ele ser um administrador, 
+				refaça novamente a operação.";
 				echo '<p><a href="../form_crud/form_delete_funcionario.php" 
 				title="Refazer a operação"><button>Refazer operação</button></a></p>';
 				exit;
@@ -57,8 +66,15 @@
 			    $remocao->bindValue(':cd_funcionario',$cd_funcionario);
 			    // Executa a operacao
 			    $remocao->execute();
-			    // Retorna para a pagina de formulario de listagem
-				header('Location: ../form_crud/form_select_funcionario.php');
+			    // Se o funcionario for um gerente ou Administrador
+				if (($_SESSION['cargo_usuario'] == "Gerente") || ($_SESSION['cargo_usuario'] == "Administrador")) {
+					header('Location: ../form_crud/form_select_funcionario.php');
+					exit;
+				} elseif ($_SESSION['cargo_usuario'] == "Atendente") {
+            		session_destroy();
+					echo "<script> alert('{$nome_usuario}, você acabou de se excluir. Procure o Administrador do sistema.'); location.href='/web/index.php' </script>";
+					exit;
+				}
 			// Se a remocao nao for possivel de realizar
 			} catch (PDOException $falha_remocao) {
 			    echo "A remoção não foi feita".$falha_remocao->getMessage();

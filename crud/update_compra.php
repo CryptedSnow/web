@@ -5,10 +5,10 @@
 	require_once '../classe/classe_usuario.php';
 	// Inicio da sessao
 	session_start();
-	// Se existir $_SESSION['id_usuario'] e $_SESSION['nome_usuario']
-	if(isset($_SESSION['id_usuario']) && isset($_SESSION['nome_usuario'])){
+	// Se existir $_SESSION['id_usuario'] e nao for vazio
+	if((isset($_SESSION['id_usuario'])) && (!empty($_SESSION['id_usuario']))){
 		// Mensagem
-		echo "Olá " . $_SESSION['nome_usuario'] . "!";
+		echo "";
 	// Se nao
 	} else {
 		// Retorna para a pagina index.php
