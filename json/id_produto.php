@@ -17,7 +17,7 @@
 		$linhas = $seleciona_dados->fetchAll(PDO::FETCH_ASSOC);
 		// Funcao que converte um array PHP em dados para JSON 
 		echo json_encode($linhas);
-	// Se a selecao nao for possível de realizar
+	// Se a selecao nao for possivel de realizar
 	} catch (PDOException $falha_selecao) {
 		echo "A listagem de dados não foi feita".$falha_selecao->getMessage();
 	} catch (Exception $falha) {
