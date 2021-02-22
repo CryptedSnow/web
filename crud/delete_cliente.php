@@ -28,7 +28,7 @@
 		// Se existir o botão de Deletar
 		if(isset($_POST['Deletar'])){
 			// Especifica a variável
-			$cd_cliente = $_POST['cd_cliente'];
+			$cd_cliente = intval($_POST['cd_cliente']);
 			// Se a remoção for possível de realizar
 			try {
 			    // Query que faz a remoção
@@ -36,7 +36,7 @@
 			    // $remocao recebe $conexao que prepare a operação de exclusão
 			    $remocao = $conexao->prepare($remove);
 			    // Recebendo referencias e valores como argumento
-			    $remocao->bindValue(':cd_cliente',$cd_cliente);
+			    $remocao->bindValue(':cd_cliente', $cd_cliente);
 			    // Executa a operação
 			    $remocao->execute();
 			    // Retorna para a pagina de formulario de listagem

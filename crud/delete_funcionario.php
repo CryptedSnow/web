@@ -28,12 +28,12 @@
 		// Se existir o botao de Deletar
 		if(isset($_POST['Deletar'])){
 			// Especifica a variavel
-			$cd_funcionario = $_POST['cd_funcionario'];
+			$cd_funcionario = intval($_POST['cd_funcionario']);
 
 			// Vai buscar o nome e cargo de gerente pela chave do funcionario
 			$procurar_cargo = "SELECT nome, cargo FROM funcionario WHERE cd_funcionario = :cd_funcionario";
 			$busca_cargo = $conexao->prepare($procurar_cargo);
-			$busca_cargo->bindValue(':cd_funcionario',$cd_funcionario);
+			$busca_cargo->bindValue(':cd_funcionario', $cd_funcionario);
 			$busca_cargo->execute();
 			$linha = $busca_cargo->fetch(PDO::FETCH_ASSOC);
 			$nome_usuario = $linha['nome'];
@@ -63,7 +63,7 @@
 			    // $remocao recebe $conexao que prepare a operacao de exclusao
 			    $remocao = $conexao->prepare($remove);
 			    // Vincula um valor a um parametro
-			    $remocao->bindValue(':cd_funcionario',$cd_funcionario);
+			    $remocao->bindValue(':cd_funcionario', $cd_funcionario);
 			    // Executa a operacao
 			    $remocao->execute();
 			    // Se o funcionario for um gerente ou Administrador

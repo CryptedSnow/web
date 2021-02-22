@@ -28,7 +28,7 @@
 		// Se existir o botão de Deletar
 		if(isset($_POST['Deletar'])){
 			// Especifica a variável
-			$cd_venda = $_POST['cd_venda'];
+			$cd_venda = intval($_POST['cd_venda']);
 			$atualiza_quantidade = 0;
 
 			// Query que verifica se existe o registro de venda em devolucao
@@ -57,7 +57,7 @@
             	// $busca_registro recebe $procurar_produto que prepara a selecao do registro
 				$busca_registro = $conexao->prepare($procurar_produto);
             	// Vincula um valor a um parametro
-				$busca_registro->bindValue(':cd_venda',$cd_venda);
+				$busca_registro->bindValue(':cd_venda', $cd_venda);
             	// Executa a operação
 				$busca_registro->execute();
 				$linha = $busca_registro->fetch(PDO::FETCH_ASSOC);
@@ -71,7 +71,7 @@
 			    // $remocao recebe $conexao que prepare a operacao de exclusao
 				$remocao = $conexao->prepare($remove);
 			    // Vincula um valor a um parametro
-				$remocao->bindValue(':cd_venda',$cd_venda);
+				$remocao->bindValue(':cd_venda', $cd_venda);
 			    // Executa a operacao
 				$remocao->execute();
 
@@ -80,8 +80,8 @@
 				$atualiza_quantidade = "UPDATE produto SET quantidade = quantidade + :quantidade WHERE cd_produto = :cd_produto";
         		// $quantidade_produto recebe $conexao que prepara a transacao para atualiza o estoque na tabela produto
 				$quantidade_produto = $conexao->prepare($atualiza_quantidade);
-				$quantidade_produto->bindValue(':quantidade',$quantidade);
-				$quantidade_produto->bindValue(':cd_produto',$cd_produto);
+				$quantidade_produto->bindValue(':quantidade', $quantidade);
+				$quantidade_produto->bindValue(':cd_produto', $cd_produto);
         		// Executa a operacao
 				$quantidade_produto->execute();
         		// Confirma a execucao das query's em todas as transacoes 

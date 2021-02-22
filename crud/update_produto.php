@@ -28,13 +28,13 @@
 		// Se existir o botao de Atualizar
 		if(isset($_POST['Atualizar'])){
 			// Especifica a variavel
-			$cd_produto = $_POST['cd_produto'];
-			$nome = $_POST['nome'];
-			$marca = $_POST['marca'];
-			$codigo_barra = $_POST['codigo_barra'];
-			$cor = $_POST['cor'];
-			$tamanho = $_POST['tamanho'];
-			$genero = $_POST['genero'];
+			$cd_produto = intval($_POST['cd_produto']);
+			$nome = strval($_POST['nome'];)
+			$marca = strval($_POST['marca']);
+			$codigo_barra = strval($_POST['codigo_barra']);
+			$cor = strval($_POST['cor']);
+			$tamanho = strval($_POST['tamanho']);
+			$genero = strval($_POST['genero']);
 			$quantidade = intval($_POST['quantidade']);
 			$valor_compra = floatval($_POST['valor_compra']);
 			$porcentagem_revenda = intval($_POST['porcentagem_revenda']);
@@ -58,17 +58,17 @@
 				// $atualiza_dados recebe $conexao que prepare a operacao de atualizacao
 				$atualiza_dados = $conexao->prepare($atualizacao);
 				// Vincula um valor a um parametro
-				$atualiza_dados->bindValue(':cd_produto',$cd_produto);
-				$atualiza_dados->bindValue(':nome',$nome);
-			    $atualiza_dados->bindValue(':marca',$marca);
-			    $atualiza_dados->bindValue(':codigo_barra',$codigo_barra);
-			    $atualiza_dados->bindValue(':cor',$cor);
-			    $atualiza_dados->bindValue(':tamanho',$tamanho);
-			    $atualiza_dados->bindValue(':genero',$genero);
-			    $atualiza_dados->bindValue(':quantidade',$quantidade);
-			    $atualiza_dados->bindValue(':valor_compra',$valor_compra);
-			    $atualiza_dados->bindValue(':porcentagem_revenda',$porcentagem_revenda);
-			    $atualiza_dados->bindValue(':valor_revenda',$valor_revenda);
+				$atualiza_dados->bindValue(':cd_produto', $cd_produto);
+				$atualiza_dados->bindValue(':nome', $nome);
+			    $atualiza_dados->bindValue(':marca', $marca);
+			    $atualiza_dados->bindValue(':codigo_barra', $codigo_barra);
+			    $atualiza_dados->bindValue(':cor', $cor);
+			    $atualiza_dados->bindValue(':tamanho', $tamanho);
+			    $atualiza_dados->bindValue(':genero', $genero);
+			    $atualiza_dados->bindValue(':quantidade', $quantidade);
+			    $atualiza_dados->bindValue(':valor_compra', $valor_compra);
+			    $atualiza_dados->bindValue(':porcentagem_revenda', $porcentagem_revenda);
+			    $atualiza_dados->bindValue(':valor_revenda', $valor_revenda);
 			    // Executa a operacao
 			    $atualiza_dados->execute();
 			    // Retorna para a pagina de formulario de listagem

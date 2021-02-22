@@ -28,9 +28,9 @@
 		// Se existir o botao de Atualizar
 		if(isset($_POST['Atualizar'])){
 			// Especifica a variavel
-			$cd_compra_fornecedor = $_POST['cd_compra_fornecedor'];
-			$cd_fornecedor = $_POST['cd_fornecedor'];
-			$cd_produto = $_POST['cd_produto'];
+			$cd_compra_fornecedor = intval($_POST['cd_compra_fornecedor']);
+			$cd_fornecedor = intval($_POST['cd_fornecedor']);
+			$cd_produto = intval($_POST['cd_produto']);
 			// Se a atualizacao for possivel de realizar
 			try {
 				// Query que faz a atualizacao
@@ -39,9 +39,9 @@
 				// $atualiza_dados recebe $conexao que prepare a operacao de atualizacao
 				$atualiza_dados = $conexao->prepare($atualizacao);
 				// Vincula um valor a um parametro
-				$atualiza_dados->bindValue(':cd_compra_fornecedor',$cd_compra_fornecedor);
-				$atualiza_dados->bindValue(':cd_fornecedor',$cd_fornecedor);
-				$atualiza_dados->bindValue(':cd_produto',$cd_produto);
+				$atualiza_dados->bindValue(':cd_compra_fornecedor', $cd_compra_fornecedor);
+				$atualiza_dados->bindValue(':cd_fornecedor', $cd_fornecedor);
+				$atualiza_dados->bindValue(':cd_produto', $cd_produto);
 				// Executa a operacao
 				$atualiza_dados->execute();
 				// Retorna para a pagina de formulario de listagem

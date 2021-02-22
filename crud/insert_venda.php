@@ -28,10 +28,9 @@
 		// Se existir o botao de Inserir
 		if (isset($_POST['Inserir'])) {
 			// Especifica a variavel
-			$cd_produto = $_POST['cd_produto'];
-			$cd_funcionario = $_POST['cd_funcionario'];
-			$cd_cliente = $_POST['cd_cliente'];
-			$valor_item = $_POST['valor_item'];
+			$cd_produto = intval($_POST['cd_produto']);
+			$cd_funcionario = intval($_POST['cd_funcionario']);
+			$cd_cliente = intval($_POST['cd_cliente']);
 			$valor_item = floatval($_POST['valor_item']);
 			$quantidade = intval($_POST['quantidade']);
 			$valor_venda = floatval(($valor_item * $quantidade));
@@ -65,12 +64,12 @@
 				// $atualiza_dados recebe $conexao que prepare a operacao de insercao
 				$insere_dados = $conexao->prepare($insercao);
 				// Vincula um valor a um parametro
-				$insere_dados->bindValue(':cd_produto',$cd_produto);
-				$insere_dados->bindValue(':cd_funcionario',$cd_funcionario);
-				$insere_dados->bindValue(':cd_cliente',$cd_cliente);
-				$insere_dados->bindValue(':valor_item',$valor_item);
-				$insere_dados->bindValue(':quantidade',$quantidade);
-				$insere_dados->bindValue(':valor_venda',$valor_venda);
+				$insere_dados->bindValue(':cd_produto', $cd_produto);
+				$insere_dados->bindValue(':cd_funcionario', $cd_funcionario);
+				$insere_dados->bindValue(':cd_cliente', $cd_cliente);
+				$insere_dados->bindValue(':valor_item', $valor_item);
+				$insere_dados->bindValue(':quantidade', $quantidade);
+				$insere_dados->bindValue(':valor_venda', $valor_venda);
 				// Executa a operacao
 				$insere_dados->execute();
 				
@@ -79,8 +78,8 @@
     			// $quantidade_produto recebe $conexao que prepara a transação para atualiza o estoque na tabela produto
     			$quantidade_produto = $conexao->prepare($atualiza_quantidade);
     			// Vincula um valor a um parametro da tabela produto
-    			$quantidade_produto->bindValue(':cd_produto',$cd_produto);
-    			$quantidade_produto->bindValue(':quantidade',$quantidade);
+    			$quantidade_produto->bindValue(':cd_produto', $cd_produto);
+    			$quantidade_produto->bindValue(':quantidade', $quantidade);
     			// Executa a operacao
     			$quantidade_produto->execute();
 

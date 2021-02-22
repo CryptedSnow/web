@@ -28,11 +28,11 @@
 		// Se existir o botao de Atualizar
 		if(isset($_POST['Atualizar'])){
 			// Especifica a variavel 
-			$cd_funcionario = $_POST['cd_funcionario'];
-			$nome = $_POST['nome'];
-			$cpf = $_POST['cpf'];
-			$telefone = $_POST['telefone'];
-			$email = $_POST['email'];
+			$cd_funcionario = intval($_POST['cd_funcionario']);
+			$nome = strval($_POST['nome']);
+			$cpf = strval($_POST['cpf']);
+			$telefone = strval($_POST['telefone']);
+			$email = strval($_POST['email']);
 			// Se a atualizacao for possivel de realizar
 			try {
 				// Query que faz a atualizacao
@@ -42,10 +42,10 @@
 				$atualiza_dados = $conexao->prepare($atualizacao);
 				// Vincula um valor a um parametro
 				$atualiza_dados->bindValue(':cd_funcionario',$cd_funcionario);
-				$atualiza_dados->bindValue(':nome',$nome);
-			    $atualiza_dados->bindValue(':cpf',$cpf);
-			    $atualiza_dados->bindValue(':telefone',$telefone);
-			    $atualiza_dados->bindValue(':email',$email);
+				$atualiza_dados->bindValue(':nome', $nome);
+				$atualiza_dados->bindValue(':cpf', $cpf);
+				$atualiza_dados->bindValue(':telefone', $telefone);
+				$atualiza_dados->bindValue(':email', $email);
 			    // Executa a operacao
 			    $atualiza_dados->execute();
 			    // Retorna para a pagina de formulario de listagem

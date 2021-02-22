@@ -28,12 +28,12 @@
 		// Se existir o botao de Inserir
 		if (isset($_POST['Inserir'])) {
 			// Especifica a variavel
-			$cd_venda = $_POST['cd_venda'];
-			$cd_produto = $_POST['cd_produto'];
+			$cd_venda = intval($_POST['cd_venda']);
+			$cd_produto = intval($_POST['cd_produto']);
 			$valor_item = $_POST['valor_item'];
-			$quantidade = $_POST['quantidade'];
-			$motivo_devolucao = $_POST['motivo_devolucao'];
-			$valor_devolucao = ($valor_item * $quantidade);
+			$quantidade = intval($_POST['quantidade']);
+			$motivo_devolucao = strval($_POST['motivo_devolucao']);
+			$valor_devolucao = floatval(($valor_item * $quantidade));
 			$quantidade_antiga = 0;
 
 			// Se a quantidade ou valor do item for menor/igual a zero

@@ -28,12 +28,12 @@
 		// Se existir o botao de Atualizar
 		if(isset($_POST['Atualizar'])){
 			// Especifica a variavel
-			$cd_venda = $_POST['cd_venda'];
-			$cd_produto = $_POST['cd_produto'];
-			$cd_funcionario = $_POST['cd_funcionario'];
-			$cd_cliente = $_POST['cd_cliente'];
+			$cd_venda = intval($_POST['cd_venda']);
+			$cd_produto = intval($_POST['cd_produto']);
+			$cd_funcionario = intval($_POST['cd_funcionario']);
+			$cd_cliente = intval($_POST['cd_cliente']);
 			$valor_item = floatval($_POST['valor_item']);
-			$quantidade = intval($_POST['quantidade']); // quantidade nova
+			$quantidade = intval($_POST['quantidade']);
 			$valor_venda = floatval(($valor_item * $quantidade));
 			$calculo_reposicao = $quantidade_antiga = $quantidade_produto_antiga = $quantidade_nova = 0;
 
@@ -51,7 +51,7 @@
 				// Quantidade inicial na tabela venda
 				$procurar_produto = "SELECT quantidade FROM venda WHERE cd_venda = :cd_venda LIMIT 1";
 				$busca_registro = $conexao->prepare($procurar_produto);
-				$busca_registro->bindValue(':cd_venda',$cd_venda);
+				$busca_registro->bindValue(':cd_venda', $cd_venda);
 				$busca_registro->execute();
 				$linha = $busca_registro->fetch(PDO::FETCH_ASSOC);
 				$quantidade_antiga = intval($linha['quantidade']); // quantidade antiga venda
@@ -59,28 +59,28 @@
 				// Buscar a quantidade antiga da tabela produto
 				$procura_quantidade_produto_antiga = "SELECT quantidade FROM produto WHERE cd_produto = :cd_produto LIMIT 1";
 				$busca_registro_produto = $conexao->prepare($procura_quantidade_produto_antiga);
-            	$busca_registro_produto->bindValue(':cd_produto',$cd_produto);
+            	$busca_registro_produto->bindValue(':cd_produto', $cd_produto);
             	$busca_registro_produto->execute();
             	$linha_produto = $busca_registro_produto->fetch(PDO::FETCH_ASSOC);
 				$quantidade_produto_antiga = intval($linha_produto['quantidade']); 
 				
-				// Método que inicializa a(s) transação(ões)
+				// Metodo que inicializa a(s) transacao(oes)
 				$conexao->beginTransaction();
-				// Query que faz a atualização
+				// Query que faz a atualizacao
 				$atualizacao = "UPDATE venda SET cd_produto = :cd_produto, 
 				cd_funcionario = :cd_funcionario, cd_cliente = :cd_cliente, 
 				valor_item = :valor_item, quantidade = :quantidade, 
 				valor_venda = :valor_venda WHERE cd_venda = :cd_venda";
-				// $atualiza_dados recebe $conexao que prepare a operação de atualização
+				// $atualiza_dados recebe $conexao que prepare a operacao de atualizacao
 				$atualiza_dados = $conexao->prepare($atualizacao);
 				// Vincula um valor a um parametro
-				$atualiza_dados->bindValue(':cd_venda',$cd_venda);
-				$atualiza_dados->bindValue(':cd_produto',$cd_produto);
-				$atualiza_dados->bindValue(':cd_funcionario',$cd_funcionario);
-				$atualiza_dados->bindValue(':cd_cliente',$cd_cliente);
-				$atualiza_dados->bindValue(':valor_item',$valor_item);
-				$atualiza_dados->bindValue(':quantidade',$quantidade);
-				$atualiza_dados->bindValue(':valor_venda',$valor_venda);
+				$atualiza_dados->bindValue(':cd_venda', $cd_venda);
+				$atualiza_dados->bindValue(':cd_produto', $cd_produto);
+				$atualiza_dados->bindValue(':cd_funcionario', $cd_funcionario);
+				$atualiza_dados->bindValue(':cd_cliente', $cd_cliente);
+				$atualiza_dados->bindValue(':valor_item', $valor_item);
+				$atualiza_dados->bindValue(':quantidade', $quantidade);
+				$atualiza_dados->bindValue(':valor_venda', $valor_venda);
 				// Executa a operacao
 				$atualiza_dados->execute();
 
@@ -104,8 +104,8 @@
     			// $quantidade_produto recebe $conexao que prepara a transacao para atualiza o estoque na tabela produto
     			$quantidade_produto = $conexao->prepare($calculo_reposicao);
     			// Vincula um valor a um parametro da tabela produto
-    			$quantidade_produto->bindValue(':cd_produto',$cd_produto);
-    			$quantidade_produto->bindValue(':quantidade_nova',$quantidade_nova);
+    			$quantidade_produto->bindValue(':cd_produto', $cd_produto);
+    			$quantidade_produto->bindValue(':quantidade_nova', $quantidade_nova);
     			// Executa a operacao
     			$quantidade_produto->execute();
     			// Confirma a execucao das query's em todas as transacoes  

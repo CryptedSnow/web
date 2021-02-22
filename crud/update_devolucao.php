@@ -28,13 +28,13 @@
 		// Se existir o botao de Atualizar
 		if (isset($_POST['Atualizar'])) {
 			// Especifica a variavel
-			$cd_devolucao = $_POST['cd_devolucao'];
-			$cd_venda = $_POST['cd_venda'];
-			$cd_produto = $_POST['cd_produto'];
-			$valor_item = $_POST['valor_item'];
-			$quantidade = $_POST['quantidade'];
-			$motivo_devolucao = $_POST['motivo_devolucao'];
-			$valor_devolucao = ($valor_item * $quantidade);
+			$cd_devolucao = intval($_POST['cd_devolucao']);
+			$cd_venda = intval($_POST['cd_venda']);
+			$cd_produto = intval($_POST['cd_produto']);
+			$valor_item = floatval($_POST['valor_item'];)
+			$quantidade = intval($_POST['quantidade']);
+			$motivo_devolucao = strval($_POST['motivo_devolucao']);
+			$valor_devolucao = floatval(($valor_item * $quantidade));
 			$calculo_reposicao = $quantidade_atual = $quantidade_inicial = $quantidade_antiga_devolucao = 0;
 
 			// Se a quantidade ou valor do item for menor/igual a zero
@@ -53,7 +53,7 @@
 				// busca_registro recebe $conexao que prepare a operacao de selecao
 				$busca_registro = $conexao->prepare($procurar_produto);
 				// Vincula um valor a um parametro
-				$busca_registro->bindValue(':cd_venda',$cd_venda);
+				$busca_registro->bindValue(':cd_venda', $cd_venda);
 				// Executa a operacao
 				$busca_registro->execute();
 				// Retorna uma matriz contendo todas as linhas do conjunto de resultados
@@ -67,7 +67,7 @@
 				// busca_registro_devolucao recebe $conexao que prepare a operacao de selecao
 				$busca_registro_devolucao = $conexao->prepare($procurar_produto_devolucao);
 				// Vincula um valor a um parametro
-				$busca_registro_devolucao->bindValue(':cd_devolucao',$cd_devolucao);
+				$busca_registro_devolucao->bindValue(':cd_devolucao', $cd_devolucao);
 				// Executa a operacao
 				$busca_registro_devolucao->execute();
 				// Retorna uma matriz contendo todas as linhas do conjunto de resultados

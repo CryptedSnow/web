@@ -28,14 +28,14 @@
 		// Se existir o botao de Atualizar
 		if(isset($_POST['Atualizar'])){	 
 			// Especifica a variavel externa
-			$cd_cliente = $_POST['cd_cliente'];
-			$nome = $_POST['nome'];
-			$cpf = $_POST['cpf'];
-			$telefone = $_POST['telefone'];
-			$email = $_POST['email'];
-			$cidade = $_POST['cidade'];
-			$bairro = $_POST['bairro'];
-			$rua = $_POST['rua'];
+			$cd_cliente = intval($_POST['cd_cliente']);
+			$nome = strval($_POST['nome']);
+			$cpf = strval($_POST['cpf']);
+			$telefone = strval($_POST['telefone']);
+			$email = strval($_POST['email']);
+			$cidade = strval($_POST['cidade']);
+			$bairro = strval($_POST['bairro']);
+			$rua = strval($_POST['rua']);
 			$numero = intval($_POST['numero']);
 			// Se a atualizacao for possivel de realizar
 			try {
@@ -47,14 +47,14 @@
 				$atualiza_dados = $conexao->prepare($atualizacao);
 				// Vincula um valor a um parametro
 				$atualiza_dados->bindValue(':cd_cliente',$cd_cliente);
-				$atualiza_dados->bindValue(':nome',$nome);
-			    $atualiza_dados->bindValue(':cpf',$cpf);
-			    $atualiza_dados->bindValue(':telefone',$telefone);
-			    $atualiza_dados->bindValue(':email',$email);
-			    $atualiza_dados->bindValue(':cidade',$cidade);
-			    $atualiza_dados->bindValue(':bairro',$bairro);
-			    $atualiza_dados->bindValue(':rua',$rua);
-			    $atualiza_dados->bindValue(':numero',$numero);
+				$atualiza_dados->bindValue(':nome', $nome);
+				$atualiza_dados->bindValue(':cpf', $cpf);
+				$atualiza_dados->bindValue(':telefone', $telefone);
+				$atualiza_dados->bindValue(':email', $email);
+				$atualiza_dados->bindValue(':cidade', $cidade);
+				$atualiza_dados->bindValue(':bairro', $bairro);
+				$atualiza_dados->bindValue(':rua', $rua);
+				$atualiza_dados->bindValue(':numero', $numero);
 			    // Executa a operacao
 			    $atualiza_dados->execute();
 			    // Retorna para a pagina de formulario de listagem

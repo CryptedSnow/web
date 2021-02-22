@@ -28,15 +28,15 @@
 		// Se existir o botao de Atualizar
 		if(isset($_POST['Atualizar'])){	
 			// Especifica a variavel
-			$cd_fornecedor = $_POST['cd_fornecedor'];
-			$nome = $_POST['nome'];
-			$cnpj = $_POST['cnpj'];
-			$telefone = $_POST['telefone'];
-			$email = $_POST['email'];
-			$estado = $_POST['estado'];
-			$cidade = $_POST['cidade'];
-			$bairro = $_POST['bairro'];
-			$endereco = $_POST['endereco'];
+			$cd_fornecedor = intval($_POST['cd_fornecedor']);
+			$nome = strval($_POST['nome']);
+			$cnpj = strval($_POST['cnpj']);
+			$telefone = strval($_POST['telefone']);
+			$email = strval($_POST['email']);
+			$estado = strval($_POST['estado']);
+			$cidade = strval($_POST['cidade']);
+			$bairro = strval($_POST['bairro']);
+			$endereco = strval($_POST['endereco']);
 			$numero = intval($_POST['numero']);
 			// Se a atualizacao for possivel de realizar
 			try {
@@ -48,16 +48,16 @@
 				// $atualiza_dados recebe $conexao que prepare a operacao de atualizacao
 				$atualiza_dados = $conexao->prepare($atualizacao);
 				// Vincula um valor a um parametro
-				$atualiza_dados->bindValue(':cd_fornecedor',$cd_fornecedor);
-				$atualiza_dados->bindValue(':nome',$nome);
-			    $atualiza_dados->bindValue(':cnpj',$cnpj);
-			    $atualiza_dados->bindValue(':telefone',$telefone);
-			    $atualiza_dados->bindValue(':email',$email);
-			    $atualiza_dados->bindValue(':estado',$estado);
-			    $atualiza_dados->bindValue(':cidade',$cidade);
-			    $atualiza_dados->bindValue(':bairro',$bairro);
-			    $atualiza_dados->bindValue(':endereco',$endereco);
-			    $atualiza_dados->bindValue(':numero',$numero);
+				$atualiza_dados->bindValue(':cd_fornecedor', $cd_fornecedor);
+				$atualiza_dados->bindValue(':nome', $nome);
+				$atualiza_dados->bindValue(':cnpj', $cnpj);
+				$atualiza_dados->bindValue(':telefone', $telefone);
+				$atualiza_dados->bindValue(':email', $email);
+				$atualiza_dados->bindValue(':estado', $estado);
+				$atualiza_dados->bindValue(':cidade', $cidade);
+				$atualiza_dados->bindValue(':bairro', $bairro);
+				$atualiza_dados->bindValue(':endereco', $endereco);
+			    $atualiza_dados->bindValue(':numero', $numero);
 			    // Executa a operacao
 			    $atualiza_dados->execute();
 			    // Retorna para a pagina de formulario de listagem

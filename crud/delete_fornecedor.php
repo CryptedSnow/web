@@ -28,7 +28,7 @@
 		// Se existir o botao de Deletar
 		if(isset($_POST['Deletar'])){	
 			// Especifica a variavel
-			$cd_fornecedor = $_POST['cd_fornecedor'];
+			$cd_fornecedor = intval($_POST['cd_fornecedor']);
 			// Se a remocao for possivel de realizar
 			try {
 			   // Query que faz a remocao
@@ -36,7 +36,7 @@
 			    // $remocao recebe $conexao que prepare a operação de exclusao
 			    $remocao = $conexao->prepare($remove);
 			    // Vincula um valor a um parametro
-			    $remocao->bindValue(':cd_fornecedor',$cd_fornecedor, PDO::PARAM_INT);
+			    $remocao->bindValue(':cd_fornecedor', $cd_fornecedor);
 			    // Executa a operacao
 			    $remocao->execute();
 			    // Retorna para a pagina de formulario de listagem

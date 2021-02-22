@@ -28,8 +28,8 @@
 		// Se existir o botao de Inserir
 		if (isset($_POST['Inserir'])) {
 			// Especifica a variavel
-			$cd_fornecedor = $_POST['cd_fornecedor'];
-			$cd_produto = $_POST['cd_produto'];
+			$cd_fornecedor = intval($_POST['cd_fornecedor']);
+			$cd_produto = intval($_POST['cd_produto']);
 			// Se a atualizacao for possivel de realizar
 			try {
 				// Query que faz a insercao	
@@ -37,8 +37,8 @@
 				// $insere_dados recebe $conexao que prepare a operação de insercao
 				$insere_dados = $conexao->prepare($insercao);
 				// Vincula um valor a um parametro
-				$insere_dados->bindValue(':cd_fornecedor',$cd_fornecedor);
-				$insere_dados->bindValue(':cd_produto',$cd_produto);
+				$insere_dados->bindValue(':cd_fornecedor', $cd_fornecedor);
+				$insere_dados->bindValue(':cd_produto', $cd_produto);
 				// Executa a operacao
 				$insere_dados->execute();
 				// Retorna para a pagina de formulario de listagem

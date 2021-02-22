@@ -28,12 +28,12 @@
 		// Se existir o botao de Inserir
 		if(isset($_POST['Inserir'])){ 
 			// Especifica a variavel
-			$nome = $_POST['nome'];
-			$marca = $_POST['marca'];
-			$codigo_barra = $_POST['codigo_barra'];
-			$cor = $_POST['cor'];
-			$tamanho = $_POST['tamanho'];
-			$genero = $_POST['genero'];
+			$nome = strval($_POST['nome'];)
+			$marca = strval($_POST['marca']);
+			$codigo_barra = strval($_POST['codigo_barra']);
+			$cor = strval($_POST['cor']);
+			$tamanho = strval($_POST['tamanho']);
+			$genero = strval($_POST['genero']);
 			$quantidade = intval($_POST['quantidade']);
 			$valor_compra = floatval($_POST['valor_compra']);
 			$porcentagem_revenda = intval($_POST['porcentagem_revenda']);
@@ -57,16 +57,16 @@
 				// $insere_dados recebe $conexao que prepare a operacao de insercao
 				$insere_dados = $conexao->prepare($insercao);
 				// Vincula um valor a um parametro
-				$insere_dados->bindValue(':nome',$nome);
-				$insere_dados->bindValue(':marca',$marca);
-				$insere_dados->bindValue(':codigo_barra',$codigo_barra);
-				$insere_dados->bindValue(':cor',$cor);
-				$insere_dados->bindValue(':tamanho',$tamanho);
-				$insere_dados->bindValue(':genero',$genero);
-				$insere_dados->bindValue(':quantidade',$quantidade);
-				$insere_dados->bindValue(':valor_compra',$valor_compra);
-				$insere_dados->bindValue(':porcentagem_revenda',$porcentagem_revenda);
-				$insere_dados->bindValue(':valor_revenda',$valor_revenda);
+				$insere_dados->bindValue(':nome', $nome);
+			    $insere_dados->bindValue(':marca', $marca);
+			    $insere_dados->bindValue(':codigo_barra', $codigo_barra);
+			    $insere_dados->bindValue(':cor', $cor);
+			    $insere_dados->bindValue(':tamanho', $tamanho);
+			    $insere_dados->bindValue(':genero', $genero);
+			    $insere_dados->bindValue(':quantidade', $quantidade);
+				$insere_dados->bindValue(':valor_compra', $valor_compra);
+				$insere_dados->bindValue(':porcentagem_revenda', $porcentagem_revenda);
+				$insere_dados->bindValue(':valor_revenda', $valor_revenda);
 				// Executa a operacao
 				$insere_dados->execute();
 				// Retorna para a pagina de formulario de listagem

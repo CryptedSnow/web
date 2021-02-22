@@ -28,10 +28,10 @@
 		// Se existir o botao de Inserir
 		if (isset($_POST['Inserir'])) {
 			// Especifica a variavel
-			$nome = $_POST['nome'];
-			$cpf = $_POST['cpf'];
-			$telefone = $_POST['telefone'];
-			$email = $_POST['email'];
+			$nome = strval($_POST['nome']);
+			$cpf = strval($_POST['cpf']);
+			$telefone = strval($_POST['telefone']);
+			$email = strval($_POST['email']);
 			$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 			// Se a insercao for possivel de realizar
 			try {

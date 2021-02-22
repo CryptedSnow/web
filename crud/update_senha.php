@@ -28,10 +28,10 @@
 		// Se existir o botao de Atualizar
 		if(isset($_POST['Atualizar'])){
 			// Especifica a variavel 
-			$cd_funcionario = $_POST['cd_funcionario'];
-			$senha_atual = $_POST['senha']; 
-			$senha_nova = $_POST['senha_nova'];
-			$confirmar_senha_nova = $_POST['confirmar_senha_nova'];
+			$cd_funcionario = intval($_POST['cd_funcionario']);
+			$senha_atual = strval($_POST['senha']); 
+			$senha_nova = strval($_POST['senha_nova']);
+			$confirmar_senha_nova = strval($_POST['confirmar_senha_nova']);
 			// Query que seleciona chave e nome do funcionario
 			$selecao = $conexao->prepare("SELECT * FROM funcionario WHERE cd_funcionario = :cd_funcionario LIMIT 1");
 			// Especifica a variavel
