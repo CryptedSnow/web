@@ -4,7 +4,7 @@ function buscaDados(){
     var cd_venda = document.querySelector("#cd_venda").value;
     // Verifica se o option selecionado e vazio (value="")
     if(!cd_venda){
-    	// Apaga os valores dos elementos do formulario
+        // Apaga os valores dos elementos do formulario
       	document.forms[0].reset();
       	// Aborta o resto da funcao 
       	return;
@@ -27,6 +27,18 @@ function buscaDados(){
         		document.querySelector("#cd_cliente").value = retornoJson[0].cd_cliente;
         		document.querySelector("#valor_item").value = retornoJson[0].valor_item;
         		document.querySelector("#quantidade").value = retornoJson[0].quantidade;
+        		let elemento = document.getElementById("quantidade");
+        		elemento.innerHTML = "";
+          		// Loop que cria varios options no campo quantidade
+          		for (let i = 0; i <= retornoJson[0].quantidade; i++) {
+		            let option = document.createElement("option");
+		            option.text = option.elemento = i;
+	            	if (i == 0) {
+	              		option.setAttribute("title","Por padrão a opção é zero, escolha abaixo a quantidade desejada.");
+	            	}
+		            option.setAttribute("value", i);
+		            elemento.appendChild(option);
+		        }
     		}
 	    }
     }
