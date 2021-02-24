@@ -219,8 +219,8 @@
 	  			<option value="100" title="Opção 100%">100%</option>			
 			</select>
 		</p>
-		<button name="Atualizar" id="botao" title="Botão para atualizar o produto">Atualizar produto</button>
-		<button type="reset" title="Botão para limpar todos os campos do formulário">Limpar formulário</button>
+		<button name="Atualizar" id="botao" title="Botão para atualizar o produto"> Atualizar produto </button>
+		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
 	</form>
 </body>
 </html>

@@ -15,6 +15,11 @@
 		echo "<script> alert('Ação inválida, entre no sistema da maneira correta.'); location.href='/web/index.php' </script>";
 		die;
 	}
+	// Caso o usuario atual seja um Atendente 
+	if ($_SESSION['cargo_usuario'] == "Atendente") {
+		echo "<script> alert('Só o gerente pode cadastrar novos funcionários.'); location.href='/web/inicio.php' </script>";
+		die;
+	}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -99,7 +104,6 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-
 	<form method="POST" autocomplete="off" action="../crud/insert_funcionario.php" onsubmit="exibirNome()">
 		<p> Nome: <input type="text" name="nome" id="nome" title="Campo para inserir o nome do funcionário" size="30" maxlength="30" required=""> </p>
 		<p> CPF: <input type="text" name="cpf" id="cpf" size="30" title="Campo para inserir o CPF do funcionário" minlength="14" required=""> </p>
@@ -110,8 +114,8 @@
 			<i class="fa fa-eye" id="text" aria-hidden="true" title="Ocultar senha"></i>
 			<i class="fa fa-eye-slash" id="pass" aria-hidden="true" title="Exibir senha"></i>
 		</p>
-		<button id="botao" name="Inserir" title="Botão para cadastrar o funcionário">Cadastrar funcionário</button>
-		<button type="reset" title="Botão para limpar todos os campos do formulário">Limpar formulário</button>
+		<button id="botao" name="Inserir" title="Botão para cadastrar o funcionário"> Cadastrar funcionário </button>
+		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
 	</form>
 </body>
 </html>

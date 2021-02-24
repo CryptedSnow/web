@@ -135,7 +135,7 @@
 
 	<form method="POST" autocomplete="off" action="../crud/update_devolucao.php" onsubmit="exibirNome()">
 		<p> ID devolução:
-			<select name="cd_devolucao" id="cd_devolucao" onclick="buscaDados()" required="" title="Caixa de seleção para escolher uma devolução a ser atualizado">
+			<select onclick="buscaDados()" name="cd_devolucao" id="cd_devolucao" required="" title="Caixa de seleção para escolher uma devolução a ser atualizado">
 				<option value="" title="Por padrão a opção é vazia, escolha abaixo ID de devolução"> Nenhum </option>
 				<?php foreach($resultado_devolucao as $v0): ?>
     				<option title="<?= $v0['cd_devolucao'] ?>" value="<?= $v0['cd_devolucao'] ?>"><?= $v0['cd_devolucao'] ?></option>
@@ -163,23 +163,19 @@
 		<p> Valor do item: <input type="number" step="any" name="valor_item" id="valor_item" placeholder="R$0.00" title="Campo para atualizar o valor do produto" size=30 required="" readonly="readonly"> </p>
 		<p> Quantidade:
 			<select name="quantidade" id="quantidade" required="" title="Caixa de seleção para atualizar a quantidade para devolução">
-				<option value="0" title="Por padrão a opção é zero, escolha abaixo a quantidade desejada" selected> 0 unidades </option>
-				<?php
-					
-				?>
 			</select>
 		</p>
 		<p> Motivo da devolução:
 			<select name="motivo_devolucao" id="motivo_devolucao" required="" title="Caixa de seleção para atualizar o motivo da devolução">
-				<option value="" title="Por padrão a opção é vazia, escolha abaixo o motivo da devolução">Nenhum selecionado</option>
-				<option value="Produto danificado" title="Produto danificado">Produto danificado</option>
-				<option value="Tamanho errado" title="Tamanho errado">Tamanho errado</option>
-				<option value="Gênero errado de roupa" title="Gênero errado de roupa">Gênero errado de roupa</option>
-				<option value="Arrependimento de compra" title="Arrependimento de compra">Arrependimento de compra</option>
+				<option value="" title="Por padrão a opção é vazia, escolha abaixo o motivo da devolução"> Nenhum selecionado </option>
+				<option value="Produto danificado" title="Produto danificado"> Produto danificado </option>
+				<option value="Tamanho errado" title="Tamanho errado"> Tamanho errado </option>
+				<option value="Gênero errado de roupa" title="Gênero errado de roupa"> Gênero errado de roupa </option>
+				<option value="Arrependimento de compra" title="Arrependimento de compra"> Arrependimento de compra </option>
 			</select>
 		</p>
 		<button name="Atualizar" title="Botão para atualizar a devolução"> Atualizar devolução </button>
-		<button type="reset" title="Botão para limpar todos os campos do formulário"> Limpar formulário </button>
+		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
 	</form>
 </body>
 </html>

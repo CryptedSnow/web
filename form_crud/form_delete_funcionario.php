@@ -24,28 +24,6 @@
 	<link rel="stylesheet" href="/web/css/css.css">
 	<script type="text/javascript" src="/web/js/alerta/alerta_delete.js" charset="UTF-8"></script>
 <body> 
-	<?php
-
-		// Mostrar todos os erros do php
-		ini_set('display_errors', '1');
-		ini_set('display_startup_errors', '1');
-		error_reporting(E_ALL);
-
-		// Se a selecao for possivel de realizar
-		try {
-			// Query que seleciona chave e nome do funcionario
-			$seleciona_nomes = $conexao->query("SELECT cd_funcionario, nome FROM funcionario WHERE cargo != 'Administrador'");
-			// Resulta em uma matriz
-			$resultado_selecao = $seleciona_nomes->fetchAll();
-		// Se a selecao nao for possivel de realizar
-		} catch (PDOException $falha_selecao) {
-			echo "A listagem de dados não foi feita".$falha_selecao->getMessage();
-			die;
-		} catch (Exception $falha) {
-			echo "Erro não característico do PDO".$falha->getMessage();
-			die;
-		}
-	?>
 	<nav id="menu">
 		<ul>
 			<li> <a href="/web/inicio.php"> Início </a> </li>
@@ -118,15 +96,14 @@
 
 	<form method="POST" autocomplete="off" action="../crud/delete_funcionario.php" onsubmit="exibirNome()">
 		<p> ID funcionário:
-			<select name="cd_funcionario" required="" id="cd_funcionario" title="Caixa de seleção para escolher o funcionário a ser excluído">
-				<option value="" title="Opção vazia, escolha abaixo o fornecedor a ser excluído"> Nenhum </option>
-	  			<?php foreach($resultado_selecao as $valor): ?>
-    				<option title="<?= $valor['nome'] ?>" value="<?= $valor['cd_funcionario'] ?>"><?= $valor['nome'] ?></option>
-				<?php endforeach ?>
+			<select name="cd_funcionario" required="" id="cd_funcionario" 
+			title="Caixa de seleção para escolher o funcionário a ser excluído">
+				<option title="<?= $_SESSION['nome_usuario'] ?>" 
+				value="<?= $_SESSION['id_usuario'] ?>"><?= $_SESSION['nome_usuario'] ?></option>
 			</select>
 		</p>
-		<button name="Deletar" id="botao" title="Botão para excluir o funcionário">Deletar funcionário</button>
-		<button type="reset" title="Botão para limpar todos os campos do formulário">Limpar formulário</button>
+		<button name="Deletar" id="botao" title="Botão para excluir o funcionário"> Deletar funcionário </button>
+		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
 	</form>
 	<?php
 		// Se a seleca for possivel de realizar

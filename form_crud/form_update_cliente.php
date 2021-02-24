@@ -138,8 +138,8 @@
 		<p> Bairro: <input type="text" name="bairro" id="bairro" title="Campo para atualizar o bairro do cliente" size="30"  maxlength="30" required=""> </p>
 		<p> Rua: <input type="text" name="rua" id="rua" title="Campo para atualizar o nome da rua do cliente" size="30" maxlength="30" required=""> </p>
 		<p> Número: <input type="number" id="numero" title="Campo para atualizar o número da residência do cliente" name="numero" size="5" required=""> </p>
-		<button id="botao" name="Atualizar" title="Botão para atualizar cliente">Atualizar cliente</button>
-		<button type="reset" title="Botão para limpar todos os campos do formulário">Limpar formulário</button>
+		<button id="botao" name="Atualizar" title="Botão para atualizar cliente"> Atualizar cliente </button>
+		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
 	</form>
 </body>
 </html>

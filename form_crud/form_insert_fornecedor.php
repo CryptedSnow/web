@@ -108,8 +108,8 @@
 		<p> Bairro: <input type="text" name="bairro" id="bairro" title="Campo para inserir o bairro do fornecedor" size="30" maxlength="30" required=""> </p>
 		<p> Rua: <input type="text" name="endereco" id="endereco" title="Campo para inserir a rua do fornecedor" size="30" maxlength="30" required=""> </p>
 		<p> Número: <input type="number" id="numero" title="Campo para inserir o número do comércio do fornecedor" name="numero" size="5" required=""> </p>
-		<button id="botao" name="Inserir" title="Botão para cadastrar o fornecedor">Cadastrar fornecedor</button>
-		<button type="reset" title="Botão para limpar todos os campos do formulário">Limpar formulário</button>
+		<button id="botao" name="Inserir" title="Botão para cadastrar o fornecedor"> Cadastrar fornecedor </button>
+		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
 	</form>
 </body>
 </html> 

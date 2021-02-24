@@ -148,10 +148,6 @@
 		<p> Valor do item: <input type="number" step="any" name="valor_item" id="valor_item" placeholder="R$0.00" title="Campo para inserir o valor do produto" size=30 required="" readonly="readonly"> </p>
 		<p> Quantidade:
 			<select name="quantidade" id="quantidade" required="" title="Caixa de seleção para escolher a quantidade para devolução">
-				<option value="0" title="Por padrão a opção é zero, escolha abaixo a quantidade desejada" selected> 0 unidades </option>
-				<?php
-					
-				?>
 			</select>
 		</p>
 		<p> Motivo da devolução:
@@ -164,7 +160,7 @@
 			</select>
 		</p>
 		<button name="Inserir" title="Botão para cadastrar a devolução"> Cadastrar devolução </button>
-		<button type="reset" title="Botão para limpar todos os campos do formulário"> Limpar formulário </button>
+		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
 	</form>
 </body>
 </html>

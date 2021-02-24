@@ -155,7 +155,7 @@
 			</select>
 		</p>
 		<button name="Atualizar" id="botao" title="Botão para atualizar a compra"> Atualizar compra </button>
-		<button type="reset" title="Botão para limpar todos os campos do formulário">Limpar formulário</button>
+		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
 	</form>
 </body>
 </html> 

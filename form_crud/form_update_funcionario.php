@@ -30,28 +30,6 @@
 	<script type="text/javascript" src="/web/js/alerta/alerta_update.js" charset="UTF-8"></script>
 </head>
 <body>
-	<?php
-
-		// Mostrar todos os erros do php
-		ini_set('display_errors', '1');
-		ini_set('display_startup_errors', '1');
-		error_reporting(E_ALL);
-
-		// Se a selecao for possivel de realizar
-		try {
-			// Query que seleciona chave e nome do funcionario
-			$seleciona_nomes = $conexao->query("SELECT cd_funcionario, nome FROM funcionario WHERE cargo != 'Administrador'");
-			// Resulta em uma matriz
-			$resultado_selecao = $seleciona_nomes->fetchAll();
-		// Se a selecao nao for possivel de realizar
-		} catch (PDOException $falha_selecao) {
-			echo "A listagem de dados não foi feita".$falha_selecao->getMessage();
-			die;
-		} catch (Exception $falha) {
-			echo "Erro não característico do PDO".$falha->getMessage();
-			die;
-		}
-	?>
 	<nav id="menu">
 		<ul>
 			<li> <a href="/web/inicio.php"> Início </a> </li>
@@ -123,20 +101,20 @@
 	</nav>
 
 	<form method="POST" autocomplete="off" action="../crud/update_funcionario.php" onsubmit="exibirNome()">
+		<p> * Os campos são preenchidos ao carregar a página ou quando o registro ID funcionario é clicado. </p>
 		<p> ID funcionário:
-		<select onclick="buscaDados()" id="cd_funcionario" name="cd_funcionario" required="" title="Caixa de seleção para escolher o funcionário a ser atualizado">
-			<option value="" title="Opção vazia, escolha abaixo o funcionário a ser atualizado"> Nenhum </option>
-  			<?php foreach($resultado_selecao as $valor): ?>
-    				<option title="<?= $valor['nome'] ?>" value="<?= $valor['cd_funcionario'] ?>"><?= $valor['nome'] ?></option>
-				<?php endforeach ?>
-		</select>
+			<select onclick="buscaDados()" name="cd_funcionario" required="" id="cd_funcionario" 
+			title="Caixa de seleção para escolher o funcionário a ser atualizado">
+				<option title="<?= $_SESSION['nome_usuario'] ?>" 
+				value="<?= $_SESSION['id_usuario'] ?>"><?= $_SESSION['nome_usuario'] ?></option>
+			</select>
 		</p>
 		<p> Nome: <input type="text" name="nome" id="nome" title="Campo para atualizar o nome do funcionário" size="30" maxlength="30" required=""> </p>
 		<p> CPF: <input type="text" name="cpf" id="cpf" title="Campo para atualizar o CPF do funcionário" size="30" minlength="14" required=""> </p>
 		<p> Telefone: <input type="text" name="telefone" id="telefone" title="Campo para atualizar o telefone do funcionário" size="30" minlength="14" required=""> </p>
 		<p> Email: <input type="email" name="email" id="email" title="Campo para atualizar o email de login do funcionário" size="30" maxlength="50" required=""> </p>
-		<button name="Atualizar" id="botao" title="Botão para atualizar funcionário">Atualizar funcionário</button>
-		<button type="reset" title="Botão para limpar todos os campos do formulário">Limpar formulário</button>
+		<button name="Atualizar" id="botao" title="Botão para atualizar funcionário"> Atualizar funcionário </button>
+		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
 	</form>
 </body>
 </html>

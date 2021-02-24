@@ -147,7 +147,7 @@
 		</select>
 		</p>
 		<p> ID produto:
-			<select onclick="buscaDados()" name="cd_produto" id="cd_produto" required="" title="Caixa de seleção para escolher a roupa a ser atualizada" readonly="readonly" tabindex="-1" aria-disabled="true">
+			<select name="cd_produto" id="cd_produto" required="" title="Caixa de seleção para escolher a roupa a ser atualizada" readonly="readonly" tabindex="-1" aria-disabled="true">
 				<option value="" title="Por padrão a opção é vazia, escolha abaixo o produto desejado"> Nenhum </option>
 	  			<?php foreach($resultado_produto as $v1): ?>
     				<option title="<?= $v1['nome'] ?>" value="<?= $v1['cd_produto'] ?>"><?= $v1['nome'] ?></option>
@@ -173,14 +173,10 @@
 		<p> Valor do item: <input type="number" step="any" name="valor_item" placeholder="R$0.00" id="valor_item" title="Campo para atualizar o valor da peça de roupa" required="" readonly="readonly"> </p>
 		<p> Quantidade:
 			<select name="quantidade" id="quantidade" required="" title="Caixa de seleção para atualizar a quantidade para venda">
-				<option value="0" title="Por padrão a opção é zero, escolha abaixo a quantidade desejada" selected> 0 unidades </option>
-				<?php
-					
-				?>
 			</select>
 		</p>
 		<button name="Atualizar" title="Botão para atualizar a venda"> Atualizar venda </button>
-		<button type="reset" title="Botão para limpar todos os campos do formulário">Limpar formulário</button>
+		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
 	</form>
 </body>
 </html> 

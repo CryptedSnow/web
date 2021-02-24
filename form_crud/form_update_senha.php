@@ -27,30 +27,6 @@
     <script type="text/javascript" src="/web/js/alerta/alerta_senha.js" charset="UTF-8"></script>
 </head>
 <body>
-	<?php
-
-		// Mostrar todos os erros do php
-		ini_set('display_errors', '1');
-		ini_set('display_startup_errors', '1');
-		error_reporting(E_ALL);
-
-		// Se a selecao for possivel de realizar
-		try {
-
-			// Query que seleciona chave e nome do funcionario
-			$seleciona_nomes = $conexao->query("SELECT cd_funcionario, nome FROM funcionario WHERE cargo != 'Administrador' ");
-			// Resulta em uma matriz
-			$resultado_selecao = $seleciona_nomes->fetchAll();	
-
-		// Se a selecao nao for possivel de realizar
-		} catch (PDOException $falha_selecao) {
-			echo "A listagem de dados não foi feita".$falha_selecao->getMessage();
-			die;
-		} catch (Exception $falha) {
-			echo "Erro não característico do PDO".$falha->getMessage();
-			die;
-		}
-	?>
 	<nav id="menu">
 		<ul>
 			<li> <a href="/web/inicio.php"> Início </a> </li>
@@ -124,10 +100,7 @@
     <form method="POST" autocomplete="off" action="../crud/update_senha.php" onsubmit="exibirNome()">
         <p> ID funcionário:
             <select id="cd_funcionario" name="cd_funcionario" required="" title="Caixa de seleção para escolher o funcionário a ter sua senha atualizada">
-                <option value="" title="Opção vazia, escolha abaixo o funcionário"> Nenhum </option>
-                <?php foreach($resultado_selecao as $v1): ?>
-                    <option title="<?= $v1['nome'] ?>" value="<?= $v1['cd_funcionario'] ?>"><?= $v1['nome'] ?></option>
-                <?php endforeach ?>
+                <option title="<?= $_SESSION['nome_usuario'] ?>" value="<?= $_SESSION['id_usuario'] ?>"><?= $_SESSION['nome_usuario'] ?></option>
             </select>
         </p>
         <p> Senha atual:
@@ -152,7 +125,7 @@
             <i class="fa fa-eye-slash" id="pass2" aria-hidden="true" title="Exibir a nova senha"></i>
         </p>
         <button name="Atualizar" id="botao" title="Botão para atualizar a senha"> Atualizar senha </button>
-        <button type="reset" title="Botão para limpar todos os campos do formulário"> Limpar formulário </button>
+        <button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
     </form>
 </body>
 </html>

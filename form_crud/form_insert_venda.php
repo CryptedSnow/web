@@ -157,17 +157,13 @@
 				<?php endforeach ?>
 			</select>
 		</p>
-		<p> Valor do item: <input type="number" step="any" placeholder="R$0.00" name="valor_item" id="valor_item" title="Campo para inserir o valor peça de roupa" required="" readonly="readonly"> </p>
+		<p> Valor do item: <input type="number" step="any" placeholder="R$0.00" name="valor_item" id="valor_item" title="Campo para inserir o valor da peça de roupa" required="" readonly="readonly"> </p>
 		<p> Quantidade:
-			<select name="quantidade" id="quantidade" required="" title="Caixa de seleção para escolher a quantidade para venda">
-				<option value="0" title="Por padrão a opção é zero, escolha abaixo a quantidade desejada" selected> 0 unidades </option>
-				<?php
-					
-				?>
+			<select name="quantidade" id="quantidade" required="" title="Caixa de seleção para inserir a quantidade para venda">
 			</select>
 		</p>
 		<button name="Inserir" title="Botão para cadastrar a venda"> Cadastrar venda </button>
-		<button type="reset" title="Botão para limpar todos os campos do formulário"> Limpar formulário </button>
+		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
 	</form>
 </body>
 </html>

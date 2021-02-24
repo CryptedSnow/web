@@ -189,8 +189,8 @@
 	  			<option value="100" title="Opção 100%">100%</option>		
 		</select>
 		</p>
-		<button name="Inserir" title="Botão para cadastrar o produto">Cadastrar produto</button>
-		<button type="reset" title="Botão para limpar todos os campos do formulário">Limpar formulário</button>
+		<button name="Inserir" title="Botão para cadastrar o produto"> Cadastrar produto </button>
+		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
 	</form>
 </body>
 </html> 
