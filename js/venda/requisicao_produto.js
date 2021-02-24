@@ -22,19 +22,19 @@ function buscaDados(){
 		      var retornoJson = JSON.parse(ajax.responseText);
 		      // Preenche os campos com o retorno dos dados em cada campo
 		      document.querySelector("#valor_item").value = retornoJson[0].valor_revenda;
-          document.querySelector("#quantidade").value = retornoJson[0].quantidade;
-          let elemento = document.getElementById("quantidade");
-          elemento.innerHTML = "";
-          // Loop que cria varios options no campo quantidade
-          for (let i = 0; i <= retornoJson[0].quantidade; i++) {
-            let option = document.createElement("option");
-            option.text = option.elemento = i;
-            if (i == 0) {
-              option.setAttribute("title","Por padrão a opção é zero, escolha abaixo a quantidade desejada.");
-            }
-            option.setAttribute("value", i);
-            elemento.appendChild(option);
-          }
+              document.querySelector("#quantidade").value = retornoJson[0].quantidade;
+              let elemento = document.getElementById("quantidade");
+              elemento.innerHTML = "";
+              // Loop que cria varios options no campo quantidade
+              for (let i = 0; i <= retornoJson[0].quantidade; i++) {
+            	let option = document.createElement("option");
+            	option.text = option.elemento = i;
+	            	if (i == 0) {
+	              		option.setAttribute("title","Por padrão a opção é zero, escolha abaixo a quantidade desejada.");
+	            	}
+	            	option.setAttribute("value", i);
+	            	elemento.appendChild(option);
+          		}
 		    }
 	    }
     }
