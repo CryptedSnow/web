@@ -31,7 +31,7 @@
 			$cd_devolucao = intval($_POST['cd_devolucao']);
 			$cd_venda = intval($_POST['cd_venda']);
 			$cd_produto = intval($_POST['cd_produto']);
-			$valor_item = floatval($_POST['valor_item'];)
+			$valor_item = floatval($_POST['valor_item']);
 			$quantidade = intval($_POST['quantidade']);
 			$motivo_devolucao = strval($_POST['motivo_devolucao']);
 			$valor_devolucao = floatval(($valor_item * $quantidade));

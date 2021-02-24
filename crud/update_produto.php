@@ -29,7 +29,7 @@
 		if(isset($_POST['Atualizar'])){
 			// Especifica a variavel
 			$cd_produto = intval($_POST['cd_produto']);
-			$nome = strval($_POST['nome'];)
+			$nome = strval($_POST['nome']);
 			$marca = strval($_POST['marca']);
 			$codigo_barra = strval($_POST['codigo_barra']);
 			$cor = strval($_POST['cor']);

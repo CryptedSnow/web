@@ -55,7 +55,7 @@
 				echo "A inserção não foi feita" . $falha_insercao->getMessage();
 				die;
 			} catch (Exception $falha) {
-				echo "Erro não característico do PDO".$falha->getMessage();
+				echo "Erro não característico do PDO" . $falha->getMessage();
 				die;
 			}
 		// Caso nao exista

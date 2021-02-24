@@ -28,7 +28,7 @@
 		// Se existir o botao de Inserir
 		if(isset($_POST['Inserir'])){ 
 			// Especifica a variavel
-			$nome = strval($_POST['nome'];)
+			$nome = strval($_POST['nome']);
 			$marca = strval($_POST['marca']);
 			$codigo_barra = strval($_POST['codigo_barra']);
 			$cor = strval($_POST['cor']);

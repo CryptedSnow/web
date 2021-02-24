@@ -41,7 +41,7 @@
 
 			// Se o for um gerente
 			if ($tipo_cargo == "Gerente") {
-				echo "O gerente {$nome_usuario} não pode ser excluído do sistema por ele ser um gerente, refaça novamente a operação.";
+				echo "O gerente {$nome_usuario} não pode ser excluído do sistema, refaça novamente a operação.";
 				echo '<p><a href="../form_crud/form_delete_funcionario.php" 
 				title="Refazer a operação"><button>Refazer operação</button></a></p>';
 				exit;
@@ -49,8 +49,7 @@
 
 			// Se o for um Administrador
 			if ($tipo_cargo == "Administrador") {
-				echo "O administrador {$nome_usuario} não pode ser excluído do sistema por ele ser um administrador, 
-				refaça novamente a operação.";
+				echo "O administrador {$nome_usuario} não pode ser excluído, refaça novamente a operação.";
 				echo '<p><a href="../form_crud/form_delete_funcionario.php" 
 				title="Refazer a operação"><button>Refazer operação</button></a></p>';
 				exit;
