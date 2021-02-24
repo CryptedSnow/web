@@ -8,7 +8,8 @@
 	// Se existir $_SESSION['id_usuario'] e nao for vazio
 	if((isset($_SESSION['id_usuario'])) && (!empty($_SESSION['id_usuario']))){
 		// Mensagem
-		echo "Olá " . $_SESSION['nome_usuario'] . "!";
+		echo "Usuário: " . $_SESSION['nome_usuario'] . "<br/> ";
+		echo "Cargo: " . $_SESSION['cargo_usuario'];
 	// Se nao
 	} else {
 		// Retorna para a pagina index.php

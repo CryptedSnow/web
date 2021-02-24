@@ -8,7 +8,8 @@
 	// Se existir $_SESSION['id_usuario'] e nao for vazio
 	if((isset($_SESSION['id_usuario'])) && (!empty($_SESSION['id_usuario']))){
 		// Mensagem
-		echo "Olá " . $_SESSION['nome_usuario'] . "!";
+		echo "Usuário: " . $_SESSION['nome_usuario'] . "<br/> ";
+		echo "Cargo: " . $_SESSION['cargo_usuario'];
 	// Se nao
 	} else {
 		// Retorna para a pagina index.php
@@ -130,7 +131,7 @@
 		<p> Código de barra: <input type="text" id="codigo" name="codigo_barra" title="Campo para inserir o código de barra da peça de roupa" size="30" minlength="15" required=""> </p>
 		<p> Cor:
       		<select name="cor" id="cor" required="" title="Caixa de seleção para inserir a cor da roupa">
-          		<option value="" title="Por padrão a opção é vazia, escolha abaixo a cor desejada">Nenhum</option>
+          		<option value="" title="Por padrão a opção é vazia, escolha abaixo a cor desejada"> Nenhum </option>
           		<option value="Preto" title="Cor preta">Preto</option>
           		<option value="Branco" title="Cor branca">Branco</option>
           		<option value="Cinza" title="Cor cinza">Cinza</option>
