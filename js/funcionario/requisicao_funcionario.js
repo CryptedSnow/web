@@ -17,18 +17,19 @@ function buscaDados(){
     ajax.onreadystatechange = function(){
     	// Se completar a requisicao
 	    if(ajax.readyState == 4){
-	        // Se retornar
+	      // Se retornar
 		    if(ajax.status == 200){
-		        // Converte a string retornada para dados em JSON no JS
-		        var retornoJson = JSON.parse(ajax.responseText);
-		        // Preenche os campos com o retorno dos dados em cada campo
-		        document.querySelector("#nome").value = retornoJson[0].nome;
-		        document.querySelector("#cpf").value = retornoJson[0].cpf;
-		        document.querySelector("#telefone").value = retornoJson[0].telefone;
-		        document.querySelector("#email").value = retornoJson[0].email;
+		      // Converte a string retornada para dados em JSON no JS
+		      var retornoJson = JSON.parse(ajax.responseText);
+		      // Preenche os campos com o retorno dos dados em cada campo
+		      document.querySelector("#nome").value = retornoJson[0].nome;
+		      document.querySelector("#cpf").value = retornoJson[0].cpf;
+		      document.querySelector("#telefone").value = retornoJson[0].telefone;
+		      document.querySelector("#email").value = retornoJson[0].email;
 		    }
 	    }
     }
     // Envia a solicitacao
     ajax.send();
 }
+window.onload = buscaDados;
