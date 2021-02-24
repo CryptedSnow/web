@@ -133,7 +133,7 @@
 		</select>
 		</p>
 		<p> Roupa:
-      		<select onchange="onChangeSelect(this)" name="nome" id="nome" required="" title="Caixa de seleção para atualizar a roupa">
+      		<select name="nome" id="nome" required="" title="Caixa de seleção para atualizar a roupa">
           		<option value="" title="Por padrão a opção é vazia, escolha abaixo o tamanho desejado"> Nenhum </option>
           		<option value="Camiseta" title="Opção Camiseta">Camiseta</option>
           		<option value="Calça" title="Opção Calça">Calça</option>
@@ -180,17 +180,17 @@
 		<p> Tamanho:
 			<select name="tamanho" id="tamanho" title="Caixa de seleção para atualizar o tamanho da peça de roupa" required="">
 				<option value="" title="Opção vazia, escolha abaixo o tamanho desejado"> Nenhum </option>
-	  			<option value="P" title="Opção tamanho P">P</option>
-	  			<option value="M" title="Opção tamanho M">M</option>
-	  			<option value="G" title="Opção tamanho G">G</option>
-	  			<option value="GG" title="Opção tamanho GG">GG</option>
+	  			<option value="P" title="Opção tamanho P"> P </option>
+	  			<option value="M" title="Opção tamanho M"> M </option>
+	  			<option value="G" title="Opção tamanho G"> G </option>
+	  			<option value="GG" title="Opção tamanho GG"> GG </option>
 			</select>
 		</p>
 		<p> Gênero:
 			<select name="genero" id="genero" title="Caixa de seleção para atualizar o gênero da peça de roupa" required="">
 				<option value="" title="Opção vazia, escolha abaixo o tipo desejado"> Nenhum </option>
-	  			<option value="M" title="Opção masculino">M</option>
-	  			<option value="F" title="Opção feminino">F</option>	
+	  			<option value="M" title="Opção masculino"> M </option>
+	  			<option value="F" title="Opção feminino"> F </option>	
 			</select>
 		</p>
 		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" title="Campo para atualizar a quantidade da peça de roupa" size="30" required=""> </p>

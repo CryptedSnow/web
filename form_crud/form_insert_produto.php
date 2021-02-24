@@ -159,7 +159,7 @@
 		<select name="genero" id="genero" title="Caixa de seleção para escolher o gênero da roupa" required="">
 			<option value="" title="Por padrão a opção é vazia, escolha abaixo o tipo desejado"> Nenhum </option>
   			<option value="M" title="Opção masculino">M</option>
-  			<option value="F" datitle="Opção feminino">F</option>	
+  			<option value="F" title="Opção feminino">F</option>	
 		</select>
 		</p>
 		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" title="Campo para inserir a quantidade de peças de roupa" size=30 required=""> </p>
