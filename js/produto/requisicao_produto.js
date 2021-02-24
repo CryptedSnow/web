@@ -30,7 +30,7 @@ function buscaDados(){
 		      document.querySelector("#genero").value = retornoJson[0].genero;
 		      document.querySelector("#quantidade").value = retornoJson[0].quantidade;
 		      document.querySelector("#valor_compra").value = retornoJson[0].valor_compra;
-          document.querySelector("#porcentagem_revenda").value = retornoJson[0].porcentagem_revenda;
+              document.querySelector("#porcentagem_revenda").value = retornoJson[0].porcentagem_revenda;
 		    }
 	    }
     }
