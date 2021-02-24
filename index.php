@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if (isset($_SESSION['id_usuario'])) {
+		echo "<script> alert('Você já está logado! faça logout para sair do sistema.'); location.href='/web/inicio.php' </script>";
+		die;
+	}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
