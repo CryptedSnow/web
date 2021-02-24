@@ -7,12 +7,11 @@
 	session_start();
 	// Se existir $_SESSION['id_usuario'] e nao for vazio
 	if((isset($_SESSION['id_usuario'])) && (!empty($_SESSION['id_usuario']))){
-		// Mensagem
 		echo "";
 	// Se nao
 	} else {
 		// Retorna para a pagina index.php
-		echo "<script> alert('Ação inválida, entre no sistema da maneira correta.'); location.href='/web/index.php' </script>";
+		//echo "<script> alert('Ação inválida, entre no sistema da maneira correta.'); location.href='/web/index.php' </script>";
 		die;
 	}
 ?>
@@ -28,7 +27,7 @@
     $seleciona_qnt->execute();
     $linha_qnt = $seleciona_qnt->fetchColumn();
 
-    if ($qnt_reg <= 0) {
+    if ($linha_qnt <= 0) {
         echo "<script> alert('Não existem registros de devoluções para gerar uma planilha.'); window.close(); </script>";
         die;
     }
