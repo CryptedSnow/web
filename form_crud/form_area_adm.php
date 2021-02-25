@@ -16,21 +16,42 @@
 		echo "<script> alert('Ação inválida, entre no sistema da maneira correta.'); location.href='/web/index.php' </script>";
 		die;
 	}
+	// Caso o usuario atual seja diferente de ADM
+	if ($_SESSION['cargo_usuario'] != "Administrador") {
+		echo "<script> alert('Só o administrador pode acessar essa área.'); location.href='/web/inicio.php' </script>";
+		die;
+	}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title> Atualizar funcionário </title>
+	<title> Aréa Administrador </title>
 	<link rel="stylesheet" href="/web/css/css.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-	<script type="text/javascript" src="/web/js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="/web/js/jquery.mask.min.js"></script>	
-	<script type="text/javascript" src="/web/js/funcionario/mascara_funcionario.js"></script>
-	<script type="text/javascript" src="/web/js/funcionario/requisicao_funcionario.js"></script>
-	<script type="text/javascript" src="/web/js/alerta/alerta_update.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="/web/js/funcionario/requisicao_adm.js"></script>
+	<script type="text/javascript" src="/web/js/alerta/alerta_adm.js" charset="UTF-8"></script>
 </head>
 <body>
+	<?php
+		// Mostrar todos os erros do php
+		ini_set('display_errors', '1');
+		ini_set('display_startup_errors', '1');
+		error_reporting(E_ALL);
+		// Se a selecao for possivel de realizar
+		try {
+			// Query que seleciona chave e nome do funcionario
+			$seleciona_funcionario = $conexao->query("SELECT cd_funcionario, nome FROM funcionario WHERE cargo != 'Administrador'");
+			// Resulta em uma matriz
+			$resultado_funcionario = $seleciona_funcionario->fetchAll();
+		// Se a selecao nao for possivel de realizar
+		} catch (PDOException $falha_selecao) {
+			echo "A listagem de dados não foi feita".$falha_selecao->getMessage();
+			die;
+		} catch (Exception $falha) {
+			echo "Erro não característico do PDO".$falha->getMessage();
+			die;
+		}
+	?>
 	<nav id="menu">
 		<ul>
 			<li> <a href="/web/inicio.php"> Início </a> </li>
@@ -106,21 +127,79 @@
 		</ul>
 	</nav>
 
-	<form method="POST" autocomplete="off" action="../crud/update_funcionario.php" onsubmit="exibirNome()">
-		<p> * Os campos são preenchidos ao carregar a página ou quando o registro ID funcionario é clicado. </p>
+	<form method="POST" autocomplete="off" action="../crud/area_adm.php" onsubmit="exibirNome()">
 		<p> ID funcionário:
-			<select onclick="buscaDados()" name="cd_funcionario" required="" id="cd_funcionario" 
-			title="Caixa de seleção para escolher o funcionário a ser atualizado">
-				<option title="<?= $_SESSION['nome_usuario'] ?>" 
-				value="<?= $_SESSION['id_usuario'] ?>"><?= $_SESSION['nome_usuario'] ?></option>
+			<select onclick="buscaDados()" name="cd_funcionario" id="cd_funcionario" required="" title="Caixa de seleção para escolher o funcionário">
+				<option value="" title="Por padrão a opção é vazia, escolha abaixo o funcionário"> Nenhum </option>
+	  			<?php foreach($resultado_funcionario as $v1): ?>
+    				<option title="<?= $v1['nome'] ?>" value="<?= $v1['cd_funcionario'] ?>"><?= $v1['nome'] ?></option>
+				<?php endforeach ?>
 			</select>
 		</p>
-		<p> Nome: <input type="text" name="nome" id="nome" title="Campo para atualizar o nome do funcionário" size="30" maxlength="30" required=""> </p>
-		<p> CPF: <input type="text" name="cpf" id="cpf" title="Campo para atualizar o CPF do funcionário" size="30" minlength="14" required=""> </p>
-		<p> Telefone: <input type="text" name="telefone" id="telefone" title="Campo para atualizar o telefone do funcionário" size="30" minlength="14" required=""> </p>
-		<p> Email: <input type="email" name="email" id="email" title="Campo para atualizar o email de login do funcionário" size="30" maxlength="50" required=""> </p>
+		<p> Cargo atual:
+      		<select name="cargo" id="cargo" required="" title="Cargo atual do funcionário" readonly="readonly" tabindex="-1" aria-disabled="true">
+          		<option value="" title="Por padrão a opção é vazia"> Nenhum </option>
+          		<option value="Atendente" title="Opção atendente"> Atendente </option>
+          		<option value="Gerente" title="Opção gerente"> Gerente </option>
+      		</select>
+  		</p>
+		<p> Novo cargo:
+      		<select name="novo_cargo" required="" title="Novo cargo do funcionário">
+          		<option value="" title="Por padrão a opção é vazia"> Nenhum </option>
+          		<option value="Atendente" title="Opção atendente"> Atendente </option>
+          		<option value="Gerente" title="Opção gerente"> Gerente </option>
+      		</select>
+  		</p>
 		<button name="Atualizar" id="botao" title="Botão para atualizar funcionário"> Atualizar funcionário </button>
 		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
 	</form>
+	<?php
+		// Se a seleca for possivel de realizar
+		try {
+			// Query que faz a selecao
+			$selecao = "SELECT * FROM funcionario WHERE cargo != 'Administrador'";
+			// $seleciona_dados recebe $conexao que prepare a operacao para selecionar
+			$seleciona_dados = $conexao->prepare($selecao);
+			// Executa a operacao
+			$seleciona_dados->execute();
+			// Retorna uma matriz contendo todas as linhas do conjunto de resultados
+			$linhas = $seleciona_dados->fetchAll(PDO::FETCH_ASSOC);
+		// Se a selecao nao for possivel de realizar
+		} catch (PDOException $falha_selecao) {
+			echo "A listagem de dados não foi feita".$falha_selecao->getMessage();
+			die;
+		} catch (Exception $falha) {
+			echo "Erro não característico do PDO".$falha->getMessage();
+			die;
+		}
+	?>
+	<table border="1">
+		<tr> 
+			<th title="ID"> ID </th> 
+			<th title="Nome"> Nome </th> 
+			<th title="Cargo"> Cargo </th>
+			<th title="CPF"> CPF </th> 
+		    <th title="Telefone"> Telefone </th>
+		    <th title="Email"> Email </th>
+		    <th title="Ações"> Ações </th>
+		</tr>
+		<?php 
+			// Loop para exibir as linhas
+			foreach ($linhas as $exibir_colunas){
+				echo '<tr>';
+		 		echo '<td title="'.$exibir_colunas['cd_funcionario'].'">'.$exibir_colunas['cd_funcionario'].'</td>';
+		 		echo '<td title="'.$exibir_colunas['nome'].'">'.$exibir_colunas['nome'].'</td>';
+		 		echo '<td title="'.$exibir_colunas['cargo'].'">'.$exibir_colunas['cargo'].'</td>';
+		 		echo '<td title="'.$exibir_colunas['cpf'].'">'.$exibir_colunas['cpf'].'</td>';
+		 		echo '<td title="'.$exibir_colunas['telefone'].'">'.$exibir_colunas['telefone'].'</td>';
+		 		echo '<td title="'.$exibir_colunas['email'].'">'.$exibir_colunas['email'].'</td>';
+		 		echo '<td>'."<a href='../form_crud/form_insert_funcionario.php' title='Cadastrar funcionário'>INSERT</a> ".
+		 		"<a href='../form_crud/form_select_funcionario.php' title='Listar funcionários'>SELECT</a> ".
+		 		"<a href='../form_crud/form_update_funcionario.php' title='Atualizar funcionário'>UPDATE</a> ".
+		 		"<a href='../form_crud/form_delete_funcionario.php' title='Deletar funcionário'>DELETE</a>".'</td>';
+		 		echo '</tr>'; echo '</p>';
+			}
+		?>
+	</table>
 </body>
 </html>

@@ -18,7 +18,7 @@
 	}
 	// Caso o usuario atual seja um Atendente 
 	if ($_SESSION['cargo_usuario'] == "Atendente") {
-		echo "<script> alert('Só o gerente pode cadastrar novos funcionários.'); location.href='/web/inicio.php' </script>";
+		echo "<script> alert('Só o gerente ou administrador podem cadastrar novos funcionários.'); location.href='/web/inicio.php' </script>";
 		die;
 	}
 ?>
@@ -101,7 +101,12 @@
 					<li> <a href="/web/form_crud/caixa_devolucao.php" title="Fluxo de devoluções"> Fluxo de devoluções </a> </li> 
 				</ul>
 			</li>
-			<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
+			<li class="submenu"> <a> Configurações </a>
+				<ul>
+					<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
+					<li> <a href="/web/form_crud/form_area_adm.php" title="Área Administrador"> Área Administrador </a> </li> 
+				</ul>
+			</li>
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
