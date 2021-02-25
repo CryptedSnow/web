@@ -112,6 +112,13 @@
 	</nav>
 	<form method="POST" autocomplete="off" action="../crud/insert_funcionario.php" onsubmit="exibirNome()">
 		<p> Nome: <input type="text" name="nome" id="nome" title="Campo para inserir o nome do funcionário" size="30" maxlength="30" required=""> </p>
+		<p> Cargo:
+      		<select name="cargo" id="cargo" required="" title="Caixa de seleção para escolher o cargo do funcionário" required="">
+          		<option value="" title="Por padrão a opção é vazia, selecione abaixo um cargo"> Nenhum </option>
+          		<option value="Atendente" title="Opção atendente"> Atendente </option>
+          		<option value="Gerente" title="Opção gerente"> Gerente </option>
+      		</select>
+  		</p>
 		<p> CPF: <input type="text" name="cpf" id="cpf" size="30" title="Campo para inserir o CPF do funcionário" minlength="14" required=""> </p>
 		<p> Telefone: <input type="text" name="telefone" id="telefone" title="Campo para inserir o telefone do funcionário" size="30" minlength="14" required=""> </p>
 		<p> Email: <input type="email" name="email" id="email" title="Campo para inserir o email de login do funcionário" size="30" maxlength="50" required=""> </p>
