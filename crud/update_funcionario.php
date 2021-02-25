@@ -46,8 +46,11 @@
 				$atualiza_dados->bindValue(':cpf', $cpf);
 				$atualiza_dados->bindValue(':telefone', $telefone);
 				$atualiza_dados->bindValue(':email', $email);
+				// Caso altere o nome do usuario sera exibido seu novo nome na tela do sistema
+				$_SESSION['nome_usuario'] = $nome;
 			    // Executa a operacao
 			    $atualiza_dados->execute();
+
 			    // Retorna para a pagina de formulario de listagem
 				header('Location: ../form_crud/form_select_funcionario.php');	
 			// Caso a atualizacao for possivel de realizar
