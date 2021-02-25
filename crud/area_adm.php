@@ -44,6 +44,8 @@
 				// Vincula um valor a um parametro
 				$atualiza_dados->bindValue(':cd_funcionario',$cd_funcionario);
 				$atualiza_dados->bindValue(':novo_cargo', $novo_cargo);
+				// Caso altere o cargo do usuario sera exibido seu novo cargo na tela do sistema
+				$_SESSION['cargo_usuario'] = $novo_cargo;
 			    // Executa a operacao
 			    $atualiza_dados->execute();
 			    // Retorna para a pagina de formulario de listagem

@@ -29,6 +29,7 @@
 		if (isset($_POST['Inserir'])) {
 			// Especifica a variavel
 			$nome = strval($_POST['nome']);
+			$cargo = strval($_POST['cargo']);
 			$cpf = strval($_POST['cpf']);
 			$telefone = strval($_POST['telefone']);
 			$email = strval($_POST['email']);
@@ -36,12 +37,13 @@
 			// Se a insercao for possivel de realizar
 			try {
 				// Query que faz a insercao
-				$insercao = "INSERT INTO funcionario (nome,cpf,telefone,email,senha) 
-				VALUES (:nome,:cpf,:telefone,:email,:senha)";
+				$insercao = "INSERT INTO funcionario (nome,cargo,cpf,telefone,email,senha) 
+				VALUES (:nome,:cargo,:cpf,:telefone,:email,:senha)";
 				// $insere_dados recebe $conexao que prepare a operacao de insercao
 				$insere_dados = $conexao->prepare($insercao);
 				// Vincula um valor a um parametro
 				$insere_dados->bindValue(':nome', $nome);
+				$insere_dados->bindValue(':cargo', $cargo);
 				$insere_dados->bindValue(':cpf', $cpf);
 				$insere_dados->bindValue(':telefone', $telefone);
 				$insere_dados->bindValue(':email', $email);
