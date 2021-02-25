@@ -71,7 +71,7 @@
 					exit;
 				} elseif ($_SESSION['cargo_usuario'] == "Atendente") {
             		session_destroy();
-					echo "<script> alert('{$nome_usuario}, você acabou de se excluir. Procure o Administrador do sistema.'); location.href='/web/index.php' </script>";
+					echo "<script> alert('{$nome_usuario}, você acabou de se excluir. Procure o gerente ou administrador do sistema.'); location.href='/web/index.php' </script>";
 					exit;
 				}
 			// Se a remocao nao for possivel de realizar
