@@ -202,7 +202,7 @@
       		<select name="quantidade" id="quantidade" required="" title="Caixa de seleção para atualizar a quantidade de peças de roupa">
           		<?php  
           			for ($i=0; $i <= 50; $i++) { 
-          				echo "<option title=$i value=$i> $i </option>";
+          				echo "<option value=$i> $i unidade(s) </option>";
           			}
           		?>
       		</select>
