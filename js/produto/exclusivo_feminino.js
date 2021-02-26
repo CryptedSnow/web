@@ -16,9 +16,5 @@ document.addEventListener("DOMContentLoaded", function(){
             document.getElementById("genero").value = "";
             document.getElementById("genero").removeAttribute("readonly", true);
         }    
-        if (document.getElementById("cd_produto").selectedIndex == 0) {
-            document.getElementById("genero").value = "";
-            document.getElementById("genero").setAttribute("readonly", true);
-        }
     });
 });
