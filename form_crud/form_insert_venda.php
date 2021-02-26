@@ -169,7 +169,6 @@
 			</select>
 		</p>
 		<button name="Inserir" title="Botão para cadastrar a venda"> Cadastrar venda </button>
-		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
 	</form>
 </body>
 </html>

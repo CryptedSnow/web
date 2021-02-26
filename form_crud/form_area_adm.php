@@ -150,8 +150,7 @@
           		<option value="Gerente" title="Opção gerente"> Gerente </option>
       		</select>
   		</p>
-		<button name="Atualizar" id="botao" title="Botão para atualizar funcionário"> Atualizar funcionário </button>
-		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
+		<button name="Atualizar" title="Botão para atualizar funcionário"> Atualizar funcionário </button>
 	</form>
 	<?php
 		// Se a seleca for possivel de realizar

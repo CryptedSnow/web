@@ -132,8 +132,7 @@
 				<?php endforeach ?>
 			</select>
 		</p>
-		<button name="Deletar" id="botao" title="Botão para excluir o cliente"> Deletar cliente </button>
-		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
+		<button name="Deletar" title="Botão para excluir o cliente"> Deletar cliente </button>
 	</form>
 	<?php
 		// Se a selecao for possível de realizar

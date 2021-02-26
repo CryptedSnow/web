@@ -144,9 +144,9 @@
           		<option value="Calça" title="Opção Calça">Calça</option>
           		<option value="Bermuda" title="Opção Bermuda">Bermuda</option>
           		<option value="Jaqueta" title="Opção Jaqueta">Jaqueta</option>
-          		<option data-f value="Saia" title="Opção Saia">Saia</option>
-          		<option data-f value="Macacão" title="Opção Macacão">Macacão</option>
-          		<option data-f value="Vestido" title="Opção Vestido">Vestido</option>
+          		<option value="Saia" title="Opção Saia">Saia</option>
+          		<option value="Macacão" title="Opção Macacão">Macacão</option>
+          		<option value="Vestido" title="Opção Vestido">Vestido</option>
       		</select>
   		</p>
   		<p> Marca:
@@ -185,17 +185,17 @@
 		<p> Tamanho:
 			<select name="tamanho" id="tamanho" title="Caixa de seleção para atualizar o tamanho da peça de roupa" required="">
 				<option value="" title="Opção vazia, escolha abaixo o tamanho desejado"> Nenhum </option>
-	  			<option value="P" title="Opção tamanho P"> P </option>
-	  			<option value="M" title="Opção tamanho M"> M </option>
-	  			<option value="G" title="Opção tamanho G"> G </option>
-	  			<option value="GG" title="Opção tamanho GG"> GG </option>
+	  			<option value="P"> Tamanho P </option>
+  				<option value="M"> Tamanho M </option>
+  				<option value="G"> Tamanho G </option>
+  				<option value="GG"> Tamanho GG </option>
 			</select>
 		</p>
 		<p> Gênero:
-			<select name="genero" id="genero" title="Caixa de seleção para atualizar o gênero da peça de roupa" required="">
+			<select name="genero" id="genero" title="Caixa de seleção para atualizar o gênero da peça de roupa" required="" readonly="readonly" tabindex="-1" aria-disabled="true">
 				<option value="" title="Opção vazia, escolha abaixo o tipo desejado"> Nenhum </option>
-	  			<option value="M" title="Opção masculino"> M </option>
-	  			<option value="F" title="Opção feminino"> F </option>	
+	  			<option value="M"> Masculino </option>
+  				<option value="F"> Feminino </option>		
 			</select>
 		</p>
 		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" title="Campo para atualizar a quantidade da peça de roupa" size="30" required=""> </p>
@@ -225,8 +225,7 @@
 	  			<option value="100" title="Opção 100%">100%</option>			
 			</select>
 		</p>
-		<button name="Atualizar" id="botao" title="Botão para atualizar o produto"> Atualizar produto </button>
-		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
+		<button name="Atualizar" title="Botão para atualizar o produto"> Atualizar produto </button>
 	</form>
 </body>
 </html>

@@ -182,7 +182,6 @@
 			</select>
 		</p>
 		<button name="Atualizar" title="Botão para atualizar a venda"> Atualizar venda </button>
-		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
 	</form>
 </body>
 </html> 

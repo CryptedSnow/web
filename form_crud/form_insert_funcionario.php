@@ -127,8 +127,7 @@
 			<i class="fa fa-eye" id="text" aria-hidden="true" title="Ocultar senha"></i>
 			<i class="fa fa-eye-slash" id="pass" aria-hidden="true" title="Exibir senha"></i>
 		</p>
-		<button id="botao" name="Inserir" title="Botão para cadastrar o funcionário"> Cadastrar funcionário </button>
-		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
+		<button name="Inserir" title="Botão para cadastrar o funcionário"> Cadastrar funcionário </button>
 	</form>
 </body>
 </html>

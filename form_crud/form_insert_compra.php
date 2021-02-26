@@ -146,7 +146,6 @@
 			</select>
 		</p>
 		<button name="Inserir" title="Botão para cadastrar a compra"> Cadastrar compra </button>
-		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
 	</form>
 </body>
 </html>

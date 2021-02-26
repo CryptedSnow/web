@@ -114,8 +114,7 @@
 		<p> Bairro: <input type="text" id="bairro" name="bairro" size="30" title="Campo para inserir o bairro do cliente" maxlength="30" required=""> </p>
 		<p> Rua: <input type="text" id="rua" name="rua" title="Campo para inserir o nome da rua do cliente" size="30" maxlength="30" required=""> </p>
 		<p> Número: <input type="number" id="numero" title="Campo para inserir o número da casa do cliente" name="numero" size="5" required=""> </p>
-		<button name="Inserir" id="botao" title="Botão para cadastrar o cliente"> Cadastrar cliente </button>
-		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
+		<button name="Inserir" title="Botão para cadastrar o cliente"> Cadastrar cliente </button>
 	</form>
 </body>
 </html> 

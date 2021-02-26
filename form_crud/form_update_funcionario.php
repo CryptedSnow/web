@@ -119,8 +119,7 @@
 		<p> CPF: <input type="text" name="cpf" id="cpf" title="Campo para atualizar o CPF do funcionário" size="30" minlength="14" required=""> </p>
 		<p> Telefone: <input type="text" name="telefone" id="telefone" title="Campo para atualizar o telefone do funcionário" size="30" minlength="14" required=""> </p>
 		<p> Email: <input type="email" name="email" id="email" title="Campo para atualizar o email de login do funcionário" size="30" maxlength="50" required=""> </p>
-		<button name="Atualizar" id="botao" title="Botão para atualizar funcionário"> Atualizar funcionário </button>
-		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
+		<button name="Atualizar" title="Botão para atualizar funcionário"> Atualizar funcionário </button>
 	</form>
 </body>
 </html>

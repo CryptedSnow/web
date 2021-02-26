@@ -108,8 +108,7 @@
 				value="<?= $_SESSION['id_usuario'] ?>"><?= $_SESSION['nome_usuario'] ?></option>
 			</select>
 		</p>
-		<button name="Deletar" id="botao" title="Botão para excluir o funcionário"> Deletar funcionário </button>
-		<button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
+		<button name="Deletar" title="Botão para excluir o funcionário"> Deletar funcionário </button>
 	</form>
 	<?php
 		// Se a seleca for possivel de realizar

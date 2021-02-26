@@ -130,8 +130,7 @@
             <i class="fa fa-eye" id="text2" aria-hidden="true" title="Ocultar a nova senha"></i>
             <i class="fa fa-eye-slash" id="pass2" aria-hidden="true" title="Exibir a nova senha"></i>
         </p>
-        <button name="Atualizar" id="botao" title="Botão para atualizar a senha"> Atualizar senha </button>
-        <button type="reset" title="Botão para limpar os campos dos formulário"> Limpar formulário </button>
+        <button name="Atualizar" title="Botão para atualizar a senha"> Atualizar senha </button>
     </form>
 </body>
 </html>
