@@ -30,6 +30,7 @@
 	<link rel="stylesheet" href="/web/css/css.css">
 	<script type="text/javascript" src="/web/js/funcionario/requisicao_adm.js"></script>
 	<script type="text/javascript" src="/web/js/alerta/alerta_adm.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="/web/js/alerta/alerta_exclusao_usuario.js" charset="UTF-8"></script>
 </head>
 <body>
 	<?php
@@ -128,6 +129,8 @@
 	</nav>
 
 	<form method="POST" autocomplete="off" action="../crud/area_adm.php" onsubmit="exibirNome()">
+		<fieldset>
+		<legend> Atualizar cargo do funcionário </legend>
 		<p> ID funcionário:
 			<select onclick="buscaDados()" name="cd_funcionario" id="cd_funcionario" required="" title="Caixa de seleção para escolher o funcionário">
 				<option value="" title="Por padrão a opção é vazia, escolha abaixo o funcionário"> Nenhum </option>
@@ -151,6 +154,23 @@
       		</select>
   		</p>
 		<button name="Atualizar" title="Botão para atualizar funcionário"> Atualizar funcionário </button>
+		</fieldset>
+	</form>
+
+	<form method="POST" autocomplete="off" action="../crud/delete_usuario.php" onsubmit="exibirExclusao()">
+		<fieldset>
+		<legend> Excluir funcionário </legend>
+		<p> ID funcionário:
+			<select name="cd_funcionario" id="cd_funcionario" required="" title="Caixa de seleção para escolher o funcionário a ser excluído">
+				<option value="" title="Por padrão a opção é vazia, escolha abaixo o funcionário"> Nenhum </option>
+	  			<?php foreach($resultado_funcionario as $v1): ?>
+    				<option title="<?= $v1['nome'] ?>" value="<?= $v1['cd_funcionario'] ?>"><?= $v1['nome'] ?></option>
+				<?php endforeach ?>
+			</select>
+		</p>
+		<button name="Deletar" title="Botão para atualizar funcionário"> Excluir funcionario </button>
+		</fieldset>
+		
 	</form>
 	<?php
 		// Se a seleca for possivel de realizar
