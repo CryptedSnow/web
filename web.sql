@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 18-Fev-2021 às 21:27
+-- Tempo de geração: 25-Fev-2021 às 13:59
 -- Versão do servidor: 10.4.14-MariaDB
 -- versão do PHP: 7.3.22
 
@@ -39,15 +39,6 @@ CREATE TABLE `cliente` (
   `numero` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Extraindo dados da tabela `cliente`
---
-
-INSERT INTO `cliente` (`cd_cliente`, `nome`, `cpf`, `telefone`, `email`, `cidade`, `bairro`, `rua`, `numero`) VALUES
-(1, 'Itachi', '430.952.879-02', '(94) 3824-2843', 'itachi@gmail.com', 'Guanambi', 'Akatsuki', 'Amaterasu', 545),
-(2, 'Konan', '843.271.239-09', '(84) 3089-3112', 'konan@gmail.com', 'Guanambi', 'Akatsuki', 'Flores de papel', 4219),
-(3, 'Pain', '437.189.023-82', '(90) 3247-0103', 'pain@gmail.com', 'Guanambi', 'Akatsuki', 'Shinra Tensei', 57);
-
 -- --------------------------------------------------------
 
 --
@@ -60,14 +51,6 @@ CREATE TABLE `compra_fornecedor` (
   `cd_produto` int(11) NOT NULL,
   `data_compra` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `compra_fornecedor`
---
-
-INSERT INTO `compra_fornecedor` (`cd_compra_fornecedor`, `cd_fornecedor`, `cd_produto`, `data_compra`) VALUES
-(1, 1, 1, '2021-02-18 16:46:20'),
-(2, 2, 2, '2021-02-18 16:46:48');
 
 -- --------------------------------------------------------
 
@@ -105,14 +88,6 @@ CREATE TABLE `fornecedor` (
   `numero` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Extraindo dados da tabela `fornecedor`
---
-
-INSERT INTO `fornecedor` (`cd_fornecedor`, `nome`, `cnpj`, `telefone`, `email`, `estado`, `cidade`, `bairro`, `endereco`, `numero`) VALUES
-(1, 'Calças Bahia', '43.872.139/1329-07', '(49) 7052-3477', 'calcas.bahia@gmail.com', 'Bahia', 'Guanambi', 'Bairro 3', 'Rua 16', 4308),
-(2, 'Chacal Roupas', '37.429.043/8743-30', '(90) 8243-9084', 'chacal.roupas@gmail.com', 'Bahia', 'Guanambi', 'Bairro 4', 'Rua 20', 86);
-
 -- --------------------------------------------------------
 
 --
@@ -134,9 +109,7 @@ CREATE TABLE `funcionario` (
 --
 
 INSERT INTO `funcionario` (`cd_funcionario`, `nome`, `cargo`, `cpf`, `telefone`, `email`, `senha`) VALUES
-(1, 'Uenio Viana', 'Gerente', '438.953.729-10', '(30) 4927-3940', 'ueniomlh@gmail.com', '$2y$10$4w46mMBlEsSajjNi5bowp.4isAFqaH4ls2AjGEoRQtcjDJquduGq2'),
-(2, 'Batman', 'Administrador', '384.793.027-11', '(50) 9674-6872', 'batman@gmail.com', '$2y$10$tGhJGZPQOkbZMPLU3XRmFeR754AWvYOp.kDyn.Q66Q1ZY2dcM2f1C'),
-(3, 'Rambo', 'Atendente', '875.209.387-12', '(34) 5618-2373', 'rambo@gmail.com', '$2y$10$f3oibG4W68Vqk45LqpiiyuV1Qs/yP4FFTdnaxkfcnxsk0mT.0SyAS');
+(1, 'Batman', 'Administrador', '250.972.318-12', '(39) 0487-2139', 'batman@gmail.com', '$2y$10$gjtWlViCsinXwodKu6VsTuOlbiHWnPRb9XhqUMtn3a9lq/NQ0iLeK');
 
 -- --------------------------------------------------------
 
@@ -157,15 +130,6 @@ CREATE TABLE `produto` (
   `porcentagem_revenda` int(11) NOT NULL,
   `valor_revenda` decimal(7,2) NOT NULL
 ) ;
-
---
--- Extraindo dados da tabela `produto`
---
-
-INSERT INTO `produto` (`cd_produto`, `nome`, `marca`, `codigo_barra`, `cor`, `tamanho`, `genero`, `quantidade`, `valor_compra`, `porcentagem_revenda`, `valor_revenda`) VALUES
-(1, 'Camiseta', 'Calvin Klein', '8-942171-038913', 'Vermelho', 'M', 'M', 30, '12.79', 65, '21.10'),
-(2, 'Vestido', 'Dudalina', '3-290472-304719', 'Rosa', 'M', 'F', 30, '15.70', 70, '26.69'),
-(3, 'Bermuda', 'Colcci', '2-904171-330942', 'Laranja', 'M', 'M', 40, '12.47', 75, '21.82');
 
 -- --------------------------------------------------------
 
@@ -255,13 +219,13 @@ ALTER TABLE `venda`
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `cd_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `cd_cliente` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `compra_fornecedor`
 --
 ALTER TABLE `compra_fornecedor`
-  MODIFY `cd_compra_fornecedor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `cd_compra_fornecedor` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `devolucao`
@@ -273,7 +237,7 @@ ALTER TABLE `devolucao`
 -- AUTO_INCREMENT de tabela `fornecedor`
 --
 ALTER TABLE `fornecedor`
-  MODIFY `cd_fornecedor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `cd_fornecedor` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `funcionario`
