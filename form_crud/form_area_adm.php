@@ -26,7 +26,7 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title> Aréa Administrador </title>
+	<title> Aréa administrador </title>
 	<link rel="stylesheet" href="/web/css/css.css">
 	<script type="text/javascript" src="/web/js/funcionario/requisicao_adm.js"></script>
 	<script type="text/javascript" src="/web/js/alerta/alerta_adm.js" charset="UTF-8"></script>
