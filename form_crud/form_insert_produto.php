@@ -167,7 +167,15 @@
   			<option value="F"> Feminino </option>	
 		</select>
 		</p>
-		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" title="Campo para inserir a quantidade de peças de roupa" size=30 required=""> </p>
+		<p> Quantidade:
+      		<select name="quantidade" id="quantidade" required="" title="Caixa de seleção para inserir a quantidade de peças de roupa">
+          		<?php  
+          			for ($i=0; $i <= 50; $i++) { 
+          				echo "<option title=$i value=$i> $i </option>";
+          			}
+          		?>
+      		</select>
+  		</p>
 		<p> Valor de compra: <input type="number" step="any" name="valor_compra" id="valor_compra" title="Campo para inserir o valor de compra da peça de roupa" required=""> </p>
 		<p> Porcentagem de revenda:
 		<select name="porcentagem_revenda" id="porcentagem_revenda" 
