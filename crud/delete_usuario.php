@@ -34,6 +34,21 @@
 		if(isset($_POST['Deletar'])){
 			// Especifica a variavel
 			$cd_funcionario = intval($_POST['cd_funcionario']);
+			// Query que verifica se o funcionário fez alguma venda
+			$procurar_key = "SELECT COUNT(cd_venda) AS countFuncionario FROM venda WHERE cd_funcionario = :cd_funcionario";
+			$busca_key = $conexao->prepare($procurar_key);
+			$busca_key->bindValue(':cd_funcionario',$cd_funcionario);
+			$busca_key->execute();
+			$linha2 = $busca_key->fetch(PDO::FETCH_ASSOC);
+			$countFuncionario = $linha2['countFuncionario'];
+			// Se o registro de venda existir na tabela devolucao 
+			if ($countFuncionario > 0) {
+				$pluralSingular = $countFuncionario == 1 ? "uma venda" : "$countFuncionario vendas";
+				echo "Você não pode excluir este funcionário, pois ele realizou $pluralSingular no sistema.";
+				echo '<p><a href="../form_crud/form_area_adm.php" title="Refazer operação">
+				<button>Refazer operação</button></a></p>';
+				exit;
+			}
 			// Se a remocao for possivel de realizar
 			try {
 			    // Query que faz a remocao

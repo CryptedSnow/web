@@ -40,7 +40,7 @@
 			$countDevolucao = $linha2['countDevolucao'];
 
 			// Se o registro de venda existir na tabela devolucao 
-			if ($countDevolucao != 0) {
+			if ($countDevolucao > 0) {
 				$pluralSingular = $countDevolucao == 1 ? "uma devolução" : "$countDevolucao devoluções";
 				echo "Você não pode apagar esse registro, pois está sendo usado em $pluralSingular.";
 				echo '<p><a href="../form_crud/form_delete_venda.php" title="Refazer operação">
