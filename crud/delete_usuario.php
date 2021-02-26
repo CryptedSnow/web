@@ -25,32 +25,30 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title> UPDATE | ÁREA ADMINISTRADOR </title>
+	<title> DELETE | USUÁRIO </title>
 	<link rel="stylesheet" href="/web/css/css.css">
 </head>
 <body>
 	<?php
-		// Se existir o botao de Atualizar
-		if(isset($_POST['Atualizar'])){
-			// Especifica a variavel 
+		// Se existir o botao de Deletar
+		if(isset($_POST['Deletar'])){
+			// Especifica a variavel
 			$cd_funcionario = intval($_POST['cd_funcionario']);
-			$novo_cargo = strval($_POST['novo_cargo']);
-			// Se a atualizacao for possivel de realizar
+			// Se a remocao for possivel de realizar
 			try {
-				// Query que faz a atualizacao
-				$atualizacao = "UPDATE funcionario SET cargo = :novo_cargo WHERE cd_funcionario = :cd_funcionario";
-				// $atualiza_dados recebe $conexao que prepare a operacao de atualizacao
-				$atualiza_dados = $conexao->prepare($atualizacao);
-				// Vincula um valor a um parametro
-				$atualiza_dados->bindValue(':cd_funcionario',$cd_funcionario);
-				$atualiza_dados->bindValue(':novo_cargo', $novo_cargo);
+			    // Query que faz a remocao
+			    $remove = "DELETE FROM funcionario WHERE cd_funcionario = :cd_funcionario";
+			    // $remocao recebe $conexao que prepare a operacao de exclusao
+			    $remocao = $conexao->prepare($remove);
+			    // Vincula um valor a um parametro
+			    $remocao->bindValue(':cd_funcionario', $cd_funcionario);
 			    // Executa a operacao
-			    $atualiza_dados->execute();
-			    // Retorna para a pagina de formulario de listagem
-				header('Location: ../form_crud/form_select_funcionario.php');	
-			// Caso a atualizacao for possivel de realizar
-			} catch (PDOException $falha_atualizacao) {
-			    echo "A atualização não foi feita".$falha_atualizacao->getMessage();
+			    $remocao->execute();
+			    // Redireciona para a pagina de listagem de funcionarios
+			    header('Location: ../form_crud/form_select_funcionario.php');
+			// Se a remocao nao for possivel de realizar
+			} catch (PDOException $falha_remocao) {
+			    echo "A remoção não foi feita".$falha_remocao->getMessage();
 			    die;
 			} catch (Exception $falha) {
 				echo "Erro não característico do PDO".$falha->getMessage();
@@ -61,7 +59,7 @@
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
 			echo '<p><a href="../form_crud/form_area_adm.php" title="Refazer operação"><button>Refazer operação</button></a></p>';
 			exit;
-		} 
+		} 	
 	?>
 </body>
 </html>
