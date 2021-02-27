@@ -155,7 +155,7 @@
 				<?php endforeach ?>
 			</select>
 		</p>
-		<p> Valor do item: <input type="number" step="any" placeholder="R$0.00" name="valor_item" id="valor_item" title="Campo para inserir o valor da roupa" required="" readonly="readonly"> </p>
+		<p> Valor do item: <input type="number" step="any" placeholder="R$0.00" pattern="\d+" name="valor_item" id="valor_item" title="Campo para inserir o valor da roupa" required="" readonly="readonly"> </p>
 		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" title="Campo para inserir a quantidade de roupas para venda" required=""> </p>
 		<button name="Inserir" title="Botão para cadastrar a venda"> Cadastrar venda </button>
 	</form>

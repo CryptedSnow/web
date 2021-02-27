@@ -197,7 +197,7 @@
   				<option value="F"> Feminino </option>		
 			</select>
 		</p>
-		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" title="Campo para atualizar a quantidade de roupas" required=""> </p>
+		<p> Quantidade: <input type="number"  name="quantidade" id="quantidade" pattern="\d+" title="Campo para atualizar a quantidade de roupas" required=""> </p>
 		<p> Valor de compra: <input type="number" step="any" name="valor_compra" id="valor_compra" title="Campo para atualizar o valor de compra da roupa" required=""> </p>
 		<p> Porcentagem de revenda:
 			<select name="porcentagem_revenda" id="porcentagem_revenda" title="Caixa de seleção para atualizar a porcentagem de revenda da roupa" required="">

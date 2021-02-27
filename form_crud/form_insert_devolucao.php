@@ -151,7 +151,7 @@
 			</select>
 		</p>
 		<p> Valor do item: <input type="number" step="any" name="valor_item" id="valor_item" placeholder="R$0.00" title="Campo para inserir o valor da roupa" size=30 required="" readonly="readonly"> </p>
-		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" title="Campo para inserir a quantidade de roupas para devolução" required=""> </p>
+		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" pattern="\d+" title="Campo para inserir a quantidade de roupas para devolução" required=""> </p>
 		<p> Motivo da devolução:
 			<select name="motivo_devolucao" required="" title="Caixa de seleção para escolher o motivo da devolução">
 				<option value="" title="Por padrão a opção é vazia, escolha abaixo o motivo da devolução">Nenhum selecionado</option>

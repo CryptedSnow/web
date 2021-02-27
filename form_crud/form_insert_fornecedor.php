@@ -112,7 +112,7 @@
 		<p> Cidade: <input type="text" name="cidade" id="cidade" title="Campo para inserir a cidade do fornecedor" size="30" maxlength="30" required=""> </p>
 		<p> Bairro: <input type="text" name="bairro" id="bairro" title="Campo para inserir o bairro do fornecedor" size="30" maxlength="30" required=""> </p>
 		<p> Rua: <input type="text" name="endereco" id="endereco" title="Campo para inserir a rua do fornecedor" size="30" maxlength="30" required=""> </p>
-		<p> Número: <input type="number" id="numero" title="Campo para inserir o número do comércio do fornecedor" name="numero" size="5" required=""> </p>
+		<p> Número: <input type="number" id="numero" pattern="\d+" title="Campo para inserir o número do comércio do fornecedor" name="numero" size="5" required=""> </p>
 		<button name="Inserir" title="Botão para cadastrar o fornecedor"> Cadastrar fornecedor </button>
 	</form>
 </body>

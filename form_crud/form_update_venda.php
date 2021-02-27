@@ -169,7 +169,7 @@
 			</select>
 		</p>
 		<p> Valor do item: <input type="number" step="any" name="valor_item" placeholder="R$0.00" id="valor_item" title="Campo para atualizar o valor da roupa" required="" readonly="readonly"> </p>
-		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" title="Campo para atualizar a quantidade de roupas para venda" required=""> </p>
+		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" pattern="\d+" title="Campo para atualizar a quantidade de roupas para venda" required=""> </p>
 		<button name="Atualizar" title="Botão para atualizar a venda"> Atualizar venda </button>
 	</form>
 </body>
