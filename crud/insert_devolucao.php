@@ -30,11 +30,11 @@
 			// Especifica a variavel
 			$cd_venda = intval($_POST['cd_venda']);
 			$cd_produto = intval($_POST['cd_produto']);
-			$valor_item = $_POST['valor_item'];
+			$valor_item = floatval($_POST['valor_item']);
 			$quantidade = intval($_POST['quantidade']);
 			$motivo_devolucao = strval($_POST['motivo_devolucao']);
 			$valor_devolucao = floatval(($valor_item * $quantidade));
-			$quantidade_antiga = 0;
+			$quantidade_antiga = $calculo_reposicao = $reposicao_produto = 0;
 
 			// Se a quantidade ou valor do item for menor/igual a zero
 			if ($quantidade <= 0 || $valor_item <= 0) { 
@@ -48,13 +48,30 @@
 			try {
 				// Tabela VENDA
 				// Query que busca o a quantidade de um registro da tabela venda
-				$procurar_produto = "SELECT quantidade FROM venda WHERE cd_venda = :cd_venda";
-				$busca_registro = $conexao->prepare($procurar_produto);
+				$procurar_venda = "SELECT cd_produto, quantidade FROM venda WHERE cd_venda = :cd_venda";
+				$busca_registro = $conexao->prepare($procurar_venda);
 				$busca_registro->bindValue(':cd_venda', $cd_venda);
 				$busca_registro->execute();
 				$linha = $busca_registro->fetch(PDO::FETCH_ASSOC);
 				// Vincula um valor a um parametro das colunas da tabela venda
 				$quantidade_antiga = $linha['quantidade'];
+
+
+				// Tabela VENDA
+				if ($quantidade > $quantidade_antiga) {
+					// Caso a quantidade devolvida seja maior que a quantidade vendida
+					echo "A quantidade devolvida é maior que a quantidade vendida, refaça novamente a operação.";
+					echo '<p><a href="../form_crud/form_insert_devolucao.php" title="Refazer a operação">
+					<button>Refazer operação</button></a></p>';
+					exit;
+				}
+
+				// Havera retirada de produto (caso a nova quantidade seja menor que a antiga)
+				$calculo_reposicao = "UPDATE venda SET quantidade = (:quantidade_antiga-:quantidade),
+				valor_venda = (valor_item * quantidade) WHERE cd_venda = :cd_venda";
+				
+				$reposicao_produto = "UPDATE produto SET quantidade = (quantidade+:quantidade) 
+				WHERE cd_produto = :cd_produto";
 
 				// Metodo que inicializa a(s) transação(oes)
 				$conexao->beginTransaction();
@@ -72,19 +89,7 @@
 				$insere_dados->bindValue(':motivo_devolucao', $motivo_devolucao);
 				// Executa a operacao
 				$insere_dados->execute();
-
-				// Tabela VENDA
-				if ($quantidade <= $quantidade_antiga) {
-					// Havera retirada de produto (caso a nova quantidade seja menor que a antiga)
-					$calculo_reposicao = "UPDATE venda SET quantidade = (:quantidade_antiga-:quantidade),
-					valor_venda = (valor_item * quantidade) WHERE cd_venda = :cd_venda";
-				} elseif ($quantidade > $quantidade_antiga) {
-					// Caso a quantidade devolvida seja maior que a quantidade vendida
-					echo "A quantidade devolvida é maior que a quantidade vendida, refaça novamente a operação.";
-					echo '<p><a href="../form_crud/form_insert_devolucao.php" title="Refazer a operação">
-					<button>Refazer operação</button></a></p>';
-					exit;
-				}
+				
 				// $quantidade_devolvida prepara a transacao para atualiza o estoque na tabela venda
 				$quantidade_devolvida = $conexao->prepare($calculo_reposicao);
 				// Vincula um valor a um parametro da tabela produto
@@ -93,11 +98,16 @@
 				$quantidade_devolvida->bindValue(':quantidade_antiga', $quantidade_antiga);
 				// Executa a operacao
 				$quantidade_devolvida->execute();
+
+				$devolver_produto = $conexao->prepare($reposicao_produto);
+				$devolver_produto->bindValue(':cd_produto', $linha['cd_produto']);
+				$devolver_produto->bindValue(':quantidade', $quantidade);
+				$devolver_produto->execute();
 				// Confirma a execucao das query's em todas as transacoes  
 				$conexao->commit();
-				// Retorna para a pagina de formulario de listagem
+				// Retorna para a pagina de formulario de insercao
 				header('Location: ../form_crud/form_select_devolucao.php');
-			// Se a atualizacao nao for possivel de realizar
+				// Se a atualizacao nao for possivel de realizar
 			} catch (PDOException $falha_insercao) {
 				echo "A insercão não foi feita".$falha_insercao->getMessage();
 				die;
