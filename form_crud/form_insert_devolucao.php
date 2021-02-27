@@ -114,7 +114,6 @@
 				<ul>
 					<li> <a href="/web/form_crud/form_insert_devolucao.php" title="Cadastrar devolução"> Cadastrar devolução </a> </li>
 					<li> <a href="/web/form_crud/form_select_devolucao.php" title="Listar devoluções"> Listar devoluções </a> </li> 
-					<li> <a href="/web/form_crud/form_update_devolucao.php" title="Atualizar devolução"> Atualizar devolução </a> </li>
 					<li> <a href="/web/form_crud/form_delete_devolucao.php" title="Excluir devolução"> Excluir devolução </a> </li>
 				</ul>
 			</li>
@@ -127,7 +126,7 @@
 			<li class="submenu"> <a> Configurações </a>
 				<ul>
 					<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-					<li> <a href="/web/form_crud/form_area_adm.php" title="Área Administrador"> Área Administrador </a> </li> 
+					<li> <a href="/web/form_crud/form_area_adm.php" title="Área administrador"> Área administrador </a> </li> 
 				</ul>
 			</li>
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
@@ -136,7 +135,7 @@
 	
 	<form method="POST" autocomplete="off" action="../crud/insert_devolucao.php" onsubmit="exibirNome()">
 		<p> ID venda:
-			<select onclick="buscaDados()" name="cd_venda" id="cd_venda" required="" title="Caixa de seleção para escolher um ID da venda">
+			<select onclick="buscaDados()" name="cd_venda" id="cd_venda" required="" title="Caixa de seleção para escolher a venda">
 				<option value="" title="Por padrão a opção é vazia, escolha abaixo ID da venda"> Nenhum </option>
 				<?php foreach($resultado_venda as $v1): ?>
     				<option title="<?= $v1['cd_venda'] ?>" value="<?= $v1['cd_venda'] ?>"><?= $v1['cd_venda'] ?></option>
@@ -144,18 +143,15 @@
 			</select>
 		</p>
 		<p> Produto:
-			<select name="cd_produto" id="cd_produto" required="" title="Caixa de seleção para escolher a peça de roupa" readonly="readonly" tabindex="-1" aria-disabled="true">
+			<select name="cd_produto" id="cd_produto" required="" title="Caixa de seleção para escolher a roupa" readonly="readonly" tabindex="-1" aria-disabled="true">
 				<option value="" title="Por padrão a opção é vazia, escolha abaixo a peça de roupa desejada"> Nenhum </option>
 				<?php foreach($resultado_produto as $v2): ?>
     				<option title="<?= $v2['nome'] ?>" value="<?= $v2['cd_produto'] ?>"><?= $v2['nome'] ?></option>
 				<?php endforeach ?>
 			</select>
 		</p>
-		<p> Valor do item: <input type="number" step="any" name="valor_item" id="valor_item" placeholder="R$0.00" title="Campo para inserir o valor do produto" size=30 required="" readonly="readonly"> </p>
-		<p> Quantidade:
-			<select name="quantidade" id="quantidade" required="" title="Caixa de seleção para escolher a quantidade para devolução">
-			</select>
-		</p>
+		<p> Valor do item: <input type="number" step="any" name="valor_item" id="valor_item" placeholder="R$0.00" title="Campo para inserir o valor da roupa" size=30 required="" readonly="readonly"> </p>
+		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" title="Campo para inserir a quantidade de roupas para devolução" required=""> </p>
 		<p> Motivo da devolução:
 			<select name="motivo_devolucao" required="" title="Caixa de seleção para escolher o motivo da devolução">
 				<option value="" title="Por padrão a opção é vazia, escolha abaixo o motivo da devolução">Nenhum selecionado</option>

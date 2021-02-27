@@ -84,7 +84,6 @@
 				<ul>
 					<li> <a href="/web/form_crud/form_insert_devolucao.php" title="Cadastrar devolução"> Cadastrar devolução </a> </li>
 					<li> <a href="/web/form_crud/form_select_devolucao.php" title="Listar devoluções"> Listar devoluções </a> </li> 
-					<li> <a href="/web/form_crud/form_update_devolucao.php" title="Atualizar devolução"> Atualizar devolução </a> </li>
 					<li> <a href="/web/form_crud/form_delete_devolucao.php" title="Excluir devolução"> Excluir devolução </a> </li>
 				</ul>
 			</li>
@@ -97,7 +96,7 @@
 			<li class="submenu"> <a> Configurações </a>
 				<ul>
 					<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-					<li> <a href="/web/form_crud/form_area_adm.php" title="Área Administrador"> Área Administrador </a> </li> 
+					<li> <a href="/web/form_crud/form_area_adm.php" title="Área administrador"> Área administrador </a> </li> 
 				</ul>
 			</li>
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
@@ -110,7 +109,7 @@
 		minlength="14" required=""> </p>
 		<p> Telefone: <input type="text" id="telefone" name="telefone" title="Campo para inserir o telefone do cliente" size="30" minlength="14" required=""> </p>
 		<p> Email: <input type="email" id="email" name="email" title="Campo para inserir o email do cliente" size="30" maxlength="50" required=""> </p>
-		<p> Cidade: <input type="text" id="cidade" name="cidade" size="30" title="Campo para inserir a cidade em que o cliente vive" maxlength="30" required=""> </p>
+		<p> Cidade: <input type="text" id="cidade" name="cidade" size="30" title="Campo para inserir a cidade do cliente" maxlength="30" required=""> </p>
 		<p> Bairro: <input type="text" id="bairro" name="bairro" size="30" title="Campo para inserir o bairro do cliente" maxlength="30" required=""> </p>
 		<p> Rua: <input type="text" id="rua" name="rua" title="Campo para inserir o nome da rua do cliente" size="30" maxlength="30" required=""> </p>
 		<p> Número: <input type="number" id="numero" title="Campo para inserir o número da casa do cliente" name="numero" size="5" required=""> </p>

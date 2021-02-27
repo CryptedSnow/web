@@ -107,7 +107,6 @@
 				<ul>
 					<li> <a href="/web/form_crud/form_insert_devolucao.php" title="Cadastrar devolução"> Cadastrar devolução </a> </li>
 					<li> <a href="/web/form_crud/form_select_devolucao.php" title="Listar devoluções"> Listar devoluções </a> </li> 
-					<li> <a href="/web/form_crud/form_update_devolucao.php" title="Atualizar devolução"> Atualizar devolução </a> </li>
 					<li> <a href="/web/form_crud/form_delete_devolucao.php" title="Excluir devolução"> Excluir devolução </a> </li>
 				</ul>
 			</li>
@@ -143,7 +142,7 @@
 		<p> Cidade: <input type="text" name="cidade" id="cidade" title="Campo para atualizar a cidade do cliente" size="30"  maxlength="30" required=""> </p>
 		<p> Bairro: <input type="text" name="bairro" id="bairro" title="Campo para atualizar o bairro do cliente" size="30"  maxlength="30" required=""> </p>
 		<p> Rua: <input type="text" name="rua" id="rua" title="Campo para atualizar o nome da rua do cliente" size="30" maxlength="30" required=""> </p>
-		<p> Número: <input type="number" id="numero" title="Campo para atualizar o número da residência do cliente" name="numero" size="5" required=""> </p>
+		<p> Número: <input type="number" id="numero" title="Campo para atualizar o número da casa do cliente" name="numero" size="5" required=""> </p>
 		<button name="Atualizar" title="Botão para atualizar cliente"> Atualizar cliente </button>
 	</form>
 </body>

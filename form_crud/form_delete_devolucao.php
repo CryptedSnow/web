@@ -105,7 +105,6 @@
 				<ul>
 					<li> <a href="/web/form_crud/form_insert_devolucao.php" title="Cadastrar devolução"> Cadastrar devolução </a> </li>
 					<li> <a href="/web/form_crud/form_select_devolucao.php" title="Listar devoluções"> Listar devoluções </a> </li> 
-					<li> <a href="/web/form_crud/form_update_devolucao.php" title="Atualizar devolução"> Atualizar devolução </a> </li>
 					<li> <a href="/web/form_crud/form_delete_devolucao.php" title="Excluir devolução"> Excluir devolução </a> </li>
 				</ul>
 			</li>
@@ -118,7 +117,7 @@
 			<li class="submenu"> <a> Configurações </a>
 				<ul>
 					<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-					<li> <a href="/web/form_crud/form_area_adm.php" title="Área Administrador"> Área Administrador </a> </li> 
+					<li> <a href="/web/form_crud/form_area_adm.php" title="Área administrador"> Área administrador </a> </li> 
 				</ul>
 			</li>
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
@@ -143,8 +142,7 @@
 			$selecao = "SELECT devolucao.cd_devolucao,
 			venda.cd_venda, produto.nome, venda.valor_item,
 			devolucao.quantidade, devolucao.valor_devolucao,
-			venda.quantidade AS qtd_vendida, devolucao.motivo_devolucao, 
-			devolucao.data_devolucao FROM devolucao
+			devolucao.motivo_devolucao, devolucao.data_devolucao FROM devolucao
 			INNER JOIN venda ON (venda.cd_venda = devolucao.cd_venda)
 			INNER JOIN produto ON (produto.cd_produto = devolucao.cd_produto)";
 			// $seleciona_dados recebe $conexao que prepare a operacao para selecionar
@@ -170,7 +168,6 @@
 			<th title="Valor item"> Valor item </th>
 			<th title="Quantidade devolvida"> Quantidade devolvida </th> 
 			<th title="Valor da devolução"> Valor da devolução </th>
-		    <th title="Quantidade vendida"> Quantidade vendida </th>
 		    <th title="Motivo da devolução"> Motivo da devolução </th>
 		    <th title="Data da devolução"> Data da devolução </th>
 		    <th title="Ações"> Ações </th>
@@ -185,7 +182,6 @@
 		 		echo '<td title="R$'.$exibir_colunas['valor_item'].'">R$'.$exibir_colunas['valor_item'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['quantidade'].' produto(s) devolvido(s)">'.$exibir_colunas['quantidade'].'</td>';
 		 		echo '<td title="R$'.$exibir_colunas['valor_devolucao'].'">R$'.$exibir_colunas['valor_devolucao'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['qtd_vendida'].' produto(s) vendidos(s) em estoque">'.$exibir_colunas['qtd_vendida'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['motivo_devolucao'].'">'.$exibir_colunas['motivo_devolucao'].'</td>';
 		 		echo '<td title="'.date('d/m/Y H:i:s', strtotime($exibir_colunas['data_devolucao'])).'">'.
 		 		date('d/m/Y H:i:s', strtotime($exibir_colunas['data_devolucao'])).'</td>';

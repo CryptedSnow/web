@@ -49,11 +49,6 @@
 			// Resulta em uma matriz
 			$resultado_produto = $seleciona_produto->fetchAll();
 
-			// Query que seleciona chave e nome do funcionario
-			$seleciona_funcionario = $conexao->query("SELECT cd_funcionario, nome FROM funcionario WHERE cargo != 'Administrador'");
-			// Resulta em uma matriz
-			$resultado_funcionario = $seleciona_funcionario->fetchAll();
-
 			// Query que seleciona chave e nome do cliente
 			$seleciona_cliente = $conexao->query("SELECT cd_cliente, nome FROM cliente");
 			// Resulta em uma matriz
@@ -123,7 +118,6 @@
 				<ul>
 					<li> <a href="/web/form_crud/form_insert_devolucao.php" title="Cadastrar devolução"> Cadastrar devolução </a> </li>
 					<li> <a href="/web/form_crud/form_select_devolucao.php" title="Listar devoluções"> Listar devoluções </a> </li> 
-					<li> <a href="/web/form_crud/form_update_devolucao.php" title="Atualizar devolução"> Atualizar devolução </a> </li>
 					<li> <a href="/web/form_crud/form_delete_devolucao.php" title="Excluir devolução"> Excluir devolução </a> </li>
 				</ul>
 			</li>
@@ -136,7 +130,7 @@
 			<li class="submenu"> <a> Configurações </a>
 				<ul>
 					<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-					<li> <a href="/web/form_crud/form_area_adm.php" title="Área Administrador"> Área Administrador </a> </li> 
+					<li> <a href="/web/form_crud/form_area_adm.php" title="Área administrador"> Área administrador </a> </li> 
 				</ul>
 			</li>
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
@@ -145,7 +139,7 @@
  
 	<form method="POST" autocomplete="off" action="../crud/update_venda.php" onsubmit="exibirNome()">
 		<p> ID venda:
-		<select onclick="buscaDados()" name="cd_venda" id="cd_venda" required="" title="Caixa de seleção para escolher a venda a ser atualizado">
+		<select onclick="buscaDados()" name="cd_venda" id="cd_venda" required="" title="Caixa de seleção para escolher a venda a ser atualizada">
 			<option value="" title="Opção vazia, escolha abaixo o cliente a ser atualizado"> Nenhum </option>
 			<?php foreach($resultado_vendas as $valor): ?>
     			<option title="<?= $valor['cd_venda'] ?>" value="<?= $valor['cd_venda'] ?>"><?= $valor['cd_venda'] ?></option>
@@ -162,10 +156,8 @@
 		</p>
 		<p> ID funcionário:
 			<select name="cd_funcionario" id="cd_funcionario" required="" title="Caixa de seleção para escolher o funcionário a ser atualizado">
-				<option value="" title="Por padrão a opção é vazia, escolha abaixo o funcionário"> Nenhum </option>
-	  			<?php foreach($resultado_funcionario as $v2): ?>
-    				<option title="<?= $v2['nome'] ?>" value="<?= $v2['cd_funcionario'] ?>"><?= $v2['nome'] ?></option>
-				<?php endforeach ?>
+	  			<option title="<?= $_SESSION['nome_usuario'] ?>" 
+				value="<?= $_SESSION['id_usuario'] ?>"><?= $_SESSION['nome_usuario'] ?></option>
 			</select>
 		</p>
 		<p> ID cliente:
@@ -176,11 +168,8 @@
 				<?php endforeach ?>
 			</select>
 		</p>
-		<p> Valor do item: <input type="number" step="any" name="valor_item" placeholder="R$0.00" id="valor_item" title="Campo para atualizar o valor da peça de roupa" required="" readonly="readonly"> </p>
-		<p> Quantidade:
-			<select name="quantidade" id="quantidade" required="" title="Caixa de seleção para atualizar a quantidade para venda">
-			</select>
-		</p>
+		<p> Valor do item: <input type="number" step="any" name="valor_item" placeholder="R$0.00" id="valor_item" title="Campo para atualizar o valor da roupa" required="" readonly="readonly"> </p>
+		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" title="Campo para atualizar a quantidade de roupas para venda" required=""> </p>
 		<button name="Atualizar" title="Botão para atualizar a venda"> Atualizar venda </button>
 	</form>
 </body>

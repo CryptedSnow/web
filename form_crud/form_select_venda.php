@@ -31,7 +31,7 @@
 			// Query que faz a selecao
 			$selecao = "SELECT venda.cd_venda, produto.nome AS nome_produto, 
 			funcionario.nome AS nome_funcionario, cliente.nome AS nome_cliente, 
-			venda.tipo_pagamento, venda.valor_item, venda.quantidade, produto.quantidade AS estoque,
+			venda.tipo_pagamento, venda.valor_item, venda.quantidade,
 			venda.valor_venda, venda.data_venda FROM venda
 			INNER JOIN produto ON (produto.cd_produto = venda.cd_produto)
 			INNER JOIN funcionario ON (funcionario.cd_funcionario = venda.cd_funcionario)
@@ -106,7 +106,6 @@
 				<ul>
 					<li> <a href="/web/form_crud/form_insert_devolucao.php" title="Cadastrar devolução"> Cadastrar devolução </a> </li>
 					<li> <a href="/web/form_crud/form_select_devolucao.php" title="Listar devoluções"> Listar devoluções </a> </li> 
-					<li> <a href="/web/form_crud/form_update_devolucao.php" title="Atualizar devolução"> Atualizar devolução </a> </li>
 					<li> <a href="/web/form_crud/form_delete_devolucao.php" title="Excluir devolução"> Excluir devolução </a> </li>
 				</ul>
 			</li>
@@ -119,7 +118,7 @@
 			<li class="submenu"> <a> Configurações </a>
 				<ul>
 					<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-					<li> <a href="/web/form_crud/form_area_adm.php" title="Área Administrador"> Área Administrador </a> </li> 
+					<li> <a href="/web/form_crud/form_area_adm.php" title="Área administrador"> Área administrador </a> </li> 
 				</ul>
 			</li>
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
@@ -135,7 +134,6 @@
 			<th title="Cliente"> Cliente </th>
 			<th title="Valor item"> Valor item </th>
 			<th title="Quantidade vendida"> Quantidade vendida </th> 
-		    <th title="Estoque disponível"> Estoque disponível </th>
 		    <th title="Valor da venda"> Valor da venda </th>
 		    <th title="Pagamento"> Pagamento </th>
 		    <th title="Data da venda"> Data da venda </th>
@@ -151,7 +149,6 @@
 		 		echo '<td title="'.$exibir_colunas['nome_cliente'].'">'.$exibir_colunas['nome_cliente'].'</td>';
 		 		echo '<td title="R$'.$exibir_colunas['valor_item'].'">R$'.$exibir_colunas['valor_item'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['quantidade'].' produto(s) vendido(s)">'.$exibir_colunas['quantidade'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['estoque'].' produto(s) em estoque">'.$exibir_colunas['estoque'].'</td>';
 		 		echo '<td title="R$'.$exibir_colunas['valor_venda'].'">R$'.$exibir_colunas['valor_venda'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['tipo_pagamento'].'">'.$exibir_colunas['tipo_pagamento'].'</td>';
 		 		echo '<td title="'.date('d/m/Y H:i:s', strtotime($exibir_colunas['data_venda'])).'">'.

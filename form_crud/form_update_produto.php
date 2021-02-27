@@ -86,7 +86,6 @@
 				<ul>
 					<li> <a href="/web/form_crud/form_insert_devolucao.php" title="Cadastrar devolução"> Cadastrar devolução </a> </li>
 					<li> <a href="/web/form_crud/form_select_devolucao.php" title="Listar devoluções"> Listar devoluções </a> </li> 
-					<li> <a href="/web/form_crud/form_update_devolucao.php" title="Atualizar devolução"> Atualizar devolução </a> </li>
 					<li> <a href="/web/form_crud/form_delete_devolucao.php" title="Excluir devolução"> Excluir devolução </a> </li>
 				</ul>
 			</li>
@@ -99,7 +98,7 @@
 			<li class="submenu"> <a> Configurações </a>
 				<ul>
 					<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-					<li> <a href="/web/form_crud/form_area_adm.php" title="Área Administrador"> Área Administrador </a> </li> 
+					<li> <a href="/web/form_crud/form_area_adm.php" title="Área administrador"> Área administrador </a> </li> 
 				</ul>
 			</li>
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
@@ -130,7 +129,7 @@
 	?>
 	<form method="POST" autocomplete="off" action="../crud/update_produto.php" onsubmit="exibirNome()">
 		<p> ID produto:
-		<select onclick="buscaDados()" name="cd_produto" id="cd_produto" required="" title="Caixa de seleção para escolher o produto a ser atualizado">
+		<select onclick="buscaDados()" name="cd_produto" id="cd_produto" required="" title="Caixa de seleção para escolher a roupa a ser atualizada">
 			<option value="" title="Opção vazia, escolha abaixo o produto a ser atualizado"> Nenhum </option>
   			<?php foreach($resultado_selecao as $valor): ?>
     			<option title="<?= $valor['nome'] ?>" value="<?= $valor['cd_produto'] ?>"><?= $valor['nome'] ?></option>
@@ -164,7 +163,7 @@
           		<option value="FARM" title="Opção FARM">FARM</option>
       		</select>
   		</p>
-		<p> Código de barra: <input type="text" name="codigo_barra" id="codigo" title="Campo para atualizar o código de barra da peça de roupa" size="30" minlength="15" required=""> </p>
+		<p> Código de barra: <input type="text" name="codigo_barra" id="codigo" title="Campo para atualizar o código de barra da roupa" size="30" minlength="15" required=""> </p>
 		<p> Cor:
       		<select name="cor" id="cor" required="" title="Caixa de seleção para atualizar a cor da roupa">
           		<option value="" title="Por padrão a opção é vazia, escolha abaixo a cor desejada"> Nenhum </option>
@@ -183,7 +182,7 @@
       		</select>
   		</p>
 		<p> Tamanho:
-			<select name="tamanho" id="tamanho" title="Caixa de seleção para atualizar o tamanho da peça de roupa" required="">
+			<select name="tamanho" id="tamanho" title="Caixa de seleção para atualizar o tamanho da roupa" required="">
 				<option value="" title="Opção vazia, escolha abaixo o tamanho desejado"> Nenhum </option>
 	  			<option value="P"> Tamanho P </option>
   				<option value="M"> Tamanho M </option>
@@ -192,24 +191,16 @@
 			</select>
 		</p>
 		<p> Gênero:
-			<select name="genero" id="genero" title="Caixa de seleção para atualizar o gênero da peça de roupa" required="" readonly="readonly" tabindex="-1" aria-disabled="true">
+			<select name="genero" id="genero" title="Caixa de seleção para atualizar o gênero da roupa" required="" readonly="readonly" tabindex="-1" aria-disabled="true">
 				<option value="" title="Opção vazia, escolha abaixo o tipo desejado"> Nenhum </option>
 	  			<option value="M"> Masculino </option>
   				<option value="F"> Feminino </option>		
 			</select>
 		</p>
-		<p> Quantidade:
-      		<select name="quantidade" id="quantidade" required="" title="Caixa de seleção para atualizar a quantidade de peças de roupa">
-          		<?php  
-          			for ($i=0; $i <= 50; $i++) { 
-          				echo "<option value=$i> $i unidade(s) </option>";
-          			}
-          		?>
-      		</select>
-  		</p>
-		<p> Valor de compra: <input type="number" step="any" name="valor_compra" id="valor_compra" title="Campo para atualizar o valor de compra da peça de roupa" required=""> </p>
+		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" title="Campo para atualizar a quantidade de roupas" required=""> </p>
+		<p> Valor de compra: <input type="number" step="any" name="valor_compra" id="valor_compra" title="Campo para atualizar o valor de compra da roupa" required=""> </p>
 		<p> Porcentagem de revenda:
-			<select name="porcentagem_revenda" id="porcentagem_revenda" title="Caixa de seleção para escolher a porcentagem de revenda" required="">
+			<select name="porcentagem_revenda" id="porcentagem_revenda" title="Caixa de seleção para atualizar a porcentagem de revenda da roupa" required="">
 				<option value="" title="Por padrão a opção é vazia, escolha abaixo a porcentagem desejado"> Nenhum </option>
 	  			<option value="5" title="Opção 5%">5%</option>		
 	  			<option value="10" title="Opção 10%">10%</option>

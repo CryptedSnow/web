@@ -85,7 +85,6 @@
 				<ul>
 					<li> <a href="/web/form_crud/form_insert_devolucao.php" title="Cadastrar devolução"> Cadastrar devolução </a> </li>
 					<li> <a href="/web/form_crud/form_select_devolucao.php" title="Listar devoluções"> Listar devoluções </a> </li> 
-					<li> <a href="/web/form_crud/form_update_devolucao.php" title="Atualizar devolução"> Atualizar devolução </a> </li>
 					<li> <a href="/web/form_crud/form_delete_devolucao.php" title="Excluir devolução"> Excluir devolução </a> </li>
 				</ul>
 			</li>
@@ -98,7 +97,7 @@
 			<li class="submenu"> <a> Configurações </a>
 				<ul>
 					<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-					<li> <a href="/web/form_crud/form_area_adm.php" title="Área Administrador"> Área Administrador </a> </li> 
+					<li> <a href="/web/form_crud/form_area_adm.php" title="Área administrador"> Área administrador </a> </li> 
 				</ul>
 			</li>
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
@@ -133,7 +132,7 @@
           		<option value="FARM" title="Opção FARM">FARM</option>
       		</select>
   		</p>
-		<p> Código de barra: <input type="text" id="codigo" name="codigo_barra" title="Campo para inserir o código de barra da peça de roupa" size="30" minlength="15" required=""> </p>
+		<p> Código de barra: <input type="text" id="codigo" name="codigo_barra" title="Campo para inserir o código de barra da roupa" size="30" minlength="15" required=""> </p>
 		<p> Cor:
       		<select name="cor" id="cor" required="" title="Caixa de seleção para inserir a cor da roupa">
           		<option value="" title="Por padrão a opção é vazia, escolha abaixo a cor desejada"> Nenhum </option>
@@ -167,19 +166,11 @@
   			<option value="F"> Feminino </option>	
 		</select>
 		</p>
-		<p> Quantidade:
-      		<select name="quantidade" id="quantidade" required="" title="Caixa de seleção para inserir a quantidade de peças de roupa">
-          		<?php  
-          			for ($i=0; $i <= 50; $i++) { 
-          				echo "<option value=$i> $i unidade(s) </option>";
-          			}
-          		?>
-      		</select>
-  		</p>
-		<p> Valor de compra: <input type="number" step="any" name="valor_compra" id="valor_compra" title="Campo para inserir o valor de compra da peça de roupa" required=""> </p>
+		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" title="Campo para inserir a quantidade de roupas" required=""> </p>
+		<p> Valor de compra: <input type="number" step="any" name="valor_compra" id="valor_compra" title="Campo para inserir o valor de compra da roupa" required=""> </p>
 		<p> Porcentagem de revenda:
 		<select name="porcentagem_revenda" id="porcentagem_revenda" 
-		title="Caixa de seleção para escolher a porcentagem de revenda" required="">
+		title="Caixa de seleção para inserir a porcentagem de revenda da roupa" required="">
 			<option value="" title="Por padrão a opção é vazia, escolha abaixo a porcentagem desejado"> Nenhum </option>
 			<option value="5" title="Opção 5%">5%</option>		
 	  			<option value="10" title="Opção 10%">10%</option>
