@@ -102,7 +102,6 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-
 	<form method="POST" autocomplete="off" action="../crud/insert_cliente.php" onsubmit="exibirNome()">
 		<p> Nome: <input type="text" name="nome" id="nome" title="Campo para inserir o nome do cliente" size="30" maxlength="30" required=""> </p>
 		<p> CPF: <input type="text" name="cpf" id="cpf" title="Campo para inserir o CPF do cliente" size="30" 

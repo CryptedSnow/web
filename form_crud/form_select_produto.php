@@ -98,7 +98,6 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-
 	<?php
 		// Se a selecao for possivel de realizar
 		try {

@@ -126,13 +126,12 @@
 			<li class="submenu"> <a> Configurações </a>
 				<ul>
 					<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-					<li> <a href="/web/form_crud/form_area_adm.php" title="Área administrador"> Área administrador </a> </li>  
+					<li> <a href="/web/form_crud/form_area_adm.php" title="Área administrador"> Área administrador </a> </li> 
 				</ul>
 			</li>
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
- 
 	<form method="POST" autocomplete="off" action="../crud/update_compra.php" onsubmit="exibirNome()">
 		<p> ID compra:
 		<select onclick="buscaDados()" name="cd_compra_fornecedor" id="cd_compra_fornecedor" required="" title="Caixa de seleção para escolher a compra a ser atualizada">

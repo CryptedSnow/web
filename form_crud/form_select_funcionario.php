@@ -112,13 +112,12 @@
 			<li class="submenu"> <a> Configurações </a>
 				<ul>
 					<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-					<li> <a href="/web/form_crud/form_area_adm.php" title="Área administrador"> Área administrador </a> </li>  
+					<li> <a href="/web/form_crud/form_area_adm.php" title="Área administrador"> Área administrador </a> </li> 
 				</ul>
 			</li>
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-
 	<p> Procurar funcionário: <input id="nome" title="Campo para procurar determinado funcionário"/></p>
 	<table id="lista" border="1">
 		<tr> 

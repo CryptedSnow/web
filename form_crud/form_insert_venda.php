@@ -131,7 +131,6 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-
 	<form method="POST" autocomplete="off" action="../crud/insert_venda.php" onsubmit="exibirNome()">
 		<p> ID produto:
 			<select onclick="buscaDados()" name="cd_produto" id="cd_produto" required="" title="Caixa de seleção para escolher a roupa">

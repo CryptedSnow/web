@@ -119,13 +119,12 @@
 			<li class="submenu"> <a> Configurações </a>
 				<ul>
 					<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-					<li> <a href="/web/form_crud/form_area_adm.php" title="Área Administrador"> Área Administrador </a> </li> 
+					<li> <a href="/web/form_crud/form_area_adm.php" title="Área administrador"> Área administrador </a> </li> 
 				</ul>
 			</li>
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-
 	<form method="POST" autocomplete="off" action="../crud/update_cliente.php" onsubmit="exibirNome()">
 		<p> ID cliente:
 		<select onclick="buscaDados()" name="cd_cliente" id="cd_cliente" required="" title="Caixa de seleção para escolher o cliente a ser atualizado">

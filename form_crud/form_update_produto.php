@@ -104,9 +104,7 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-
 	<?php
-
 		// Mostrar todos os erros do php
 		ini_set('display_errors', '1');
 		ini_set('display_startup_errors', '1');

@@ -142,7 +142,6 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-
 	<table border="1">
 		<caption title="Movimentação anual"> Movimentação anual </caption>
 		<tr> 

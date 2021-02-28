@@ -123,7 +123,6 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
- 
 	<form method="POST" autocomplete="off" action="../crud/delete_venda.php" onsubmit="exibirNome()">
 		<p> ID venda:
 			<select name="cd_venda" required="" id="cd_venda" title="Caixa de seleção para escolher a venda a ser excluída">

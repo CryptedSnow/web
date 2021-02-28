@@ -98,7 +98,6 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-
 	<form method="POST" autocomplete="off" action="../crud/delete_funcionario.php" onsubmit="exibirNome()">
 		<p> ID funcionário:
 			<select name="cd_funcionario" required="" id="cd_funcionario" 

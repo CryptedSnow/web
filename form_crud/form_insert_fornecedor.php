@@ -96,13 +96,12 @@
 			<li class="submenu"> <a> Configurações </a>
 				<ul>
 					<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-					<li> <a href="/web/form_crud/form_area_adm.php" title="Área administrador"> Área administrador </a> </li>  
+					<li> <a href="/web/form_crud/form_area_adm.php" title="Área administrador"> Área administrador </a> </li> 
 				</ul>
 			</li>
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-
 	<form method="POST" autocomplete="off" action="../crud/insert_fornecedor.php" onsubmit="exibirNome()">
 		<p> Nome: <input type="text" name="nome" id="nome" title="Campo para inserir o nome do fornecedor" size="30" maxlength="30" required=""> </p>
 		<p> CNPJ: <input type="text" name="cnpj" id="cnpj" title="Campo para inserir o CNPJ do fornecedor" size="30" minlength="18" required=""> </p>

@@ -126,7 +126,6 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-
 	<form method="POST" autocomplete="off" action="../crud/insert_compra.php" onsubmit="exibirNome()">
 		<p> ID fornecedor:
 			<select name="cd_fornecedor" id="cd_fornecedor" required="" title="Caixa de seleção para escolher o fornecedor">

@@ -121,7 +121,6 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
- 
 	<form method="POST" autocomplete="off" action="../crud/delete_compra.php" onsubmit="exibirNome()">
 		<p> ID compra:
 			<select name="cd_compra_fornecedor" required="" id="cd_compra_fornecedor" 

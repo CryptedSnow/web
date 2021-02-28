@@ -101,7 +101,6 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
- 
     <form method="POST" autocomplete="off" action="../crud/update_senha.php" onsubmit="exibirNome()">
         <p> ID funcionário:
             <select id="cd_funcionario" name="cd_funcionario" required="" title="Caixa de seleção para escolher o funcionário a ter sua senha atualizada">

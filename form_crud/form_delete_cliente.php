@@ -121,7 +121,6 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-
 	<form method="POST" autocomplete="off" action="../crud/delete_cliente.php" onsubmit="exibirNome()">
 		<p> ID cliente:
 			<select name="cd_cliente" required="" id="cd_cliente" title="Caixa de seleção para escolher o cliente a ser excluído">
