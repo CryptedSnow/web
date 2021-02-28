@@ -34,7 +34,14 @@
 		if(isset($_POST['Atualizar'])){
 			// Especifica a variavel 
 			$cd_funcionario = intval($_POST['cd_funcionario']);
+			$cargo_atual = strval($_POST['cargo']);
 			$novo_cargo = strval($_POST['novo_cargo']);
+			// Se o cargo atual for igual ao novo cargo
+			if ($cargo_atual == $novo_cargo) {
+				echo "O novo cargo não pode ser igual ao antigo cargo, refaça a operação.";
+				echo '<p><a href="../form_crud/form_area_adm.php" title="Refazer operação"><button>Refazer operação</button></a></p>';
+				exit;
+			}
 			// Se a atualizacao for possivel de realizar
 			try {
 				// Query que faz a atualizacao
