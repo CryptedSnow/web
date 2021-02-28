@@ -31,8 +31,10 @@
 			// Query que faz a selecao
 			$selecao = "SELECT devolucao.cd_devolucao,
 			venda.cd_venda, produto.nome, venda.valor_item,
-			devolucao.quantidade, devolucao.valor_devolucao,
-			devolucao.motivo_devolucao, devolucao.data_devolucao FROM devolucao
+			devolucao.quantidade, venda.quantidade AS qtd_vendida,
+			produto.quantidade AS estoque, 
+			devolucao.valor_devolucao, devolucao.motivo_devolucao, 
+			devolucao.data_devolucao FROM devolucao
 			INNER JOIN venda ON (venda.cd_venda = devolucao.cd_venda)
 			INNER JOIN produto ON (produto.cd_produto = devolucao.cd_produto)";
 			// $seleciona_dados recebe $conexao que prepare a operacaoo para selecionar
@@ -131,7 +133,9 @@
 			<th title="ID venda"> ID venda </th>
 			<th title="Produto"> Produto </th>
 			<th title="Valor item"> Valor item </th>
-			<th title="Quantidade devolvida"> Quantidade devolvida </th> 
+			<th title="Quantidade devolvida"> Qtd devolvida </th> 
+			<th title="Quantidade vendida"> Qtd vendida </th>
+			<th title="Estoque"> Estoque </th>  
 			<th title="Valor da devolução"> Valor da devolução </th>
 		    <th title="Motivo da devolução"> Motivo da devolução </th>
 		    <th title="Data da devolução"> Data da devolução </th>
@@ -146,13 +150,14 @@
 		 		echo '<td title="'.$exibir_colunas['nome'].'">'.$exibir_colunas['nome'].'</td>';
 		 		echo '<td title="R$'.$exibir_colunas['valor_item'].'">R$'.$exibir_colunas['valor_item'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['quantidade'].' produto(s) devolvido(s)">'.$exibir_colunas['quantidade'].'</td>';
+		 		echo '<td title="'.$exibir_colunas['qtd_vendida'].' produto(s) vendido(s)">'.$exibir_colunas['qtd_vendida'].'</td>';
+		 		echo '<td title="'.$exibir_colunas['estoque'].' produto(s) em estoque">'.$exibir_colunas['estoque'].'</td>';
 		 		echo '<td title="R$'.$exibir_colunas['valor_devolucao'].'">R$'.$exibir_colunas['valor_devolucao'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['motivo_devolucao'].'">'.$exibir_colunas['motivo_devolucao'].'</td>';
 		 		echo '<td title="'.date('d/m/Y H:i:s', strtotime($exibir_colunas['data_devolucao'])).'">'.
 		 		date('d/m/Y H:i:s', strtotime($exibir_colunas['data_devolucao'])).'</td>';
 		 		echo '<td>'."<a href='../form_crud/form_insert_devolucao.php' title='Cadastrar devolução'>INSERT</a> ".
 		 		"<a href='../form_crud/form_select_devolucao.php' title='Listar devoluções'>SELECT</a> ".
-		 		"<a href='../form_crud/form_update_devolucao.php' title='Atualizar devolução'>UPDATE</a> ".
 		 		"<a href='../form_crud/form_delete_devolucao.php' title='Deletar devolução'>DELETE</a>".'</td>';
 		 		echo '</tr>'; echo '</p>';
 			}

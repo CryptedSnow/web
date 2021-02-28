@@ -141,7 +141,7 @@
 			// Query que faz a selecao
 			$selecao = "SELECT venda.cd_venda, produto.nome AS nome_produto, 
 			funcionario.nome AS nome_funcionario, cliente.nome AS nome_cliente, 
-			venda.tipo_pagamento, venda.valor_item, venda.quantidade,
+			venda.tipo_pagamento, venda.valor_item, venda.quantidade, produto.quantidade AS estoque,
 			venda.valor_venda, venda.data_venda FROM venda
 			INNER JOIN produto ON (produto.cd_produto = venda.cd_produto)
 			INNER JOIN funcionario ON (funcionario.cd_funcionario = venda.cd_funcionario)
@@ -169,6 +169,7 @@
 			<th title="Cliente"> Cliente </th>
 			<th title="Valor item"> Valor item </th>
 			<th title="Quantidade vendida"> Quantidade vendida </th> 
+			<th title="Estoque disponível"> Estoque </th> 
 		    <th title="Valor da venda"> Valor da venda </th>
 		    <th title="Pagamento"> Pagamento </th>
 		    <th title="Data da venda"> Data da venda </th>
@@ -184,6 +185,7 @@
 		 		echo '<td title="'.$exibir_colunas['nome_cliente'].'">'.$exibir_colunas['nome_cliente'].'</td>';
 		 		echo '<td title="R$'.$exibir_colunas['valor_item'].'">R$'.$exibir_colunas['valor_item'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['quantidade'].' produto(s) vendido(s)">'.$exibir_colunas['quantidade'].'</td>';
+		 		echo '<td title="'.$exibir_colunas['estoque'].' produto(s) em estoque">'.$exibir_colunas['estoque'].'</td>';
 		 		echo '<td title="R$'.$exibir_colunas['valor_venda'].'">R$'.$exibir_colunas['valor_venda'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['tipo_pagamento'].'">'.$exibir_colunas['tipo_pagamento'].'</td>';
 		 		echo '<td title="'.date('d/m/Y H:i:s', strtotime($exibir_colunas['data_venda'])).'">'.

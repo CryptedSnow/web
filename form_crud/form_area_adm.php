@@ -199,7 +199,6 @@
 			<th title="CPF"> CPF </th> 
 		    <th title="Telefone"> Telefone </th>
 		    <th title="Email"> Email </th>
-		    <th title="Ações"> Ações </th>
 		</tr>
 		<?php 
 			// Loop para exibir as linhas
@@ -211,10 +210,6 @@
 		 		echo '<td title="'.$exibir_colunas['cpf'].'">'.$exibir_colunas['cpf'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['telefone'].'">'.$exibir_colunas['telefone'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['email'].'">'.$exibir_colunas['email'].'</td>';
-		 		echo '<td>'."<a href='../form_crud/form_insert_funcionario.php' title='Cadastrar funcionário'>INSERT</a> ".
-		 		"<a href='../form_crud/form_select_funcionario.php' title='Listar funcionários'>SELECT</a> ".
-		 		"<a href='../form_crud/form_update_funcionario.php' title='Atualizar funcionário'>UPDATE</a> ".
-		 		"<a href='../form_crud/form_delete_funcionario.php' title='Deletar funcionário'>DELETE</a>".'</td>';
 		 		echo '</tr>'; echo '</p>';
 			}
 		?>
