@@ -62,11 +62,10 @@
 			$busca_key->execute();
 			$linha2 = $busca_key->fetch(PDO::FETCH_ASSOC);
 			$countFuncionario = $linha2['countFuncionario'];
-
-			// Se o registro de venda existir na tabela devolucao 
+ 
 			if ($countFuncionario > 0) {
 				$pluralSingular = $countFuncionario == 1 ? "uma venda" : "$countFuncionario vendas";
-				echo "Você não pode excluir {$nome_usuario}, pois ele realizou $pluralSingular no sistema.";
+				echo "{$nome_usuario} não pode ser excluído, pois ele realizou $pluralSingular no sistema.";
 				echo '<p><a href="../form_crud/form_delete_funcionario.php" title="Refazer operação">
 				<button>Refazer operação</button></a></p>';
 				exit;
