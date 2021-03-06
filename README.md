@@ -1,5 +1,5 @@
 # Sobre o projeto <h1> 
-O sistema em questão trata-se de um sistema para gerenciamento de vendas desenvolvido em PHP.
+O sistema em questão trata-se de um sistema web para gerenciamento de vendas.
 
 # Ferramentas utilizadas <h1>
  * [Astah UML](https://astah.net/downloads/): É um software de modelagem que permite uma fácil visualização dos componentes do sistema e de como eles se interagem através de diagramas.
