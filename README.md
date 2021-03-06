@@ -8,8 +8,8 @@ O sistema em questão trata-se de um sistema web para o gerenciamento de vendas 
 * [Trello](https://trello.com/): É uma ferramenta de desenvolvimento de projetos trazendo para os integrantes do projeto uma facilidade em acompanhar cada etapa das atividades a serem feitas.
 
 # Linguagens utilizadas <h1>
- 
- * [PHP](https://www.php.net/manual/pt_BR/intro-whatis.php)
- * [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
  * [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+ * [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/Guide/HTML/HTML5)
+ * [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+ * [PHP](https://www.php.net/manual/pt_BR/intro-whatis.php)
  * [SQL](https://www.w3schools.com/sql/)
