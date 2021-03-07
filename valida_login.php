@@ -35,7 +35,7 @@
 	}																						
 
 	// Sera redirecionado para a pagina inicio.php
-	echo "<script> alert('Login realizado com sucesso! Bem-vindo ao sistema.'); location.href='/web/inicio.php' </script>";
+	echo "<script> alert('{$_SESSION['nome_usuario']}, você acabou de entrar no sistema.'); location.href='/web/inicio.php' </script>";
 	die;
 	
 ?>
