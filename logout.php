@@ -1,6 +1,10 @@
 <?php
-    session_start(); // Comando para fazer com que a sessao funcione
-    session_unset(); // Remove as variaveis da sessao (a sessao ainda existe)
-    session_destroy(); // Destroi a sessao 
+    session_start();
+    if((!isset($_SESSION['id_usuario'])) || (empty($_SESSION['id_usuario']))){
+		header("Location: /web/index.php");
+		die;
+	}
+    session_unset();
+    session_destroy();
     echo "<script> alert('Você saiu do sistema! Até uma outra ocasião.'); location.href='/web/index.php' </script>"; 
 ?>
