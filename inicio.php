@@ -105,7 +105,7 @@
 		try {
 			// Query que faz a selecao
 			$selecao = "SELECT COUNT(cd_cliente) AS qtd_cliente, 
-			(SELECT COUNT(cd_funcionario) FROM funcionario WHERE cargo != 'Administrador') AS qtd_funcionario,
+			(SELECT COUNT(cd_funcionario) FROM funcionario) AS qtd_funcionario,
 			(SELECT COUNT(cd_fornecedor) FROM fornecedor) AS qtd_fornecedor, 
 			(SELECT COUNT(cd_compra_fornecedor) FROM compra_fornecedor) AS qtd_compra,
 			(SELECT COUNT(cd_produto) FROM produto) AS qtd_produto, 

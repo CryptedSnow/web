@@ -1,7 +1,7 @@
 <?php
 
 	// Se nao existir o id da sessao ou se a sessao nao estiver aberta
-	if (!session_id() || !isset($_SESSION)) {
+	if ((!session_id()) || (!isset($_SESSION))) {
 		session_start();
 	}
 
@@ -12,7 +12,7 @@
 	}
 
 	// Se os parametros de email ou senha forem vazios
-	if (empty($_POST['email']) || empty($_POST['senha'])) {
+	if ((empty($_POST['email'])) || (empty($_POST['senha']))) {
 		echo "<script> alert('Dados inválidos, refaça novamente o login.'); location.href='/web/index.php' </script>";
 		die;
 	}
