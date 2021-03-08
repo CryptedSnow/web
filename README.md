@@ -14,3 +14,7 @@ O sistema em questão trata-se de um sistema web para o gerenciamento de vendas 
  * [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
  * [PHP](https://www.php.net/manual/pt_BR/intro-whatis.php)
  * [SQL](https://www.w3schools.com/sql/)
+
+### Próximos passos <h3>
+- [ ] Finalizar layouts 
+- [ ] Finalizar front-end
