@@ -29,7 +29,7 @@
 		// Se a selecao for possivel de realizar
 		try {
 			// Query que faz a selecao
-			$selecao = "SELECT * FROM funcionario WHERE cargo != 'Administrador'";
+			$selecao = "SELECT * FROM funcionario";
 			// $seleciona_dados recebe $conexao que prepare a operacao para selecionar
 			$seleciona_dados = $conexao->prepare($selecao);
 			// Executa a operacao
