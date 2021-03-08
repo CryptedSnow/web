@@ -22,6 +22,7 @@ Gerenciamento de clientes | Funcionando
 Gerenciamento de funcionários | Funcionando
 Gerenciamento de fornecedores | Funcionando
 Gerenciamento de produtos | Funcionando
+Gerenciamento de compras | Funcionando
 Gerenciamento de vendas | Funcionando
 Gerenciamento de devoluções | Funcionando
 Fluxo de caixa | Funcionando
