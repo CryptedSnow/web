@@ -33,4 +33,6 @@ Login/Logout | Funcionando
 - [ ] Finalizar layouts 
 - [ ] Desenvolver front-end do sistema
 
-### Equipe <h3> 
+### Equipe <h3>
+[<img src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4" width=115 > <br> <sub> Iury </sub>](https://github.com/Iury189) |
+| :---: |  
