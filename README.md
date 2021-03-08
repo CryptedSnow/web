@@ -31,4 +31,6 @@ Login/Logout | Funcionando
 
 ### Próximos passos <h3>
 - [ ] Finalizar layouts 
-- [ ] Finalizar front-end
+- [ ] Desenvolver front-end do sistema
+
+### Equipe <h3> 
