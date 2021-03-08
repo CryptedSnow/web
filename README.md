@@ -1,5 +1,3 @@
-### Sistema de gerenciamento de vendas <h1> 
-
 ### Sobre o projeto <h3> 
 O sistema em questão trata-se de um sistema web para o gerenciamento de vendas para uma loja fictícia de roupas.
 
