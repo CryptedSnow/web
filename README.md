@@ -15,6 +15,15 @@ O sistema em questão trata-se de um sistema web para o gerenciamento de vendas 
  * [PHP](https://www.php.net/manual/pt_BR/intro-whatis.php)
  * [SQL](https://www.w3schools.com/sql/)
 
+### Funcionalidades do sistema <h3>
+Funcionalidade | Status
+------------ | -------------
+Cadastrar cliente | Funcionando
+Listar clientes | Funcionando
+Buscar cliente | Funcionando
+Atualizar cliente | Funcionando
+Excluir cliente | Funcionando
+
 ### Próximos passos <h3>
 - [ ] Finalizar layouts 
 - [ ] Finalizar front-end
