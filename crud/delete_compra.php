@@ -41,6 +41,7 @@
 			    $remocao->execute();
 			    // Retorna para a pagina de formulario de listagem
 				header('Location: ../form_crud/form_select_compra.php');
+				die();
 			// Se a remocao nao for possivel de realizar
 			} catch (PDOException $falha_remocao) {
 			    echo "A remoção não foi feita".$falha_remocao->getMessage();

@@ -61,6 +61,7 @@
 			    $remocao->execute();
 			    // Redireciona para a pagina de listagem de funcionarios
 			    header('Location: ../form_crud/form_select_funcionario.php');
+			    die();
 			// Se a remocao nao for possivel de realizar
 			} catch (PDOException $falha_remocao) {
 			    echo "A remoção não foi feita".$falha_remocao->getMessage();

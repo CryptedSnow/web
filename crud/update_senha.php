@@ -50,6 +50,7 @@
 					// Mensagem
 					echo "{$usuario_nome}, algo deu errado na atualização de sua senha, refaça novamente a operação.";
 					echo '<p><a href="../form_crud/form_update_senha.php"><button>Refazer operação</button></a></p>';
+					die();
 				// Se nao
 				} else {
                     // Cria uma senha com password_hash onde seu comprimento muda de acordo com o tempo
@@ -64,6 +65,7 @@
 					// Mensagem
 					echo "{$usuario_nome}, sua senha foi atualizada com sucesso!";
 					echo '<p><a href="../form_crud/form_update_senha.php"><button>Retornar operação</button></a></p>';
+					die();
 				}
 			// Se a atualizacao da senha nao for possivel de realizar	
 			} catch (PDOException $falha_alteracao) {

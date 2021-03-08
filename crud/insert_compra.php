@@ -43,6 +43,7 @@
 				$insere_dados->execute();
 				// Retorna para a pagina de formulario de listagem
 				header('Location: ../form_crud/form_select_compra.php');
+				die();
 			// Se a atualização nao for possivel de realizar
 			} catch (PDOException $falha_insercao) {
 				echo "A insercão não foi feita".$falha_insercao->getMessage();

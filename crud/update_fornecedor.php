@@ -61,7 +61,8 @@
 			    // Executa a operacao
 			    $atualiza_dados->execute();
 			    // Retorna para a pagina de formulario de listagem
-				header('Location: ../form_crud/form_select_fornecedor.php');	
+				header('Location: ../form_crud/form_select_fornecedor.php');
+				die();	
 			// Caso a atualizacao for possivel de realizar
 			} catch (PDOException $falha_atualizacao) {
 			    echo "A atualização não foi feita".$falha_atualizacao->getMessage();

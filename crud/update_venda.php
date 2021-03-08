@@ -112,6 +112,7 @@
 				$conexao->commit();
     			// Retorna para a pagina de formulario de listagem
 				header('Location: ../form_crud/form_select_venda.php');
+				die();
 				// Se a atualizacao nao for possivel de realizar
 			} catch (PDOException $falha_atualizacao) {
 				$conexao->rollBack();

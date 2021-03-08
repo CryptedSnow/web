@@ -84,11 +84,12 @@
 			    // Se o funcionario for um gerente ou Administrador
 				if (($_SESSION['cargo_usuario'] == "Gerente") || ($_SESSION['cargo_usuario'] == "Administrador")) {
 					header('Location: ../form_crud/form_select_funcionario.php');
-					exit;
+					die();
 				} elseif ($_SESSION['cargo_usuario'] == "Atendente") {
             		session_destroy();
-					echo "<script> alert('{$nome_usuario}, você acabou de se excluir. Procure o gerente ou administrador do sistema.'); location.href='/web/index.php' </script>";
-					exit;
+					echo "<script> alert('{$nome_usuario}, você acabou de se excluir. 
+					Procure o gerente ou administrador do sistema.'); location.href='/web/index.php' </script>";
+					die();
 				}
 			// Se a remocao nao for possivel de realizar
 			} catch (PDOException $falha_remocao) {

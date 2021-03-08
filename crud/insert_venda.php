@@ -106,6 +106,7 @@
     			$conexao->commit();
     			// Retorna para a pagina de formulario de listagem
 				header('Location: ../form_crud/form_select_venda.php');
+				die();
 			// Se a insercao nao for possivel de realizar
 			} catch (PDOException $falha_insercao) {
 				echo "A insercão não foi feita".$falha_insercao->getMessage();
