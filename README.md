@@ -27,6 +27,7 @@ Gerenciamento de vendas | Funcionando
 Gerenciamento de devoluções | Funcionando
 Fluxo de caixa | Funcionando
 Configurações | Funcionando
+Login/Logout | Funcionando
 
 ### Próximos passos <h3>
 - [ ] Finalizar layouts 
