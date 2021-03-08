@@ -18,11 +18,14 @@ O sistema em questão trata-se de um sistema web para o gerenciamento de vendas 
 ### Funcionalidades do sistema <h3>
 Funcionalidade | Status
 ------------ | -------------
-Cadastrar cliente | Funcionando
-Listar clientes | Funcionando
-Buscar cliente | Funcionando
-Atualizar cliente | Funcionando
-Excluir cliente | Funcionando
+Gerenciamento de clientes | Funcionando
+Gerenciamento de funcionários | Funcionando
+Gerenciamento de fornecedores | Funcionando
+Gerenciamento de produtos | Funcionando
+Gerenciamento de vendas | Funcionando
+Gerenciamento de devoluções | Funcionando
+Fluxo de caixa | Funcionando
+Configurações | Funcionando
 
 ### Próximos passos <h3>
 - [ ] Finalizar layouts 
