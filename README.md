@@ -33,6 +33,7 @@ Login/Logout | Funcionando
 - [ ] Finalizar layouts 
 - [ ] Desenvolver front-end do sistema
 
+### Equipe <h3>
 <table align="center">
     <tr>
         <td align="center">
