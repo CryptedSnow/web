@@ -33,6 +33,28 @@ Login/Logout | Funcionando
 - [ ] Finalizar layouts 
 - [ ] Desenvolver front-end do sistema
 
-### Equipe <h3>
-[<img src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4" width=115 > <br> <sub> Iury </sub>](https://github.com/Iury189) |
-| :---: |  
+<table align="center">
+    <tr>
+        <td align="center">
+            <a href="https://github.com/Iury189">
+                <img src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4"/>
+                <br/>
+                <b>Nome 1</b>
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/Iury189">
+                <img src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4"/>
+                <br/>
+                <b>Nome 2</b>
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/Iury189">
+                <img src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4"/>
+                <br/>
+                <b>Nome 3</b>
+            </a>
+        </td>
+    </tr>
+</table>
