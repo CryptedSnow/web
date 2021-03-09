@@ -37,21 +37,21 @@ Login/Logout | Funcionando
     <tr>
         <td align="center">
             <a href="https://github.com/Iury189">
-                <img width="50" src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4"/>
+                <img width="150" src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4"/>
                 <br/>
                 <b>Nome 1</b>
             </a>
         </td>
         <td align="center">
             <a href="https://github.com/Iury189">
-                <img width="50" src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4"/>
+                <img width="150" src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4"/>
                 <br/>
                 <b>Nome 2</b>
             </a>
         </td>
         <td align="center">
             <a href="https://github.com/Iury189">
-                <img width="50" src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4"/>
+                <img width="150" src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4"/>
                 <br/>
                 <b>Nome 3</b>
             </a>
