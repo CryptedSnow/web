@@ -16,6 +16,9 @@
 		echo "<script> alert('Ação inválida, entre no sistema da maneira correta.'); location.href='/web/index.php' </script>";
 		die;
 	}
+	header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+	header("Cache-Control: post-check=0, pre-check=0", false);
+	header("Pragma: no-cache");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -134,8 +137,8 @@
 			<?php endforeach ?>
 		</select>
 		</p>
-		<p> Roupa:
-      		<select name="nome" id="nome" required="" title="Caixa de seleção para atualizar a roupa">
+		<p> Tipo do produto:
+      		<select name="nome" id="nome" required="" title="Caixa de seleção para atualizar o tipo do produto">
           		<option value="" title="Por padrão a opção é vazia, escolha abaixo o tamanho desejado"> Nenhum </option>
           		<option value="Camiseta" title="Opção Camiseta">Camiseta</option>
           		<option value="Calça" title="Opção Calça">Calça</option>

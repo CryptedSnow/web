@@ -21,6 +21,9 @@
 		echo "<script> alert('Só o administrador pode acessar essa área.'); location.href='/web/inicio.php' </script>";
 		die;
 	}
+	header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+	header("Cache-Control: post-check=0, pre-check=0", false);
+	header("Pragma: no-cache");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
