@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if (isset($_SESSION['id_usuario'])) {
-		echo "<script> alert('Você já está logado! faça logout para sair do sistema.'); location.href='/web/inicio.php' </script>";
+		header("Location: inicio.php");
 		die;
 	}
 	header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");

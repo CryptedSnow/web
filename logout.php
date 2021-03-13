@@ -1,7 +1,7 @@
 <?php
     session_start();
     if((!isset($_SESSION['id_usuario'])) || (empty($_SESSION['id_usuario']))){
-		header("Location: /web/index.php");
+		header("Location: index.php");
 		die;
 	}
     session_unset();

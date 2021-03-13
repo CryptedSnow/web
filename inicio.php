@@ -1,8 +1,8 @@
 <?php
 	// Arquivo conexao.php
-	require(__DIR__ . '/conexao/conexao.php');
+	require(dirname(__FILE__) . '/conexao/conexao.php');
 	// Arquivo classe_usuario.php
-	require(__DIR__ . '/classe/classe_usuario.php');
+	require(dirname(__FILE__) . '/classe/classe_usuario.php');
 	// Inicio da sessao
 	session_start();
 	// Se existir $_SESSION['id_usuario'] e nao for vazio
@@ -31,7 +31,7 @@
 
 	<nav id="menu">
 		<ul>
-			<li> <a href="/web/inicio.php"> Início </a> </li>
+			<li> <a href="/web/inicio.php" title="Início"> Início </a> </li>
 			<li class="submenu"> <a> Cliente </a>
 				<ul>
 					<li><a href="/web/form_crud/form_insert_cliente.php" title="Cadastrar cliente"> Cadastrar cliente </a></li>
@@ -102,7 +102,6 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-	
 	<?php
 		// Se a selecao for possível de realizar
 		try {

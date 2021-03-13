@@ -13,14 +13,14 @@
 
 	// Se os parametros de email ou senha forem vazios
 	if ((empty($_POST['email'])) || (empty($_POST['senha']))) {
-		echo "<script> alert('Dados inválidos, refaça novamente o login.'); location.href='/web/index.php' </script>";
+		echo "<script> alert('E-mail e senha não podem ser vazios, refaça novamente o login.'); location.href='/web/index.php' </script>";
 		die;
 	}
 
-	// Importando arquivo conexao.php
-	require(__DIR__ . '/conexao/conexao.php');
-	// Importando arquivo classe_usuario.php
-	require(__DIR__ . '/classe/classe_usuario.php');
+	// Arquivo conexao.php
+	require(dirname(__FILE__) . '/conexao/conexao.php');
+	// Arquivo classe_usuario.php
+	require(dirname(__FILE__) . '/classe/classe_usuario.php');
 	
 	// Criando uma instancia da classe Usuario
 	$u = new Usuario();
