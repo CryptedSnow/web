@@ -56,7 +56,7 @@
 	?>
 	<nav id="menu">
 		<ul>
-			<li> <a href="/web/inicio.php"> Início </a> </li>
+			<li> <a href="/web/inicio.php" title="Início"> Início </a> </li>
 			<li class="submenu"> <a> Cliente </a>
 				<ul>
 					<li><a href="/web/form_crud/form_insert_cliente.php" title="Cadastrar cliente"> Cadastrar cliente </a></li>
