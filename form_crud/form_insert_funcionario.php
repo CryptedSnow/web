@@ -64,7 +64,7 @@
 					<li> <a href="/web/form_crud/form_insert_fornecedor.php/#cad_forn" title="Cadastrar fornecedor"> Cadastrar fornecedor </a></li>
 					<li> <a href="/web/form_crud/form_select_fornecedor.php/#nome" title="Listar fornecedores"> Listar fornecedores </a></li> 
 					<li> <a href="/web/form_crud/form_update_fornecedor.php/#atu_forn" title="Atualizar fornecedor"> Atualizar fornecedor </a></li>
-					<li> <a href="/web/form_crud/form_delete_fornecedor.php//#exc_forn" title="Excluir fornecedor"> Excluir fornecedor </a></li>
+					<li> <a href="/web/form_crud/form_delete_fornecedor.php/#exc_forn" title="Excluir fornecedor"> Excluir fornecedor </a></li>
 				</ul>
 			</li>
 			<li class="submenu"> <a> Produto </a>
