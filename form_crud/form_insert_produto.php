@@ -38,75 +38,75 @@
 			<li> <a href="/web/inicio.php" title="Início"> Início </a> </li>
 			<li class="submenu"> <a> Cliente </a>
 				<ul>
-					<li><a href="/web/form_crud/form_insert_cliente.php" title="Cadastrar cliente"> Cadastrar cliente </a></li>
-					<li><a href="/web/form_crud/form_select_cliente.php" title="Listar clientes"> Listar clientes </a></li> 
-					<li><a href="/web/form_crud/form_update_cliente.php" title="Atualizar cliente"> Atualizar cliente </a></li>
-					<li><a href="/web/form_crud/form_delete_cliente.php" title="Excluir cliente"> Excluir cliente </a></li>
+					<li><a href="/web/form_crud/form_insert_cliente.php/#cad_cli" title="Cadastrar cliente"> Cadastrar cliente </a></li>
+					<li><a href="/web/form_crud/form_select_cliente.php/#nome" title="Listar clientes"> Listar clientes </a></li> 
+					<li><a href="/web/form_crud/form_update_cliente.php/#atu_cli" title="Atualizar cliente"> Atualizar cliente </a></li>
+					<li><a href="/web/form_crud/form_delete_cliente.php/#exc_cli" title="Excluir cliente"> Excluir cliente </a></li>
 				</ul>
 			</li>
 			<li class="submenu"> <a> Funcionário </a>
 				<ul>
-					<li><a href="/web/form_crud/form_insert_funcionario.php" title="Cadastrar funcionário"> Cadastrar funcionário </a></li>
-					<li><a href="/web/form_crud/form_select_funcionario.php" title="Listar funcionários"> Listar funcionários </a></li> 
-					<li><a href="/web/form_crud/form_update_funcionario.php" title="Atualizar funcionário"> Atualizar funcionário </a></li>
-					<li><a href="/web/form_crud/form_delete_funcionario.php" title="Excluir funcionário"> Excluir funcionário </a></li>
+					<li><a href="/web/form_crud/form_insert_funcionario.php/#cad_func" title="Cadastrar funcionário"> Cadastrar funcionário </a></li>
+					<li><a href="/web/form_crud/form_select_funcionario.php/#nome" title="Listar funcionários"> Listar funcionários </a></li> 
+					<li><a href="/web/form_crud/form_update_funcionario.php/#atu_func" title="Atualizar funcionário"> Atualizar funcionário </a></li>
+					<li><a href="/web/form_crud/form_delete_funcionario.php/#exc_func" title="Excluir funcionário"> Excluir funcionário </a></li>
 				</ul>
 			</li>
 			<li class="submenu"> <a> Fornecedor </a>
 				<ul>
-					<li> <a href="/web/form_crud/form_insert_fornecedor.php" title="Cadastrar fornecedor"> Cadastrar fornecedor </a></li>
-					<li> <a href="/web/form_crud/form_select_fornecedor.php" title="Listar fornecedores"> Listar fornecedores </a></li> 
-					<li> <a href="/web/form_crud/form_update_fornecedor.php" title="Atualizar fornecedor"> Atualizar fornecedor </a></li>
-					<li> <a href="/web/form_crud/form_delete_fornecedor.php" title="Excluir fornecedor"> Excluir fornecedor </a></li>
+					<li> <a href="/web/form_crud/form_insert_fornecedor.php/#cad_forn" title="Cadastrar fornecedor"> Cadastrar fornecedor </a></li>
+					<li> <a href="/web/form_crud/form_select_fornecedor.php/#nome" title="Listar fornecedores"> Listar fornecedores </a></li> 
+					<li> <a href="/web/form_crud/form_update_fornecedor.php/#atu_forn" title="Atualizar fornecedor"> Atualizar fornecedor </a></li>
+					<li> <a href="/web/form_crud/form_delete_fornecedor.php//#exc_forn" title="Excluir fornecedor"> Excluir fornecedor </a></li>
 				</ul>
 			</li>
 			<li class="submenu"> <a> Produto </a>
 				<ul>
-					<li> <a href="/web/form_crud/form_insert_produto.php" title="Cadastrar produto"> Cadastrar produto </a> </li>
-					<li> <a href="/web/form_crud/form_select_produto.php" title="Listar produtos"> Listar produtos </a> </li> 
-					<li> <a href="/web/form_crud/form_update_produto.php" title="Atualizar produto"> Atualizar produto </a> </li>
-					<li> <a href="/web/form_crud/form_delete_produto.php" title="Excluir produto"> Excluir produto </a> </li>
+					<li> <a href="/web/form_crud/form_insert_produto.php/#cad_pro" title="Cadastrar produto"> Cadastrar produto </a> </li>
+					<li> <a href="/web/form_crud/form_select_produto.php/#nome" title="Listar produtos"> Listar produtos </a> </li> 
+					<li> <a href="/web/form_crud/form_update_produto.php/#atu_pro" title="Atualizar produto"> Atualizar produto </a> </li>
+					<li> <a href="/web/form_crud/form_delete_produto.php/#exc_pro" title="Excluir produto"> Excluir produto </a> </li>
 				</ul>
 			</li>
 			<li class="submenu"> <a> Compra </a>
 				<ul>
-					<li> <a href="/web/form_crud/form_insert_compra.php" title="Cadastrar compra"> Cadastrar compra </a> </li>
-					<li> <a href="/web/form_crud/form_select_compra.php" title="Listar compras"> Listar compras </a> </li> 
-					<li> <a href="/web/form_crud/form_update_compra.php" title="Atualizar compra"> Atualizar compra </a> </li>
-					<li> <a href="/web/form_crud/form_delete_compra.php" title="Excluir compra"> Excluir compra </a> </li>
+					<li> <a href="/web/form_crud/form_insert_compra.php/#cad_com" title="Cadastrar compra"> Cadastrar compra </a> </li>
+					<li> <a href="/web/form_crud/form_select_compra.php/#nome" title="Listar compras"> Listar compras </a> </li> 
+					<li> <a href="/web/form_crud/form_update_compra.php/#atu_com" title="Atualizar compra"> Atualizar compra </a> </li>
+					<li> <a href="/web/form_crud/form_delete_compra.php/#exc_com" title="Excluir compra"> Excluir compra </a> </li>
 				</ul>
 			</li>
 			<li class="submenu"> <a> Venda </a>
 				<ul>
-					<li> <a href="/web/form_crud/form_insert_venda.php" title="Cadastrar venda"> Cadastrar venda </a> </li>
-					<li> <a href="/web/form_crud/form_select_venda.php" title="Listar vendas"> Listar vendas </a> </li> 
-					<li> <a href="/web/form_crud/form_update_venda.php" title="Atualizar venda"> Atualizar venda </a> </li>
-					<li> <a href="/web/form_crud/form_delete_venda.php" title="Excluir venda"> Excluir venda </a> </li>
+					<li> <a href="/web/form_crud/form_insert_venda.php/#cad_ven" title="Cadastrar venda"> Cadastrar venda </a> </li>
+					<li> <a href="/web/form_crud/form_select_venda.php/#nome" title="Listar vendas"> Listar vendas </a> </li> 
+					<li> <a href="/web/form_crud/form_update_venda.php/#atu_ven" title="Atualizar venda"> Atualizar venda </a> </li>
+					<li> <a href="/web/form_crud/form_delete_venda.php/#exc_ven" title="Excluir venda"> Excluir venda </a> </li>
 				</ul>
 			</li>
 			<li class="submenu"> <a> Devolução </a>
 				<ul>
-					<li> <a href="/web/form_crud/form_insert_devolucao.php" title="Cadastrar devolução"> Cadastrar devolução </a> </li>
-					<li> <a href="/web/form_crud/form_select_devolucao.php" title="Listar devoluções"> Listar devoluções </a> </li> 
-					<li> <a href="/web/form_crud/form_delete_devolucao.php" title="Excluir devolução"> Excluir devolução </a> </li>
+					<li> <a href="/web/form_crud/form_insert_devolucao.php/#cad_dev" title="Cadastrar devolução"> Cadastrar devolução </a> </li>
+					<li> <a href="/web/form_crud/form_select_devolucao.php/#nome" title="Listar devoluções"> Listar devoluções </a> </li> 
+					<li> <a href="/web/form_crud/form_delete_devolucao.php/#exc_dev" title="Excluir devolução"> Excluir devolução </a> </li>
 				</ul>
 			</li>
 			<li class="submenu"> <a> Fluxo de caixa </a>
 				<ul>
-					<li> <a href="/web/form_crud/caixa_venda.php" title="Fluxo de vendas"> Fluxo de vendas </a> </li>
-					<li> <a href="/web/form_crud/caixa_devolucao.php" title="Fluxo de devoluções"> Fluxo de devoluções </a> </li> 
+					<li> <a href="/web/form_crud/caixa_venda.php/#fluxo_ven" title="Fluxo de vendas"> Fluxo de vendas </a> </li>
+					<li> <a href="/web/form_crud/caixa_devolucao.php/#fluxo_dev" title="Fluxo de devoluções"> Fluxo de devoluções </a> </li> 
 				</ul>
 			</li>
 			<li class="submenu"> <a> Configurações </a>
 				<ul>
-					<li> <a href="/web/form_crud/form_update_senha.php" title="Alterar senha"> Alterar senha </a> </li>
-					<li> <a href="/web/form_crud/form_area_adm.php" title="Área administrador"> Área administrador </a> </li> 
+					<li> <a href="/web/form_crud/form_update_senha.php/#alt_senha" title="Alterar senha"> Alterar senha </a> </li>
+					<li> <a href="/web/form_crud/form_area_adm.php/#area_adm" title="Área administrador"> Área administrador </a> </li> 
 				</ul>
 			</li>
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-	<form method="POST" autocomplete="off" action="../crud/insert_produto.php" onsubmit="exibirNome()">
+	<form method="POST" id="cad_pro" autocomplete="off" action="../crud/insert_produto.php" onsubmit="exibirNome()">
 		<p> Tipo do produto:
       		<select name="nome" id="nome" required="" title="Caixa de seleção para escolher o tipo do produto">
           		<option value="" title="Por padrão a opção é vazia, escolha abaixo o tamanho desejado"> Nenhum </option>
@@ -120,7 +120,7 @@
       		</select>
   		</p>
   		<p> Marca:
-      		<select name="marca" id="marca" required="" title="Caixa de seleção para escolher a marca da roupa">
+      		<select name="marca" id="marca" required="" title="Caixa de seleção para escolher a marca do produto">
           		<option value="" title="Por padrão a opção é vazia, escolha abaixo a marca desejada"> Nenhum </option>
           		<option value="Lacoste" title="Opção Lacoste">Lacoste</option>
           		<option value="Hollister" title="Opção Hollister">Hollister</option>
@@ -134,45 +134,45 @@
           		<option value="FARM" title="Opção FARM">FARM</option>
       		</select>
   		</p>
-		<p> Código de barra: <input type="text" id="codigo" name="codigo_barra" title="Campo para inserir o código de barra da roupa" size="30" minlength="15" required=""> </p>
+		<p> Código de barra: <input type="text" id="codigo" name="codigo_barra" title="Campo para inserir o código de barra do produto" size="30" minlength="15" required=""> </p>
 		<p> Cor:
-      		<select name="cor" id="cor" required="" title="Caixa de seleção para inserir a cor da roupa">
+      		<select name="cor" id="cor" required="" title="Caixa de seleção para inserir a cor do produto">
           		<option value="" title="Por padrão a opção é vazia, escolha abaixo a cor desejada"> Nenhum </option>
-          		<option value="Preto" title="Cor preta">Preto</option>
-          		<option value="Branco" title="Cor branca">Branco</option>
-          		<option value="Cinza" title="Cor cinza">Cinza</option>
-          		<option value="Vermelho" title="Cor vermelha">Vermelho</option>
+          		<option value="Preto" title="Cor preta">Cor preta</option>
+          		<option value="Branco" title="Cor branca">Cor branca</option>
+          		<option value="Cinza" title="Cor cinza">Cor cinza</option>
+          		<option value="Vermelho" title="Cor vermelha">Cor vermelha</option>
           		<option value="Amarelo" title="Cor amarela">Amarelo</option>
-          		<option value="Azul" title="Cor azul">Azul</option>
-          		<option value="Verde" title="Cor verde">Verde</option>
-          		<option value="Laranja" title="Cor laranja">Laranja</option>
-          		<option value="Rosa" title="Cor rosa">Rosa</option>
-          		<option value="Vinho" title="Cor vinho">Vinho</option>
-          		<option value="Marrom" title="Cor marrom">Marrom</option>
-          		<option value="Roxa" title="Cor roxa">Roxo</option>
+          		<option value="Azul" title="Cor azul">Cor azul</option>
+          		<option value="Verde" title="Cor verde">Cor verde</option>
+          		<option value="Laranja" title="Cor laranja">Cor laranja</option>
+          		<option value="Rosa" title="Cor rosa">Cor rosa</option>
+          		<option value="Vinho" title="Cor vinho">Cor vinho</option>
+          		<option value="Marrom" title="Cor marrom">Cor marrom</option>
+          		<option value="Roxa" title="Cor roxa">Cor roxa</option>
       		</select>
   		</p>
 		<p> Tamanho:
-		<select name="tamanho" id="tamanho" title="Caixa de seleção para escolher o tamanho da roupa" required="">
+		<select name="tamanho" id="tamanho" title="Caixa de seleção para escolher o tamanho do produto" required="">
 			<option value="" title="Por padrão a opção é vazia, escolha abaixo o tamanho desejado"> Nenhum </option>
-  			<option value="P"> Tamanho P </option>
-  			<option value="M"> Tamanho M </option>
-  			<option value="G"> Tamanho G </option>
-  			<option value="GG"> Tamanho GG </option>
+  			<option value="P" title="Tamanho P"> Tamanho P </option>
+  			<option value="M" title="Tamanho M"> Tamanho M </option>
+  			<option value="G" title="Tamanho G">  Tamanho G </option>
+  			<option value="GG" title="Tamanho GG"> Tamanho GG </option>
 		</select>
 		</p>
 		<p> Gênero:
-		<select name="genero" id="genero" title="Caixa de seleção para escolher o gênero da roupa" required="">
+		<select name="genero" id="genero" title="Caixa de seleção para escolher o gênero do produto" required="">
 			<option value="" title="Por padrão a opção é vazia, escolha abaixo o tipo desejado"> Nenhum </option>
-  			<option value="M"> Masculino </option>
-  			<option value="F"> Feminino </option>	
+  			<option value="M" title="Gênero masculino"> Gênero masculino </option>
+  			<option value="F" title="Gênero feminino"> Gênero feminino </option>	
 		</select>
 		</p>
-		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" pattern="\d+" title="Campo para inserir a quantidade de roupas" required=""> </p>
-		<p> Valor de compra: <input type="number" step="any" name="valor_compra" id="valor_compra" title="Campo para inserir o valor de compra da roupa" required=""> </p>
+		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" pattern="\d+" title="Campo para inserir a quantidade do produto" required=""> </p>
+		<p> Valor de compra: <input type="number" step="any" name="valor_compra" id="valor_compra" title="Campo para inserir o valor de compra do produto" required=""> </p>
 		<p> Porcentagem de revenda:
 		<select name="porcentagem_revenda" id="porcentagem_revenda" 
-		title="Caixa de seleção para inserir a porcentagem de revenda da roupa" required="">
+		title="Caixa de seleção para inserir a porcentagem de revenda do produto" required="">
 			<option value="" title="Por padrão a opção é vazia, escolha abaixo a porcentagem desejado"> Nenhum </option>
 			<option value="5" title="Opção 5%">5%</option>		
 	  			<option value="10" title="Opção 10%">10%</option>
@@ -196,7 +196,7 @@
 	  			<option value="100" title="Opção 100%">100%</option>		
 		</select>
 		</p>
-		<button name="Inserir" title="Botão para cadastrar o produto"> Cadastrar produto </button>
+		<button name="Inserir" title="Botão para cadastrar o produto"> Botão cadastrar produto </button>
 	</form>
 </body>
 </html> 
