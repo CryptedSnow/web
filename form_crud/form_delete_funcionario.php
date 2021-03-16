@@ -101,7 +101,7 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-	<form method="POST" id="exc_func" autocomplete="off" action="../crud/delete_funcionario.php" onsubmit="exibirNome()">
+	<form method="POST" id="exc_func" autocomplete="off" action="/web/crud/delete_funcionario.php" onsubmit="exibirNome()">
 		<p> ID funcionário:
 			<select name="cd_funcionario" required="" id="cd_funcionario" 
 			title="Caixa de seleção para escolher o funcionário a ser excluído">

@@ -128,7 +128,7 @@
 			die;
 		}
 	?>
-	<form method="POST" id="atu_pro" autocomplete="off" action="../crud/update_produto.php" onsubmit="exibirNome()">
+	<form method="POST" id="atu_pro" autocomplete="off" action="/web/crud/update_produto.php" onsubmit="exibirNome()">
 		<p> ID produto:
 		<select onclick="buscaDados()" name="cd_produto" id="cd_produto" required="" title="Caixa de seleção para escolher o produto a ser atualizado">
 			<option value="" title="Opção vazia, escolha abaixo o produto a ser atualizado"> Nenhum </option>

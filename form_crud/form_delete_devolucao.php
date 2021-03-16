@@ -124,7 +124,7 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-	<form method="POST" id="exc_dev" autocomplete="off" action="../crud/delete_devolucao.php" onsubmit="exibirNome()">
+	<form method="POST" id="exc_dev" autocomplete="off" action="/web/crud/delete_devolucao.php" onsubmit="exibirNome()">
 		<p> ID devolução:
 			<select name="cd_devolucao" required="" id="cd_devolucao" title="Caixa de seleção para escolher a devolução a ser excluída">
 				<option value="" title="Opção vazia, escolha abaixo o item devolvido a ser excluído"> Nenhum </option>

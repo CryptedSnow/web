@@ -107,7 +107,7 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-	<form method="POST" id="atu_func" autocomplete="off" action="../crud/update_funcionario.php" onsubmit="exibirNome()">
+	<form method="POST" id="atu_func" autocomplete="off" action="/web/crud/update_funcionario.php" onsubmit="exibirNome()">
 		<p> * Os campos são preenchidos ao carregar a página ou quando o registro ID funcionario é clicado. </p>
 		<p> ID funcionário:
 			<select onclick="buscaDados()" name="cd_funcionario" required="" id="cd_funcionario" 

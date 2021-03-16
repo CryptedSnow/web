@@ -135,7 +135,7 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-	<form method="POST" id="atu_com" autocomplete="off" action="../crud/update_compra.php" onsubmit="exibirNome()">
+	<form method="POST" id="atu_com" autocomplete="off" action="/web/crud/update_compra.php" onsubmit="exibirNome()">
 		<p> ID compra:
 		<select onclick="buscaDados()" name="cd_compra_fornecedor" id="cd_compra_fornecedor" required="" title="Caixa de seleção para escolher a compra a ser atualizada">
 			<option value="" title="Opção vazia, escolha a compra a ser atualizado"> Nenhum </option>

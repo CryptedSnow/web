@@ -105,7 +105,7 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-	<form method="POST" id="cad_forn" autocomplete="off" action="../crud/insert_fornecedor.php" onsubmit="exibirNome()">
+	<form method="POST" id="cad_forn" autocomplete="off" action="/web/crud/insert_fornecedor.php" onsubmit="exibirNome()">
 		<p> Nome: <input type="text" name="nome" id="nome" title="Campo para inserir o nome do fornecedor" size="30" maxlength="30" required=""> </p>
 		<p> CNPJ: <input type="text" name="cnpj" id="cnpj" title="Campo para inserir o CNPJ do fornecedor" size="30" minlength="18" required=""> </p>
 		<p> Telefone: <input type="text" name="telefone" id="telefone" title="Campo para inserir o telefone do fornecedor" size="30" minlength="14" required=""> </p>

@@ -139,7 +139,7 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-	<form method="POST" id="atu_ven" autocomplete="off" action="../crud/update_venda.php" onsubmit="exibirNome()">
+	<form method="POST" id="atu_ven" autocomplete="off" action="/web/crud/update_venda.php" onsubmit="exibirNome()">
 		<p> ID venda:
 		<select onclick="buscaDados()" name="cd_venda" id="cd_venda" required="" title="Caixa de seleção para escolher a venda a ser atualizada">
 			<option value="" title="Opção vazia, escolha abaixo o cliente a ser atualizado"> Nenhum </option>

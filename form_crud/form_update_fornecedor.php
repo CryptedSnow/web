@@ -127,7 +127,7 @@
 			die;
 		}
 	?>
-	<form method="POST" id="atu_forn" autocomplete="off" action="../crud/update_fornecedor.php" onsubmit="exibirNome()">
+	<form method="POST" id="atu_forn" autocomplete="off" action="/web/crud/update_fornecedor.php" onsubmit="exibirNome()">
 		<p> ID fornecedor:
 		<select onclick="buscaDados()" name="cd_fornecedor" id="cd_fornecedor" required="" title="Caixa de seleção para escolher o fornecedor a ser atualizado">
 			<option value="" title="Opção vazia, escolha abaixo o fornecedor a ser atualizado"> Nenhum </option>

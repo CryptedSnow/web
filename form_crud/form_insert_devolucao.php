@@ -135,7 +135,7 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-	<form method="POST" id="cad_dev" autocomplete="off" action="../crud/insert_devolucao.php" onsubmit="exibirNome()">
+	<form method="POST" id="cad_dev" autocomplete="off" action="/web/crud/insert_devolucao.php" onsubmit="exibirNome()">
 		<p> ID venda:
 			<select onclick="buscaDados()" name="cd_venda" id="cd_venda" required="" title="Caixa de seleção para escolher a venda">
 				<option value="" title="Por padrão a opção é vazia, escolha abaixo ID da venda"> Nenhum </option>

@@ -106,7 +106,7 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-	<form method="POST" id="cad_pro" autocomplete="off" action="../crud/insert_produto.php" onsubmit="exibirNome()">
+	<form method="POST" id="cad_pro" autocomplete="off" action="/web/crud/insert_produto.php" onsubmit="exibirNome()">
 		<p> Tipo do produto:
       		<select name="nome" id="nome" required="" title="Caixa de seleção para escolher o tipo do produto">
           		<option value="" title="Por padrão a opção é vazia, escolha abaixo o tamanho desejado"> Nenhum </option>

@@ -123,7 +123,7 @@
 			die;
 		}
 	?>
-	<form method="POST" id="exc_forn" autocomplete="off" action="../crud/delete_fornecedor.php" onsubmit="exibirNome()">
+	<form method="POST" id="exc_forn" autocomplete="off" action="/web/crud/delete_fornecedor.php" onsubmit="exibirNome()">
 		<p> ID fornecedor:
 			<select name="cd_fornecedor" required="" id="cd_fornecedor" title="Caixa de seleção para escolher o fornecedor a ser excluído">
 				<option value="" title="Opção vazia, escolha abaixo o fornecedor a ser excluído"> Nenhum </option>

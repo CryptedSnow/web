@@ -123,7 +123,7 @@
 			die;
 		}
 	?>
-	<form method="POST" id="exc_pro" autocomplete="off" action="../crud/delete_produto.php" onsubmit="exibirNome()">
+	<form method="POST" id="exc_pro" autocomplete="off" action="/web/crud/delete_produto.php" onsubmit="exibirNome()">
 		<p> ID produto:
 			<select name="cd_produto" required="" id="cd_produto" title="Caixa de seleção para escolher o produto a ser excluído">
 				<option value="" title="Opção vazia, escolha abaixo a roupa a ser excluída"> Nenhum </option>

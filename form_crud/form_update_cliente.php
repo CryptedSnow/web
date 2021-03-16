@@ -128,7 +128,7 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-	<form method="POST" id="atu_cli" autocomplete="off" action="../crud/update_cliente.php" onsubmit="exibirNome()">
+	<form method="POST" id="atu_cli" autocomplete="off" action="/web/crud/update_cliente.php" onsubmit="exibirNome()">
 		<p> ID cliente:
 		<select onclick="buscaDados()" name="cd_cliente" id="cd_cliente" required="" title="Caixa de seleção para escolher o cliente a ser atualizado">
 			<option value="" title="Opção vazia, escolha abaixo o cliente a ser atualizado"> Nenhum </option>
