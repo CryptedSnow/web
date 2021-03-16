@@ -158,7 +158,7 @@
 		</fieldset>
 	</form>
 
-	<form method="POST" autocomplete="off" action="../crud/delete_usuario.php" onsubmit="exibirExclusao()">
+	<form method="POST" autocomplete="off" action="/web/crud/delete_usuario.php" onsubmit="exibirExclusao()">
 		<fieldset>
 		<legend> Excluir funcionário </legend>
 		<p> ID funcionário:
@@ -169,7 +169,7 @@
 				<?php endforeach ?>
 			</select>
 		</p>
-		<button name="Deletar" title="Botão para atualizar funcionário"> Botão excluir funcionário </button>
+		<button name="Deletar" title="Botão para excluir o funcionário"> Botão excluir funcionário </button>
 		</fieldset>
 		
 	</form>
