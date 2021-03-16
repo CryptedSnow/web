@@ -43,7 +43,8 @@
 			// Se a quantidade ou valor do item for menor/igual a zero
 			if ($quantidade <= 0 || $valor_item <= 0) { 
 				echo "A quantidade ou valor do produto não pode ser igual ou menor que zero, refaça novamente a operação.";
-				echo '<p><a href="../form_crud/form_update_venda.php" title="Refazer a operação"><button>Refazer operação</button></a></p>';
+				echo '<p><a href="../form_crud/form_update_venda.php/#atu_ven" 
+				title="Refazer operação"><button>Refazer operação</button></a></p>';
 				exit;
 			}
 
@@ -97,8 +98,8 @@
 					// Caso a quantidade vendida ultrapasse a quantidade em estoque
 					if ($quantidade_produto_antiga - ($quantidade - $quantidade_antiga) < 0) {
 						echo "A quantidade da venda não pode superar a quantidade do estoque disponível, refaça novamente a operação.";
-						echo '<p><a href="../form_crud/form_update_venda.php" title="Refazer a operação">
-						<button>Refazer operação</button></a></p>';
+						echo '<p><a href="../form_crud/form_update_venda.php/#atu_ven" 
+						title="Refazer operação"><button>Refazer operação</button></a></p>';
 						exit;
 					}
 					$quantidade_nova = $quantidade_produto_antiga - ($quantidade - $quantidade_antiga);
@@ -114,7 +115,7 @@
     			// Confirma a execucao das query's em todas as transacoes  
 				$conexao->commit();
     			// Retorna para a pagina de formulario de listagem
-				header('Location: ../form_crud/form_select_venda.php');
+				header('Location: ../form_crud/form_select_venda/#nome.php');
 				die();
 				// Se a atualizacao nao for possivel de realizar
 			} catch (PDOException $falha_atualizacao) {
@@ -129,7 +130,8 @@
 		// Caso nao exista
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
-			echo '<p><a href="../form_crud/form_update_venda.php" title="Refazer operação"><button>Refazer operação</button></a></p>';
+			echo '<p><a href="../form_crud/form_update_venda.php/#atu_ven" 
+			title="Refazer operação"><button>Refazer operação</button></a></p>';
 			exit;
 		} 		
 	?>

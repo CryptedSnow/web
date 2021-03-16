@@ -42,8 +42,8 @@
 			// Se a quantidade ou valor do item for menor/igual a zero
 			if ($quantidade <= 0 || $valor_item <= 0) { 
 				echo "A quantidade ou valor do produto não pode ser igual ou menor que zero, refaça novamente a operação.";
-				echo '<p><a href="../form_crud/form_insert_devolucao.php" 
-				title="Refazer a operação"><button>Refazer operação</button></a></p>';
+				echo '<p><a href="../form_crud/form_insert_devolucao.php/#cad_dev" 
+				title="Refazer operação"><button>Refazer operação</button></a></p>';
 				exit;
 			}
 
@@ -64,8 +64,8 @@
 				if ($quantidade > $quantidade_antiga) {
 					// Caso a quantidade devolvida seja maior que a quantidade vendida
 					echo "A quantidade devolvida é maior que a quantidade vendida, refaça novamente a operação.";
-					echo '<p><a href="../form_crud/form_insert_devolucao.php" title="Refazer a operação">
-					<button>Refazer operação</button></a></p>';
+					echo '<p><a href="../form_crud/form_insert_devolucao.php/#cad_dev" 
+					title="Refazer operação"><button>Refazer operação</button></a></p>';
 					exit;
 				}
 
@@ -99,7 +99,6 @@
 				$quantidade_devolvida->bindValue(':cd_venda', $cd_venda);
 				$quantidade_devolvida->bindValue(':quantidade', $quantidade);
 				$quantidade_devolvida->bindValue(':quantidade_antiga', $quantidade_antiga);
-				// Executa a operacao
 				$quantidade_devolvida->execute();
 
 				$devolver_produto = $conexao->prepare($reposicao_produto);
@@ -109,7 +108,7 @@
 				// Confirma a execucao das query's em todas as transacoes  
 				$conexao->commit();
 				// Retorna para a pagina de formulario de insercao
-				header('Location: ../form_crud/form_select_devolucao.php');
+				header('Location: ../form_crud/form_select_devolucao#nome.php');
 				die();
 				// Se a atualizacao nao for possivel de realizar
 			} catch (PDOException $falha_insercao) {
@@ -122,7 +121,8 @@
 		// Caso nao exista
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
-			echo '<p><a href="../form_crud/form_insert_devolucao.php" title="Refazer operação"><button>Refazer operação</button></a></p>';
+			echo '<p><a href="../form_crud/form_insert_devolucao.php/#cad_dev" 
+			title="Refazer operação"><button>Refazer operação</button></a></p>';
 			exit;
 		} 
 	?>

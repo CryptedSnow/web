@@ -48,8 +48,8 @@
 			if ($countFuncionario > 0) {
 				$pluralSingular = $countFuncionario == 1 ? "uma venda" : "$countFuncionario vendas";
 				echo "Você não pode excluir este funcionário, pois ele realizou $pluralSingular no sistema.";
-				echo '<p><a href="../form_crud/form_area_adm.php" title="Refazer operação">
-				<button>Refazer operação</button></a></p>';
+				echo '<p><a href="../form_crud/form_area_adm.php/#area_adm" 
+				title="Refazer operação"><button>Refazer operação</button></a></p>';
 				exit;
 			}
 			// Se a remocao for possivel de realizar
@@ -63,7 +63,7 @@
 			    // Executa a operacao
 			    $remocao->execute();
 			    // Redireciona para a pagina de listagem de funcionarios
-			    header('Location: ../form_crud/form_select_funcionario.php');
+			    header('Location: ../form_crud/form_select_funcionario.php/#nome');
 			    die();
 			// Se a remocao nao for possivel de realizar
 			} catch (PDOException $falha_remocao) {
@@ -76,7 +76,8 @@
 		// Caso nao exista
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
-			echo '<p><a href="../form_crud/form_area_adm.php" title="Refazer operação"><button>Refazer operação</button></a></p>';
+			echo '<p><a href="../form_crud/form_area_adm.php/#area_adm" 
+			title="Refazer operação"><button>Refazer operação</button></a></p>';
 			exit;
 		} 	
 	?>

@@ -46,8 +46,8 @@
 			if ($countDevolucao > 0) {
 				$pluralSingular = $countDevolucao == 1 ? "uma devolução" : "$countDevolucao devoluções";
 				echo "Você não pode apagar esse registro, pois está sendo usado em $pluralSingular.";
-				echo '<p><a href="../form_crud/form_delete_venda.php" title="Refazer operação">
-				<button>Refazer operação</button></a></p>';
+				echo '<p><a href="../form_crud/form_delete_venda.php/#exc_ven" 
+				title="Refazer operação"><button>Refazer operação</button></a></p>';
 				exit;
 			}
 
@@ -90,7 +90,7 @@
         		// Confirma a execucao das query's em todas as transacoes 
 				$conexao->commit();
         		// Retorna para a pagina de formulario de listagem
-				header('Location: ../form_crud/form_select_venda.php');
+				header('Location: ../form_crud/form_select_venda/#nome.php');
 				die();
 			// Se a remocao nao for possivel de realizar
 			} catch (PDOException $falha_remocao) {
@@ -103,7 +103,8 @@
 		// Caso nao exista
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
-			echo '<p><a href="../form_crud/form_delete_venda.php" title="Refazer operação"><button>Refazer operação</button></a></p>';
+			echo '<p><a href="../form_crud/form_delete_venda.php/#exc_ven" 
+			title="Refazer operação"><button>Refazer operação</button></a></p>';
 			exit;
 		} 
 	?>

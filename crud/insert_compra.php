@@ -45,7 +45,7 @@
 				// Executa a operacao
 				$insere_dados->execute();
 				// Retorna para a pagina de formulario de listagem
-				header('Location: ../form_crud/form_select_compra.php');
+				header('Location: ../form_crud/form_select_compra/#nome.php');
 				die();
 			// Se a atualização nao for possivel de realizar
 			} catch (PDOException $falha_insercao) {
@@ -58,7 +58,8 @@
 		// Caso nao exista
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
-			echo '<p><a href="../form_crud/form_insert_compra.php" title="Refazer operação"><button>Refazer operação</button></a></p>';
+			echo '<p><a href="../form_crud/form_insert_compra.php/#atu_com" 
+			title="Refazer operação"><button>Refazer operação</button></a></p>';
 			exit;
 		} 
 	?>

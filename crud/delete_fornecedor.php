@@ -43,7 +43,7 @@
 			    // Executa a operacao
 			    $remocao->execute();
 			    // Retorna para a pagina de formulario de listagem
-				header('Location: ../form_crud/form_select_fornecedor.php');
+				header('Location: ../form_crud/form_select_fornecedor/#nome.php');
 				die();
 			// Se a remocao nao for possivel de realizar
 			} catch (PDOException $falha_remocao) {
@@ -56,7 +56,8 @@
 		// Caso nao exista
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
-			echo '<p><a href="../form_crud/form_delete_fornecedor.php" title="Refazer operação"><button>Refazer operação</button></a></p>';
+			echo '<p><a href="../form_crud/form_delete_fornecedor/#exc_forn.php" 
+			title="Refazer operação"><button>Refazer operação</button></a></p>';
 			exit;
 		} 
 	?>

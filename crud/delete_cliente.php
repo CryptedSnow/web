@@ -43,7 +43,7 @@
 			    // Executa a operação
 			    $remocao->execute();
 			    // Retorna para a pagina de formulario de listagem
-				header('Location: ../form_crud/form_select_cliente.php');
+				header('Location: ../form_crud/form_select_cliente/#nome.php');
 				die();
 			// Se a remoção não for possível de realizar
 			} catch (PDOException $falha_remocao) {
@@ -56,7 +56,8 @@
 		// Caso nao exista
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
-			echo '<p><a href="../form_crud/form_delete_cliente.php" title="Refazer operação"><button>Refazer operação</button></a></p>';
+			echo '<p><a href="../form_crud/form_delete_cliente/#exc_cli.php" 
+			title="Refazer operação"><button>Refazer operação</button></a></p>';
 			exit;
 		} 	
 	?>

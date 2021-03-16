@@ -42,7 +42,8 @@
 			// Se a quantidade ou valor do item for menor/igual a zero
 			if ($quantidade <= 0 || $valor_item <= 0) {
 				echo "A quantidade ou valor do produto não pode ser igual ou menor que zero, refaça novamente a operação.";
-				echo '<p><a href="../form_crud/form_insert_venda.php" title="Refazer a operação"><button>Refazer operação</button></a></p>';
+				echo '<p><a href="../form_crud/form_insert_venda.php/#cad_ven" 
+				title="Refazer operação"><button>Refazer operação</button></a></p>';
 				exit;
 			}
 
@@ -94,8 +95,8 @@
 				// Caso a quantidade vendida seja maior que a quantidade em estoque
 				} elseif ($quantidade > $quantidade_antiga) {
 					echo "A quantidade de produtos vendidos não pode ultrapassar a quantidade em estoque, refaça novamente a operação.";
-					echo '<p><a href="../form_crud/form_insert_venda.php" 
-					title="Refazer a operação"><button>Refazer operação</button></a></p>';
+					echo '<p><a href="../form_crud/form_insert_venda.php/#cad_ven" 
+					title="Refazer operação"><button>Refazer operação</button></a></p>';
 					exit;
 				}
 				// $quantidade_estoque recebe $conexao que prepara a transacao para atualiza o estoque na tabela produto
@@ -108,7 +109,7 @@
     			// Confirma a execucao das query's em todas as transacoes  
     			$conexao->commit();
     			// Retorna para a pagina de formulario de listagem
-				header('Location: ../form_crud/form_select_venda.php');
+				header('Location: ../form_crud/form_select_venda/#nome.php');
 				die();
 			// Se a insercao nao for possivel de realizar
 			} catch (PDOException $falha_insercao) {
@@ -121,7 +122,8 @@
 		// Caso nao exista
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
-			echo '<p><a href="../form_crud/form_insert_venda.php" title="Refazer operação"><button>Refazer operação</button></a></p>';
+			echo '<p><a href="../form_crud/form_insert_venda.php/#cad_ven" 
+			title="Refazer operação"><button>Refazer operação</button></a></p>';
 			exit;
 		} 
 	?>

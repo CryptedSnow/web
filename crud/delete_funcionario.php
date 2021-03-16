@@ -45,16 +45,16 @@
 			// Se o for um gerente
 			if ($tipo_cargo == "Gerente") {
 				echo "O gerente {$nome_usuario} não pode ser excluído do sistema, refaça novamente a operação.";
-				echo '<p><a href="../form_crud/form_delete_funcionario.php" 
-				title="Refazer a operação"><button>Refazer operação</button></a></p>';
+				echo '<p><a href="../form_crud/form_delete_funcionario.php/#exc_func" 
+				title="Refazer operação"><button>Refazer operação</button></a></p>';
 				exit;
 			}
 
 			// Se o for um Administrador
 			if ($tipo_cargo == "Administrador") {
 				echo "O administrador {$nome_usuario} não pode ser excluído, refaça novamente a operação.";
-				echo '<p><a href="../form_crud/form_delete_funcionario.php" 
-				title="Refazer a operação"><button>Refazer operação</button></a></p>';
+				echo '<p><a href="../form_crud/form_delete_funcionario.php/#exc_func" 
+				title="Refazer operação"><button>Refazer operação</button></a></p>';
 				exit;
 			}
 
@@ -69,8 +69,8 @@
 			if ($countFuncionario > 0) {
 				$pluralSingular = $countFuncionario == 1 ? "uma venda" : "$countFuncionario vendas";
 				echo "{$nome_usuario} não pode ser excluído, pois ele realizou $pluralSingular no sistema.";
-				echo '<p><a href="../form_crud/form_delete_funcionario.php" title="Refazer operação">
-				<button>Refazer operação</button></a></p>';
+				echo '<p><a href="../form_crud/form_delete_funcionario.php/#exc_func" 
+				title="Refazer operação"><button>Refazer operação</button></a></p>';
 				exit;
 			}
 			
@@ -86,7 +86,7 @@
 			    $remocao->execute();
 			    // Se o funcionario for um gerente ou Administrador
 				if (($_SESSION['cargo_usuario'] == "Gerente") || ($_SESSION['cargo_usuario'] == "Administrador")) {
-					header('Location: ../form_crud/form_select_funcionario.php');
+					header('Location: ../form_crud/form_select_funcionario.php/#nome');
 					die();
 				} elseif ($_SESSION['cargo_usuario'] == "Atendente") {
             		session_destroy();
@@ -105,7 +105,8 @@
 		// Caso nao exista
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
-			echo '<p><a href="../form_crud/form_delete_funcionario.php" title="Refazer operação"><button>Refazer operação</button></a></p>';
+			echo '<p><a href="../form_crud/form_delete_funcionario.php/#exc_func" 
+			title="Refazer operação"><button>Refazer operação</button></a></p>';
 			exit;
 		} 	
 	?>

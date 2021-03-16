@@ -54,7 +54,7 @@
 			    // Executa a operacao
 			    $atualiza_dados->execute();
 			    // Retorna para a pagina de formulario de listagem
-				header('Location: ../form_crud/form_select_funcionario.php');
+				header('Location: ../form_crud/form_select_funcionario.php/#nome');
 				die();	
 			// Caso a atualizacao for possivel de realizar
 			} catch (PDOException $falha_atualizacao) {
@@ -67,7 +67,8 @@
 		// Caso nao exista
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
-			echo '<p><a href="../form_crud/form_update_funcionario.php" title="Refazer operação"><button>Refazer operação</button></a></p>';
+			echo '<p><a href="../form_crud/form_update_funcionario.php/#atu_func" 
+			title="Refazer operação"><button>Refazer operação</button></a></p>';
 			exit;
 		} 
 	?>

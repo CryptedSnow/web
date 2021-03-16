@@ -45,8 +45,8 @@
 			// Se a quantidade ou valor do item for menor/igual a zero
 			if ($quantidade <= 0 || $valor_compra <= 0) { 
 				echo "A quantidade ou valor de compra do produto não pode ser igual ou menor que zero, refaça novamente a operação.";
-				echo '<p><a href="../form_crud/form_insert_produto.php" 
-				title="Refazer a operação"><button>Refazer operação</button></a></p>';
+				echo '<p><a href="../form_crud/form_insert_produto.php/#cad_pro" 
+				title="Refazer operação"><button>Refazer operação</button></a></p>';
 				exit;
 			}
 
@@ -73,7 +73,7 @@
 				// Executa a operacao
 				$insere_dados->execute();
 				// Retorna para a pagina de formulario de listagem
-				header('Location: ../form_crud/form_select_produto.php');
+				header('Location: ../form_crud/form_select_produto/#nome.php');
 				die();
 			// Se a insercao nao for possivel de realizar
 			} catch (PDOException $falha_insercao) {
@@ -86,7 +86,8 @@
 		// Caso nao exista
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
-			echo '<p><a href="../form_crud/form_insert_produto.php" title="Refazer operação"><button>Refazer operação</button></a></p>';
+			echo '<p><a href="../form_crud/form_insert_produto.php/#cad_pro" 
+			title="Refazer operação"><button>Refazer operação</button></a></p>';
 			exit;
 		} 			
 	?>
