@@ -58,7 +58,7 @@
 				// Executa a operacao
 				$insere_dados->execute();
 				// Retorna para a pagina de formulario de listagem
-				header('Location: ../form_crud/form_select_cliente/#nome.php');
+				header('Location: ../form_crud/form_select_cliente.php/#nome');
 				die();
 			// Se a insercao nao for possível de realizar
 			} catch (PDOException $falha_insercao) {

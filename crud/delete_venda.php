@@ -90,7 +90,7 @@
         		// Confirma a execucao das query's em todas as transacoes 
 				$conexao->commit();
         		// Retorna para a pagina de formulario de listagem
-				header('Location: ../form_crud/form_select_venda/#nome.php');
+				header('Location: ../form_crud/form_select_venda.php/#nome');
 				die();
 			// Se a remocao nao for possivel de realizar
 			} catch (PDOException $falha_remocao) {

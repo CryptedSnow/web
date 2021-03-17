@@ -48,7 +48,7 @@
 				// Executa a operacao
 				$atualiza_dados->execute();
 				// Retorna para a pagina de formulario de listagem
-				header('Location: ../form_crud/form_select_compra/#nome.php');
+				header('Location: ../form_crud/form_select_compra.php/#nome');
 				die();
 				// Se a atualizacao nao for possivel de realizar
 			} catch (PDOException $falha_atualizacao) {

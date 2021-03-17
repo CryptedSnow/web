@@ -7,7 +7,6 @@
 	session_start();
 	// Se existir $_SESSION['id_usuario'] e nao for vazio
 	if((isset($_SESSION['id_usuario'])) && (!empty($_SESSION['id_usuario']))){
-		// Mensagem
 		echo "";
 	// Se nao
 	} else {
@@ -87,12 +86,12 @@
 			    // Se o funcionario for um gerente ou Administrador
 				if (($_SESSION['cargo_usuario'] == "Gerente") || ($_SESSION['cargo_usuario'] == "Administrador")) {
 					header('Location: ../form_crud/form_select_funcionario.php/#nome');
-					die();
+					die;
 				} elseif ($_SESSION['cargo_usuario'] == "Atendente") {
             		session_destroy();
-					echo "<script> alert('{$nome_usuario}, você acabou de se excluir. 
-					Procure o gerente ou administrador do sistema.'); location.href='/web/index.php' </script>";
-					die();
+					echo "{$nome_usuario}, você se excluiu do sistema, entre em contato com o gerente ou administrador.";
+					echo '<p><a href="/web/index.php"><button>Botão sair do sistema</button></a></p>';
+					die;
 				}
 			// Se a remocao nao for possivel de realizar
 			} catch (PDOException $falha_remocao) {
