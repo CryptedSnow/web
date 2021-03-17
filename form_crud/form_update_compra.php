@@ -163,5 +163,6 @@
 		</p>
 		<button name="Atualizar" title="Botão para atualizar a compra"> Botão atualizar compra </button>
 	</form>
+	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>
 </html> 

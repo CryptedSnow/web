@@ -148,5 +148,6 @@
 		</p>
 		<button name="Inserir" title="Botão para cadastrar a compra"> Botão cadastrar compra </button>
 	</form>
+	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>
 </html>

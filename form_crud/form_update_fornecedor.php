@@ -147,5 +147,6 @@
 		<p> Número: <input type="number" name="numero" id="numero" pattern="\d+" title="Campo para atualizar o número do comércio do fornecedor" size="5" required=""> </p>
 		<button name="Atualizar" title="Botão para atualizar fornecedor"> Botão atualizar fornecedor </button>
 	</form>
+	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>
 </html>

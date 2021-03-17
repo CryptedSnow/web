@@ -169,5 +169,6 @@
 	</table>
 	<script type="text/javascript" src="/web/js/compra/select_compra.js"></script> 
 	<p><a href='../planilha/planilha_compra.php' target="_blank" title="Botão de download de planilha de compras"><button> Gerar planilha de compras </button></a></p>
+	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>
 </html>

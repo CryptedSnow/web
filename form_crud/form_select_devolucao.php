@@ -167,5 +167,6 @@
 	</table>
 	<script type="text/javascript" src="/web/js/devolucao/select_devolucao.js"></script>
 	<p><a href='../planilha/planilha_devolucao.php' title="Botão de download de planilha de devoluções" target="_blank"><button> Gerar planilha de devoluções</button></a></p>
+	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>
 </html>

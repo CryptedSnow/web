@@ -117,5 +117,6 @@
 		<p> Número: <input type="number" id="numero" pattern="\d+" title="Campo para inserir o número da casa do cliente" name="numero" size="5" required=""> </p>
 		<button name="Inserir" title="Botão para cadastrar o cliente"> Botão cadastrar cliente </button>
 	</form>
+	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>
 </html> 

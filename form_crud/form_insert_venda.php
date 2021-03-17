@@ -161,5 +161,6 @@
 		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" title="Campo para inserir a quantidade de produtos para venda" required=""> </p>
 		<button name="Inserir" title="Botão para cadastrar a venda"> Botão cadastrar venda </button>
 	</form>
+	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>
 </html>

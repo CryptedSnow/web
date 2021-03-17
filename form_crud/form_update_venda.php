@@ -174,5 +174,6 @@
 		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" pattern="\d+" title="Campo para atualizar a quantidade de produtos para venda" required=""> </p>
 		<button name="Atualizar" title="Botão para atualizar a venda"> Botão atualizar venda </button>
 	</form>
+	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>
 </html> 
