@@ -30,7 +30,7 @@
 
 	// Verifica se o metodo e falso
 	if ($u->Logar($email, $senha) == false) {
-		echo "<script> alert('Dados inválidos, refaça novamente o login.'); location.href='/web/index.php' </script>";
+		echo "<script> alert('E-mail ou senha estão incorretos, refaça novamente o login.'); location.href='/web/index.php' </script>";
 		die;																								
 	}																						
 
