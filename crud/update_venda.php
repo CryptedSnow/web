@@ -44,7 +44,7 @@
 			if ($quantidade <= 0 || $valor_item <= 0) { 
 				echo "A quantidade ou valor do produto não pode ser igual ou menor que zero, refaça novamente a operação.";
 				echo '<p><a href="../form_crud/form_update_venda.php/#atu_ven" 
-				title="Refazer operação"><button>Refazer operação</button></a></p>';
+				title="Refazer operação"><button>Botão refazer operação</button></a></p>';
 				exit;
 			}
 
@@ -99,7 +99,7 @@
 					if ($quantidade_produto_antiga - ($quantidade - $quantidade_antiga) < 0) {
 						echo "A quantidade da venda não pode superar a quantidade do estoque disponível, refaça novamente a operação.";
 						echo '<p><a href="../form_crud/form_update_venda.php/#atu_ven" 
-						title="Refazer operação"><button>Refazer operação</button></a></p>';
+						title="Refazer operação"><button>Botão refazer operação</button></a></p>';
 						exit;
 					}
 					$quantidade_nova = $quantidade_produto_antiga - ($quantidade - $quantidade_antiga);
@@ -131,7 +131,7 @@
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
 			echo '<p><a href="../form_crud/form_update_venda.php/#atu_ven" 
-			title="Refazer operação"><button>Refazer operação</button></a></p>';
+			title="Refazer operação"><button>Botão refazer operação</button></a></p>';
 			exit;
 		} 		
 	?>

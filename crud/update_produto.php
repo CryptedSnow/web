@@ -47,7 +47,7 @@
 			if ($quantidade <= 0 || $valor_compra <= 0) { 
 				echo "A quantidade ou valor de compra do produto não pode ser igual ou menor que zero, refaça novamente a operação.";
 				echo '<p><a href="../form_crud/form_update_produto.php/#atu_pro" 
-				title="Refazer operação"><button>Refazer operação</button></a></p>';
+				title="Refazer operação"><button>Botão refazer operação</button></a></p>';
 				exit;
 			}
 
@@ -89,7 +89,7 @@
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
 			echo '<p><a href="../form_crud/form_update_produto.php/#atu_pro" 
-			title="Refazer operação"><button>Refazer operação</button></a></p>';
+			title="Refazer operação"><button>Botão refazer operação</button></a></p>';
 			exit;
 		} 	
 	?>

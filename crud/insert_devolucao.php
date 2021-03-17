@@ -43,7 +43,7 @@
 			if ($quantidade <= 0 || $valor_item <= 0) { 
 				echo "A quantidade ou valor do produto não pode ser igual ou menor que zero, refaça novamente a operação.";
 				echo '<p><a href="../form_crud/form_insert_devolucao.php/#cad_dev" 
-				title="Refazer operação"><button>Refazer operação</button></a></p>';
+				title="Refazer operação"><button>Botão refazer operação</button></a></p>';
 				exit;
 			}
 
@@ -65,7 +65,7 @@
 					// Caso a quantidade devolvida seja maior que a quantidade vendida
 					echo "A quantidade devolvida é maior que a quantidade vendida, refaça novamente a operação.";
 					echo '<p><a href="../form_crud/form_insert_devolucao.php/#cad_dev" 
-					title="Refazer operação"><button>Refazer operação</button></a></p>';
+					title="Refazer operação"><button>Botão refazer operação</button></a></p>';
 					exit;
 				}
 
@@ -122,7 +122,7 @@
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
 			echo '<p><a href="../form_crud/form_insert_devolucao.php/#cad_dev" 
-			title="Refazer operação"><button>Refazer operação</button></a></p>';
+			title="Refazer operação"><button>Botão refazer operação</button></a></p>';
 			exit;
 		} 
 	?>

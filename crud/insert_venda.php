@@ -43,7 +43,7 @@
 			if ($quantidade <= 0 || $valor_item <= 0) {
 				echo "A quantidade ou valor do produto não pode ser igual ou menor que zero, refaça novamente a operação.";
 				echo '<p><a href="../form_crud/form_insert_venda.php/#cad_ven" 
-				title="Refazer operação"><button>Refazer operação</button></a></p>';
+				title="Refazer operação"><button>Botão refazer operação</button></a></p>';
 				exit;
 			}
 
@@ -96,7 +96,7 @@
 				} elseif ($quantidade > $quantidade_antiga) {
 					echo "A quantidade de produtos vendidos não pode ultrapassar a quantidade em estoque, refaça novamente a operação.";
 					echo '<p><a href="../form_crud/form_insert_venda.php/#cad_ven" 
-					title="Refazer operação"><button>Refazer operação</button></a></p>';
+					title="Refazer operação"><button>Botão refazer operação</button></a></p>';
 					exit;
 				}
 				// $quantidade_estoque recebe $conexao que prepara a transacao para atualiza o estoque na tabela produto
@@ -123,7 +123,7 @@
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
 			echo '<p><a href="../form_crud/form_insert_venda.php/#cad_ven" 
-			title="Refazer operação"><button>Refazer operação</button></a></p>';
+			title="Refazer operação"><button>Botão refazer operação</button></a></p>';
 			exit;
 		} 
 	?>

@@ -46,7 +46,7 @@
 			if ($tipo_cargo == "Gerente") {
 				echo "O gerente {$nome_usuario} não pode ser excluído do sistema, refaça novamente a operação.";
 				echo '<p><a href="../form_crud/form_delete_funcionario.php/#exc_func" 
-				title="Refazer operação"><button>Refazer operação</button></a></p>';
+				title="Refazer operação"><button>Botão refazer operação</button></a></p>';
 				exit;
 			}
 
@@ -54,7 +54,7 @@
 			if ($tipo_cargo == "Administrador") {
 				echo "O administrador {$nome_usuario} não pode ser excluído, refaça novamente a operação.";
 				echo '<p><a href="../form_crud/form_delete_funcionario.php/#exc_func" 
-				title="Refazer operação"><button>Refazer operação</button></a></p>';
+				title="Refazer operação"><button>Botão refazer operação</button></a></p>';
 				exit;
 			}
 
@@ -70,7 +70,7 @@
 				$pluralSingular = $countFuncionario == 1 ? "uma venda" : "$countFuncionario vendas";
 				echo "{$nome_usuario} não pode ser excluído, pois ele realizou $pluralSingular no sistema.";
 				echo '<p><a href="../form_crud/form_delete_funcionario.php/#exc_func" 
-				title="Refazer operação"><button>Refazer operação</button></a></p>';
+				title="Botão refazer operação"><button>Refazer operação</button></a></p>';
 				exit;
 			}
 			
@@ -106,7 +106,7 @@
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
 			echo '<p><a href="../form_crud/form_delete_funcionario.php/#exc_func" 
-			title="Refazer operação"><button>Refazer operação</button></a></p>';
+			title="Refazer operação"><button>Botão refazer operação</button></a></p>';
 			exit;
 		} 	
 	?>

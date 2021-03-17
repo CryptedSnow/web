@@ -43,7 +43,7 @@
 			if ($cargo_atual == $novo_cargo) {
 				echo "O novo cargo não pode ser igual ao antigo cargo, refaça a operação.";
 				echo '<p><a href="../form_crud/form_area_adm.php/#area_adm" 
-				title="Refazer operação"><button>Refazer operação</button></a></p>';
+				title="Refazer operação"><button>Botão refazer operação</button></a></p>';
 				exit;
 			}
 			// Se a atualizacao for possivel de realizar
@@ -72,7 +72,7 @@
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
 			echo '<p><a href="../form_crud/form_area_adm.php/#area_adm" 
-			title="Refazer operação"><button>Refazer operação</button></a></p>';
+			title="Refazer operação"><button>Botão refazer operação</button></a></p>';
 			exit;
 		} 
 	?>

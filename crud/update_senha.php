@@ -52,7 +52,7 @@
 				if (!password_verify($senha_atual, $senha_mysql) || ($senha_nova != $confirmar_senha_nova)){
 					// Mensagem
 					echo "{$usuario_nome}, algo deu errado na atualização de sua senha, refaça novamente a operação.";
-					echo '<p><a href="../form_crud/form_update_senha.php/#alt_senha"><button>Retornar operação</button></a></p>';
+					echo '<p><a href="../form_crud/form_update_senha.php/#alt_senha"><button>Botão retornar operação</button></a></p>';
 					die();
 				// Se nao
 				} else {
@@ -67,7 +67,7 @@
 					$update->execute();
 					// Mensagem
 					echo "{$usuario_nome}, sua senha foi atualizada com sucesso!";
-					echo '<p><a href="../form_crud/form_update_senha.php/#alt_senha"><button>Retornar operação</button></a></p>';
+					echo '<p><a href="../form_crud/form_update_senha.php/#alt_senha"><button>Botão retornar operação</button></a></p>';
 					die();
 				}
 			// Se a atualizacao da senha nao for possivel de realizar	
@@ -81,7 +81,7 @@
 		// Caso nao exista	
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
-			echo '<p><a href="../form_crud/form_update_senha.php/#alt_senha"><button>Retornar operação</button></a></p>';
+			echo '<p><a href="../form_crud/form_update_senha.php/#alt_senha"><button>Botão retornar operação</button></a></p>';
 			exit;
 		}
 	?>

@@ -47,7 +47,7 @@
 				$pluralSingular = $countDevolucao == 1 ? "uma devolução" : "$countDevolucao devoluções";
 				echo "Você não pode apagar esse registro, pois está sendo usado em $pluralSingular.";
 				echo '<p><a href="../form_crud/form_delete_venda.php/#exc_ven" 
-				title="Refazer operação"><button>Refazer operação</button></a></p>';
+				title="Refazer operação"><button>Botão refazer operação</button></a></p>';
 				exit;
 			}
 
@@ -104,7 +104,7 @@
 		} else {
 			echo "Ocorreu algum erro ao finalizar a operação, refaça novamente a operação.";
 			echo '<p><a href="../form_crud/form_delete_venda.php/#exc_ven" 
-			title="Refazer operação"><button>Refazer operação</button></a></p>';
+			title="Refazer operação"><button>Botão Refazer operação</button></a></p>';
 			exit;
 		} 
 	?>
