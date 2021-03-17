@@ -157,16 +157,15 @@
 		 		echo '<td title="'.$exibir_colunas['tipo_pagamento'].'">'.$exibir_colunas['tipo_pagamento'].'</td>';
 		 		echo '<td title="'.date('d/m/Y H:i:s', strtotime($exibir_colunas['data_venda'])).'">'.
 		 		date('d/m/Y H:i:s', strtotime($exibir_colunas['data_venda'])).'</td>';
-		 		echo '<td>'."<a href='../form_crud/form_insert_venda.php' title='Cadastrar venda'>INSERT</a> ".
-		 		"<a href='../form_crud/form_select_venda.php' title='Listar vendas'>SELECT</a> ".
-		 		"<a href='../form_crud/form_update_venda.php' title='Atualizar venda'>UPDATE</a> ".
-		 		"<a href='../form_crud/form_delete_venda.php' title='Deletar venda'>DELETE</a>".'</td>';
+		 		echo '<td>'."<a href='/web/form_crud/form_insert_venda.php/#cad_ven' title='Cadastrar venda'>Cadastrar</a> ".
+		 		"<a href='/web/form_crud/form_update_venda.php/#atu_ven' title='Atualizar venda'>Atualizar</a> ".
+		 		"<a href='/web/form_crud/form_delete_venda.php/#exc_ven' title='Deletar venda'>Excluir</a>".'</td>';
 		 		echo '</tr>'; echo '</p>';
 			}
 		?>
 	</table>
 	<script type="text/javascript" src="/web/js/venda/select_venda.js"></script>
-	<p><a href='../planilha/planilha_venda.php' title="Botão de download de planilha de vendas" target="_blank"><button> Gerar planilha de vendas</button></a></p>
+	<p><a href='/web/planilha/planilha_venda.php' title="Botão de download de planilha de vendas" target="_blank"><button> Gerar planilha de vendas</button></a></p>
 	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>
 </html>

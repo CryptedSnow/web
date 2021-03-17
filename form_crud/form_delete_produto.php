@@ -184,10 +184,9 @@
 		 		echo '<td title="R$'.$exibir_colunas['valor_compra'].'">R$'.$exibir_colunas['valor_compra'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['porcentagem_revenda'].'%">'.$exibir_colunas['porcentagem_revenda'].'%</td>';
 		 		echo '<td title="R$'.$exibir_colunas['valor_revenda'].'">R$'.$exibir_colunas['valor_revenda'].'</td>';
-		 		echo '<td>'."<a href='../form_crud/form_insert_produto.php' title='Cadastrar produto'>INSERT</a> ".
-		 		"<a href='../form_crud/form_select_produto.php' title='Listar produtos'>SELECT</a> ".
-		 		"<a href='../form_crud/form_update_produto.php' title='Atualizar produto'>UPDATE</a> ".
-		 		"<a href='../form_crud/form_delete_produto.php' title='Deletar produto'>DELETE</a>".'</td>';
+		 		echo '<td>'."<a href='/web/form_crud/form_insert_produto.php/#cad_pro' title='Cadastrar produto'>Cadastrar</a> ".
+		 		"<a href='/web/form_crud/form_select_produto.php/#nome' title='Listar produtos'>Listar</a> ".
+		 		"<a href='/web/form_crud/form_update_produto.php/#atu_pro' title='Atualizar produto'>Atualizar</a>";
 		 		echo '</tr>'; echo '</p>';
 			}
 		?>

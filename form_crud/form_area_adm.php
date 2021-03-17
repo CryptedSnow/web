@@ -18,7 +18,7 @@
 	}
 	// Caso o usuario atual seja diferente de ADM
 	if ($_SESSION['cargo_usuario'] != "Administrador") {
-		echo "<script> alert('Só o administrador pode acessar essa área.'); location.href='/web/inicio.php' </script>";
+		echo "<script> alert('{$_SESSION['nome_usuario']}, só o administrador pode acessar essa área.'); location.href='/web/inicio.php' </script>";
 		die;
 	}
 	header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");

@@ -194,10 +194,9 @@
 		 		echo '<td title="R$'.$exibir_colunas['valor_compra'].'">R$'.$exibir_colunas['valor_compra'].'</td>';
 		 		echo '<td title="'.date('d/m/Y H:i:s', strtotime($exibir_colunas['data_compra'])).'">'.
 		 		date('d/m/Y H:i:s', strtotime($exibir_colunas['data_compra'])).'</td>';
-		 		echo '<td>'."<a href='../form_crud/form_insert_compra.php' title='Cadastrar compra'>INSERT</a> ".
-		 		"<a href='../form_crud/form_select_compra.php' title='Listar compras'>SELECT</a> ".
-		 		"<a href='../form_crud/form_update_compra.php' title='Atualizar compra'>UPDATE</a> ".
-		 		"<a href='../form_crud/form_delete_compra.php' title='Deletar compra'>DELETE</a>".'</td>';
+		 		echo '<td>'."<a href='/web/form_crud/form_insert_compra.php/#cad_com' title='Cadastrar compra'>Cadastrar</a> ".
+		 		"<a href='/web/form_crud/form_select_compra.php/#nome' title='Listar compras'>Listar</a> ".
+		 		"<a href='/web/form_crud/form_update_compra.php/#atu_com' title='Atualizar compra'>Atualizar</a>";
 		 		echo '</tr>'; echo '</p>';
 			}
 		?>

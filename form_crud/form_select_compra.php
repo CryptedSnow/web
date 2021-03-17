@@ -159,16 +159,15 @@
 		 		echo '<td title="R$'.$exibir_colunas['valor_compra'].'">R$'.$exibir_colunas['valor_compra'].'</td>';
 		 		echo '<td title="'.date('d/m/Y H:i:s', strtotime($exibir_colunas['data_compra'])).'">'.
 		 		date('d/m/Y H:i:s', strtotime($exibir_colunas['data_compra'])).'</td>';
-		 		echo '<td>'."<a href='../form_crud/form_insert_compra.php' title='Cadastrar compra'>INSERT</a> ".
-		 		"<a href='../form_crud/form_select_compra.php' title='Listar compras'>SELECT</a> ".
-		 		"<a href='../form_crud/form_update_compra.php' title='Atualizar compra'>UPDATE</a> ".
-		 		"<a href='../form_crud/form_delete_compra.php' title='Deletar compra'>DELETE</a>".'</td>';
+		 		echo '<td>'."<a href='/web/form_crud/form_insert_compra.php/#cad_com' title='Cadastrar compra'>Cadastrar</a> ".
+		 		"<a href='/web/form_crud/form_update_compra.php/#atu_com' title='Atualizar compra'>Atualizar</a> ".
+		 		"<a href='/web/form_crud/form_delete_compra.php/#exc_com' title='Deletar compra'>Excluir</a>".'</td>';
 		 		echo '</tr>'; echo '</p>';
 			}
 		?>
 	</table>
 	<script type="text/javascript" src="/web/js/compra/select_compra.js"></script> 
-	<p><a href='../planilha/planilha_compra.php' target="_blank" title="Botão de download de planilha de compras"><button> Gerar planilha de compras </button></a></p>
+	<p><a href='/web/planilha/planilha_compra.php' target="_blank" title="Botão de download de planilha de compras"><button> Gerar planilha de compras </button></a></p>
 	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>
 </html>

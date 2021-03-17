@@ -120,7 +120,7 @@
 		<p> CPF: <input type="text" name="cpf" id="cpf" title="Campo para atualizar o CPF do funcionário" size="30" minlength="14" required=""> </p>
 		<p> Telefone: <input type="text" name="telefone" id="telefone" title="Campo para atualizar o telefone do funcionário" size="30" minlength="14" required=""> </p>
 		<p> Email: <input type="email" name="email" id="email" title="Campo para atualizar o email de login do funcionário" size="30" maxlength="50" required=""> </p>
-		<button name="Atualizar" title="Botão para atualizar funcionário"> Botão cadastrar funcionário </button>
+		<button name="Atualizar" title="Botão para atualizar funcionário"> Botão atualizar funcionário </button>
 	</form>
 	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>

@@ -181,10 +181,9 @@
 		 		echo '<td title="'.$exibir_colunas['bairro'].'">'.$exibir_colunas['bairro'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['rua'].'">'.$exibir_colunas['rua'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['numero'].'">'.$exibir_colunas['numero'].'</td>';
-		 		echo '<td>'."<a href='../form_crud/form_insert_cliente.php' title='Cadastrar cliente'>INSERT</a> ".
-		 		"<a href='../form_crud/form_select_cliente.php' title='Listar clientes'>SELECT</a> ".
-		 		"<a href='../form_crud/form_update_cliente.php' title='Atualizar cliente'>UPDATE</a> ".
-		 		"<a href='../form_crud/form_delete_cliente.php' title='Deletar cliente'>DELETE</a>".'</td>';
+		 		echo '<td>'."<a href='/web/form_crud/form_insert_cliente.php/#cad_cli' title='Cadastrar cliente'>Cadastrar</a> ".
+		 		"<a href='/web/form_crud/form_select_cliente.php/#nome' title='Listar clientes'>Listar</a> ".
+		 		"<a href='/web/form_crud/form_update_cliente.php/#atu_cli' title='Atualizar cliente'>Atualizar</a>";
 		 		echo '</tr>'; echo '</p>';
 			}
 		?>

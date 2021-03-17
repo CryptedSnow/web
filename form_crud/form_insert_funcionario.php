@@ -18,7 +18,7 @@
 	}
 	// Caso o usuario atual seja um Atendente 
 	if ($_SESSION['cargo_usuario'] == "Atendente") {
-		echo "<script> alert('Só o gerente ou administrador podem cadastrar novos funcionários.'); 
+		echo "<script> alert('{$_SESSION['nome_usuario']}, só o gerente e administrador podem acessar essa área.'); 
 		location.href='/web/inicio.php' </script>";
 		die;
 	}

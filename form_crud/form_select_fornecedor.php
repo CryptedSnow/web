@@ -150,10 +150,9 @@
 		 		echo '<td title="'.$exibir_colunas['bairro'].'">'.$exibir_colunas['bairro'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['endereco'].'">'.$exibir_colunas['endereco'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['numero'].'">'.$exibir_colunas['numero'].'</td>';
-		 		echo '<td>'."<a href='../form_crud/form_insert_fornecedor.php' title='Cadastrar fornecedor'>INSERT</a> ".
-		 		"<a href='../form_crud/form_select_fornecedor.php' title='Listar fornecedores'>SELECT</a> ".
-		 		"<a href='../form_crud/form_update_fornecedor.php' title='Atualizar fornecedor'>UPDATE</a> ".
-		 		"<a href='../form_crud/form_delete_fornecedor.php' title='Deletar fornecedor'>DELETE</a>".'</td>';
+		 		echo '<td>'."<a href='/web/form_crud/form_insert_fornecedor.php/#cad_forn' title='Cadastrar fornecedor'>Cadastrar</a> ".
+		 		"<a href='/web/form_crud/form_update_fornecedor.php/#atu_forn' title='Atualizar fornecedor'>Atualizar</a> ".
+		 		"<a href='/web/form_crud/form_delete_fornecedor.php/#exc_forn' title='Deletar fornecedor'>Excluir</a>".'</td>';
 		 		echo '</tr>'; echo '</p>';
 			}
 		?>
