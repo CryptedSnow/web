@@ -174,7 +174,7 @@
 				echo '<tr>';
 		 		echo '<td title="'.$exibir_colunas['cd_fornecedor'].'">'.$exibir_colunas['cd_fornecedor'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['nome'].'">'.$exibir_colunas['nome'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['cnpj'].'">'.$exibir_colunas['cnpj'].'</td>';
+		 		echo '<td title="'.substr_replace($exibir_colunas['cnpj'], '***.***/****', 3, -3).'">'.substr_replace($exibir_colunas['cnpj'], '***.***/****', 3, -3).'</td>';
 		 		echo '<td title="'.$exibir_colunas['telefone'].'">'.$exibir_colunas['telefone'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['email'].'">'.$exibir_colunas['email'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['estado'].'">'.$exibir_colunas['estado'].'</td>';
