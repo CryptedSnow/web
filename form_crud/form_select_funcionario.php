@@ -141,7 +141,8 @@
 		 		echo '<td title="'.$exibir_colunas['cargo'].'">'.$exibir_colunas['cargo'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['cpf'].'">'.$exibir_colunas['cpf'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['telefone'].'">'.$exibir_colunas['telefone'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['email'].'">'.$exibir_colunas['email'].'</td>';
+		 		echo '<td title="'.substr_replace($exibir_colunas['email'], '******', 1, strpos($exibir_colunas['email'], '@') 
+		 		- 2).'">'.substr_replace($exibir_colunas['email'], '*****', 1, strpos($exibir_colunas['email'], '@') - 2).'</td>';
 		 		echo '<td>'."<a href='/web/form_crud/form_insert_funcionario.php/#cad_func' title='Cadastrar funcionário'>Cadastrar</a> ".
 		 		"<a href='/web/form_crud/form_update_funcionario.php/#atu_func' title='Atualizar funcionário'>Atualizar</a> ".
 		 		"<a href='/web/form_crud/form_delete_funcionario.php/#exc_func' title='Deletar funcionário'>Excluir</a>".'</td>';
