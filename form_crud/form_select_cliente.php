@@ -141,9 +141,10 @@
 				echo '<tr>';
 		 		echo '<td title="'.$exibir_colunas['cd_cliente'].'">'.$exibir_colunas['cd_cliente'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['nome'].'">'.$exibir_colunas['nome'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['cpf'].'">'.$exibir_colunas['cpf'].'</td>';
+		 		echo '<td title="'.substr_replace($exibir_colunas['cpf'], '***.***', 4, -3).'">'.substr_replace($exibir_colunas['cpf'], '***.***', 4, -3).'</td>';
 		 		echo '<td title="'.$exibir_colunas['telefone'].'">'.$exibir_colunas['telefone'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['email'].'">'.$exibir_colunas['email'].'</td>';
+		 		echo '<td title="'.substr_replace($exibir_colunas['email'], '*****', 1, strpos($exibir_colunas['email'], '@') 
+		 		- 2).'">'.substr_replace($exibir_colunas['email'], '*****', 1, strpos($exibir_colunas['email'], '@') - 2).'</td>';
 		 		echo '<td title="'.$exibir_colunas['cidade'].'">'.$exibir_colunas['cidade'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['bairro'].'">'.$exibir_colunas['bairro'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['rua'].'">'.$exibir_colunas['rua'].'</td>';
