@@ -62,4 +62,4 @@ Login/Logout | Funcionando
 </table>
 
 ### Link do sistema <h3>
-http://lojaroupasweb.store/web/
+Acesse http://lojaroupasweb.store/web/
