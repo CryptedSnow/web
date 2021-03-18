@@ -32,6 +32,7 @@ Login/Logout | Funcionando
 ### Próximos passos <h3>
 - [ ] Finalizar layouts 
 - [ ] Desenvolver front-end do sistema
+- [ ] Aplicar correções no sistema
 
 ### Equipe <h3>
 <table align="center">
@@ -59,3 +60,6 @@ Login/Logout | Funcionando
         </td>
     </tr>
 </table>
+
+### Link do sistema <h3>
+http://lojaroupasweb.store/web/
