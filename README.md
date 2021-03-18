@@ -65,5 +65,5 @@ Login/Logout | Funcionando
 Acesse http://lojaroupasweb.store/web/
 
 Dados de login:
-E-mail: convidado1@convidado.com
+E-mail: convidado1@convidado.com |
 Senha: Convidado0123
