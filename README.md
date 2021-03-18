@@ -41,14 +41,14 @@ Login/Logout | Funcionando
             <a href="https://github.com/Iury189">
                 <img width="150" src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4"/>
                 <br/>
-                <b>Nome 1</b>
+                <b>Iury Fernandes</b>
             </a>
         </td>
         <td align="center">
             <a href="https://github.com/Iury189">
                 <img width="150" src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4"/>
                 <br/>
-                <b>Nome 2</b>
+                <b>Renan Oliveira</b>
             </a>
         </td>
         <td align="center">
