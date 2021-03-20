@@ -26,6 +26,7 @@
 	<meta charset="utf-8">
 	<title> Início </title>
 	<link rel="stylesheet" href="/web/css/css.css">
+	<script type="text/javascript" src="/web/js/atalho/inicio.js"></script>
 </head>
 <body>
 	<nav id="menu">

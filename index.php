@@ -27,7 +27,7 @@
 			<i class="fa fa-eye" id="text" aria-hidden="true" title="Ocultar senha"></i>
 			<i class="fa fa-eye-slash" id="pass" aria-hidden="true" title="Exibir senha"></i>
 		</p>
-		<button name="Entrar" title="Botão para entrar no sistema"> Entrar </button>
+		<button name="Entrar" title="Botão para entrar no sistema"> Botão entrar </button>
 	</form>
 </body>
 </html>
