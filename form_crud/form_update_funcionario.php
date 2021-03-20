@@ -108,7 +108,7 @@
 		</ul>
 	</nav>
 	<form method="POST" id="atu_func" autocomplete="off" action="/web/crud/update_funcionario.php" onsubmit="exibirNome()">
-		<p> * Os campos são preenchidos ao carregar a página ou quando o registro ID funcionario é clicado. </p>
+		<p> * Os campos são preenchidos ao carregar a página ou quando o registro ID funcionário é clicado. </p>
 		<p> ID funcionário:
 			<select onclick="buscaDados()" name="cd_funcionario" required="" id="cd_funcionario" 
 			title="Caixa de seleção para escolher o funcionário a ser atualizado">
