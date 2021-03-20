@@ -32,6 +32,28 @@
 		if(isset($_POST['Deletar'])){
 			// Especifica a variável
 			$cd_cliente = intval($_POST['cd_cliente']);
+			// Buscar nome do cliente
+			$procurar_nome = "SELECT nome FROM cliente WHERE cd_cliente = :cd_cliente";
+			$busca_nome = $conexao->prepare($procurar_nome);
+			$busca_nome->bindValue(':cd_cliente', $cd_cliente);
+			$busca_nome->execute();
+			$linha_nome = $busca_nome->fetch(PDO::FETCH_ASSOC);
+			$nome_cliente = $linha_nome['nome'];
+			// Query que verifica se existe o registro de cliente em venda
+			$procurar_cliente = "SELECT COUNT(cd_cliente) AS countCliente FROM venda WHERE cd_cliente = :cd_cliente";
+			$busca_cliente = $conexao->prepare($procurar_cliente);
+			$busca_cliente->bindValue(':cd_cliente',$cd_cliente);
+			$busca_cliente->execute();
+			$linha = $busca_cliente->fetch(PDO::FETCH_ASSOC);
+			$countCliente = $linha['countCliente'];
+			// Se o registro de cliente existir na tabela venda 
+			if ($countCliente > 0) {
+				$pluralSingular = $countCliente == 1 ? "uma venda" : "$countCliente vendas";
+				echo "Você não pode apagar {$nome_cliente} do sistema, pois está registrado em $pluralSingular.";
+				echo '<p><a href="../form_crud/form_delete_cliente.php/#exc_cli" 
+				title="Refazer operação"><button>Botão refazer operação</button></a></p>';
+				exit;
+			}
 			// Se a remoção for possível de realizar
 			try {
 			    // Query que faz a remoção

@@ -32,6 +32,36 @@
 		if(isset($_POST['Deletar'])){
 			// Especifica a variavel
 			$cd_produto = intval($_POST['cd_produto']);
+			// Buscar nome do produto
+			$procurar_nome = "SELECT nome FROM produto WHERE cd_produto = :cd_produto";
+			$busca_nome = $conexao->prepare($procurar_nome);
+			$busca_nome->bindValue(':cd_produto',$cd_produto);
+			$busca_nome->execute();
+			$linha_nome = $busca_nome->fetch(PDO::FETCH_ASSOC);
+			$nome_produto = $linha_nome['nome'];
+			// Query que verifica se existe o registro de cliente em devolucao
+			$procurar_produto = "SELECT COUNT(cd_produto) AS countProduto FROM compra_fornecedor WHERE cd_produto = :cd_produto";
+			$busca_produto = $conexao->prepare($procurar_produto);
+			$busca_produto->bindValue(':cd_produto',$cd_produto);
+			$busca_produto->execute();
+			$linha = $busca_produto->fetch(PDO::FETCH_ASSOC);
+			$countProduto = $linha['countProduto'];
+			// Query que verifica se existe o registro de cliente em devolucao
+			$procurar_produto2 = "SELECT COUNT(cd_produto) AS countProduto2 FROM venda WHERE cd_produto = :cd_produto";
+			$busca_produto2 = $conexao->prepare($procurar_produto2);
+			$busca_produto2->bindValue(':cd_produto',$cd_produto);
+			$busca_produto2->execute();
+			$linha2 = $busca_produto2->fetch(PDO::FETCH_ASSOC);
+			$countProduto2 = $linha2['countProduto2'];
+			// Se o registro de produto existir na tabela compra ou venda 
+			if ($countProduto > 0 || $countProduto2 > 0) {
+				$pluralSingular = $countProduto == 1 ? "uma compra" : "$countProduto compras";
+				$pluralSingular2 = $countProduto2 == 1 ? "uma venda" : "$countProduto2 vendas";
+				echo "Você não pode apagar {$nome_produto} sistema, pois está registrado em $pluralSingular e em $pluralSingular2. <br>";
+				echo '<p><a href="../form_crud/form_delete_produto.php/#exc_pro" 
+				title="Refazer operação"><button>Botão refazer operação</button></a></p>';
+				exit;
+			}
 			// Se a remocao for possivel de realizar
 			try {
 			    // Query que faz a remocao
