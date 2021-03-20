@@ -111,7 +111,7 @@
 		// Se a selecao for possivel de realizar
 		try {
 			// Query que seleciona chave e nome do fornecedor
-			$seleciona_nomes = $conexao->query("SELECT cd_fornecedor, nome FROM fornecedor");
+			$seleciona_nomes = $conexao->query("SELECT cd_fornecedor, nome FROM fornecedor ORDER BY cd_fornecedor");
 			// Resulta em uma matriz
 			$resultado_selecao = $seleciona_nomes->fetchAll();
 		// Se a selecao nao for possivel de realizar

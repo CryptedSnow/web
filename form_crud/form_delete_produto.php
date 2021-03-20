@@ -111,7 +111,7 @@
 		// Se a selecao for possivel de realizar
 		try {
 			// Query que seleciona chave e nome do produto
-			$seleciona_nomes = $conexao->query("SELECT cd_produto, nome FROM produto");
+			$seleciona_nomes = $conexao->query("SELECT cd_produto, nome FROM produto ORDER BY cd_produto");
 			// Resulta em uma matriz
 			$resultado_selecao = $seleciona_nomes->fetchAll();
 		// Se a selecao nao for possivel de realizar

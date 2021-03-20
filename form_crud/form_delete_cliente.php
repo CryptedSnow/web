@@ -39,7 +39,7 @@
 		// Se a selecao for possivel de realizar
 		try {
 			// Query que seleciona chave e nome do cliente
-			$seleciona_nomes = $conexao->query("SELECT cd_cliente, nome FROM cliente");
+			$seleciona_nomes = $conexao->query("SELECT cd_cliente, nome FROM cliente ORDER BY cd_cliente");
 			// Resulta em uma matriz
 			$resultado_selecao = $seleciona_nomes->fetchAll();
 		// Se a selecao nao for possivel de realizar

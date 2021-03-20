@@ -33,39 +33,6 @@
 	<script type="text/javascript" src="/web/js/alerta/alerta_update.js" charset="UTF-8"></script>
 </head>
 <body>
-	<?php
-
-		// Mostrar todos os erros do php
-		ini_set('display_errors', '1');
-		ini_set('display_startup_errors', '1');
-		error_reporting(E_ALL);
-
-		// Se a selecao for possivel de realizar
-		try {
-			// Query que seleciona chave de venda
-			$seleciona_vendas = $conexao->query("SELECT cd_venda FROM venda");
-			// Resulta em uma matriz
-			$resultado_vendas = $seleciona_vendas->fetchAll();
-
-			// Query que seleciona chave e nome do produto
-			$seleciona_produto = $conexao->query("SELECT cd_produto, nome FROM produto");
-			// Resulta em uma matriz
-			$resultado_produto = $seleciona_produto->fetchAll();
-
-			// Query que seleciona chave e nome do cliente
-			$seleciona_cliente = $conexao->query("SELECT cd_cliente, nome FROM cliente");
-			// Resulta em uma matriz
-			$resultado_cliente = $seleciona_cliente->fetchAll(); 
-			
-		// Se a selecao nao for possivel de realizar
-		} catch (PDOException $falha_selecao) {
-			echo "A listagem de dados não foi feita".$falha_selecao->getMessage();
-			die;
-		} catch (Exception $falha) {
-			echo "Erro não característico do PDO".$falha->getMessage();
-			die;
-		}
-	?>
 	<nav id="menu">
 		<ul>
 			<li> <a href="/web/inicio.php" title="Início"> Início </a> </li>
@@ -139,6 +106,39 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
+	<?php
+
+		// Mostrar todos os erros do php
+		ini_set('display_errors', '1');
+		ini_set('display_startup_errors', '1');
+		error_reporting(E_ALL);
+
+		// Se a selecao for possivel de realizar
+		try {
+			// Query que seleciona chave de venda
+			$seleciona_vendas = $conexao->query("SELECT cd_venda FROM venda ORDER BY cd_venda");
+			// Resulta em uma matriz
+			$resultado_vendas = $seleciona_vendas->fetchAll();
+
+			// Query que seleciona chave e nome do produto
+			$seleciona_produto = $conexao->query("SELECT cd_produto, nome FROM produto ORDER BY cd_produto");
+			// Resulta em uma matriz
+			$resultado_produto = $seleciona_produto->fetchAll();
+
+			// Query que seleciona chave e nome do cliente
+			$seleciona_cliente = $conexao->query("SELECT cd_cliente, nome FROM cliente ORDER BY cd_cliente");
+			// Resulta em uma matriz
+			$resultado_cliente = $seleciona_cliente->fetchAll(); 
+			
+		// Se a selecao nao for possivel de realizar
+		} catch (PDOException $falha_selecao) {
+			echo "A listagem de dados não foi feita".$falha_selecao->getMessage();
+			die;
+		} catch (Exception $falha) {
+			echo "Erro não característico do PDO".$falha->getMessage();
+			die;
+		}
+	?>
 	<form method="POST" id="atu_ven" autocomplete="off" action="/web/crud/update_venda.php" onsubmit="exibirNome()">
 		<p> ID venda:
 		<select onclick="buscaDados()" name="cd_venda" id="cd_venda" required="" title="Caixa de seleção para escolher a venda a ser atualizada">

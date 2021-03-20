@@ -39,7 +39,7 @@
 		// Se a selecao for possivel de realizar
 		try {
 			// Query que seleciona chave da tabela compra_fornecedor
-			$seleciona_compra = $conexao->query("SELECT cd_compra_fornecedor FROM compra_fornecedor");
+			$seleciona_compra = $conexao->query("SELECT cd_compra_fornecedor FROM compra_fornecedor ORDER BY compra_fornecedor");
 			// Resulta em uma matriz
 			$resultado_selecao = $seleciona_compra->fetchAll();	
 		// Se a selecao nao for possivel de realizar

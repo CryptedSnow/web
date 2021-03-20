@@ -44,7 +44,8 @@
 		// Se a selecao for possivel de realizar
 		try {
 			// Query que seleciona chave e nome do funcionario
-			$seleciona_funcionario = $conexao->query("SELECT cd_funcionario, nome FROM funcionario WHERE cargo != 'Administrador'");
+			$seleciona_funcionario = $conexao->query("SELECT cd_funcionario, nome FROM funcionario 
+			WHERE cargo != 'Administrador' ORDER BY cd_funcionario");
 			// Resulta em uma matriz
 			$resultado_funcionario = $seleciona_funcionario->fetchAll();
 		// Se a selecao nao for possivel de realizar
@@ -154,7 +155,7 @@
           		<option value="Gerente" title="Cargo gerente"> Cargo gerente </option>
       		</select>
   		</p>
-		<button name="Atualizar" title="Botão para atualizar funcionário"> Botão atualizar funcionário </button>
+		<button name="Atualizar" title="Botão para atualizar cargo do funcionário"> Botão atualizar cargo funcionário </button>
 		</fieldset>
 	</form>
 
@@ -209,9 +210,10 @@
 		 		echo '<td title="'.$exibir_colunas['cd_funcionario'].'">'.$exibir_colunas['cd_funcionario'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['nome'].'">'.$exibir_colunas['nome'].'</td>';
 		 		echo '<td title="'.$exibir_colunas['cargo'].'">'.$exibir_colunas['cargo'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['cpf'].'">'.$exibir_colunas['cpf'].'</td>';
+		 		echo '<td title="'.substr_replace($exibir_colunas['cpf'], '***.***', 4, -3).'">'.substr_replace($exibir_colunas['cpf'], '***.***', 4, -3).'</td>';
 		 		echo '<td title="'.$exibir_colunas['telefone'].'">'.$exibir_colunas['telefone'].'</td>';
-		 		echo '<td title="'.$exibir_colunas['email'].'">'.$exibir_colunas['email'].'</td>';
+		 		echo '<td title="'.substr_replace($exibir_colunas['email'], '*****', 1, strpos($exibir_colunas['email'], '@') 
+		 		- 2).'">'.substr_replace($exibir_colunas['email'], '*****', 1, strpos($exibir_colunas['email'], '@') - 2).'</td>';
 		 		echo '</tr>'; echo '</p>';
 			}
 		?>

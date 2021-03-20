@@ -29,30 +29,6 @@
 	<script type="text/javascript" src="/web/js/alerta/alerta_delete.js" charset="UTF-8"></script>
 </head>
 <body> 
-	<?php
-
-		// Mostrar todos os erros do php
-		ini_set('display_errors', '1');
-		ini_set('display_startup_errors', '1');
-		error_reporting(E_ALL);
-
-		// Se a selecao for possivel de realizar
-		try {
-
-			// Query que seleciona chave e nome do fornecedor
-			$seleciona_nomes = $conexao->query("SELECT cd_venda FROM venda");
-			// Resulta em uma matriz
-			$resultado_selecao = $seleciona_nomes->fetchAll();	
-			
-		// Se a selecao nao for possivel de realizar
-		} catch (PDOException $falha_selecao) {
-			echo "A listagem de dados não foi feita".$falha_selecao->getMessage();
-			die;
-		} catch (Exception $falha) {
-			echo "Erro não característico do PDO".$falha->getMessage();
-			die;
-		}
-	?>
 	<nav id="menu">
 		<ul>
 			<li> <a href="/web/inicio.php" title="Início"> Início </a> </li>
@@ -126,6 +102,30 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
+	<?php
+
+		// Mostrar todos os erros do php
+		ini_set('display_errors', '1');
+		ini_set('display_startup_errors', '1');
+		error_reporting(E_ALL);
+
+		// Se a selecao for possivel de realizar
+		try {
+
+			// Query que seleciona chave e nome do fornecedor
+			$seleciona_nomes = $conexao->query("SELECT cd_venda FROM venda ORDER BY cd_venda");
+			// Resulta em uma matriz
+			$resultado_selecao = $seleciona_nomes->fetchAll();	
+			
+		// Se a selecao nao for possivel de realizar
+		} catch (PDOException $falha_selecao) {
+			echo "A listagem de dados não foi feita".$falha_selecao->getMessage();
+			die;
+		} catch (Exception $falha) {
+			echo "Erro não característico do PDO".$falha->getMessage();
+			die;
+		}
+	?>
 	<form method="POST" id="exc_ven" autocomplete="off" action="/web/crud/delete_venda.php" onsubmit="exibirNome()">
 		<p> ID venda:
 			<select name="cd_venda" required="" id="cd_venda" title="Caixa de seleção para escolher a venda a ser excluída">

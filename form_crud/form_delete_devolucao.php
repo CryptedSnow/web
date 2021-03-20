@@ -38,7 +38,7 @@
 		try {
 
 			// Query que seleciona chave da tabela devolucao
-			$seleciona_nomes = $conexao->query("SELECT cd_devolucao FROM devolucao");
+			$seleciona_nomes = $conexao->query("SELECT cd_devolucao FROM devolucao ORDER BY cd_devolucao");
 			// Resulta em uma matriz
 			$resultado_selecao = $seleciona_nomes->fetchAll();
 

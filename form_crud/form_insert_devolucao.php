@@ -44,12 +44,12 @@
 		try {
 
 			// Query que seleciona chave da tabela venda
-			$seleciona_venda = $conexao->query("SELECT cd_venda, quantidade FROM venda");
+			$seleciona_venda = $conexao->query("SELECT cd_venda, quantidade FROM venda ORDER BY cd_venda");
 			// Resulta em uma matriz
 			$resultado_venda = $seleciona_venda->fetchAll();
 
 			// Query que seleciona chave e nome do produto
-			$seleciona_produto = $conexao->query("SELECT cd_produto, nome, quantidade FROM produto");
+			$seleciona_produto = $conexao->query("SELECT cd_produto, nome, quantidade FROM produto ORDER BY cd_produto");
 			// Resulta em uma matriz
 			$resultado_produto = $seleciona_produto->fetchAll();
 

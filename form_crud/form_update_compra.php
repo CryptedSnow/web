@@ -40,17 +40,17 @@
 		// Se a selecao for possivel de realizar
 		try {
 			// Query que seleciona chave da tabela compra_fornecedor
-			$seleciona_compra = $conexao->query("SELECT cd_compra_fornecedor FROM compra_fornecedor");
+			$seleciona_compra = $conexao->query("SELECT cd_compra_fornecedor FROM compra_fornecedor ORDER BY cd_compra_fornecedor");
 			// Resulta em uma matriz
 			$resultado_compra = $seleciona_compra->fetchAll();	
 
 			// Query que seleciona chave e nome do fornecedor
-			$seleciona_fornecedor = $conexao->query("SELECT cd_fornecedor, nome FROM fornecedor");
+			$seleciona_fornecedor = $conexao->query("SELECT cd_fornecedor, nome FROM fornecedor ORDER BY cd_fornecedor");
 			// Resulta em uma matriz
 			$resultado_fornecedor = $seleciona_fornecedor->fetchAll();
 
 			// Query que seleciona chave e nome do produto
-			$seleciona_produto = $conexao->query("SELECT cd_produto, nome FROM produto");
+			$seleciona_produto = $conexao->query("SELECT cd_produto, nome FROM produto ORDER BY cd_produto");
 			// Resulta em uma matriz
 			$resultado_produto = $seleciona_produto->fetchAll();
 		// Se a selecao nao for possivel de realizar
