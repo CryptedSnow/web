@@ -99,3 +99,9 @@ Dados de login (Esse login não possui acesso total ao sistema):
 
 ### 9º - Com os módulos ativados, é possível fazer os testes de desenvolvimento web localmente. <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i8.png?raw=true)
+
+### 10º - Caso não tenha instalado o MySQL Wokbench, escolha o sistema operacional e versão e baixe-o. <h3>
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i9.png?raw=true)
+    
+### 11º - Siga as instruções de instalação a aguarde o têrmino do processo. <h3> 
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i10.png?raw=true)
