@@ -104,6 +104,6 @@ Dados de login (Esse login não possui acesso total ao sistema):
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i9.png?raw=true)
     
 ### 11º - Siga as instruções de instalação a aguarde o têrmino do processo. <h3>
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i10.png?raw=true)
 > Verifique se **.NET Framework** e **Microsoft Visual C++** estão instalados e atualizados.
 > >
-![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i10.png?raw=true)
