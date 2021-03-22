@@ -74,5 +74,5 @@ Dados de login (Esse login não possui acesso total ao sistema):
 
 ### 1º - Instale um servidor de desenvolvimento web em sua máquina, pode ser qualquer um de sua preferência, nesse demonstração estou usando o [XAMPP](https://www.apachefriends.org/pt_br/index.html). <h3> 
 
-### 2º - Ao escolher o ambiente de sua escolha, escolha o sistema operacional de sua preferência para baixar a versão mais recente do XAMPP, ou acesse **Baixar** para escolher as versões anteriores do XAMPP.  <h3> 
-![](github.com/Iury189/web/tree/main/imagens_instalacao/i1.png?raw=true)
+### 2º - Ao escolher o ambiente de sua escolha, escolha o sistema operacional de sua preferência para baixar a versão mais recente do XAMPP, ou acesse **Baixar** no menu do topo da página para escolher as versões anteriores do XAMPP.  <h3> 
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i1.png?raw=true)
