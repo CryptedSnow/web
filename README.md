@@ -103,5 +103,7 @@ Dados de login (Esse login não possui acesso total ao sistema):
 ### 10º - Caso não tenha instalado o MySQL Wokbench, escolha o sistema operacional e versão e baixe-o. <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i9.png?raw=true)
     
-### 11º - Siga as instruções de instalação a aguarde o têrmino do processo. <h3> 
+### 11º - Siga as instruções de instalação a aguarde o têrmino do processo. <h3>
+> Verifique se **.NET Framework** e **Microsoft Visual C++** estão instalados e atualizados.
+> >
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i10.png?raw=true)
