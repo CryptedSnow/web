@@ -91,5 +91,11 @@ Dados de login (Esse login não possui acesso total ao sistema):
 > O caminho do Linux e macOS são diferentes do Windows, para Linux o diretório é **/var/www/html/** e para macOS o diretório é **/Applications/XAMPP/xamppfiles/htdocs**.
 > >
 
-### 6º - Para usar o xampp é preciso acessar o painel de controle usando a interface gráfica, basta clicar em **xampp-control.exe** ("C:\xampp\xampp-control.ini") <h3>
+### 7º - Para usar o xampp é preciso acessar o painel de controle usando a interface gráfica, basta clicar em **xampp-control.exe** ("C:\xampp\xampp-control.ini") <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i6.png?raw=true)
+
+### 8º - Com a interface gráfica, aperte o botão **start** dos módulos de **Apache** e **MySQL**. <h3>
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i7.png?raw=true)
+
+### 9º - Com os módulos ativados, é possível fazer os testes de desenvolvimento web localmente. <h3>
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i8.png?raw=true)
