@@ -85,3 +85,5 @@ Dados de login (Esse login não possui acesso total ao sistema):
     
 ### 5º - Acesse a pasta **htdocs** ("C:\xampp\htdocs") . <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i4.png?raw=true)
+
+### 6º - Pronto, você já está dentro do endereço de servidor web local (o caminho do Linux é diferente do Windows, para Linux o diretório é **/var/www/html/**) e para Mac OS o diretório é **/Applications/XAMPP/xamppfiles/htdocs**. <h3>
