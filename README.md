@@ -138,5 +138,13 @@ Dados de login (Esse login não possui acesso total ao sistema):
 ### 20º Passo - Com arquivo escolhido para ser importado, clique no botão **Executar** <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i20.png?raw=true)
 
-### 21º Passo - Agora o banco de dados já foi importado para seu SGBD <h3>
+### 21º Passo - Agora o banco de dados já foi importado para seu MySQL Workbench <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i21.png?raw=true)
+
+### 22º Passo - Insira o endereço **localhost/web/index.php** em seu navegador para ser levado ao início do sistema <h3>
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i22.png?raw=true)
+    
+### 23º Passo - Insira os dados de login do qual foi disponibilizado na descrição <h3>
+> E-mail: convidado1@convidado.com
+> Senha: Convidado0123
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i23.png?raw=true)
