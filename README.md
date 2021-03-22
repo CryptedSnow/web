@@ -80,10 +80,11 @@ Dados de login (Esse login não possui acesso total ao sistema):
 ### 3º - Siga as instruções de instalação a aguarde o têrmino do processo (por padrão o xampp orienta usar o endereço "C:\xampp" em sua máquina, caso queira um outro caminho basta definir). <h3> 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i2.png?raw=true)
 
-### 4º - Vá até a pasta raiz do XAMPP e acesse a pasta **xampp** ("C:\xampp"). <h3>
+### 4º - Vá até o disco local ("C:\") acesse a pasta **xampp**. <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i3.png?raw=true)
     
-### 5º - Acesse a pasta **htdocs** ("C:\xampp\htdocs") . <h3>
+### 5º - Dentro da pasta xampp ("C:\xampp") acesse a pasta **htdocs**. <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i4.png?raw=true)
 
-### 6º - Pronto, você já está dentro do endereço de servidor web local (o caminho do Linux é diferente do Windows, para Linux o diretório é **/var/www/html/**) e para Mac OS o diretório é **/Applications/XAMPP/xamppfiles/htdocs**. <h3>
+### 6º - Pronto, você já está dentro do endereço de servidor web local ("C:\xampp\htdocs") <h3>
+### (o caminho do Linux é diferente do Windows, para Linux o diretório é **/var/www/html/**) e para Mac OS o diretório é **/Applications/XAMPP/xamppfiles/htdocs**. <h3>
