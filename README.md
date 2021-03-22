@@ -113,3 +113,6 @@ Dados de login (Esse login não possui acesso total ao sistema):
     
 ### 13º - Descompacte o zip e tranfira os códigos para dentro da pasta ("C:\xampp\htdocs") <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i12.png?raw=true)
+
+### 14º - Vá no navegador e digite o endereço **localhost** <h3>
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i13.png?raw=true)
