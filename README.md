@@ -145,6 +145,11 @@ Dados de login (Esse login não possui acesso total ao sistema):
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i22.png?raw=true)
     
 ### 23º Passo - Insira os dados de login do qual foi disponibilizado na descrição <h3>
-> E-mail: convidado1@convidado.com
-> Senha: Convidado0123
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i23.png?raw=true)
+> E-mail: convidado1@convidado.com
+> 
+> Senha: Convidado0123
+> 
+
+### 24º Passo - Feito o login agora é só executar <h3>
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i24.png?raw=true)
