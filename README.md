@@ -106,7 +106,7 @@ Dados de login (Esse login não possui acesso total ao sistema):
 ### 11º - Siga as instruções de instalação a aguarde o têrmino do processo. <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i10.png?raw=true)
 > Verifique se **.NET Framework** e **Microsoft Visual C++** estão instalados e atualizados.
-> >
+>
 
 ### 12º - Para testar os códigos de meu repositório clique em **Code** e em seguinda clique em **Download Zip**<h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i11.png?raw=true)
@@ -114,5 +114,20 @@ Dados de login (Esse login não possui acesso total ao sistema):
 ### 13º - Descompacte o zip e tranfira os códigos para dentro da pasta ("C:\xampp\htdocs") <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i12.png?raw=true)
 
-### 14º - Vá no navegador e digite o endereço **localhost** <h3>
+### 14º - Vá ao no navegador e digite o endereço **localhost** <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i13.png?raw=true)
+
+### 15º - Na página inicial do xampp clique em **phpmyadmin** <h3>
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i14.png?raw=true)
+
+### 16º - Para fazer a importação do banco, basta clicar em **Novo** <h3>
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i15.png?raw=true)
+    
+### 16º - Nomeie o banco de dados para **web** e clique em **Criar** (é importante que o banco importado tenha o mesmo nome do banco vazio em sua máquina) <h3>
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i16.png?raw=true)
+
+### 17º - Com o banco vazio criado, vá para a página **Importar** <h3>
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i17.png?raw=true)
+
+### 18º - Clique no botão **Escolher arquivo** para fazer o upload do arquivo da importação do banco <h3>
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i18.png?raw=true)
