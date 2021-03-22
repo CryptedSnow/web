@@ -94,7 +94,7 @@ Dados de login (Esse login não possui acesso total ao sistema):
 ### 7º - Para usar o xampp é preciso acessar o painel de controle usando a interface gráfica, basta clicar em **xampp-control.exe** ("C:\xampp\xampp-control.ini") <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i6.png?raw=true)
 
-### 8º - Com a interface gráfica, aperte o botão **start** dos módulos de **Apache** e **MySQL**. <h3>
+### 8º - Com a interface gráfica, aperte o botão **Start** dos módulos de **Apache** e **MySQL**. <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i7.png?raw=true)
 
 ### 9º - Com os módulos ativados, é possível fazer os testes de desenvolvimento web localmente. <h3>
@@ -107,3 +107,9 @@ Dados de login (Esse login não possui acesso total ao sistema):
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i10.png?raw=true)
 > Verifique se **.NET Framework** e **Microsoft Visual C++** estão instalados e atualizados.
 > >
+
+### 12º - Para testar os códigos de meu repositório clique em **Code** e em seguinda clique em **Download Zip**<h3>
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i11.png?raw=true)
+    
+### 13º - Descompacte o zip e tranfira os códigos para dentro da pasta ("C:\xampp\htdocs") <h3>
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i12.png?raw=true)
