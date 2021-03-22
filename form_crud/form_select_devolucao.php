@@ -128,7 +128,7 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-	<p> Procurar produto devolvido: <input id="nome" title="Campo para procurar determinado item devolvido"/> </p>
+	<p> Procurar nome do produto devolvido: <input id="nome" title="Campo para procurar determinado produto devolvido pelo nome"/> </p>
 	<table id="lista" border="1">
 		<tr> 
 			<th title="ID"> ID </th>

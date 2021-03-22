@@ -121,7 +121,7 @@
 			die;
 		}
 	?>
-	<p> Procurar fornecedor: <input id="nome" title="Campo para procurar determinado fornecedor"/></p>
+	<p> Procurar nome fornecedor: <input id="nome" title="Campo para procurar determinado fornecedor pelo nome"/></p>
 	<table id="lista" border="1">
 		<tr> 
 			<th title="ID"> ID </th>

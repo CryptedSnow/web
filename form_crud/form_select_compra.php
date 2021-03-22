@@ -127,7 +127,7 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-	<p> Procurar produto do fornecedor: <input id="nome" title="Campo para procurar determinado produto comprado do fornecedor"/> </p>
+	<p> Procurar nome produto comprado: <input id="nome" title="Campo para procurar determinado produto comprado pelo nome"/> </p>
 	<table id="lista" border="1">
 		<tr> 
 			<th title="ID"> ID </th>

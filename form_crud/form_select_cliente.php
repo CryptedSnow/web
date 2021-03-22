@@ -121,7 +121,7 @@
 			die;
 		}
 	?>
-	<p> Procurar cliente: <input id="nome" title="Campo para procurar determinado cliente"/> </p>
+	<p> Procurar nome cliente: <input id="nome" title="Campo para procurar determinado cliente pelo nome"/> </p>
 	<table id="lista" border="1">
 		<tr> 
 			<th title="ID"> ID </th>

@@ -121,7 +121,7 @@
 			die;
 		}
 	?>
-	<p> Procurar produto: <input id="nome" title="Campo para procurar determinado produto"/></p>
+	<p> Procurar nome produto: <input id="nome" title="Campo para procurar determinado produto pelo nome"/></p>
 	<table id="lista" border="1">
 		<tr> 
 			<th title="ID"> ID </th>

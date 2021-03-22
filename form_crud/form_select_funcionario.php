@@ -121,7 +121,7 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-	<p> Procurar funcionário: <input id="nome" title="Campo para procurar determinado funcionário"/></p>
+	<p> Procurar nome funcionário: <input id="nome" title="Campo para procurar determinado funcionário pelo nome"/></p>
 	<table id="lista" border="1">
 		<tr> 
 			<th title="ID"> ID </th> 
@@ -141,8 +141,8 @@
 		 		echo '<td title="'.$exibir_colunas['cargo'].'">'.$exibir_colunas['cargo'].'</td>';
 		 		echo '<td title="'.substr_replace($exibir_colunas['cpf'], '***.***', 4, -3).'">'.substr_replace($exibir_colunas['cpf'], '***.***', 4, -3).'</td>';
 		 		echo '<td title="'.$exibir_colunas['telefone'].'">'.$exibir_colunas['telefone'].'</td>';
-		 		echo '<td title="'.substr_replace($exibir_colunas['email'], '*****', 1, strpos($exibir_colunas['email'], '@') 
-		 		- 2).'">'.substr_replace($exibir_colunas['email'], '*****', 1, strpos($exibir_colunas['email'], '@') - 2).'</td>';
+		 		echo '<td title="'.substr_replace($exibir_colunas['email'], '****', 1, strpos($exibir_colunas['email'], '@') 
+		 		- 2).'">'.substr_replace($exibir_colunas['email'], '****', 1, strpos($exibir_colunas['email'], '@') - 2).'</td>';
 		 		echo '<td>'."<a href='/web/form_crud/form_insert_funcionario.php/#cad_func' title='Cadastrar funcionário'>Cadastrar</a> ".
 		 		"<a href='/web/form_crud/form_update_funcionario.php/#atu_func' title='Atualizar funcionário'>Atualizar</a> ".
 		 		"<a href='/web/form_crud/form_delete_funcionario.php/#exc_func' title='Deletar funcionário'>Excluir</a>".'</td>';
