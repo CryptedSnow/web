@@ -88,4 +88,5 @@ Dados de login (Esse login não possui acesso total ao sistema):
 
 ### 6º - Pronto, você já está dentro do endereço de servidor web local ("C:\xampp\htdocs") <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i5.png?raw=true)
-> O caminho do Linux e macOS são diferentes do Windows, para Linux o diretório é **/var/www/html/** e para macOS o diretório é **/Applications/XAMPP/xamppfiles/htdocs**.>
+> O caminho do Linux e macOS são diferentes do Windows, para Linux o diretório é **/var/www/html/** e para macOS o diretório é **/Applications/XAMPP/xamppfiles/htdocs**.
+> >
