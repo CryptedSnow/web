@@ -74,13 +74,13 @@ Dados de login (Esse login não possui acesso total ao sistema):
 
 ### 1º Passo - Instale um servidor de desenvolvimento web em sua máquina, pode ser qualquer um de sua preferência, nesse demonstração estou usando o [XAMPP](https://www.apachefriends.org/pt_br/index.html) no Windows. <h3> 
 
-### 2º Passo - Ao escolher o ambiente de sua escolha, escolha o sistema operacional de sua preferência para baixar a versão mais recente do XAMPP, ou acesse "**Clique aqui para outras versões**" ou no menu do topo da página escrito "**Baixar**" para escolher as versões anteriores do XAMPP.  <h3> 
+### 2º Passo - Ao escolher o ambiente de sua escolha, escolha o sistema operacional de sua preferência para baixar a versão mais recente do XAMPP, ou acesse ***Clique aqui para outras versões*** ou no menu do topo da página escrito ***Baixar*** para escolher as versões anteriores do XAMPP.  <h3> 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i1.png?raw=true)
     
-### 3º Passo - Siga as instruções de instalação a aguarde o têrmino do processo (por padrão o xampp orienta usar o endereço _C:\xampp_ no disco local, caso queira um outro caminho basta definir). <h3> 
+### 3º Passo - Siga as instruções de instalação a aguarde o têrmino do processo (por padrão o xampp orienta usar o endereço ***C:\xampp*** no disco local, caso queira um outro caminho basta definir). <h3> 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i2.png?raw=true)
 
-### 4º Passo - Vá até o disco local _C:\_ acesse a pasta *xampp*. <h3>
+### 4º Passo - Vá até o disco local ***C:\*** acesse a pasta ***xampp***. <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i3.png?raw=true)
     
 ### 5º Passo - Dentro da pasta xampp ("C:\xampp") acesse a pasta **htdocs**. <h3>
@@ -91,7 +91,7 @@ Dados de login (Esse login não possui acesso total ao sistema):
 > O caminho do Linux e macOS são diferentes do Windows, para Linux o diretório é **/var/www/html/** e para macOS o diretório é **/Applications/XAMPP/xamppfiles/htdocs**.
 > >
 
-### 7º Passo - Para usar o xampp é preciso acessar o painel de controle usando a interface gráfica, basta clicar em **"xampp-control.exe"** ("C:\xampp\xampp-control.ini") <h3>
+### 7º Passo - Para usar o xampp é preciso acessar o painel de controle usando a interface gráfica, basta clicar em ***xampp-control.exe*** ("C:\xampp\xampp-control.ini") <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i6.png?raw=true)
 
 ### 8º Passo - Com a interface gráfica, aperte o botão **"Start"** dos módulos de **"Apache"** e **"MySQL"**. <h3>
@@ -114,7 +114,7 @@ Dados de login (Esse login não possui acesso total ao sistema):
 ### 13º Passo - Descompacte o zip e tranfira os códigos para dentro da pasta ("C:\xampp\htdocs") <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i12.png?raw=true)
 
-### 14º Passo - Vá ao no navegador e digite o endereço **"localhost"** <h3>
+### 14º Passo - Vá ao no navegador e digite o endereço ***localhost*** <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i13.png?raw=true)
 
 ### 15º Passo - Na página inicial do xampp clique em **"phpmyadmin"** <h3>
