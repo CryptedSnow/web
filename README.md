@@ -78,11 +78,11 @@ Dados de login (Esse login não possui acesso total ao sistema):
 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i1.png?raw=true)
     
-3º Passo - Siga as instruções de instalação a aguarde o têrmino do processo (por padrão o xampp orienta usar o endereço _C:\xampp_ no disco local, caso queira um outro caminho basta definir). 
+3º Passo - Siga as instruções de instalação a aguarde o têrmino do processo (por padrão o xampp orienta usar o endereço (_C:\xampp_) no disco local, caso queira um outro caminho basta definir). 
 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i2.png?raw=true)
 
-4º Passo - Vá até o disco local _C:\_ acesse a pasta **xampp**.
+4º Passo - Vá até o disco local (_C:\_) acesse a pasta **xampp**.
 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i3.png?raw=true)
     
@@ -170,6 +170,7 @@ Dados de login (Esse login não possui acesso total ao sistema):
 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i23.png?raw=true)
 > E-mail: convidado1@convidado.com
+> 
 > Senha: Convidado0123
 
 25º Passo - Feito o login agora é só executar o sistema.
