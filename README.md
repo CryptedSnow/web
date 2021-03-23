@@ -82,7 +82,7 @@ Dados de login (Esse login não possui acesso total ao sistema):
 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i2.png?raw=true)
 
-4º Passo - Vá até o disco local (_C:\_) acesse a pasta **xampp**.
+4º Passo - Vá até o disco local (C:\) acesse a pasta **xampp**.
 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i3.png?raw=true)
     
