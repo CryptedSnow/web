@@ -77,10 +77,10 @@ Dados de login (Esse login não possui acesso total ao sistema):
 ### 2º Passo - Ao escolher o ambiente de sua escolha, escolha o sistema operacional de sua preferência para baixar a versão mais recente do XAMPP, ou acesse "**Clique aqui para outras versões**" ou no menu do topo da página escrito "**Baixar**" para escolher as versões anteriores do XAMPP.  <h3> 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i1.png?raw=true)
     
-### 3º Passo - Siga as instruções de instalação a aguarde o têrmino do processo (por padrão o xampp orienta usar o endereço "C:\xampp" no disco local, caso queira um outro caminho basta definir). <h3> 
+### 3º Passo - Siga as instruções de instalação a aguarde o têrmino do processo (por padrão o xampp orienta usar o endereço _C:\xampp_ no disco local, caso queira um outro caminho basta definir). <h3> 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i2.png?raw=true)
 
-### 4º Passo - Vá até o disco local ("C:\") acesse a pasta **xampp**. <h3>
+### 4º Passo - Vá até o disco local _C:\_ acesse a pasta *xampp*. <h3>
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i3.png?raw=true)
     
 ### 5º Passo - Dentro da pasta xampp ("C:\xampp") acesse a pasta **htdocs**. <h3>
