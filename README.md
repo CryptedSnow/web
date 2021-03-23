@@ -166,7 +166,7 @@ Dados de login (Esse login não possui acesso total ao sistema):
 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i22.png?raw=true)
     
-24º Passo - Insira os dados de login do qual foi disponibilizado na descrição.
+24º Passo - Insira os dados de login do qual foi disponibilizado na descrição acima ou abaixo da figura a seguir.
 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i23.png?raw=true)
 > E-mail: convidado1@convidado.com
