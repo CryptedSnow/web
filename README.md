@@ -72,84 +72,82 @@ Dados de login (Esse login não possui acesso total ao sistema):
 
 <h1 align="center"> Instalação local </h1>
 
-1º Passo - Instale um servidor de desenvolvimento web em sua máquina, pode ser qualquer um de sua preferência, nesse demonstração estou usando o [XAMPP](https://www.apachefriends.org/pt_br/index.html) no Windows. <h3> 
+1º Passo - Instale um servidor de desenvolvimento web em sua máquina, pode ser qualquer um de sua preferência, nesse demonstração estou usando o [XAMPP](https://www.apachefriends.org/pt_br/index.html) no Windows.
 
 2º Passo - Ao escolher o ambiente de sua escolha, escolha o sistema operacional de sua preferência para baixar a versão mais recente do XAMPP, ou acesse **Clique aqui para outras versões** ou no menu do topo da página escrito **Baixar** para escolher as versões anteriores do XAMPP. 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i1.png?raw=true)
     
-### 3º Passo - Siga as instruções de instalação a aguarde o têrmino do processo (por padrão o xampp orienta usar o endereço C:\xampp no disco local, caso queira um outro caminho basta definir). <h3> 
+3º Passo - Siga as instruções de instalação a aguarde o têrmino do processo (por padrão o xampp orienta usar o endereço _C:\xampp_ no disco local, caso queira um outro caminho basta definir). 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i2.png?raw=true)
 
-### 4º Passo - Vá até o disco local C:\ acesse a pasta xampp. <h3>
+4º Passo - Vá até o disco local _C:\_ acesse a pasta **xampp**.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i3.png?raw=true)
     
-### 5º Passo - Dentro da pasta xampp (C:\xampp) acesse a pasta htdocs. <h3>
+5º Passo - Dentro da pasta xampp (_C:\xampp_) acesse a pasta **htdocs**.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i4.png?raw=true)
 
-### 6º Passo - Pronto, você já está dentro do endereço de servidor web local (C:\xampp\htdocs) <h3>
+6º Passo - Pronto, você já está dentro do endereço de servidor web local (_C:\xampp\htdocs_).
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i5.png?raw=true)
 > O caminho do Linux e macOS são diferentes do Windows, para Linux o diretório é **/var/www/html/** e para macOS o diretório é **/Applications/XAMPP/xamppfiles/htdocs**.
 > >
 
-### 7º Passo - Para usar o xampp é preciso acessar o painel de controle usando a interface gráfica, basta clicar em xampp-control.exe (C:\xampp\xampp-control.exe) <h3>
+7º Passo - Para usar o xampp é preciso acessar o painel de controle usando a interface gráfica, basta clicar em **xampp-control.exe** (_C:\xampp\xampp-control.exe_).
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i6.png?raw=true)
 
-### 8º Passo - Com a interface gráfica, aperte o botão Start dos módulos de Apache e MySQL. <h3>
+8º Passo - Com a interface gráfica, aperte o botão **Start** dos módulos de **Apache** e **MySQL**.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i7.png?raw=true)
 
-### 9º Passo - Com os módulos ativados, é possível fazer os testes de desenvolvimento web localmente. <h3>
+9º Passo - Com os módulos ativados, é possível fazer os testes de desenvolvimento web localmente.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i8.png?raw=true)
 
-### 10º Passo - Caso não tenha instalado o MySQL Wokbench, escolha o sistema operacional e versão e baixe-o. <h3>
+10º Passo - Caso não tenha instalado o MySQL Wokbench, escolha o sistema operacional e versão e baixe-o.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i9.png?raw=true)
     
-### 11º Passo - Siga as instruções de instalação a aguarde o têrmino do processo. <h3>
+11º Passo - Siga as instruções de instalação a aguarde o têrmino do processo.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i10.png?raw=true)
 > Verifique se **.NET Framework** e **Microsoft Visual C++** estão instalados e atualizados.
 >
 
-### 12º Passo - Para testar os códigos de meu repositório clique em Code e em seguinda clique em Download Zip<h3>
+12º Passo - Para testar os códigos de meu repositório clique em **Code** e em seguinda clique em **Download Zip**.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i11.png?raw=true)
     
-### 13º Passo - Descompacte o zip e tranfira os códigos para dentro da pasta htdocs (C:\xampp\htdocs) <h3>
+13º Passo - Descompacte o zip e tranfira os códigos para dentro da pasta htdocs (_C:\xampp\htdocs_).
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i12.png?raw=true)
 
-### 14º Passo - Vá ao no navegador e digite o endereço localhost <h3>
+14º Passo - Vá ao no navegador e digite o endereço _localhost_.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i13.png?raw=true)
 
-### 15º Passo - Na página inicial do xampp clique em phpmyadmin <h3>
+15º Passo - Na página inicial do xampp clique em **phpmyadmin**.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i14.png?raw=true)
 
-### 16º Passo - Para fazer a importação do banco, basta clicar em Novo <h3>
+16º Passo - Para fazer a importação do banco, basta clicar em **Novo**.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i15.png?raw=true)
     
-### 16º Passo - Nomeie o banco de dados para web e clique em Criar (é importante que o banco importado tenha o mesmo nome do banco vazio em sua máquina) <h3>
+17º Passo - Nomeie o banco de dados para **web** e clique em **Criar** (é importante que o banco importado tenha o mesmo nome do banco vazio em sua máquina).
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i16.png?raw=true)
 
-### 17º Passo - Com o banco vazio criado, vá para a página Importar <h3>
+18º Passo - Com o banco vazio criado, vá para a página **Importar**.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i17.png?raw=true)
 
-### 18º Passo - Clique no botão Escolher arquivo para fazer o upload do arquivo da importação do banco <h3>
+19º Passo - Clique no botão **Escolher arquivo** para fazer o upload do arquivo da importação do banco.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i18.png?raw=true)
 
-### 19º Passo - Vá para dentro da pasta web (C:\xampp\htdocs\web) e escolha o arquivo web.sql e clique no botão Abrir <h3>
+20º Passo - Vá para dentro da pasta **web** (_C:\xampp\htdocs\web_) e escolha o arquivo **web.sql** e clique no botão **Abrir**.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i19.png?raw=true)
 
-### 20º Passo - Com arquivo escolhido para ser importado, clique no botão Executar <h3>
+21º Passo - Com arquivo escolhido para ser importado, clique no botão **Executar**.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i20.png?raw=true)
 
-### 21º Passo - Agora o banco de dados já foi importado para seu MySQL Workbench <h3>
+22º Passo - Agora o banco de dados já foi importado para seu MySQL Workbench.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i21.png?raw=true)
 
-### 22º Passo - Insira o endereço localhost/web/index.php em seu navegador para ser levado ao início do sistema <h3>
+23º Passo - Insira o endereço _localhost/web/index.php_ em seu navegador para ser levado ao início do sistema.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i22.png?raw=true)
     
-### 23º Passo - Insira os dados de login do qual foi disponibilizado na descrição <h3>
+24º Passo - Insira os dados de login do qual foi disponibilizado na descrição.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i23.png?raw=true)
 > E-mail: convidado1@convidado.com
-> 
 > Senha: Convidado0123
-> 
 
-### 24º Passo - Feito o login agora é só executar o sistema<h3>
+25º Passo - Feito o login agora é só executar o sistema.
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i24.png?raw=true)
