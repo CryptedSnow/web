@@ -43,7 +43,6 @@ Login/Logout | Funcionando
                 <img width="120" src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4"/>
                 <br/>
                 <b>Iury Fernandes</b>
-                <hr>
             </a>
              <li> Desenvolvedor </li>
              <li> Responsável pelos testes </li>
@@ -52,8 +51,7 @@ Login/Logout | Funcionando
             <a href="https://github.com/renanoliveir13">
                 <img width="120" src="https://avatars.githubusercontent.com/u/80891168?s=460&v=4"/>
                 <br/>
-                <b>Renan Oliveira</b>
-                <hr>
+                <b>Renan Oliveira</b>   
             </a>
             <li> Desenvolvedor </li>
             <li> DBA </li>
