@@ -40,7 +40,7 @@ Login/Logout | Funcionando
     <tr>
         <td align="center">
             <a href="https://github.com/Iury189">
-                <img width="150" src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4"/>
+                <img width="120" src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4"/>
                 <br/>
                 <b>Iury Fernandes</b>
             </a>
@@ -49,7 +49,7 @@ Login/Logout | Funcionando
         </td>
         <td align="center">
             <a href="https://github.com/renanoliveir13">
-                <img width="150" src="https://avatars.githubusercontent.com/u/80891168?s=460&v=4"/>
+                <img width="120" src="https://avatars.githubusercontent.com/u/80891168?s=460&v=4"/>
                 <br/>
                 <b>Renan Oliveira</b>
             </a>
@@ -58,7 +58,7 @@ Login/Logout | Funcionando
         </td>
         <td align="center">
             <a href="https://github.com/Iury189">
-                <img width="150" src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4"/>
+                <img width="120" src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4"/>
                 <br/>
                 <b>Nome 3</b>
             </a>
