@@ -56,13 +56,6 @@ Login/Logout | Funcionando
             <li> Desenvolvedor </li>
             <li> DBA </li>
         </td>
-        <td align="center">
-            <a href="https://github.com/Iury189">
-                <img width="120" src="https://avatars.githubusercontent.com/u/63120240?s=460&v=4"/>
-                <br/>
-                <b>Nome 3</b>
-            </a>
-        </td>
     </tr>
 </table>
 
