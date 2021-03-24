@@ -44,6 +44,8 @@ Login/Logout | Funcionando
                 <br/>
                 <b>Iury Fernandes</b>
             </a>
+             <li> Desenvolvedor </li>
+             <li> Responsável pelos testes </li>
         </td>
         <td align="center">
             <a href="https://github.com/renanoliveir13">
@@ -51,6 +53,8 @@ Login/Logout | Funcionando
                 <br/>
                 <b>Renan Oliveira</b>
             </a>
+            <li> Desenvolvedor </li>
+            <li> DBA </li>
         </td>
         <td align="center">
             <a href="https://github.com/Iury189">
