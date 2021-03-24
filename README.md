@@ -54,7 +54,7 @@ Login/Logout | Funcionando
                 <b>Renan Oliveira</b>
             </a>
             <li> Desenvolvedor </li>
-            <li> DBA </li>
+            <li> Responsável pelo banco de dados </li>
         </td>
     </tr>
 </table>
