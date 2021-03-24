@@ -56,7 +56,7 @@ Login/Logout | Funcionando
                 <hr>
             </a>
             <li> Desenvolvedor </li>
-            <li> Responsável pelo banco de dados </li>
+            <li> DBA </li>
         </td>
     </tr>
 </table>
