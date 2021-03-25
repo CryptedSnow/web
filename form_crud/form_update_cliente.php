@@ -40,6 +40,8 @@
 		ini_set('display_startup_errors', '1');
 		error_reporting(E_ALL);
 
+		$exibir_colunas['cd_cliente'] = $_GET['cd_cliente'];
+
 		// Se a selecao for possivel de realizar
 		try {
 			// Query que seleciona chave e nome do cliente
@@ -94,7 +96,6 @@
 				<ul>
 					<li> <a href="/web/form_crud/form_insert_compra.php/#cad_com" title="Cadastrar compra"> Cadastrar compra </a> </li>
 					<li> <a href="/web/form_crud/form_select_compra.php/#nome" title="Listar compras"> Listar compras </a> </li> 
-					<li> <a href="/web/form_crud/form_update_compra.php/#atu_com" title="Atualizar compra"> Atualizar compra </a> </li>
 					<li> <a href="/web/form_crud/form_delete_compra.php/#exc_com" title="Excluir compra"> Excluir compra </a> </li>
 				</ul>
 			</li>
@@ -130,7 +131,7 @@
 	</nav>
 	<form method="POST" id="atu_cli" autocomplete="off" action="/web/crud/update_cliente.php" onsubmit="exibirNome()">
 		<p> ID cliente:
-		<select onclick="buscaDados()" name="cd_cliente" id="cd_cliente" required="" title="Caixa de seleção para escolher o cliente a ser atualizado">
+		<select onclick="buscaDados()" name="cd_cliente" id="cd_cliente" required="" title="Caixa de seleção para escolher o cliente a ser atualizado" value="<?php echo $exibir_colunas['cd_cliente'] ?>">
 			<option value="" title="Opção vazia, escolha abaixo o cliente a ser atualizado"> Nenhum </option>
   			<?php foreach($resultado_selecao as $valor): ?>
     				<option title="<?= $valor['nome'] ?>" value="<?= $valor['cd_cliente'] ?>"><?= $valor['nome'] ?></option>

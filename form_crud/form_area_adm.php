@@ -96,7 +96,6 @@
 				<ul>
 					<li> <a href="/web/form_crud/form_insert_compra.php/#cad_com" title="Cadastrar compra"> Cadastrar compra </a> </li>
 					<li> <a href="/web/form_crud/form_select_compra.php/#nome" title="Listar compras"> Listar compras </a> </li> 
-					<li> <a href="/web/form_crud/form_update_compra.php/#atu_com" title="Atualizar compra"> Atualizar compra </a> </li>
 					<li> <a href="/web/form_crud/form_delete_compra.php/#exc_com" title="Excluir compra"> Excluir compra </a> </li>
 				</ul>
 			</li>
@@ -212,8 +211,8 @@
 		 		echo '<td title="'.$exibir_colunas['cargo'].'">'.$exibir_colunas['cargo'].'</td>';
 		 		echo '<td title="'.substr_replace($exibir_colunas['cpf'], '***.***', 4, -3).'">'.substr_replace($exibir_colunas['cpf'], '***.***', 4, -3).'</td>';
 		 		echo '<td title="'.$exibir_colunas['telefone'].'">'.$exibir_colunas['telefone'].'</td>';
-		 		echo '<td title="'.substr_replace($exibir_colunas['email'], '*****', 1, strpos($exibir_colunas['email'], '@') 
-		 		- 2).'">'.substr_replace($exibir_colunas['email'], '*****', 1, strpos($exibir_colunas['email'], '@') - 2).'</td>';
+		 		echo '<td title="'.substr_replace($exibir_colunas['email'], '****', 1, strpos($exibir_colunas['email'], '@') 
+		 		- 2).'">'.substr_replace($exibir_colunas['email'], '****', 1, strpos($exibir_colunas['email'], '@') - 2).'</td>';
 		 		echo '</tr>'; echo '</p>';
 			}
 		?>
