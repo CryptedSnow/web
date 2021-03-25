@@ -88,10 +88,9 @@ Dados de login (Esse login não possui acesso total ao sistema):
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i4.png?raw=true)
 
 6º Passo - Pronto, você já está dentro do endereço de servidor web local (_C:\xampp\htdocs_).
-
-![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i5.png?raw=true)
 > O caminho do Linux e macOS são diferentes do Windows, para Linux o diretório é **/var/www/html/** e para macOS o diretório é **/Applications/XAMPP/xamppfiles/htdocs**.
 > >
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i5.png?raw=true)
 
 7º Passo - Para usar o xampp é preciso acessar o painel de controle usando a interface gráfica, basta clicar em **xampp-control.exe** (_C:\xampp\xampp-control.exe_).
 
@@ -110,10 +109,9 @@ Dados de login (Esse login não possui acesso total ao sistema):
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i9.png?raw=true)
     
 11º Passo - Siga as instruções de instalação a aguarde o têrmino do processo.
-
-![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i10.png?raw=true)
 > Verifique se **.NET Framework** e **Microsoft Visual C++** estão instalados e atualizados.
 >
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i10.png?raw=true)
 
 12º Passo - Para testar os códigos de meu repositório clique em **Code** e em seguinda clique em **Download Zip**.
 
