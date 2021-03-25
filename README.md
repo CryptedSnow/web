@@ -170,5 +170,3 @@ Dados de login (Esse login não possui acesso total ao sistema):
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i23.png?raw=true)
 
 25º Passo - Feito o login agora é só executar o sistema.
-
-![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i24.png?raw=true)
