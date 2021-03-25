@@ -104,7 +104,7 @@ Dados de login (Esse login não possui acesso total ao sistema):
 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i8.png?raw=true)
 
-10º Passo - Caso não tenha instalado o MySQL Wokbench, escolha o sistema operacional e baixe-o.
+10º Passo - Caso não tenha instalado o MySQL Wokbench, escolha o sistema operacional e clique em **Download**.
 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i9.png?raw=true)
     
