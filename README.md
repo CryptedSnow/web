@@ -96,7 +96,7 @@ Dados de login (Esse login não possui acesso total ao sistema):
 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i6.png?raw=true)
 
-8º Passo - Já no painel aperte o botão **Start** para ativar os módulos de **Apache** e **MySQL**.
+8º Passo - Já no painel, aperte o botão **Start** para ativar os módulos de **Apache** e **MySQL**.
 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i7.png?raw=true)
 
