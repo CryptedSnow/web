@@ -69,7 +69,7 @@ Dados de login (Esse login não possui acesso total ao sistema):
 
 <h1 align="center"> Instalação local </h1>
 
-1º Passo - Instale um servidor de desenvolvimento web em sua máquina, pode ser qualquer um de sua preferência, nesse demonstração estou usando o [XAMPP](https://www.apachefriends.org/pt_br/index.html) no Windows.
+1º Passo - Instale um servidor de desenvolvimento web em sua máquina, pode ser qualquer um de sua preferência (**XAMPP**, **WAMPServer**, **MAMP**, **Docker**, **Laragon**, **EasyPHP** e outros), nesse demonstração estou usando o [XAMPP](https://www.apachefriends.org/pt_br/index.html) no Windows.
 
 2º Passo - Ao escolher o ambiente de sua escolha, escolha o sistema operacional de sua preferência para baixar a versão mais recente do XAMPP, ou acesse **Clique aqui para outras versões** ou no menu do topo da página escrito **Baixar** para escolher as versões anteriores do XAMPP.
 
