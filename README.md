@@ -117,7 +117,7 @@ Dados de login (Esse login não possui acesso total ao sistema):
 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i11.png?raw=true)
     
-13º Passo - Descompacte o zip e tranfira os códigos para dentro da pasta **htdocs** (_C:\xampp\htdocs_).
+13º Passo - Descompacte o zip corretamente e transfira os códigos para dentro da pasta **htdocs** (_C:\xampp\htdocs_).
 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i12.png?raw=true)
 
