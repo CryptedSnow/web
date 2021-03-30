@@ -137,7 +137,7 @@ Dados de login (Esse login não possui acesso total ao sistema):
 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i16.png?raw=true)
 
-18º Passo - Com o banco vazio criado, vá para a página **Importar**.
+18º Passo - Com o banco **web** criado, vá para a página **Importar**.
 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i17.png?raw=true)
 
