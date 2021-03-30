@@ -109,7 +109,7 @@ Dados de login (Esse login não possui acesso total ao sistema):
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i9.png?raw=true)
     
 11º Passo - Siga as instruções de instalação a aguarde o têrmino do processo.
-> Verifique se **.NET Framework** e **Microsoft Visual C++** estão instalados e atualizados.
+> Verifique se **.NET Framework** e **Microsoft Visual C++** estão instalados e atualizados em seu Windows (caso esteja usando outro sistema operacional verifique se há requisitos para instalar o MySQL Workbench.
 >
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i10.png?raw=true)
 
