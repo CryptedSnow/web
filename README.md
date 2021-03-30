@@ -137,7 +137,9 @@ Dados de login (Esse login não possui acesso total ao sistema):
 
 ![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i16.png?raw=true)
 
-18º Passo - Com o banco **web** criado, vá para a página **Importar**.
+18º Passo - Com o banco **web** criado (o banco está vazio), vá para a página **Importar**.
+
+![](https://github.com/Iury189/web/blob/main/imagens_instalacao/i17.png?raw=true)
 
 19º Passo - Clique no botão **Escolher arquivo** para fazer o upload do arquivo da importação do banco.
 
