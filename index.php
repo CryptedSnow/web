@@ -20,7 +20,10 @@
 <body>
 	<h1> Login </h1>
 	<form method="POST" autocomplete="off" action="/web/valida_login.php">
-		<p> Email: <input type="email" name="email" title="Campo para digitar seu email" size=30 required maxlength="50"> </p>
+	<fieldset>
+		<legend> Login (Atalho = Alt + w) </legend>
+		<p> Email: <input type="email" name="email" accesskey="w" title="Campo para digitar seu email" size=30 required 
+		maxlength="50" > </p>
 		<p> Senha:
 			<input type="password" id="senha" name="senha" title="Campo para digitar sua senha" size="30" 
 			maxlength="32" required="" onclick="mostrarSenha()">
@@ -28,6 +31,7 @@
 			<i class="fa fa-eye-slash" id="pass" aria-hidden="true" title="Exibir senha"></i>
 		</p>
 		<button name="Entrar" title="Botão para entrar no sistema"> Botão entrar </button>
+	</fieldset>
 	</form>
 </body>
 </html>
