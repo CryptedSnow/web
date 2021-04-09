@@ -105,7 +105,9 @@
 		</ul>
 	</nav>
 	<form method="POST" id="cad_cli" autocomplete="off" action="/web/crud/insert_cliente.php" onsubmit="exibirNome()">
-		<p> Nome: <input type="text" name="nome" id="nome" title="Campo para inserir o nome do cliente" size="30" maxlength="30" required=""> </p>
+		<fieldset>
+		<legend> Cadastrar cliente (Atalho = Alt + w) </legend>
+		<p> Nome: <input type="text" name="nome" id="nome" title="Campo para inserir o nome do cliente" size="30" maxlength="30" required="" accesskey="w"> </p>
 		<p> CPF: <input type="text" name="cpf" id="cpf" title="Campo para inserir o CPF do cliente" size="30" 
 		minlength="14" required=""> </p>
 		<p> Telefone: <input type="text" id="telefone" name="telefone" title="Campo para inserir o telefone do cliente" size="30" minlength="14" required=""> </p>
@@ -115,6 +117,7 @@
 		<p> Rua: <input type="text" id="rua" name="rua" title="Campo para inserir o nome da rua do cliente" size="30" maxlength="30" required=""> </p>
 		<p> Número: <input type="number" id="numero" pattern="\d+" title="Campo para inserir o número da casa do cliente" name="numero" size="5" required=""> </p>
 		<button name="Inserir" title="Botão para cadastrar o cliente"> Botão cadastrar cliente </button>
+		</fieldset>
 	</form>
 	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>

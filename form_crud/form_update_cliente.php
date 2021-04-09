@@ -40,8 +40,6 @@
 		ini_set('display_startup_errors', '1');
 		error_reporting(E_ALL);
 
-		$exibir_colunas['cd_cliente'] = $_GET['cd_cliente'];
-
 		// Se a selecao for possivel de realizar
 		try {
 			// Query que seleciona chave e nome do cliente
@@ -130,8 +128,10 @@
 		</ul>
 	</nav>
 	<form method="POST" id="atu_cli" autocomplete="off" action="/web/crud/update_cliente.php" onsubmit="exibirNome()">
+		<fieldset>
+		<legend> Excluir cliente (Atalho = Alt + w) </legend>
 		<p> ID cliente:
-		<select onclick="buscaDados()" name="cd_cliente" id="cd_cliente" required="" title="Caixa de seleção para escolher o cliente a ser atualizado" value="<?php echo $exibir_colunas['cd_cliente'] ?>">
+		<select onclick="buscaDados()" name="cd_cliente" id="cd_cliente" required="" title="Caixa de seleção para escolher o cliente a ser atualizado" accesskey="w">
 			<option value="" title="Opção vazia, escolha abaixo o cliente a ser atualizado"> Nenhum </option>
   			<?php foreach($resultado_selecao as $valor): ?>
     				<option title="<?= $valor['nome'] ?>" value="<?= $valor['cd_cliente'] ?>"><?= $valor['nome'] ?></option>
@@ -147,6 +147,7 @@
 		<p> Rua: <input type="text" name="rua" id="rua" title="Campo para atualizar o nome da rua do cliente" size="30" maxlength="30" required=""> </p>
 		<p> Número: <input type="number" id="numero" pattern="\d+" title="Campo para atualizar o número da casa do cliente" name="numero" size="5" required=""> </p>
 		<button name="Atualizar" title="Botão para atualizar cliente"> Botão atualizar cliente </button>
+		</fieldset>
 	</form>
 	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>

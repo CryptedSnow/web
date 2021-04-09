@@ -113,7 +113,9 @@
 		</ul>
 	</nav>
 	<form method="POST" id="cad_func" autocomplete="off" action="/web/crud/insert_funcionario.php" onsubmit="exibirNome()">
-		<p> Nome: <input type="text" name="nome" id="nome" title="Campo para inserir o nome do funcionário" size="30" maxlength="30" required=""> </p>
+		<fieldset>
+		<legend> Cadastrar funcionário (Atalho = Alt + w) </legend>
+		<p> Nome: <input type="text" name="nome" id="nome" title="Campo para inserir o nome do funcionário" size="30" maxlength="30" required="" accesskey="w"> </p>
 		<p> Cargo:
       		<select name="cargo" id="cargo" required="" title="Caixa de seleção para escolher o cargo do funcionário" required="">
           		<option value="" title="Por padrão a opção é vazia, selecione abaixo um cargo"> Nenhum </option>

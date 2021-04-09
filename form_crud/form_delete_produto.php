@@ -123,8 +123,10 @@
 		}
 	?>
 	<form method="POST" id="exc_pro" autocomplete="off" action="/web/crud/delete_produto.php" onsubmit="exibirNome()">
+		<fieldset>
+		<legend> Cadastrar produto (Atalho = Alt + w) </legend>
 		<p> ID produto:
-			<select name="cd_produto" required="" id="cd_produto" title="Caixa de seleção para escolher o produto a ser excluído">
+			<select name="cd_produto" required="" id="cd_produto" title="Caixa de seleção para escolher o produto a ser excluído" accesskey="w">
 				<option value="" title="Opção vazia, escolha abaixo a roupa a ser excluída"> Nenhum </option>
 	  			<?php foreach($resultado_selecao as $valor): ?>
     				<option title="<?= $valor['nome'] ?>" value="<?= $valor['cd_produto'] ?>"><?= $valor['nome'] ?></option>
@@ -132,6 +134,7 @@
 			</select>
 		</p>
 		<button name="Deletar" title="Botão para excluir o produto"> Botão deletar produto </button>
+		</fieldset>
 	</form>
 	<?php
 		// Se a selecao for possivel de realizar

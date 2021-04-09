@@ -106,8 +106,10 @@
 		</ul>
 	</nav>
 	<form method="POST" id="cad_pro" autocomplete="off" action="/web/crud/insert_produto.php" onsubmit="exibirNome()">
+		<fieldset>
+		<legend> Cadastrar produto (Atalho = Alt + w) </legend>
 		<p> Tipo do produto:
-      		<select name="nome" id="nome" required="" title="Caixa de seleção para escolher o tipo do produto">
+      		<select name="nome" id="nome" required="" title="Caixa de seleção para escolher o tipo do produto" accesskey="w">
           		<option value="" title="Por padrão a opção é vazia, escolha abaixo o tamanho desejado"> Nenhum </option>
           		<option value="Camiseta" title="Opção Camiseta">Camiseta</option>
           		<option value="Calça" title="Opção Calça">Calça</option>
@@ -196,6 +198,7 @@
 		</select>
 		</p>
 		<button name="Inserir" title="Botão para cadastrar o produto"> Botão cadastrar produto </button>
+		</fieldset>
 	</form>
 	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>

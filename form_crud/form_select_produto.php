@@ -120,7 +120,10 @@
 			die;
 		}
 	?>
-	<p> Procurar nome produto: <input id="nome" title="Campo para procurar determinado produto pelo nome"/></p>
+	<fieldset>
+		<legend> Procurar produto (Atalho = Alt + w) </legend>
+		<p> Procurar nome produto: <input id="nome" accesskey="w" title="Campo para procurar determinado produto pelo nome"/></p>
+	</fieldset>
 	<table id="lista" border="1">
 		<tr> 
 			<th title="ID"> ID </th>

@@ -139,8 +139,10 @@
 		}
 	?>
 	<form method="POST" id="atu_ven" autocomplete="off" action="/web/crud/update_venda.php" onsubmit="exibirNome()">
+		<fieldset>
+		<legend> Atualizar venda (Atalho = Alt + w) </legend>
 		<p> ID venda:
-		<select onclick="buscaDados()" name="cd_venda" id="cd_venda" required="" title="Caixa de seleção para escolher a venda a ser atualizada">
+		<select onclick="buscaDados()" name="cd_venda" id="cd_venda" required="" title="Caixa de seleção para escolher a venda a ser atualizada" accesskey="w">
 			<option value="" title="Opção vazia, escolha abaixo o cliente a ser atualizado"> Nenhum </option>
 			<?php foreach($resultado_vendas as $valor): ?>
     			<option title="<?= $valor['cd_venda'] ?>" value="<?= $valor['cd_venda'] ?>"><?= $valor['cd_venda'] ?></option>
@@ -172,6 +174,7 @@
 		<p> Valor do item: <input type="number" step="any" name="valor_item" placeholder="R$0.00" id="valor_item" title="Campo para atualizar o valor do produto" required="" readonly="readonly"> </p>
 		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" pattern="\d+" title="Campo para atualizar a quantidade de produtos para venda" required=""> </p>
 		<button name="Atualizar" title="Botão para atualizar a venda"> Botão atualizar venda </button>
+		</fieldset>
 	</form>
 	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>

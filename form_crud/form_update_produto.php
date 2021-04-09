@@ -128,8 +128,10 @@
 		}
 	?>
 	<form method="POST" id="atu_pro" autocomplete="off" action="/web/crud/update_produto.php" onsubmit="exibirNome()">
+		<fieldset>
+		<legend> Atualizar produto (Atalho = Alt + w) </legend>
 		<p> ID produto:
-		<select onclick="buscaDados()" name="cd_produto" id="cd_produto" required="" title="Caixa de seleção para escolher o produto a ser atualizado">
+		<select onclick="buscaDados()" name="cd_produto" id="cd_produto" required="" title="Caixa de seleção para escolher o produto a ser atualizado" accesskey="w">
 			<option value="" title="Opção vazia, escolha abaixo o produto a ser atualizado"> Nenhum </option>
   			<?php foreach($resultado_selecao as $valor): ?>
     			<option title="<?= $valor['nome'] ?>" value="<?= $valor['cd_produto'] ?>"><?= $valor['nome'] ?></option>
@@ -225,6 +227,7 @@
 			</select>
 		</p>
 		<button name="Atualizar" title="Botão para atualizar o produto"> Botão atualizar produto </button>
+		</fieldset>
 	</form>
 	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>

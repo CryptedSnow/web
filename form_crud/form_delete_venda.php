@@ -126,8 +126,10 @@
 		}
 	?>
 	<form method="POST" id="exc_ven" autocomplete="off" action="/web/crud/delete_venda.php" onsubmit="exibirNome()">
+		<fieldset>
+		<legend> Excluir venda (Atalho = Alt + w) </legend>
 		<p> ID venda:
-			<select name="cd_venda" required="" id="cd_venda" title="Caixa de seleção para escolher a venda a ser excluída">
+			<select name="cd_venda" required="" id="cd_venda" title="Caixa de seleção para escolher a venda a ser excluída" accesskey="w">
 				<option value="" title="Opção vazia, escolha abaixo a venda a ser excluída"> Nenhum </option>
 				<?php foreach($resultado_selecao as $valor): ?>
     				<option title="<?= $valor['cd_venda'] ?>" value="<?= $valor['cd_venda'] ?>"><?= $valor['cd_venda'] ?></option>
@@ -135,6 +137,7 @@
 			</select>
 		</p>
 		<button name="Deletar" title="Botão para excluir a venda"> Botão deletar venda </button>
+		</fieldset>
 	</form>
 	<?php 
 		// Se a selecao for possivel de realizar

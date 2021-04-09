@@ -39,7 +39,8 @@
 		// Se a selecao for possivel de realizar
 		try {
 			// Query que seleciona chave da tabela compra_fornecedor
-			$seleciona_compra = $conexao->query("SELECT cd_compra_fornecedor FROM compra_fornecedor ORDER BY compra_fornecedor");
+			$seleciona_compra = $conexao->query("SELECT cd_compra_fornecedor FROM compra_fornecedor 
+			ORDER BY cd_compra_fornecedor");
 			// Resulta em uma matriz
 			$resultado_selecao = $seleciona_compra->fetchAll();	
 		// Se a selecao nao for possivel de realizar
@@ -124,9 +125,11 @@
 		</ul>
 	</nav>
 	<form method="POST" id="exc_com" autocomplete="off" action="/web/crud/delete_compra.php" onsubmit="exibirNome()">
+	<fieldset>
+		<legend> Excluir compra (Atalho = Alt + w) </legend>
 		<p> ID compra:
 			<select name="cd_compra_fornecedor" required="" id="cd_compra_fornecedor" 
-			title="Caixa de seleção para escolher a compra a ser excluída">
+			title="Caixa de seleção para escolher a compra a ser excluída" accesskey="w">
 				<option value="" title="Opção vazia, escolha abaixo a compra a ser excluída"> Nenhum </option>
 	  			<?php foreach($resultado_selecao as $valor): ?>
     				<option title="<?= $valor['cd_compra_fornecedor'] ?>" 
@@ -135,6 +138,7 @@
 			</select>
 		</p>
 		<button name="Deletar" title="Botão para excluir a compra"> Botão deletar compra </button>
+	</fieldset>
 	</form>
 	<?php  
 		// Se a selecao for possivel de realizar

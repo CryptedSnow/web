@@ -120,7 +120,12 @@
 			die;
 		}
 	?>
-	<p> Procurar nome cliente: <input id="nome" title="Campo para procurar determinado cliente pelo nome"/> </p>
+	<fieldset>
+		<legend> Procurar cliente (Atalho = Alt + w) </legend>
+		<p> Procurar cliente pelo nome: 
+		<input id="nome" accesskey="w" title="Campo para procurar determinado cliente pelo nome"/> </p>
+	</fieldset>
+	
 	<table id="lista" border="1">
 		<tr> 
 			<th title="ID"> ID </th>

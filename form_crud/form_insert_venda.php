@@ -134,8 +134,10 @@
 		</ul>
 	</nav>
 	<form method="POST" id="cad_ven" autocomplete="off" action="/web/crud/insert_venda.php" onsubmit="exibirNome()">
+		<fieldset>
+		<legend> Cadastrar venda (Atalho = Alt + w) </legend>
 		<p> ID produto:
-			<select onclick="buscaDados()" name="cd_produto" id="cd_produto" required="" title="Caixa de seleção para escolher o produto">
+			<select onclick="buscaDados()" name="cd_produto" id="cd_produto" required="" title="Caixa de seleção para escolher o produto" accesskey="w">
 				<option value="" title="Por padrão a opção é vazia, escolha abaixo o produto desejado"> Nenhum </option>
 	  			<?php foreach($resultado_produto as $v1): ?>
     				<option title="<?= $v1['nome'] ?>" value="<?= $v1['cd_produto'] ?>"><?= $v1['nome'] ?></option>
@@ -159,6 +161,7 @@
 		<p> Valor do item: <input type="number" step="any" placeholder="R$0.00" pattern="\d+" name="valor_item" id="valor_item" title="Campo para inserir o valor do produto" required="" readonly="readonly"> </p>
 		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" title="Campo para inserir a quantidade de produtos para venda" required=""> </p>
 		<button name="Inserir" title="Botão para cadastrar a venda"> Botão cadastrar venda </button>
+		</fieldset>
 	</form>
 	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>

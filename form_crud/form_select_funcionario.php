@@ -120,7 +120,10 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-	<p> Procurar nome funcionário: <input id="nome" title="Campo para procurar determinado funcionário pelo nome"/></p>
+	<fieldset>
+	<legend> Procurar funcionário (Atalho = Alt + w) </legend>
+		<p> Procurar funcionário pelo nome: <input id="nome" accesskey="w" title="Campo para procurar determinado funcionário pelo nome"/></p>
+	</fieldset>
 	<table id="lista" border="1">
 		<tr> 
 			<th title="ID"> ID </th> 

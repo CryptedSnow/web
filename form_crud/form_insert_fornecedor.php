@@ -105,7 +105,9 @@
 		</ul>
 	</nav>
 	<form method="POST" id="cad_forn" autocomplete="off" action="/web/crud/insert_fornecedor.php" onsubmit="exibirNome()">
-		<p> Nome: <input type="text" name="nome" id="nome" title="Campo para inserir o nome do fornecedor" size="30" maxlength="30" required=""> </p>
+	<fieldset>
+		<legend> Cadastrar fornecedor (Atalho = Alt + w) </legend>
+		<p> Nome: <input type="text" name="nome" id="nome" title="Campo para inserir o nome do fornecedor" size="30" maxlength="30" required="" accesskey="w"> </p>
 		<p> CNPJ: <input type="text" name="cnpj" id="cnpj" title="Campo para inserir o CNPJ do fornecedor" size="30" minlength="18" required=""> </p>
 		<p> Telefone: <input type="text" name="telefone" id="telefone" title="Campo para inserir o telefone do fornecedor" size="30" minlength="14" required=""> </p>
 		<p> Email: <input type="email" name="email" id="email" title="Campo para inserir o email do fornecedor" size="30" maxlength="50" required=""> </p>
@@ -115,6 +117,7 @@
 		<p> Rua: <input type="text" name="endereco" id="endereco" title="Campo para inserir a rua do fornecedor" size="30" maxlength="30" required=""> </p>
 		<p> Número: <input type="number" id="numero" pattern="\d+" title="Campo para inserir o número do comércio do fornecedor" name="numero" size="5" required=""> </p>
 		<button name="Inserir" title="Botão para cadastrar o fornecedor"> Botão cadastrar fornecedor </button>
+	</fieldset>
 	</form>
 	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>

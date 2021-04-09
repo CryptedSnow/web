@@ -107,10 +107,12 @@
 		</ul>
 	</nav>
 	<form method="POST" id="atu_func" autocomplete="off" action="/web/crud/update_funcionario.php" onsubmit="exibirNome()">
+		<fieldset>
+		<legend> Atualizar funcionário (Atalho = Alt + w) </legend>
 		<p> * Os campos são preenchidos ao carregar a página ou quando o registro ID funcionário é clicado. </p>
 		<p> ID funcionário:
 			<select onclick="buscaDados()" name="cd_funcionario" required="" id="cd_funcionario" 
-			title="Caixa de seleção para escolher o funcionário a ser atualizado">
+			title="Caixa de seleção para escolher o funcionário a ser atualizado" accesskey="w">
 				<option title="<?= $_SESSION['nome_usuario'] ?>" 
 				value="<?= $_SESSION['id_usuario'] ?>"><?= $_SESSION['nome_usuario'] ?></option>
 			</select>

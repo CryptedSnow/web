@@ -123,8 +123,10 @@
 		}
 	?>
 	<form method="POST" id="exc_forn" autocomplete="off" action="/web/crud/delete_fornecedor.php" onsubmit="exibirNome()">
+	<fieldset>
+		<legend> Excluir fornecedor (Atalho = Alt + w) </legend>
 		<p> ID fornecedor:
-			<select name="cd_fornecedor" required="" id="cd_fornecedor" title="Caixa de seleção para escolher o fornecedor a ser excluído">
+			<select name="cd_fornecedor" required="" id="cd_fornecedor" title="Caixa de seleção para escolher o fornecedor a ser excluído" accesskey="w">
 				<option value="" title="Opção vazia, escolha abaixo o fornecedor a ser excluído"> Nenhum </option>
 	  			<?php foreach($resultado_selecao as $valor): ?>
     				<option title="<?= $valor['nome'] ?>" value="<?= $valor['cd_fornecedor'] ?>"><?= $valor['nome'] ?></option>
@@ -132,6 +134,7 @@
 			</select>
 		</p>
 		<button name="Deletar" title="Botão para excluir o fornecedor"> Botão deletar fornecedor </button>
+	</fieldset>
 	</form>
 <?php
 		// Se a selecao for possivel de realizar

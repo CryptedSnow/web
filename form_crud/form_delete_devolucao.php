@@ -124,8 +124,10 @@
 		</ul>
 	</nav>
 	<form method="POST" id="exc_dev" autocomplete="off" action="/web/crud/delete_devolucao.php" onsubmit="exibirNome()">
+		<fieldset>
+		<legend> Excluir devolução (Atalho = Alt + w) </legend>
 		<p> ID devolução:
-			<select name="cd_devolucao" required="" id="cd_devolucao" title="Caixa de seleção para escolher a devolução a ser excluída">
+			<select name="cd_devolucao" required="" id="cd_devolucao" accesskey="w" title="Caixa de seleção para escolher a devolução a ser excluída">
 				<option value="" title="Opção vazia, escolha abaixo o item devolvido a ser excluído"> Nenhum </option>
 				<?php foreach($resultado_selecao as $valor): ?>
     				<option title="<?= $valor['cd_devolucao'] ?>" value="<?= $valor['cd_devolucao'] ?>"><?= $valor['cd_devolucao'] ?></option>
@@ -133,6 +135,7 @@
 			</select>
 		</p>
 		<button name="Deletar" title="Botão para excluir a devolução"> Botão deletar devolução </button>
+		</fieldset>
 	</form>
 	<?php
 		// Se a selecao for possivel de realizar

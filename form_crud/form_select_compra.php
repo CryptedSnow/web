@@ -126,7 +126,10 @@
 			<li> <a href="/web/logout.php" title="Sair do sistema"> Sair </a> </li> 
 		</ul>
 	</nav>
-	<p> Procurar nome produto comprado: <input id="nome" title="Campo para procurar determinado produto comprado pelo nome"/> </p>
+	<fieldset>
+		<legend> Procurar compra (Atalho = Alt + w) </legend>
+		<p> Procurar produto comprado pelo nome: <input id="nome" accesskey="w" title="Campo para procurar determinado produto comprado pelo nome"/> </p>
+	</fieldset>
 	<table id="lista" border="1">
 		<tr> 
 			<th title="ID"> ID </th>

@@ -101,14 +101,17 @@
 		</ul>
 	</nav>
 	<form method="POST" id="exc_func" autocomplete="off" action="/web/crud/delete_funcionario.php" onsubmit="exibirNome()">
+		<fieldset>
+		<legend> Excluir funcionário (Atalho = Alt + w) </legend>
 		<p> ID funcionário:
 			<select name="cd_funcionario" required="" id="cd_funcionario" 
-			title="Caixa de seleção para escolher o funcionário a ser excluído">
+			title="Caixa de seleção para escolher o funcionário a ser excluído" accesskey="w">
 				<option title="<?= $_SESSION['nome_usuario'] ?>" 
 				value="<?= $_SESSION['id_usuario'] ?>"><?= $_SESSION['nome_usuario'] ?></option>
 			</select>
 		</p>
 		<button name="Deletar" title="Botão para excluir o funcionário"> Botão deletar funcionário </button>
+		</fieldset>
 	</form>
 	<?php
 		// Se a seleca for possivel de realizar

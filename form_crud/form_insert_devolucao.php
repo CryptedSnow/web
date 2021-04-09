@@ -135,8 +135,10 @@
 		</ul>
 	</nav>
 	<form method="POST" id="cad_dev" autocomplete="off" action="/web/crud/insert_devolucao.php" onsubmit="exibirNome()">
+		<fieldset>
+		<legend> Cadastrar devolução (Atalho = Alt + w) </legend>
 		<p> ID venda:
-			<select onclick="buscaDados()" name="cd_venda" id="cd_venda" required="" title="Caixa de seleção para escolher a venda">
+			<select onclick="buscaDados()" name="cd_venda" id="cd_venda" required="" accesskey="w" title="Caixa de seleção para escolher a venda">
 				<option value="" title="Por padrão a opção é vazia, escolha abaixo ID da venda"> Nenhum </option>
 				<?php foreach($resultado_venda as $v1): ?>
     				<option title="<?= $v1['cd_venda'] ?>" value="<?= $v1['cd_venda'] ?>"><?= $v1['cd_venda'] ?></option>
@@ -163,6 +165,7 @@
 			</select>
 		</p>
 		<button name="Inserir" title="Botão para cadastrar a devolução"> Botão cadastrar devolução </button>
+		</fieldset>
 	</form>
 	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>

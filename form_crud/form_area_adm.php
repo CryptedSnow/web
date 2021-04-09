@@ -131,9 +131,9 @@
 	</nav>
 	<form method="POST" id="area_adm" autocomplete="off" action="/web/crud/area_adm.php" onsubmit="exibirNome()">
 		<fieldset>
-		<legend> Atualizar cargo do funcionário </legend>
+		<legend> Atualizar cargo do funcionário (Atalho = Alt + w) </legend>
 		<p> ID funcionário:
-			<select onclick="buscaDados()" name="cd_funcionario" id="cd_funcionario" required="" title="Caixa de seleção para escolher o funcionário">
+			<select onclick="buscaDados()" name="cd_funcionario" id="cd_funcionario" required="" title="Caixa de seleção para escolher o funcionário" accesskey="w">
 				<option value="" title="Por padrão a opção é vazia, escolha abaixo o funcionário"> Nenhum </option>
 	  			<?php foreach($resultado_funcionario as $v1): ?>
     				<option title="<?= $v1['nome'] ?>" value="<?= $v1['cd_funcionario'] ?>"><?= $v1['nome'] ?></option>
@@ -160,9 +160,9 @@
 
 	<form method="POST" autocomplete="off" action="/web/crud/delete_usuario.php" onsubmit="exibirExclusao()">
 		<fieldset>
-		<legend> Excluir funcionário </legend>
+		<legend> Excluir funcionário (Atalho = Alt + q) </legend>
 		<p> ID funcionário:
-			<select name="cd_funcionario" id="cd_funcionario" required="" title="Caixa de seleção para escolher o funcionário a ser excluído">
+			<select name="cd_funcionario" id="cd_funcionario" required="" title="Caixa de seleção para escolher o funcionário a ser excluído" accesskey="q">
 				<option value="" title="Por padrão a opção é vazia, escolha abaixo o funcionário"> Nenhum </option>
 	  			<?php foreach($resultado_funcionario as $v1): ?>
     				<option title="<?= $v1['nome'] ?>" value="<?= $v1['cd_funcionario'] ?>"><?= $v1['nome'] ?></option>

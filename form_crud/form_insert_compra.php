@@ -129,8 +129,10 @@
 		</ul>
 	</nav>
 	<form method="POST" id="cad_com" autocomplete="off" action="/web/crud/insert_compra.php" onsubmit="exibirNome()">
+	<fieldset>
+		<legend> Cadastrar compra (Atalho = Alt + w) </legend>
 		<p> ID fornecedor:
-			<select name="cd_fornecedor" id="cd_fornecedor" required="" title="Caixa de seleção para escolher o fornecedor">
+			<select name="cd_fornecedor" id="cd_fornecedor" required="" title="Caixa de seleção para escolher o fornecedor" accesskey="w">
 				<option value="" title="Por padrão a opção é vazia, escolha abaixo o fornecedor"> Nenhum </option>
 				<?php foreach($resultado_fornecedor as $v1): ?>
     				<option title="<?= $v1['nome'] ?>" value="<?= $v1['cd_fornecedor'] ?>"><?= $v1['nome'] ?></option>
@@ -146,6 +148,7 @@
 			</select>
 		</p>
 		<button name="Inserir" title="Botão para cadastrar a compra"> Botão cadastrar compra </button>
+	</fieldset>
 	</form>
 	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>

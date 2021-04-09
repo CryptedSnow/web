@@ -127,8 +127,10 @@
 		}
 	?>
 	<form method="POST" id="atu_forn" autocomplete="off" action="/web/crud/update_fornecedor.php" onsubmit="exibirNome()">
+	<fieldset>
+		<legend> Atualizar fornecedor (Atalho = Alt + w) </legend>
 		<p> ID fornecedor:
-		<select onclick="buscaDados()" name="cd_fornecedor" id="cd_fornecedor" required="" title="Caixa de seleção para escolher o fornecedor a ser atualizado">
+		<select onclick="buscaDados()" name="cd_fornecedor" id="cd_fornecedor" required="" title="Caixa de seleção para escolher o fornecedor a ser atualizado" accesskey="w">
 			<option value="" title="Opção vazia, escolha abaixo o fornecedor a ser atualizado"> Nenhum </option>
   			<?php foreach($resultado_selecao as $valor): ?>
     			<option title="<?= $valor['nome'] ?>" value="<?= $valor['cd_fornecedor'] ?>"><?= $valor['nome'] ?></option>
@@ -145,6 +147,7 @@
 		<p> Rua: <input type="text" title="Campo para atualizar a rua do fornecedor" name="endereco" id="endereco" size="30" maxlength="30" required=""> </p>
 		<p> Número: <input type="number" name="numero" id="numero" pattern="\d+" title="Campo para atualizar o número do comércio do fornecedor" size="5" required=""> </p>
 		<button name="Atualizar" title="Botão para atualizar fornecedor"> Botão atualizar fornecedor </button>
+	</fieldset>
 	</form>
 	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>

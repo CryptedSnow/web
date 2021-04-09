@@ -124,15 +124,18 @@
 		</ul>
 	</nav>
 	<form method="POST" id="exc_cli"autocomplete="off" action="/web/crud/delete_cliente.php" onsubmit="exibirNome()">
+		<fieldset>
+		<legend> Excluir cliente (Atalho = Alt + w) </legend>
 		<p> ID cliente:
 			<select name="cd_cliente" required="" id="cd_cliente" title="Caixa de seleção para escolher o cliente a ser excluído">
-				<option value="" title="Opção vazia, escolha abaixo o cliente a ser excluído"> Nenhum </option>
+				<option value="" title="Opção vazia, escolha abaixo o cliente a ser excluído" accesskey="w"> Nenhum </option>
 	  			<?php foreach($resultado_selecao as $valor): ?>
     				<option title="<?= $valor['nome'] ?>" value="<?= $valor['cd_cliente'] ?>"><?= $valor['nome'] ?></option>
 				<?php endforeach ?>
 			</select>
 		</p>
 		<button name="Deletar" title="Botão para excluir o cliente"> Botão excluir cliente </button>
+		</fieldset>
 	</form>
 	<?php
 		// Se a selecao for possível de realizar

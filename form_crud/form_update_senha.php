@@ -104,8 +104,10 @@
 		</ul>
 	</nav>
     <form method="POST" autocomplete="off" id="alt_senha" action="/web/crud/update_senha.php" onsubmit="exibirNome()">
-        <p> ID funcionário:
-            <select id="cd_funcionario" name="cd_funcionario" required="" title="Caixa de seleção para escolher o funcionário a ter sua senha atualizada">
+    	<fieldset>
+    	<legend> Atualizar senha (Atalho = Alt + w) </legend>
+    	<p> ID funcionário:
+            <select id="cd_funcionario" name="cd_funcionario" required="" title="Caixa de seleção para escolher o funcionário a ter sua senha atualizada" accesskey="w">
                 <option title="<?= $_SESSION['nome_usuario'] ?>" value="<?= $_SESSION['id_usuario'] ?>"><?= $_SESSION['nome_usuario'] ?></option>
             </select>
         </p>
@@ -131,6 +133,7 @@
             <i class="fa fa-eye-slash" id="pass2" aria-hidden="true" title="Exibir a nova senha"></i>
         </p>
         <button name="Atualizar" title="Botão para atualizar a senha"> Botão atualizar senha </button>
+    	</fieldset>
     </form>
     <button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
 </body>
