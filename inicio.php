@@ -130,24 +130,24 @@
 	<table border="1">
 		<caption title="Painel"> Painel </caption>
 		<tr> 
-			<th title="Número de clientes"> N° de clientes </th>
-			<th title="Número de funcionários"> N° de funcionários </th>
-			<th title="Número de fornecedores"> N° de fornecedores </th>
+		    <th title="Número de clientes"> N° de clientes </th>
+		    <th title="Número de funcionários"> N° de funcionários </th>
+		    <th title="Número de fornecedores"> N° de fornecedores </th>
 		    <th title="Número de compras"> N° de compras </th>
 		    <th title="Número de produtos"> N° de produtos </th>
 		    <th title="Número de vendas"> N° de vendas </th>
 		    <th title="Número de devoluções"> N° de devoluções </th>
 		</tr>
 		<?php
-			foreach ($linha as $exibir_colunas) {
+			foreach ($linha as $colunas) {
 			 	echo '<tr>';
-				echo '<td title="'.$exibir_colunas['qtd_cliente'].' cliente(s)">'.$exibir_colunas['qtd_cliente'].'</td>';
-				echo '<td title="'.$exibir_colunas['qtd_funcionario'].' funcionário(s)">'.$exibir_colunas['qtd_funcionario'].'</td>';
-				echo '<td title="'.$exibir_colunas['qtd_fornecedor'].' fornecedor(s)">'.$exibir_colunas['qtd_fornecedor'].'</td>';
-				echo '<td title="'.$exibir_colunas['qtd_compra'].' compra(s)">'.$exibir_colunas['qtd_compra'].'</td>';
-				echo '<td title="'.$exibir_colunas['qtd_produto'].' produto(s)">'.$exibir_colunas['qtd_produto'].'</td>';
-				echo '<td title="'.$exibir_colunas['qtd_venda'].' venda(s)">'.$exibir_colunas['qtd_venda'].'</td>';
-				echo '<td title="'.$exibir_colunas['qtd_devolucao'].' devolução(ões)">'.$exibir_colunas['qtd_devolucao'].'</td>';
+				echo '<td title="'.$colunas['qtd_cliente'].' cliente(s)">'.$colunas['qtd_cliente'].'</td>';
+				echo '<td title="'.$colunas['qtd_funcionario'].' funcionário(s)">'.$colunas['qtd_funcionario'].'</td>';
+				echo '<td title="'.$colunas['qtd_fornecedor'].' fornecedor(s)">'.$colunas['qtd_fornecedor'].'</td>';
+				echo '<td title="'.$colunas['qtd_compra'].' compra(s)">'.$colunas['qtd_compra'].'</td>';
+				echo '<td title="'.$colunas['qtd_produto'].' produto(s)">'.$colunas['qtd_produto'].'</td>';
+				echo '<td title="'.$colunas['qtd_venda'].' venda(s)">'.$colunas['qtd_venda'].'</td>';
+				echo '<td title="'.$colunas['qtd_devolucao'].' devolução(ões)">'.$colunas['qtd_devolucao'].'</td>';
 				echo '</tr>'; echo '</p>';
 			} 
 		?>
