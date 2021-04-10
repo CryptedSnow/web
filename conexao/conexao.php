@@ -15,8 +15,8 @@
 		$conexao = new PDO("mysql:host=$host;dbname=$banco;charset=utf8",$usuario,$senha);
 
 	// Se nao for possivel fazer a conexao pelo PDO
-	} catch (PDOException $falha_conexao) {
-		echo "Erro na conexão do banco".$falha_conexao->getMessage();
+	} catch (PDOException $falha) {
+		echo "Erro na conexão do banco".$falha->getMessage();
 		die;
 	// Caso haja outro tipo de erro sem relacao PDO
 	} catch (Exception $falha) {
