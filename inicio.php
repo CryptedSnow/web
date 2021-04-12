@@ -130,9 +130,9 @@
 	<table border="1">
 		<caption title="Painel"> Painel </caption>
 		<tr> 
-		    <th title="Número de clientes"> N° de clientes </th>
-		    <th title="Número de funcionários"> N° de funcionários </th>
-		    <th title="Número de fornecedores"> N° de fornecedores </th>
+			<th title="Número de clientes"> N° de clientes </th>
+			<th title="Número de funcionários"> N° de funcionários </th>
+			<th title="Número de fornecedores"> N° de fornecedores </th>
 		    <th title="Número de compras"> N° de compras </th>
 		    <th title="Número de produtos"> N° de produtos </th>
 		    <th title="Número de vendas"> N° de vendas </th>
@@ -154,5 +154,9 @@
 	</table>
 	<br/>
 	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
+	<footer id="rodape">
+	<p> Sistema web desenvolvido na matéria de Laboratório e Programação Web. </p>
+	<p> Desenvolvido por <b> Iury Fernandes </b> e <b> Renan Oliveira. <b> </p>
+	</footer>
 </body>
 </html>

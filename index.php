@@ -33,5 +33,9 @@
 		<button name="Entrar" title="Botão para entrar no sistema"> Botão entrar </button>
 	</fieldset>
 	</form>
+	<footer id="rodape">
+	<p> Sistema web desenvolvido na matéria de Laboratório e Programação Web. </p>
+	<p> Desenvolvido por <b> Iury Fernandes </b> e <b> Renan Oliveira. <b> </p>
+	</footer>
 </body>
 </html>
