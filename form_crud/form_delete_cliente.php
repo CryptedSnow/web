@@ -127,8 +127,8 @@
 		<fieldset>
 		<legend> Excluir cliente (Atalho = Alt + w) </legend>
 		<p> ID cliente:
-			<select name="cd_cliente" required="" id="cd_cliente" title="Caixa de seleção para escolher o cliente a ser excluído">
-				<option value="" title="Opção vazia, escolha abaixo o cliente a ser excluído" accesskey="w"> Nenhum </option>
+			<select name="cd_cliente" required="" id="cd_cliente" title="Caixa de seleção para escolher o cliente a ser excluído" accesskey="w">
+				<option value="" title="Opção vazia, escolha abaixo o cliente a ser excluído"> Nenhum </option>
 	  			<?php foreach($resultado_selecao as $valor): ?>
     				<option title="<?= $valor['nome'] ?>" value="<?= $valor['cd_cliente'] ?>"><?= $valor['nome'] ?></option>
 				<?php endforeach ?>
