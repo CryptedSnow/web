@@ -169,5 +169,9 @@
 	<script type="text/javascript" src="/web/js/venda/select_venda.js"></script>
 	<p><a href='/web/planilha/planilha_venda.php' title="Botão de download de planilha de vendas" target="_blank"><button> Gerar planilha de vendas</button></a></p>
 	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
+	<footer id="rodape">
+	<p> Sistema web desenvolvido na matéria de Laboratório e Programação Web. </p>
+	<p> Desenvolvido por <b> Iury Fernandes </b> e <b> Renan Oliveira. <b> </p>
+	</footer>
 </body>
 </html>

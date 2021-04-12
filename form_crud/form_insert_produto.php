@@ -172,34 +172,38 @@
 		<p> Quantidade: <input type="number" name="quantidade" id="quantidade" pattern="\d+" title="Campo para inserir a quantidade do produto" required=""> </p>
 		<p> Valor de compra: <input type="number" step="any" name="valor_compra" id="valor_compra" title="Campo para inserir o valor de compra do produto" required=""> </p>
 		<p> Porcentagem de revenda:
-		<select name="porcentagem_revenda" id="porcentagem_revenda" 
-		title="Caixa de seleção para inserir a porcentagem de revenda do produto" required="">
-			<option value="" title="Por padrão a opção é vazia, escolha abaixo a porcentagem desejado"> Nenhum </option>
-			<option value="5" title="Opção 5%">5%</option>		
-	  			<option value="10" title="Opção 10%">10%</option>
-	  			<option value="15" title="Opção 15%">15%</option>		
-	  			<option value="20" title="Opção 20%">20%</option>
-	  			<option value="25" title="Opção 25%">25%</option>		
-	  			<option value="30" title="Opção 30%">30%</option>
-	  			<option value="35" title="Opção 35%">35%</option>			
-	  			<option value="40" title="Opção 40%">40%</option>
-	  			<option value="45" title="Opção 45%">45%</option>			
-	  			<option value="50" title="Opção 50%">50%</option>
-	  			<option value="55" title="Opção 55%">55%</option>			
-	  			<option value="60" title="Opção 60%">60%</option>
-	  			<option value="65" title="Opção 65%">65%</option>			
-	  			<option value="70" title="Opção 70%">70%</option>
-	  			<option value="75" title="Opção 75%">75%</option>			
-	  			<option value="80" title="Opção 80%">80%</option>
-	  			<option value="85" title="Opção 85%">85%</option>		
-	  			<option value="90" title="Opção 90%">90%</option>
-	  			<option value="95" title="Opção 95%">95%</option>		
-	  			<option value="100" title="Opção 100%">100%</option>		
+			<select name="porcentagem_revenda" id="porcentagem_revenda" 
+			title="Caixa de seleção para inserir a porcentagem de revenda do produto" required="">
+				<option value="" title="Por padrão a opção é vazia, escolha abaixo a porcentagem desejado"> Nenhum </option>
+				<option value="5" title="Porcentagem de 5%">Porcentagem de 5%</option>		
+		  		<option value="10" title="Porcentagem de 10%">Porcentagem de 10%</option>
+		  		<option value="15" title="Porcentagem de 15%">Porcentagem de 15%</option>		
+		  		<option value="20" title="Porcentagem de 20%">Porcentagem de 20%</option>
+		  		<option value="25" title="Porcentagem de 25%">Porcentagem de 25%</option>		
+		  		<option value="30" title="Porcentagem de 30%">Porcentagem de 30%</option>
+		  		<option value="35" title="Porcentagem de 35%">Porcentagem de 35%</option>			
+		  		<option value="40" title="Porcentagem de 40%">Porcentagem de 40%</option>
+		  		<option value="45" title="Porcentagem de 45%">Porcentagem de 45%</option>			
+		  		<option value="50" title="Porcentagem de 50%">Porcentagem de 50%</option>
+		  		<option value="55" title="Porcentagem de 55%">Porcentagem de 55%</option>			
+		  		<option value="60" title="Porcentagem de 60%">Porcentagem de 60%</option>
+		  		<option value="65" title="Porcentagem de 65%">Porcentagem de 65%</option>			
+		  		<option value="70" title="Porcentagem de 70%">Porcentagem de 70%</option>
+		  		<option value="75" title="Porcentagem de 75%">Porcentagem de 75%</option>			
+		  		<option value="80" title="Porcentagem de 80%">Porcentagem de 80%</option>
+		  		<option value="85" title="Porcentagem de 85%">Porcentagem de 85%</option>		
+		  		<option value="90" title="Porcentagem de 90%">Porcentagem de 90%</option>
+		  		<option value="95" title="Porcentagem de 95%">Porcentagem de 95%</option>		
+		  		<option value="100" title="Porcentagem de 100%">Porcentagem de 100%</option>		
 		</select>
 		</p>
 		<button name="Inserir" title="Botão para cadastrar o produto"> Botão cadastrar produto </button>
 		</fieldset>
 	</form>
 	<button href="#" onclick='window.scrollTo({top: 0, behavior: "smooth"})' title="Botão voltar ao topo">Botão topo da página</button>
+	<footer id="rodape">
+	<p> Sistema web desenvolvido na matéria de Laboratório e Programação Web. </p>
+	<p> Desenvolvido por <b> Iury Fernandes </b> e <b> Renan Oliveira. <b> </p>
+	</footer>
 </body>
 </html> 
