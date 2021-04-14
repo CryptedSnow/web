@@ -34,8 +34,9 @@
 	</fieldset>
 	</form>
 	<footer id="rodape">
-	<p> Sistema web desenvolvido na matéria de Laboratório e Programação Web. </p>
-	<p> Desenvolvido por <b> Iury Fernandes </b> e <b> Renan Oliveira. <b> </p>
+	<p> Sistema web desenvolvido na matéria de <b>Laboratório e Programação Web</b>. </p>
+	<p> Desenvolvido por <a href="https://github.com/Iury189" target="_blank"> <b> Iury Fernandes </b> </a> 
+	e <a href="https://github.com/renanoliveir13" target="_blank"> <b>Renan Oliveira<b></a>. </p>
 	</footer>
 </body>
 </html>
