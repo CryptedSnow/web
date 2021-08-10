@@ -1,6 +1,6 @@
 ### Sobre o projeto <h3> 
 O sistema em questão trata-se de um sistema web para o gerenciamento de vendas para uma loja fictícia de roupas como requisito fundamental para a disciplina de Laboratório de
-Programação Web feito no semestre de 2020.1 no Instituto Federal de Educação, Ciência e Tecnologia Baiano - Campus Guanambi.
+Programação Web I feito no semestre de 2020.1 no Instituto Federal de Educação, Ciência e Tecnologia Baiano - Campus Guanambi.
 
 ### Ferramentas utilizadas <h3>
  * [Astah UML](https://astah.net/downloads/): É um software de modelagem que permite uma fácil visualização dos componentes do sistema e de como eles se interagem através de diagramas.
